@@ -1,0 +1,7 @@
+.PageLayout {
+	position: relative;
+
+	max-width: 1000px;
+	height: auto !important;
+	margin: auto;
+}
