@@ -1,3 +1,27 @@
+.PageLayout {
+	position: relative;
+
+	max-width: 1000px;
+	height: auto !important;
+	margin: auto;
+}
+
+.PageLayout-Nav {
+	margin-top: 5px;
+}
+
+.PageLayout-Sidebar {
+	margin-top: 5px;
+}
+
+.PageLayout-Content {
+	margin: 5px 5px 0 175px;
+}
+
+.PageLayout-BannerAd {
+	margin-top: 50px;
+}
+
 .Header {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -421,6 +445,18 @@ div[id=''] {
 	min-width: 141px;
 	max-width: 141px;
 	width: 141px;
+}
+
+.pred,
+.pred:hover,
+.pred_v:hover,
+.pred_v,
+.pred_0,
+.pred_no {
+	padding: 5px 10px 5px 10px;
+	width: calc(14.28% - 21px);
+	max-width: none;
+	min-width: auto;
 }
 
 .pred_0 {
@@ -897,7 +933,7 @@ a:hover .news.urgent u {
 	width: 81px;
 	height: 23px;
 	background: center center no-repeat;
-	background-image: url(/img/button-store.svg);
+	background-image: url(https://ege.sdamgia.ru/img/button-store.svg);
 	background-size: cover;
 	border-radius: 0 !important;
 }
@@ -1235,8 +1271,8 @@ input[type='submit'] {
 	outline: none;
 }
 .search__search-icon {
-    position: absolute;
-    /* top: 5px; */
+	position: absolute;
+	/* top: 5px; */
 	top: 0;
 	left: 5.5px;
 }
@@ -1270,6 +1306,21 @@ input[type='submit'] {
 	cursor: pointer;
 }
 
+.HelpButton {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	background: #fff;
+	border: 1px solid silver;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
 .ButtonStore_iOS {
 	padding: 0;
 	position: absolute;
@@ -1286,4 +1337,20 @@ input[type='submit'] {
 	left: 0;
 	background-position: 0 0;
 	border-bottom-left-radius: 5px !important;
+}
+
+.SidebarBannerAd {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.smallcapitals {
+	text-transform: uppercase;
+	font-size: 0.85em;
+	letter-spacing: 0.1em;
+	margin-right: -0.1em;
+}
+
+.BannerAd {
+	width: 100%;
 }
