@@ -10,6 +10,7 @@ import helpButtonIcon from './assets/helpButtonIcon.png';
 import sidebarBannerAd from './assets/sidebarBannerAd.png';
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
+import spbsut from './assets/spbsut.png';
 
 import Student from '../../Student';
 
@@ -527,6 +528,25 @@ function App() {
 						src={contentBannerBottomAd}
 					/>
 				</main>
+
+				<footer className="Footer">
+					<p style={{ float: 'left' }}>
+						<a href="/about">О проекте</a> ·{' '}
+						<a href="/staff">Редакция</a> ·{' '}
+						<a href="/legal">Правовая информация</a>{' '}
+					</p>
+					<p align="right">© Гущин Д. Д., 2011—2019</p> <br />
+					<center>
+						<a href="http://priem.sut.ru/" target="_blank">
+							<img
+								src={spbsut}
+								alt="СПб ГУТ!"
+								title="priem.sut.ru"
+								width="160"
+							/>
+						</a>
+					</center>
+				</footer>
 			</div>
 		</div>
 	);
