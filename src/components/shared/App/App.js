@@ -401,8 +401,8 @@ function App() {
 						>
 							<div className="news__date">15 августа</div>
 							<div className="news__text">
-								Подготовка к ЕГЭ и ОГЭ с нуля до 100 баллов на
-								годовом курсе УМСКУЛ
+								Подготовка к ЕГЭ и ОГЭ с нуля до 100 баллов
+								на годовом курсе УМСКУЛ
 							</div>
 						</a>
 						<a
@@ -425,8 +425,7 @@ function App() {
 						>
 							<div className="news__date">14 июня</div>
 							<div className="news__text">
-								ЕГЭ ещё не&nbsp;начался, а&nbsp;выгнать уже
-								смогли
+								ЕГЭ ещё не начался, а выгнать уже смогли
 							</div>
 						</a>
 						<a
@@ -437,8 +436,8 @@ function App() {
 						>
 							<div className="news__date">12 июня</div>
 							<div className="news__text">
-								Комментарии Д. Гущина к&nbsp;геометрическим
-								заданиям ЕГЭ основной волны
+								Комментарии Д. Гущина к геометрическим заданиям
+								ЕГЭ основной волны
 							</div>
 						</a>
 						<a
@@ -447,7 +446,7 @@ function App() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Новый сервис&nbsp;— <u>карточки</u>
+							Новый сервис — <u>карточки</u>
 						</a>
 						<div className="login__title">ЧУЖОЕ НЕ БРАТЬ!</div>
 						<a
@@ -457,7 +456,7 @@ function App() {
 							rel="noopener noreferrer"
 						>
 							<div className="news__text">
-								Экзамер из Таганрога
+								Экзамер из Таганрога
 							</div>
 						</a>
 						<a
@@ -467,7 +466,7 @@ function App() {
 							rel="noopener noreferrer"
 						>
 							<div className="news__text">
-								Учитель Думбадзе из&nbsp;школы 162 Петербурга
+								Учитель Думбадзе из школы 162 Петербурга
 							</div>
 						</a>
 
