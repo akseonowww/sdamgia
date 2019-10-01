@@ -387,10 +387,10 @@ a:hover {
 
 div.header {
 	background-color: #bac2ff;
-	background: linear-gradient(top, #e2e0fc, #bac2ff);
-	background: -webkit-linear-gradient(top, #e2e0fc, #bac2ff);
-	background: -moz-linear-gradient(top, #e2e0fc, #bac2ff);
-	background: -khtml-linear-gradient(top, #e2e0fc, #bac2ff);
+	background: linear-gradient(to bottom, #e2e0fc, #bac2ff);
+	background: -webkit-linear-gradient(to bottom, #e2e0fc, #bac2ff);
+	background: -moz-linear-gradient(to bottom, #e2e0fc, #bac2ff);
+	background: -khtml-linear-gradient(to bottom, #e2e0fc, #bac2ff);
 	box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
 	border-left: 1px solid #d6d6d6;
 	border-top: 1px solid #d6d6d6;
@@ -465,12 +465,12 @@ div[id=''] {
 
 .pred {
 	cursor: pointer;
-	background: linear-gradient(top, #fff0e6, #ffd2b6);
-	background: -webkit-linear-gradient(top, #fff0e6, #ffd2b6);
-	background: -khtml-linear-gradient(top, #fff0e6, #ffd2b6);
-	background: -ms-linear-gradient(top, #fff0e6, #ffd2b6);
-	background: -o-linear-gradient(top, #fff0e6, #ffd2b6);
-	background: -moz-linear-gradient(top, #fff0e6, #ffd2b6);
+	background: linear-gradient(to bottom, #fff0e6, #ffd2b6);
+	background: -webkit-linear-gradient(to bottom, #fff0e6, #ffd2b6);
+	background: -khtml-linear-gradient(to bottom, #fff0e6, #ffd2b6);
+	background: -ms-linear-gradient(to bottom, #fff0e6, #ffd2b6);
+	background: -o-linear-gradient(to bottom, #fff0e6, #ffd2b6);
+	background: -moz-linear-gradient(to bottom, #fff0e6, #ffd2b6);
 	background-color: #ffe2c6;
 	box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
 }
@@ -478,20 +478,20 @@ div[id=''] {
 .pred:hover,
 .pred_v:hover {
 	background-color: #ffc788;
-	background: linear-gradient(bottom, #fff0e6, #ffd2b6);
-	background: -webkit-linear-gradient(bottom, #fff0e6, #ffd2b6);
-	background: -khtml-linear-gradient(bottom, #fff0e6, #ffd2b6);
-	background: -moz-linear-gradient(bottom, #fff0e6, #ffd2b6);
+	background: linear-gradient(to top, #fff0e6, #ffd2b6);
+	background: -webkit-linear-gradient(to top, #fff0e6, #ffd2b6);
+	background: -khtml-linear-gradient(to top, #fff0e6, #ffd2b6);
+	background: -moz-linear-gradient(to top, #fff0e6, #ffd2b6);
 	box-shadow: inset 0 1px 2px rgba(77, 77, 77, 0.15);
 }
 
 .pred_v {
 	font-weight: 700;
 	background-color: #ffe2c6;
-	background: linear-gradient(bottom, #ffe6e6, #ffd4a4);
-	background: -webkit-linear-gradient(bottom, #ffe6e6, #ffd4a4);
-	background: -moz-linear-gradient(bottom, #ffe6e6, #ffd4a4);
-	background: -khtml-linear-gradient(bottom, #fff0e6, #ffd4a4);
+	background: linear-gradient(to top, #ffe6e6, #ffd4a4);
+	background: -webkit-linear-gradient(to top, #ffe6e6, #ffd4a4);
+	background: -moz-linear-gradient(to top, #ffe6e6, #ffd4a4);
+	background: -khtml-linear-gradient(to top, #fff0e6, #ffd4a4);
 	box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
 	background-color: #ffe2c6;
 }
@@ -554,12 +554,12 @@ input[type='submit'] {
 	-ms-border-radius: 6px;
 	-o-border-radius: 6px;
 	background-color: #d2e2ff;
-	background: -webkit-linear-gradient(top, #d2e2ff, #9dccff);
-	background: -khtml-linear-gradient(top, #d2e2ff, #9dccff);
-	background: -moz-linear-gradient(top, #d2e2ff, #9dccff);
-	background: -ms-linear-gradient(top, #d2e2ff, #9dccff);
-	background: -o-linear-gradient(top, #d2e2ff, #9dccff);
-	background: linear-gradient(top, #d2e2ff, #9dccff);
+	background: -webkit-linear-gradient(to bottom, #d2e2ff, #9dccff);
+	background: -khtml-linear-gradient(to bottom, #d2e2ff, #9dccff);
+	background: -moz-linear-gradient(to bottom, #d2e2ff, #9dccff);
+	background: -ms-linear-gradient(to bottom, #d2e2ff, #9dccff);
+	background: -o-linear-gradient(to bottom, #d2e2ff, #9dccff);
+	background: linear-gradient(to bottom, #d2e2ff, #9dccff);
 	box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
 	-webkit-transition-duration: 0.1s;
 	-khtml-transition-duration: 0.1s;
@@ -575,23 +575,23 @@ input[type='submit'] {
 input[type='button']:hover,
 input[type='submit']:hover {
 	background-color: #dbe8ff;
-	background: -webkit-linear-gradient(top, #dbe8ff, #b1d6ff);
-	background: -khtml-linear-gradient(top, #dbe8ff, #b1d6ff);
-	background: -moz-linear-gradient(top, #dbe8ff, #b1d6ff);
-	background: -ms-linear-gradient(top, #dbe8ff, #b1d6ff);
-	background: -o-linear-gradient(top, #dbe8ff, #b1d6ff);
-	background: linear-gradient(top, #dbe8ff, #b1d6ff);
+	background: -webkit-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+	background: -khtml-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+	background: -moz-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+	background: -ms-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+	background: -o-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+	background: linear-gradient(to bottom, #dbe8ff, #b1d6ff);
 }
 
 input[type='button']:active,
 input[type='submit']:active {
 	background-color: #bfd6ff;
-	background: -webkit-linear-gradient(top, #bfd6ff, #d2e2ff);
-	background: -khtml-linear-gradient(top, #bfd6ff, #d2e2ff);
-	background: -moz-linear-gradient(top, #bfd6ff, #d2e2ff);
-	background: -ms-linear-gradient(top, #bfd6ff, #d2e2ff);
-	background: -o-linear-gradient(top, #bfd6ff, #d2e2ff);
-	background: linear-gradient(top, #bfd6ff, #d2e2ff);
+	background: -webkit-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
+	background: -khtml-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
+	background: -moz-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
+	background: -ms-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
+	background: -o-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
+	background: linear-gradient(to bottom, #bfd6ff, #d2e2ff);
 	box-shadow: inset 1px 1px 2px rgba(77, 77, 77, 0.4);
 }
 

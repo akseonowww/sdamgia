@@ -302,14 +302,11 @@ function App() {
 							<a href="/profile">
 								<b>Константин</b>
 							</a>
-							<a
-								href="javascript:void(0)"
-								style={{ borderBottom: 'none' }}
-							>
+							<a href="/signout" style={{ borderBottom: 'none' }}>
 								<img
 									src={signOutIcon}
 									style={{ verticalAlign: 'middle' }}
-									title="Выход"
+									alt="Выход"
 								/>
 							</a>
 						</form>
@@ -346,7 +343,7 @@ function App() {
 											rel="noopener noreferrer"
 											title="Наш умный бот ВК"
 										>
-											<img src={vkBotImg} />
+											<img src={vkBotImg} alt="" />
 										</a>
 									</td>
 									<td width="5px"></td>
@@ -357,7 +354,7 @@ function App() {
 											rel="noopener noreferrer"
 											title="Наш Телеграм-бот"
 										>
-											<img src={telegramBotImg} />
+											<img src={telegramBotImg} alt="" />
 										</a>
 									</td>
 								</tr>
@@ -485,10 +482,6 @@ function App() {
 
 						<div className="login__social-links">
 							<a
-								href="https://ege.sdamgia.ru/page/examer.ru"
-								style={{ textDecoration: 'none' }}
-							></a>
-							<a
 								className="button_vk"
 								href="https://vk.com/reshuege"
 								target="_blank"
@@ -504,27 +497,40 @@ function App() {
 							target="_blank"
 							rel="noopener noreferrer"
 							title="Андроиды"
-						></a>
+						>
+							&nbsp;
+						</a>
 						<a
 							className="button-store ButtonStore_iOS"
 							href="https://appsto.re/ru/TSavbb.i"
 							target="_blank"
 							rel="noopener noreferrer"
 							title="Джобсы"
-						></a>
+						>
+							&nsbp;
+						</a>
 					</div>
 
-					<img class="SidebarBannerAd" src={sidebarBannerAd} />
+					<img
+						class="SidebarBannerAd"
+						src={sidebarBannerAd}
+						alt="Реклама"
+					/>
 				</div>
 
 				<main class="PageLayout-Content">
-					<img class="BannerAd" src={contentBannerTopAd} />
+					<img
+						class="BannerAd"
+						src={contentBannerTopAd}
+						alt="Реклама"
+					/>
 
 					<Student />
 
 					<img
 						class="BannerAd PageLayout-BannerAd"
 						src={contentBannerBottomAd}
+						alt="Реклама"
 					/>
 				</main>
 
@@ -536,7 +542,11 @@ function App() {
 					</p>
 					<p align="right">© Гущин Д. Д., 2011—2019</p> <br />
 					<center>
-						<a href="http://priem.sut.ru/" target="_blank">
+						<a
+							href="http://priem.sut.ru/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<img
 								src={spbsut}
 								alt="СПб ГУТ!"
