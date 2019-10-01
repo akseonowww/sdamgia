@@ -14,7 +14,7 @@ const OurVariants = () => (
 		<ComplexHeader className="Section-ComplexHeader">
 			<Title>
 				Тренировочные варианты
-				<span className="Title-Caption">новые сентябрьские</span>
+				<span className="Title-Caption">новые октябрьские</span>
 			</Title>
 			<div className="ComplexHeader-Link">
 				<Link className="Link Link_static" to="/archive">
