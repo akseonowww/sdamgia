@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Variants from './Variants';
+import OurVariants from './OurVariants';
 import LarinVariants from './LarinVariants';
 import TwoColumns from '../shared/TwoColumns';
 import Constructor from './Constructor';
@@ -8,7 +8,7 @@ import './Student.css';
 
 const Student = () => (
     <>
-        <Variants />
+        <OurVariants />
         <LarinVariants />
         <TwoColumns />
         <Constructor />
