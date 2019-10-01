@@ -320,6 +320,7 @@ function App() {
 								<a href="/profile">
 									<b>Константин</b>
 								</a>
+								&nbsp;
 								<a
 									href="/signout"
 									style={{ borderBottom: 'none' }}
