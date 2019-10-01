@@ -525,6 +525,20 @@ div[id=''] {
 	color: #bfbfbf;
 }
 
+.Link_selected {
+	cursor: default;
+}
+
+.NavLink_selected {
+	text-decoration: none;
+}
+
+.NavLink_selected .menu_l {
+	background-image: url(https://ege.sdamgia.ru/img/square-hover.svg) !important;
+
+	cursor: default;
+}
+
 .menu a:hover {
 	color: #000;
 }
@@ -1215,6 +1229,11 @@ input[type='submit'] {
 .header-link:hover {
 	color: #f60;
 	border-bottom-color: rgba(255, 102, 51, 0.25);
+}
+
+.header-link_selected {
+	color: #000 !important;
+	border-bottom: none;
 }
 
 .sdamgia_btns {
