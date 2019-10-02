@@ -2,22 +2,28 @@
 	display: block;
 	grid-column: span 4;
 	padding: 3px 0 5px;
+	padding: 1rem 0 1.1rem;
 
 	text-align: center;
 
-	border: .75px solid;
+	border: 0.75px solid;
 	border-radius: 3px;
 }
 
 .VariantsLink_one-per-row {
-	grid-column: 8/14;
+	grid-column: 1/21;
+	margin-top: 5px;
+}
+
+.VariantsLink-Word {
+	display: none;
 }
 
 .VariantsLink-Hint {
 	display: inline-block;
 	margin: -2px 0 -2px 5px;
-	width: 18px;
-	height: 18px;
+	width: 1.75rem;
+	height: 1.75rem;
 
 	text-align: center;
 
@@ -26,4 +32,35 @@
 	box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
 
 	cursor: pointer;
+}
+
+@media (min-width: 576px) {
+	.VariantsLink {
+		padding: 0.25rem 0 0.35rem;
+	}
+
+	.VariantsLink_one-per-row {
+		grid-column: 7/15;
+	}
+
+	.VariantsLink-Word {
+		display: inline;
+	}
+
+	.VariantsLink-Hint {
+		width: 1.35rem;
+		height: 1.35rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.VariantsLink_one-per-row {
+		grid-column: 7/15;
+	}
+}
+
+@media (min-width: 992px) {
+	.VariantsLink_one-per-row {
+		grid-column: 8/14;
+	}
 }

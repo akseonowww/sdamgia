@@ -10,23 +10,29 @@ import './OurVariants.css';
 import '../../shared/Link/Link.css';
 
 const OurVariants = () => (
-	<Section>
+	<Section class="OurVariants">
 		<ComplexHeader className="Section-ComplexHeader">
 			<Title>
-				Тренировочные варианты
+				<span className="OurVariants-TitleWord1">Тренировочные </span>
+				<span className="OurVariants-TitleWord2">варианты</span>
 				<span className="Title-Caption">новые октябрьские</span>
 			</Title>
-			<div className="ComplexHeader-Link">
-				<Link className="Link Link_static" to="/archive">
+			<div className="ComplexHeader-Link ComplexHeader-Link_desktop">
+				<Link className=" Link Link_static" to="/archive">
 					Прошлые месяцы
 				</Link>
 			</div>
 		</ComplexHeader>
 
-		<p className="Section-Desc">
-			Специально для наших читателей мы ежемесячно составляем варианты для
+		<p className="Section-Desc OurVariants-Desc_mobile">
+			Каждый месяц мы составляем варианты для самопроверки. По окончании
+			вашей работы вы увидите ответы, решения и свой&nbsp;балл.
+		</p>
+
+		<p className="Section-Desc OurVariants-Desc_desktop">
+			Каждый месяц для наших читателей мы составляем варианты для
 			самопроверки. По окончании вашей работы система проверит ответы,
-			покажет правильные решения и выставит оценку по стобалльной шкале.
+			покажет правильные решения и рассчитает&nbsp;балл.
 		</p>
 
 		<Grid className="Variants">
@@ -55,6 +61,12 @@ const OurVariants = () => (
 				</div>
 			</VariantsLink>
 		</Grid>
+
+		<div className="ComplexHeader-Link ComplexHeader-Link_mobile">
+				<Link className=" Link Link_static" to="/archive">
+					Варианты прошлых месяцев
+				</Link>
+			</div>
 	</Section>
 );
 

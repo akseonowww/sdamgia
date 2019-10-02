@@ -1,0 +1,35 @@
+.OurVariants-TitleWord1 {
+	display: block;
+}
+
+.OurVariants-TitleWord2 {
+	display: inline-block;
+}
+
+@media (min-width: 576px) {
+	.OurVariants-TitleWord1 {
+		display: inline;
+	}
+
+	.OurVariants-TitleWord2 {
+		display: inline-block;
+	}
+}
+
+.OurVariants-Desc_mobile {
+	display: block;
+}
+
+.OurVariants-Desc_desktop {
+	display: none;
+}
+
+@media (min-width: 576px) {
+	.OurVariants-Desc_mobile {
+        display: none;
+    }
+
+    .OurVariants-Desc_desktop {
+        display: block;
+    }
+}

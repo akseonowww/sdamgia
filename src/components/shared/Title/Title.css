@@ -1,9 +1,9 @@
 .Title {
-	margin: 0 0 10px;
+	margin: 0 0 1rem;
 	padding-top: 2px;
 
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 2rem;
 	text-align: left;
 	color: #006;
 }
@@ -12,7 +12,19 @@
 	display: inline-block;
 
 	font-weight: normal;
-	font-size: 10px;
+	font-size: 1.05rem;
 	vertical-align: top;
 	color: #f60;
+}
+
+@media (min-width: 576px) {
+	.Title {
+		font-size: 1.5rem;
+
+		margin: 0 0 .75rem;
+	}
+
+	.Title-Caption {	
+		font-size: .75rem;
+	}
 }

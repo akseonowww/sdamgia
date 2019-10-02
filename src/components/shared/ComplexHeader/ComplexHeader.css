@@ -1,3 +1,23 @@
 .ComplexHeader-Link {
 	margin-top: 5px;
 }
+
+.ComplexHeader-Link_desktop {
+	display: none;
+}
+
+.ComplexHeader-Link_mobile {
+	margin-top: 10px;
+
+	text-align: center;
+}
+
+@media (min-width: 576px) {
+	.ComplexHeader-Link_desktop {
+		display: block;
+	}
+
+	.ComplexHeader-Link_mobile {
+		display: none;
+	}
+}

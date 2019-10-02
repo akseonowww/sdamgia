@@ -21,11 +21,7 @@ function App() {
 			<BrowserRouter>
 				<div className="PageLayout StartPage">
 					<header className="Header">
-						<NavLink
-							to="/"
-							exact
-							activeClassName="Link_selected"
-						>
+						<NavLink to="/" exact activeClassName="Link_selected">
 							<img
 								src="https://ege.sdamgia.ru/img/headers/logo.svg"
 								className="Header-Logo"
@@ -51,14 +47,15 @@ function App() {
 							>
 								СДАМ ГИА
 							</a>
-							: <NavLink
-							to="/"
-							exact
-							className="header-link"
-							activeClassName="header-link_selected Link_selected"
-						>
-							РЕШУ ЕГЭ
-						</NavLink>
+							:{' '}
+							<NavLink
+								to="/"
+								exact
+								className="header-link"
+								activeClassName="header-link_selected Link_selected"
+							>
+								РЕШУ ЕГЭ
+							</NavLink>
 						</div>
 						<div className="header_site_info">
 							Образовательный портал для подготовки к экзаменам
@@ -69,7 +66,12 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</header>
 
-					<nav className="Nav PageLayout-Nav">
+					<div
+						class="Nav PageLayout-Nav_mobile"
+					>
+						≡ математика
+					</div>
+					<nav className="Nav PageLayout-Nav PageLayout-Nav_desktop">
 						<a
 							className="subjhr"
 							rel="nofollow"
@@ -171,11 +173,11 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</nav>
 
-					<div className="left_column_btn">
+					<div className="SidebarBtns">
 						сайты - меню - вход - новости
 					</div>
 
-					<div className="left_column PageLayout-Sidebar">
+					<div className="Sidebar PageLayout-Sidebar">
 						<div className="sdamgia_btns">
 							<a href="https://sdamgia.ru">СДАМ ГИА</a>
 							<a href="https://ege.sdamgia.ru">РЕШУ ЕГЭ</a>
@@ -273,7 +275,7 @@ function App() {
 							</a>
 						</div>
 						<form
-							class="search left_column__search"
+							class="search Sidebar-Search"
 							action="/problem"
 							method="POST"
 						>
@@ -541,7 +543,7 @@ function App() {
 						</div>
 
 						<img
-							class="SidebarBannerAd"
+							class="SidebarBannerAd Sidebar-BannerAd "
 							src={sidebarBannerAd}
 							alt="Реклама"
 						/>
@@ -566,7 +568,7 @@ function App() {
 						/>
 					</main>
 
-					<footer className="Footer">
+					<footer className="Footer PageLayout-Footer">
 						<p style={{ float: 'left' }}>
 							<a href="/about">О проекте</a> ·{' '}
 							<a href="/staff">Редакция</a> ·{' '}
