@@ -26,10 +26,24 @@
 
 @media (min-width: 576px) {
 	.OurVariants-Desc_mobile {
-        display: none;
-    }
+		display: none;
+	}
 
-    .OurVariants-Desc_desktop {
-        display: block;
-    }
+	.OurVariants-Desc_desktop {
+		display: block;
+	}
+}
+
+.OurVariants-Link {
+	grid-column: span 4;
+}
+
+.OurVariants-Word {
+	display: none;
+}
+
+@media (min-width: 576px) {
+	.OurVariants-Word {
+		display: inline;
+	}
 }

@@ -1,0 +1,72 @@
+.LarinVariants-TitleWord1,
+.LarinVariants-TitleWord2 {
+	display: block;
+}
+
+.LarinVariants-TitleWord3 {
+	display: inline-block;
+}
+
+@media (min-width: 404px) {
+	.LarinVariants-TitleWord1,
+	.LarinVariants-TitleWord2 {
+		display: inline;
+	}
+
+	.LarinVariants-TitleWord3 {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 430px) {
+	.LarinVariants-TitleWord2 {
+		display: inline;
+	}
+
+	.LarinVariants-TitleWord3 {
+		display: inline;
+	}
+}
+
+@media (min-width: 547px) {
+	.LarinVariants-TitleWord1 {
+		display: block;
+	}
+}
+
+@media (min-width: 576px) {
+	.LarinVariants-TitleWord1 {
+		display: inline;
+	}
+}
+
+.LarinVariants-Variants {
+	grid-template-columns: repeat(5, 1fr);
+	margin-top: -0.5rem;
+	padding-top: 0.5rem;
+}
+
+.LarinVariants-Variants_cut {
+	height: 240px;
+
+	border-bottom: 0.05rem solid rgba(0, 0, 102, 0.5);
+	box-shadow: inset 0 -5px 10px -10px #006;
+
+	overflow: hidden;
+}
+
+@media (min-width: 576px) {
+	.LarinVariants-Variants {
+		grid-template-columns: repeat(10, 1fr);
+	}
+
+	.LarinVariants-Variants_cut {
+		height: 110px;
+	}
+}
+
+@media (min-width: 992px) {
+	.LarinVariants-Variants {
+		grid-template-columns: repeat(20, 1fr);
+	}
+}

@@ -1,6 +1,5 @@
 .VariantsLink {
 	display: block;
-	grid-column: span 4;
 	padding: 1rem 0 1.1rem;
 
 	text-align: center;
@@ -14,8 +13,32 @@
 	margin-top: 0.35rem;
 }
 
-.VariantsLink-Word {
-	display: none;
+.VariantsLink_new {
+	position: relative;
+}
+
+.VariantsLink_new::after {
+	position: absolute;
+	top: -0.25rem;
+	right: -0.25rem;
+
+	width: 1rem;
+	height: 1rem;
+
+	background: #f60;
+	border-radius: 50%;
+
+	content: '';
+}
+
+@media (min-width: 576px) {
+	.VariantsLink_new::after {
+		top: -0.25rem;
+		right: -0.35rem;
+
+		width: 0.75rem;
+		height: 0.75rem;
+	}
 }
 
 .VariantsLink-Hint {
@@ -40,10 +63,6 @@
 
 	.VariantsLink_one-per-row {
 		grid-column: 6/16;
-	}
-
-	.VariantsLink-Word {
-		display: inline;
 	}
 }
 

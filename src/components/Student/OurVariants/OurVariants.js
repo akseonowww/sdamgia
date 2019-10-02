@@ -37,21 +37,111 @@ const OurVariants = () => (
 		</p>
 
 		<Grid className="Variants">
-			<VariantsLink to="/test?id=24890461">1</VariantsLink>
-			<VariantsLink to="/test?id=24890462">2</VariantsLink>
-			<VariantsLink to="/test?id=24890463">3</VariantsLink>
-			<VariantsLink to="/test?id=24890464">4</VariantsLink>
-			<VariantsLink to="/test?id=24890465">5</VariantsLink>
-			<VariantsLink to="/test?id=24890466">6</VariantsLink>
-			<VariantsLink to="/test?id=24890467">7</VariantsLink>
-			<VariantsLink to="/test?id=24890468">8</VariantsLink>
-			<VariantsLink to="/test?id=24890469">9</VariantsLink>
-			<VariantsLink to="/test?id=248904610">10</VariantsLink>
-			<VariantsLink to="/test?id=248904611">11</VariantsLink>
-			<VariantsLink to="/test?id=248904612">12</VariantsLink>
-			<VariantsLink to="/test?id=248904613">13</VariantsLink>
-			<VariantsLink to="/test?id=248904614">14</VariantsLink>
-			<VariantsLink to="/test?id=248904615">15</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890461"
+			>
+				1
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890462"
+			>
+				2
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890463"
+			>
+				3
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890464"
+			>
+				4
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890465"
+			>
+				5
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890466"
+			>
+				6
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890467"
+			>
+				7
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890468"
+			>
+				8
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=24890469"
+			>
+				9
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=248904610"
+			>
+				10
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=248904611"
+			>
+				11
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=248904612"
+			>
+				12
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=248904613"
+			>
+				13
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=248904614"
+			>
+				14
+			</VariantsLink>
+			<VariantsLink
+				className="OurVariants-Link"
+				data-wordClassName="OurVariants-Word"
+				to="/test?id=248904615"
+			>
+				15
+			</VariantsLink>
 			<VariantsLink
 				className="VariantsLink_one-per-row Link_static"
 				to="/test?a=own_test"
