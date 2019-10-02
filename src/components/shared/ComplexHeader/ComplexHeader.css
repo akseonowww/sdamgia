@@ -1,5 +1,5 @@
 .ComplexHeader-Link {
-	margin-top: 5px;
+	margin-top: 0.4rem;
 }
 
 .ComplexHeader-Link_desktop {
@@ -7,7 +7,7 @@
 }
 
 .ComplexHeader-Link_mobile {
-	margin-top: 10px;
+	margin-top: 1rem;
 
 	text-align: center;
 }

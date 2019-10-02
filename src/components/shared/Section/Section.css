@@ -1,9 +1,9 @@
 .Section {
-	margin-bottom: 25px;
+	margin-bottom: 1.75rem;
 
-	font-size: 1.25rem;
+	font-size: 1rem;
 
-	border-top: 3px solid #006;
+	border-top: 0.15rem solid #006;
 }
 
 .Section-ComplexHeader {
@@ -12,28 +12,19 @@
 }
 
 .Section-Desc {
-	margin: 0 0 10px;
+	margin: 0 0 1rem;
 
-	line-height: 1.75rem;
+	line-height: 1.4rem;
 	text-align: left;
 }
 
 @media (min-width: 576px) {
-	.Section {
-		font-size: 1rem;
-
-		border-top-width: 2px;
-	}
-
 	.Section-ComplexHeader {
-		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 	}
 
 	.Section-Desc {
-		padding-right: 25px;
-		
-		line-height: 13pt;
+		padding-right: 1.75rem;
 	}
 }
