@@ -1,6 +1,7 @@
 .Button {
 	margin: 0 !important;
 	padding: 4px 15px 6px !important;
+	padding: 0.25rem 1.1rem 0.5rem !important;
 
 	font-size: 1rem;
 }
