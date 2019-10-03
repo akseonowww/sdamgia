@@ -1,0 +1,13 @@
+.CatalogSearch {
+    grid-column: span 20;
+
+    border-top: 0.15rem solid #006;
+}
+
+@media (min-width: 576px) {
+	.CatalogSearch {
+        grid-column: span 10;
+
+        border-top: none;
+    }
+}

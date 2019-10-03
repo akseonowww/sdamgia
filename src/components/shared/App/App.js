@@ -284,7 +284,7 @@ function App() {
 								title="Для поиска нажмите клавишу Enter"
 							>
 								<input
-									class="input search-input"
+									class="Input search-input"
 									type="text"
 									name="id"
 									placeholder="№/текст задания"

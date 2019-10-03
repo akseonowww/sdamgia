@@ -1,0 +1,15 @@
+.TeacherVariant {
+	grid-column: span 20;
+    margin-bottom: 1.75rem;
+    padding-right: 0.4rem;
+}
+
+@media (min-width: 576px) {
+	.TeacherVariant {
+		grid-column: span 10;
+        margin-bottom: 0;
+        padding-bottom: 1.5rem;
+
+		border-right: 0.15rem solid #006;
+	}
+}

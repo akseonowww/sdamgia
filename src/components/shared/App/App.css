@@ -644,7 +644,7 @@ input[type='submit'] {
 	-o-transition-duration: 0.1s;
 	transition-duration: 0.1s;
 	min-width: 60px;
-	font-size: 9pt;
+	/* font-size: 9pt; */
 	margin-top: 9px;
 }
 
@@ -680,7 +680,7 @@ textarea {
 	padding: 2px;
 	box-shadow: inset 0 0 3px rgba(77, 77, 77, 0.35);
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 9pt;
+	/* font-size: 9pt; */
 	max-width: calc(100% - 5px);
 }
 
@@ -1327,16 +1327,6 @@ input[type='submit'] {
 	clear: both;
 }
 
-.input {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 5px 8px 6px;
-	background: #f0f0f0;
-	border: none;
-	border-radius: 3px;
-	box-shadow: none;
-	outline: none;
-}
 .Sidebar-Search {
 	margin: 14px 0 7px;
 }
@@ -1350,10 +1340,14 @@ input[type='submit'] {
 	max-width: 100% !important;
 	margin: 0;
 	padding: 6px 2px 7px 26px !important;
+
+	font-size: 9pt;
+
 	background: #f0f0f0 !important;
 	border: none !important;
 	border-radius: 7px !important;
 	box-shadow: none !important;
+
 	outline: none;
 }
 .search__search-icon {
