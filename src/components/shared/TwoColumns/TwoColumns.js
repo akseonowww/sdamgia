@@ -1,0 +1,24 @@
+import React from 'react';
+
+import Section from '../Section';
+import Grid from '../Grid';
+import './TwoColumns.css';
+
+const TwoColumns = props => {
+	const { children } = props;
+
+	return (
+		<Section>
+			<Grid>
+				<div className="TwoColumns-Col TwoColumns-Col_1">
+					{children[0]}
+				</div>
+				<div className="TwoColumns-Col TwoColumns-Col_2">
+					{children[1]}
+				</div>
+			</Grid>
+		</Section>
+	);
+};
+
+export default TwoColumns;
