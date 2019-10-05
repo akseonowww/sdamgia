@@ -79,7 +79,7 @@ const Constructor = () => {
 									<button
 										className={
 											'ConstructorForm-CounterButton ' +
-											(!values.count1 &&
+											(values.count1 == 0 &&
 												'ConstructorForm-CounterButton_disabled')
 										}
 										data-input="count1"
@@ -122,7 +122,7 @@ const Constructor = () => {
 									<button
 										className={
 											'ConstructorForm-CounterButton ' +
-											(!values.count2 &&
+											(values.count2 == 0 &&
 												'ConstructorForm-CounterButton_disabled')
 										}
 										data-input="count2"
@@ -152,7 +152,7 @@ const Constructor = () => {
 										</div>
 										<div className="CostructorForm-TopicDesc">
 											<button className="Link Link_pseudo Link_pseudo-black">
-												Про­стей­шие текстовые задачи
+												Текстовые задачи
 											</button>
 										</div>
 									</div>
