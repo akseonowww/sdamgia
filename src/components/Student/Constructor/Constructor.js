@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Section from '../../shared/Section';
 import Grid from '../../shared/Grid';
 import Title from '../../shared/Title';
+import '../../shared/Input/Input.css';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
 
