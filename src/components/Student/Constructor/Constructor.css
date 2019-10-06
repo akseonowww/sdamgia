@@ -14,7 +14,7 @@
 }
 
 .ConstructorForm-Row_head {
-	padding-bottom: 0.55rem;
+	padding-bottom: 0.75rem;
 
 	font-weight: bold;
 	color: #006;
@@ -22,10 +22,15 @@
 	border-bottom: 0.05rem solid rgba(0, 0, 102, 0.25);
 }
 
-.ConstructorForm-Row_extra {
+.ConstructorForm-Row_label {
 	grid-template-columns: 1fr;
+	margin-top: 1rem;
 
 	font-style: italic;
+}
+
+.ConstructorForm-Row_head + .ConstructorForm-Row_label {
+	margin-top: -0.25rem;
 }
 
 .ConstructorForm-ExtraTopics {

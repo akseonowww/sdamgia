@@ -62,7 +62,7 @@ const Constructor = () => {
 		count16: 0,
 		count17: 0,
 		count18: 0,
-		count19: 0,
+		count19: 0
 	});
 
 	const handleInputChange = e => {
@@ -97,6 +97,12 @@ const Constructor = () => {
 								Количество
 							</div>
 							<div className="ConstructorForm-Topic">Тема</div>
+						</div>
+						
+						<div className="ConstructorForm-Row ConstructorForm-Row_label">
+							<div className="ConstructorForm-Topic">
+								Тестовая часть
+							</div>
 						</div>
 						<div className="ConstructorForm-MainContent">
 							<div className="ConstructorForm-Row">
@@ -412,6 +418,11 @@ const Constructor = () => {
 								</div>
 							</div>
 
+							<div className="ConstructorForm-Row ConstructorForm-Row_label">
+								<div className="ConstructorForm-Topic">
+									Развернутая часть
+								</div>
+							</div>
 							<div className="ConstructorForm-Row">
 								<Counter
 									name="count13"
@@ -596,7 +607,7 @@ const Constructor = () => {
 						</div>
 
 						<div className="ConstructorForm-ExtraContent">
-							<div className="ConstructorForm-Row ConstructorForm-Row_extra">
+							<div className="ConstructorForm-Row ConstructorForm-Row_label">
 								<div className="ConstructorForm-Topic">
 									<button class="Link Link_pseudo Link_pseudo-black">
 										Задания, не входящие в ЕГЭ этого года
