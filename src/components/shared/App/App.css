@@ -241,11 +241,11 @@ span.our_test a:hover {
 body,
 div,
 td {
-	color: #000;
 	font-family: Verdana, Geneva, sans-serif;
+	/* text-align: justify; */
+	/* color: #000; */
 	/* font-size: 9pt; */
 	/* margin: 5px 0 0; */
-	text-align: justify;
 }
 
 td {
@@ -573,10 +573,13 @@ div[id=''] {
 }
 
 .menu_l {
-	cursor: pointer;
+	color: #000;
+
 	background-image: url(https://ege.sdamgia.ru/img/square.svg);
 	background-repeat: no-repeat;
 	background-position: center left;
+
+	cursor: pointer;
 }
 
 .menu_l:hover {
@@ -1312,6 +1315,8 @@ input[type='submit'] {
 	height: auto !important;
 
 	border-right: 2px solid silver;
+
+	color: #000;
 }
 
 .Sidebar-BannerAd {

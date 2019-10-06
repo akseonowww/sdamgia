@@ -74,6 +74,12 @@ const Constructor = () => {
 				<Grid className="ConstructorForm">
 					<div className="ConstructorForm-TopicList">
 						<div>
+							<div className="ConstructorForm-TopicListGrid ConstructorForm-Head">
+								<div className="ConstructorForm-Counter">
+									Количество
+								</div>
+								<div className="CostructorForm-Topic">Тема</div>
+							</div>
 							<div className="ConstructorForm-TopicListGrid">
 								<div className="ConstructorForm-Counter">
 									<button
@@ -117,7 +123,8 @@ const Constructor = () => {
 										Вычисления
 									</div>
 								</div>
-
+							</div>
+							<div className="ConstructorForm-TopicListGrid">
 								<div className="ConstructorForm-Counter">
 									<button
 										className={
