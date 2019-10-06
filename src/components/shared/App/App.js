@@ -66,11 +66,7 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</header>
 
-					<div
-						class="Nav PageLayout-Nav_mobile"
-					>
-						≡ математика
-					</div>
+					<div class="Nav PageLayout-Nav_mobile">≡ математика</div>
 					<nav className="Nav PageLayout-Nav PageLayout-Nav_desktop">
 						<a
 							className="subjhr"
@@ -528,18 +524,14 @@ function App() {
 								target="_blank"
 								rel="noopener noreferrer"
 								title="Андроиды"
-							>
-								&nbsp;
-							</a>
+							></a>
 							<a
 								className="button-store ButtonStore_iOS"
 								href="https://appsto.re/ru/TSavbb.i"
 								target="_blank"
 								rel="noopener noreferrer"
 								title="Джобсы"
-							>
-								&nsbp;
-							</a>
+							></a>
 						</div>
 
 						<img
