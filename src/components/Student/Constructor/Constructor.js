@@ -78,7 +78,7 @@ const Constructor = () => {
 							<div className="ConstructorForm-Counter">
 								Количество
 							</div>
-							<div className="CostructorForm-Topic">Тема</div>
+							<div className="ConstructorForm-Topic">Тема</div>
 						</div>
 						<div className="ConstructorForm-MainContent">
 							<div className="ConstructorForm-Row">
@@ -109,18 +109,19 @@ const Constructor = () => {
 										+
 									</button>
 								</div>
-								<div className="CostructorForm-Topic">
-									<div className="CostructorForm-TopicName">
-										<div className="CostructorForm-TopicNumber">
-											1.&nbsp;
-										</div>
-										<div className="CostructorForm-TopicDesc">
-											<button className="Link Link_pseudo Link_pseudo-black">
+								<div className="ConstructorForm-Topic">
+									<div className="ConstructorForm-TopicName">
+										<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicNameAlign">
+											<span className="ConstructorForm-TopicNumber">
+												1.
+											</span>{' '}
+											<u className="Link_wrap-U">
 												Про­стей­шие текстовые задачи
-											</button>
-										</div>
+											</u>
+										</button>
 									</div>
-									<div className="CostructorForm-TopicSubs">
+
+									<div className="ConstructorForm-TopicSubs">
 										Вычисления
 									</div>
 								</div>
@@ -154,18 +155,18 @@ const Constructor = () => {
 										+
 									</button>
 								</div>
-								<div className="CostructorForm-Topic">
-									<div className="CostructorForm-TopicName">
-										<div className="CostructorForm-TopicNumber">
-											11.&nbsp;
-										</div>
-										<div className="CostructorForm-TopicDesc">
-											<button className="Link Link_pseudo Link_pseudo-black">
+								<div className="ConstructorForm-Topic">
+									<div className="ConstructorForm-TopicName">
+										<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicLink ConstructorForm-TopicNameAlign">
+											<span className="ConstructorForm-TopicNumber">
+												11.
+											</span>{' '}
+											<u className="Link_wrap-U">
 												Текстовые задачи
-											</button>
-										</div>
+											</u>
+										</button>
 									</div>
-									<div className="CostructorForm-TopicSubs">
+									<div className="ConstructorForm-TopicSubs">
 										Вычисления
 									</div>
 								</div>
@@ -173,7 +174,7 @@ const Constructor = () => {
 						</div>
 						<div className="ConstructorForm-ExtraContent">
 							<div className="ConstructorForm-Row ConstructorForm-Row_extra">
-								<div className="CostructorForm-Topic">
+								<div className="ConstructorForm-Topic">
 									<button class="Link Link_pseudo Link_pseudo-black">
 										Задания, не входящие в ЕГЭ этого года
 									</button>
@@ -208,18 +209,18 @@ const Constructor = () => {
 											+
 										</button>
 									</div>
-									<div className="CostructorForm-Topic">
-										<div className="CostructorForm-TopicName">
-											<div className="CostructorForm-TopicNumber">
+									<div className="ConstructorForm-Topic">
+										<div className="ConstructorForm-TopicName">
+											<div className="ConstructorForm-TopicNumber">
 												Д1.&nbsp;
 											</div>
-											<div className="CostructorForm-TopicDesc">
+											<div className="ConstructorForm-TopicDesc">
 												<button className="Link Link_pseudo Link_pseudo-black">
 													Выбор оптимального варианта
 												</button>
 											</div>
 										</div>
-										<div className="CostructorForm-TopicSubs">
+										<div className="ConstructorForm-TopicSubs">
 											Выбор варианта из двух возможных
 										</div>
 									</div>

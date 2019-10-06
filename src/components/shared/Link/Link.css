@@ -23,7 +23,7 @@
 .Link_pseudo {
 	margin: 0;
 	padding: 0;
-	
+
 	font-family: inherit;
 	font-size: inherit;
 
@@ -50,4 +50,19 @@
 
 .Link_pseudo:hover {
 	border-color: rgba(255, 102, 0, 0.5) !important;
+}
+
+.Link_wrap {
+	width: 100%;
+
+	text-align: left;
+
+	border-width: 0;
+}
+
+.Link_wrap-U {
+	border-bottom-width: 0.1rem;
+	border-bottom-style: inherit;
+	border-bottom-color: inherit;
+	text-decoration: none;
 }

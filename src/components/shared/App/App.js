@@ -524,14 +524,18 @@ function App() {
 								target="_blank"
 								rel="noopener noreferrer"
 								title="Андроиды"
-							></a>
+							>
+								{' '}
+							</a>
 							<a
 								className="button-store ButtonStore_iOS"
 								href="https://appsto.re/ru/TSavbb.i"
 								target="_blank"
 								rel="noopener noreferrer"
 								title="Джобсы"
-							></a>
+							>
+								{' '}
+							</a>
 						</div>
 
 						<img

@@ -47,7 +47,7 @@
 	text-align: center;
 
 	background: transparent;
-	border: .1rem solid;
+	border: 0.1rem solid;
 	border-color: #f0f0f0;
 	border-radius: 50%;
 	box-shadow: none;
@@ -72,17 +72,17 @@
 	text-align: center;
 }
 
-.CostructorForm-TopicSubs {
-	display: none;
+.ConstructorForm-TopicNameAlign {
+	padding: 0.3rem 1.5rem 0.4rem 0;
 }
 
-.CostructorForm-TopicName {
-	display: grid;
-	grid-template-columns: 28px 1fr;
-	/* grid-column-gap: 0.4rem; */
-	padding-top: 0.3rem;
-}
+.ConstructorForm-TopicNumber {
+	display: inline-block;
+	width: 1.65rem;
 
-.CostructorForm-TopicNumber {
 	text-align: right;
+}
+
+.ConstructorForm-TopicSubs {
+	display: none;
 }
