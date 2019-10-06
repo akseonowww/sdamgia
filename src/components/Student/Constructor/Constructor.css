@@ -72,14 +72,14 @@
 	text-align: center;
 }
 
-.ConstructorForm-TopicNameAlign {
+.ConstructorForm-TopicName {
+	display: grid;
+	grid-template-columns: 1.65rem 1fr;
+	grid-column-gap: 0.35rem;
 	padding: 0.3rem 1.5rem 0.4rem 0;
 }
 
 .ConstructorForm-TopicNumber {
-	display: inline-block;
-	width: 1.65rem;
-
 	text-align: right;
 }
 

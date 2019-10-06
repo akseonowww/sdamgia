@@ -110,16 +110,16 @@ const Constructor = () => {
 									</button>
 								</div>
 								<div className="ConstructorForm-Topic">
-									<div className="ConstructorForm-TopicName">
-										<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicNameAlign">
-											<span className="ConstructorForm-TopicNumber">
-												1.
-											</span>{' '}
-											<u className="Link_wrap-U">
-												Про­стей­шие текстовые задачи
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											1.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Простейшие текстовые задачи
 											</u>
-										</button>
-									</div>
+										</div>
+									</button>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -156,16 +156,16 @@ const Constructor = () => {
 									</button>
 								</div>
 								<div className="ConstructorForm-Topic">
-									<div className="ConstructorForm-TopicName">
-										<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicLink ConstructorForm-TopicNameAlign">
-											<span className="ConstructorForm-TopicNumber">
-												11.
-											</span>{' '}
-											<u className="Link_wrap-U">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											11.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
 												Текстовые задачи
 											</u>
-										</button>
-									</div>
+										</div>
+									</button>
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
 									</div>
@@ -210,16 +210,16 @@ const Constructor = () => {
 										</button>
 									</div>
 									<div className="ConstructorForm-Topic">
-										<div className="ConstructorForm-TopicName">
+										<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 											<div className="ConstructorForm-TopicNumber">
-												Д1.&nbsp;
+												Д1.
 											</div>
 											<div className="ConstructorForm-TopicDesc">
-												<button className="Link Link_pseudo Link_pseudo-black">
+												<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
 													Выбор оптимального варианта
-												</button>
+												</u>
 											</div>
-										</div>
+										</button>
 										<div className="ConstructorForm-TopicSubs">
 											Выбор варианта из двух возможных
 										</div>
