@@ -73,14 +73,14 @@ const Constructor = () => {
 			<form action="/test?a=generate" method="GET">
 				<Grid className="ConstructorForm">
 					<div className="ConstructorForm-TopicList">
-						<div>
-							<div className="ConstructorForm-TopicListGrid ConstructorForm-Head">
-								<div className="ConstructorForm-Counter">
-									Количество
-								</div>
-								<div className="CostructorForm-Topic">Тема</div>
+						<div className="ConstructorForm-Row ConstructorForm-Row_head">
+							<div className="ConstructorForm-Counter">
+								Количество
 							</div>
-							<div className="ConstructorForm-TopicListGrid">
+							<div className="CostructorForm-Topic">Тема</div>
+						</div>
+						<div className="ConstructorForm-MainContent">
+							<div className="ConstructorForm-Row">
 								<div className="ConstructorForm-Counter">
 									<button
 										className={
@@ -124,7 +124,8 @@ const Constructor = () => {
 									</div>
 								</div>
 							</div>
-							<div className="ConstructorForm-TopicListGrid">
+
+							<div className="ConstructorForm-Row">
 								<div className="ConstructorForm-Counter">
 									<button
 										className={
@@ -169,7 +170,63 @@ const Constructor = () => {
 								</div>
 							</div>
 						</div>
+						<div className="ConstructorForm-ExtraContent">
+							<div className="ConstructorForm-Row ConstructorForm-Row_extra">
+								<div className="CostructorForm-Topic">
+									<button class="Link Link_pseudo Link_pseudo-black">
+										Задания, не входящие в ЕГЭ этого года
+									</button>
+								</div>
+							</div>
+							<div className="ConstructorForm-ExtraTopics">
+								<div className="ConstructorForm-Row">
+									<div className="ConstructorForm-Counter">
+										<button
+											className={
+												'ConstructorForm-CounterButton ' +
+												(values.count1 == 0 &&
+													'ConstructorForm-CounterButton_disabled')
+											}
+											data-input="count1"
+											onClick={decrement}
+										>
+											−
+										</button>
+										<input
+											className="ConstructorForm-CounterInput Input"
+											type="text"
+											name="count1"
+											value={values.count1}
+											onInput={handleInputChange}
+										/>
+										<button
+											class="ConstructorForm-CounterButton"
+											data-input="count1"
+											onClick={increment}
+										>
+											+
+										</button>
+									</div>
+									<div className="CostructorForm-Topic">
+										<div className="CostructorForm-TopicName">
+											<div className="CostructorForm-TopicNumber">
+												Д1.&nbsp;
+											</div>
+											<div className="CostructorForm-TopicDesc">
+												<button className="Link Link_pseudo Link_pseudo-black">
+													Выбор оптимального варианта
+												</button>
+											</div>
+										</div>
+										<div className="CostructorForm-TopicSubs">
+											Выбор варианта из двух возможных
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+
 					<div className="ConstructorForm-Buttons">
 						<div className="ConstructorForm-ButtonsPanel">
 							<input

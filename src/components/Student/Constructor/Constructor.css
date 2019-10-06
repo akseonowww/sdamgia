@@ -6,20 +6,30 @@
 	grid-column: 16/21;
 }
 
-.ConstructorForm-TopicListGrid {
+.ConstructorForm-Row {
 	display: grid;
 	grid-template-columns: 100px 1fr;
 	grid-column-gap: 0.75rem;
 	margin-bottom: 0.75rem;
 }
 
-.ConstructorForm-Head {
+.ConstructorForm-Row_head {
 	padding-bottom: 0.55rem;
 
 	font-weight: bold;
 	color: #006;
 
 	border-bottom: 0.05rem solid rgba(0, 0, 102, 0.25);
+}
+
+.ConstructorForm-Row_extra {
+	grid-template-columns: 1fr;
+
+	font-style: italic;
+}
+
+.ConstructorForm-ExtraTopics {
+	display: none;
 }
 
 .ConstructorForm-Counter {

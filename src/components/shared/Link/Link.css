@@ -1,4 +1,6 @@
 .Link {
+	font-weight: inherit;
+	font-style: inherit;
 	color: #006;
 
 	border-bottom: 0.05rem solid;
