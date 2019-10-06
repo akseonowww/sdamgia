@@ -45,7 +45,24 @@ const useCounter = (initial = { count1: 0, count2: 0 }) => {
 const Constructor = () => {
 	const { values, setValues, increment, decrement } = useCounter({
 		count1: 0,
-		count2: 0
+		count2: 0,
+		count3: 0,
+		count4: 0,
+		count5: 0,
+		count6: 0,
+		count7: 0,
+		count8: 0,
+		count9: 0,
+		count10: 0,
+		count11: 0,
+		count12: 0,
+		count13: 0,
+		count14: 0,
+		count15: 0,
+		count16: 0,
+		count17: 0,
+		count18: 0,
+		count19: 0,
 	});
 
 	const handleInputChange = e => {
@@ -119,6 +136,241 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
+											2.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Чтение графиков и диаграмм
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count3"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											3.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Квадратная решетка, координатная
+												плоскость
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count4"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											4.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Начала теории вероятностей
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count5"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											5.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Простейшие уравнения
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count6"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											6.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Планиметрия
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count7"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											7.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Производная и первообразная
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count8"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											8.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Стереометрия
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count9"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											9.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Вычисления и преобразования
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count10"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											10.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Задачи с прикладным содержанием
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count11"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
 											11.
 										</div>
 										<div className="ConstructorForm-TopicDesc">
@@ -132,7 +384,217 @@ const Constructor = () => {
 									</div>
 								</div>
 							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count12"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											12.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Наибольшее и наименьшее значение
+												функций
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count13"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											13.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Уравнения
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count14"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											14.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Стереометрическая задача
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count15"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											15.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Неравенства
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count16"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											16.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Планиметрическая задача
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count17"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											17.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Финансовая математика
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count18"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											18.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Задача с параметром
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									name="count19"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											19.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Числа и их свойства
+											</u>
+										</div>
+									</button>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
 						</div>
+
 						<div className="ConstructorForm-ExtraContent">
 							<div className="ConstructorForm-Row ConstructorForm-Row_extra">
 								<div className="ConstructorForm-Topic">
