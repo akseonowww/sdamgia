@@ -8,7 +8,7 @@
 
 .ConstructorForm-Row {
 	display: grid;
-	grid-template-columns: 102.5px 1fr;
+	grid-template-columns: 105px 1fr;
 	grid-column-gap: 0.75rem;
 	margin-bottom: 0.75rem;
 }
@@ -30,46 +30,6 @@
 
 .ConstructorForm-ExtraTopics {
 	display: none;
-}
-
-.ConstructorForm-Counter {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-.ConstructorForm-CounterButton {
-	margin: 0;
-	padding: 0.227rem 0.495rem 0.33rem;
-
-	font-size: 1rem;
-	font-family: Verdana, sans-serif;
-	text-align: center;
-
-	background: transparent;
-	border: 0.1rem solid;
-	border-color: #f0f0f0;
-	border-radius: 50%;
-	box-shadow: none;
-	outline: none;
-}
-
-.ConstructorForm-CounterButton_disabled {
-	color: #ccc;
-}
-
-.ConstructorForm-CounterButton:not(.ConstructorForm-CounterButton_disabled):hover {
-	color: #f60;
-
-	border-color: rgba(255, 102, 51, 0.5);
-
-	cursor: pointer;
-}
-
-.ConstructorForm-CounterInput {
-	width: 40px;
-
-	text-align: center;
 }
 
 .ConstructorForm-TopicName {

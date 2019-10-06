@@ -1,0 +1,39 @@
+.Counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.CounterButton {
+	margin: 0;
+	padding: 0.227rem 0.495rem 0.33rem;
+
+	font-size: 1rem;
+	font-family: Verdana, sans-serif;
+	text-align: center;
+
+	background: transparent;
+	border: 0.1rem solid;
+	border-color: #f0f0f0;
+	border-radius: 50%;
+	box-shadow: none;
+	outline: none;
+}
+
+.CounterButton_disabled {
+	color: #ccc;
+}
+
+.CounterButton:not(.CounterButton_disabled):hover {
+	color: #f60;
+
+	border-color: rgba(255, 102, 51, 0.5);
+
+	cursor: pointer;
+}
+
+.CounterInput {
+	width: 3rem;
+
+	text-align: center;
+}

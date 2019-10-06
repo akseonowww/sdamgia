@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Section from '../../shared/Section';
 import Grid from '../../shared/Grid';
 import Title from '../../shared/Title';
+import Counter from '../../shared/Counter/Counter';
 import '../../shared/Input/Input.css';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
@@ -82,33 +83,13 @@ const Constructor = () => {
 						</div>
 						<div className="ConstructorForm-MainContent">
 							<div className="ConstructorForm-Row">
-								<div className="ConstructorForm-Counter">
-									<button
-										className={
-											'ConstructorForm-CounterButton ' +
-											(values.count1 == 0 &&
-												'ConstructorForm-CounterButton_disabled')
-										}
-										data-input="count1"
-										onClick={decrement}
-									>
-										−
-									</button>
-									<input
-										className="ConstructorForm-CounterInput Input"
-										type="text"
-										name="count1"
-										value={values.count1}
-										onInput={handleInputChange}
-									/>
-									<button
-										class="ConstructorForm-CounterButton"
-										data-input="count1"
-										onClick={increment}
-									>
-										+
-									</button>
-								</div>
+								<Counter
+									name="count1"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
 								<div className="ConstructorForm-Topic">
 									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
@@ -128,33 +109,13 @@ const Constructor = () => {
 							</div>
 
 							<div className="ConstructorForm-Row">
-								<div className="ConstructorForm-Counter">
-									<button
-										className={
-											'ConstructorForm-CounterButton ' +
-											(values.count2 == 0 &&
-												'ConstructorForm-CounterButton_disabled')
-										}
-										data-input="count2"
-										onClick={decrement}
-									>
-										−
-									</button>
-									<input
-										className="ConstructorForm-CounterInput Input"
-										name="count2"
-										type="text"
-										value={values.count2}
-										onInput={handleInputChange}
-									/>
-									<button
-										class="ConstructorForm-CounterButton"
-										data-input="count2"
-										onClick={increment}
-									>
-										+
-									</button>
-								</div>
+								<Counter
+									name="count2"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
 								<div className="ConstructorForm-Topic">
 									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
