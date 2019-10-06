@@ -609,7 +609,7 @@ const Constructor = () => {
 						<div className="ConstructorForm-ExtraContent">
 							<div className="ConstructorForm-Row ConstructorForm-Row_label">
 								<div className="ConstructorForm-Topic">
-									<button class="Link Link_pseudo Link_pseudo-black">
+									<button class="Link Link_pseudo">
 										Задания, не входящие в ЕГЭ этого года
 									</button>
 								</div>
