@@ -4,7 +4,7 @@ import Section from '../../shared/Section';
 import Grid from '../../shared/Grid';
 import Title from '../../shared/Title';
 import Counter from '../../shared/Counter/Counter';
-import '../../shared/Input/Input.css';
+import Checkbox from '../../shared/Checkbox';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
 
@@ -50,6 +50,15 @@ const Constructor = () => {
 		count4: 0,
 		count5: 0,
 		count6: 0,
+		subtopic61: true,
+		subtopic62: true,
+		subtopic63: true,
+		subtopic64: true,
+		subtopic65: true,
+		subtopic66: true,
+		subtopic67: true,
+		subtopic68: true,
+		subtopic69: true,
 		count7: 0,
 		count8: 0,
 		count9: 0,
@@ -64,13 +73,30 @@ const Constructor = () => {
 		count18: 0,
 		count19: 0
 	});
+	const [subtopics, setSubtopics] = useState({
+		subtopics6: false
+	});
 
 	const handleInputChange = e => {
-		const { name: input, value } = e.target;
+		const target = e.target;
+		const value =
+			target.type === 'checkbox' ? target.checked : target.value;
+		const name = target.name;
 
 		setValues({
 			...values,
-			...{ [input]: value }
+			...{ [name]: value }
+		});
+	};
+
+	const handleTopicClick = e => {
+		const { subtopics: subtopicsName } = e.currentTarget.dataset;
+
+		e.preventDefault();
+
+		setSubtopics({
+			...subtopics,
+			...{ [subtopicsName]: !subtopics[subtopicsName] }
 		});
 	};
 
@@ -98,7 +124,7 @@ const Constructor = () => {
 							</div>
 							<div className="ConstructorForm-Topic">Тема</div>
 						</div>
-						
+
 						<div className="ConstructorForm-Row ConstructorForm-Row_label">
 							<div className="ConstructorForm-Topic">
 								Тестовая часть
@@ -245,7 +271,11 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<button
+										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
+										data-subtopics="subtopics6"
+										onClick={handleTopicClick}
+									>
 										<div className="ConstructorForm-TopicNumber">
 											6.
 										</div>
@@ -256,9 +286,170 @@ const Constructor = () => {
 										</div>
 									</button>
 
-									<div className="ConstructorForm-TopicSubs">
-										Вычисления
-									</div>
+									{subtopics.subtopics6 && (
+										<div
+											className="ConstructorForm-TopicSubs"
+											style={{ display: 'block' }}
+										>
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic61"
+														value={
+															values.subtopic61
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Решение прямоугольного
+													треугольника
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic62"
+														value={
+															values.subtopic62
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Решение равнобедренного
+													треугольника
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic63"
+														value={
+															values.subtopic63
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Треугольники общего вида
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic64"
+														value={
+															values.subtopic64
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Параллелограммы
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic65"
+														value={
+															values.subtopic65
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Задания тренировочных
+													и диагностических работ
+													Задания тренировочных и
+													диагностических работ
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic66"
+														value={
+															values.subtopic66
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Центральные и вписанные углы
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic67"
+														value={
+															values.subtopic67
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Касательная, хорда, секущая
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic68"
+														value={
+															values.subtopic68
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Вписанные окружности
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														name="subtopic69"
+														value={
+															values.subtopic69
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Описанные окружности
+												</div>
+											</label>
+										</div>
+									)}
 								</div>
 							</div>
 
