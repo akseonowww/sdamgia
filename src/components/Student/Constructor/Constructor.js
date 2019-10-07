@@ -376,8 +376,6 @@ const Constructor = () => {
 												<div className="ConstructorForm-TopicDesc">
 													Задания тренировочных
 													и диагностических работ
-													Задания тренировочных и
-													диагностических работ
 												</div>
 											</label>
 
