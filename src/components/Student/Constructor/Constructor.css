@@ -52,3 +52,30 @@
 .ConstructorForm-TopicSubs {
 	display: none;
 }
+
+.ConstructorForm-ButtonsPanel {
+	margin-top: 28px;
+	padding: 1rem 0.4rem 1.75rem;
+
+	background: #f0f5ff;
+}
+
+.ConstructorForm-SubmitButton {
+	width: 100%;
+	height: 4.25rem;
+	margin-bottom: 0.9rem !important;
+
+	white-space: normal;
+}
+
+.ConstructorForm-Switcher {
+	margin-bottom: 0.75rem;
+}
+
+.ConstructorForm-ResetButton {
+	padding: 0 1rem 0.35rem;
+}
+
+.ConstructorForm-ResetButtonText {
+	margin-left: 0.45rem;
+}

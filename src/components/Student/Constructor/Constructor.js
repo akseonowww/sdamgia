@@ -5,6 +5,9 @@ import Grid from '../../shared/Grid';
 import Title from '../../shared/Title';
 import Counter from '../../shared/Counter/Counter';
 import Checkbox from '../../shared/Checkbox';
+import '../../shared/Switcher/Switcher.css';
+import '../../shared/Switcher/_vertical/Switcher_vertical.css';
+import '../../shared/Switcher/_checkbox/Switcher_checkbox.css';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
 
@@ -44,6 +47,7 @@ const useCounter = (initial = { count1: 0, count2: 0 }) => {
 
 const Constructor = () => {
 	const { values, setValues, increment, decrement } = useCounter({
+		testPart: false,
 		count1: 0,
 		count2: 0,
 		count3: 0,
@@ -65,6 +69,7 @@ const Constructor = () => {
 		count10: 0,
 		count11: 0,
 		count12: 0,
+		detailedPart: false,
 		count13: 0,
 		count14: 0,
 		count15: 0,
@@ -97,6 +102,48 @@ const Constructor = () => {
 		setSubtopics({
 			...subtopics,
 			...{ [subtopicsName]: !subtopics[subtopicsName] }
+		});
+	};
+
+	const switchTestPart = () => {
+		const value = !values.testPart ? 1 : 0;
+
+		setValues({
+			...values,
+			...{
+				testPart: !values.testPart,
+				count1: value,
+				count1: value,
+				count2: value,
+				count3: value,
+				count4: value,
+				count5: value,
+				count6: value,
+				count7: value,
+				count8: value,
+				count9: value,
+				count10: value,
+				count11: value,
+				count12: value
+			}
+		});
+	};
+
+	const switchDetailedPart = () => {
+		const value = !values.detailedPart ? 1 : 0;
+
+		setValues({
+			...values,
+			...{
+				detailedPart: !values.detailedPart,
+				count13: value,
+				count14: value,
+				count15: value,
+				count16: value,
+				count17: value,
+				count18: value,
+				count19: value
+			}
 		});
 	};
 
@@ -855,10 +902,46 @@ const Constructor = () => {
 					<div className="ConstructorForm-Buttons">
 						<div className="ConstructorForm-ButtonsPanel">
 							<input
-								className="Button"
+								className="Button ConstructorForm-SubmitButton"
 								type="submit"
 								value="Составить вариант"
 							/>
+
+							<div className="Switcher Switcher_vertical Switcher_checkbox ConstructorForm-Switcher">
+								<label className="Label Switcher-Label Switcher_vertical-Label Switcher_checkbox-Label">
+									<Checkbox
+										className="Switcher-Input"
+										fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
+										name="testPart"
+										value={values.testPart}
+										onChange={switchTestPart}
+									/>
+									<span className="Switcher-Text Switcher_checkbox-Text">
+										Тестовая часть
+									</span>
+								</label>
+								<label className="Label Switcher-Label Switcher_vertical-Label Switcher_checkbox-Label">
+									<Checkbox
+										className="Switcher-Input"
+										fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
+										name="detailedPart"
+										value={values.detailedPart}
+										onChange={switchDetailedPart}
+									/>
+									<span className="Switcher-Text Switcher_checkbox-Text">
+										Развернутая часть
+									</span>
+								</label>
+							</div>
+
+							<button className="Link Link_pseudo Link_wrap ConstructorForm-ResetButton">
+								<span>
+									×
+								</span>
+								<u className="Link-U Link_pseudo-U Link_wrap-U ConstructorForm-ResetButtonText">
+									Очистить поля
+								</u>
+							</button>
 						</div>
 					</div>
 				</Grid>

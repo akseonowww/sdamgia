@@ -1,0 +1,20 @@
+.Switcher_checkbox-Label {
+	display: flex;
+	padding: .4rem;
+}
+
+.Switcher_checkbox-Label:hover,
+.Switcher_checkbox-Label:hover .Switcher_checkbox-FakeCheckbox {
+	background: rgba(0, 0, 102, 0.1) !important;
+}
+
+.Switcher_checkbox-Text {
+	padding: 0 0 0 .6rem;
+
+	background: transparent !important;
+}
+
+.Switcher_checkbox-FakeCheckbox {
+	border: 0.05rem solid !important;
+	border-color: #006 !important;
+}

@@ -648,7 +648,7 @@ input[type='submit'] {
 	transition-duration: 0.1s;
 	min-width: 60px;
 	/* font-size: 9pt; */
-	margin-top: 9px;
+	/* margin-top: 9px; */
 }
 
 input[type='button']:hover,

@@ -1,0 +1,43 @@
+.Switcher {
+	font-size: 0;
+}
+
+.Switcher-Label {
+	display: inline-block;
+	margin-right: -1px;
+
+	font-size: 1rem;
+	color: #006;
+
+	border: 0.05rem solid #006;
+	background: transparent;
+}
+
+.Switcher-Text {
+	display: block;
+	padding: 4px 15px 6px;
+
+	cursor: pointer;
+}
+
+.Switcher-Input {
+	display: none;
+}
+
+.Switcher-Label:hover .Switcher-Text {
+	background: rgba(0, 0, 102, 0.1);
+}
+
+.Switcher-Input:checked + .Switcher-Text {
+	background: #006 !important;
+	color: #fff;
+
+	cursor: default;
+}
+
+.Switcher-Label:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.Switcher-Label:last-child {
+	border-radius: 0 4px 4px 0;
+}
