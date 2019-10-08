@@ -1,3 +1,7 @@
+.TwoColumns-Grid {
+	grid-row-gap: 0;
+}
+
 .TwoColumns-Col {
 	grid-column: 1/21;
 }

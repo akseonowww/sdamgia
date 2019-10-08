@@ -9,7 +9,7 @@ const TwoColumns = props => {
 
 	return (
 		<Section>
-			<Grid>
+			<Grid className="TwoColumns-Grid">
 				<div className="TwoColumns-Col TwoColumns-Col_1">
 					{children[0]}
 				</div>
