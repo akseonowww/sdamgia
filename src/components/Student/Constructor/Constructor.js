@@ -68,6 +68,7 @@ const Constructor = () => {
 		subtopic66: true,
 		subtopic67: true,
 		subtopic68: true,
+		subtopic69: true,
 		count7: 0,
 		count8: 0,
 		count9: 0,
@@ -393,7 +394,13 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Решение прямоугольного
-													треугольника
+													треугольника ·{' '}
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														48 шт.
+													</a>
 												</div>
 											</label>
 
@@ -412,7 +419,13 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Решение равнобедренного
-													треугольника
+													треугольника ·{' '}
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														45 шт.
+													</a>
 												</div>
 											</label>
 
@@ -431,6 +444,13 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Треугольники общего вида
+													<br />
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														27 шт.
+													</a>
 												</div>
 											</label>
 
@@ -448,7 +468,13 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Параллелограммы
+													Параллелограммы ·{' '}
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														34 шт.
+													</a>
 												</div>
 											</label>
 
@@ -466,7 +492,13 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Центральные и вписанные углы
+													Трапеция ·{' '}
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														25 шт.
+													</a>
 												</div>
 											</label>
 
@@ -484,7 +516,13 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Касательная, хорда, секущая
+													Центральные и вписанные углы ·{' '}
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														12 шт.
+													</a>
 												</div>
 											</label>
 
@@ -502,7 +540,13 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Вписанные окружности
+													Касательная, хорда, секущая ·{' '}
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														11 шт.
+													</a>
 												</div>
 											</label>
 
@@ -520,7 +564,39 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
+													Вписанные окружности
+													<br />
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														24 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic69"
+														value={
+															values.subtopic69
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
 													Описанные окружности
+													<br />
+													<a
+														href="https://math-ege.sdamgia.ru/test?theme=79"
+														className="Link Link_black"
+													>
+														29 шт.
+													</a>
 												</div>
 											</label>
 										</div>
