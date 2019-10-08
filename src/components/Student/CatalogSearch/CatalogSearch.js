@@ -21,7 +21,7 @@ const CatalogSearch = () => (
 					className="Input Form_oneLine-Input"
 					type="text"
 					name="id"
-					placeholder="Номер или текст задания"
+					placeholder="№/текст задания"
 				/>
 				<input className="Button" type="submit" value="Открыть" />
 			</div>
