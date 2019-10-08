@@ -66,12 +66,14 @@
 }
 
 .ConstructorForm-Counter {
+	grid-row: 2;
 	width: 135px;
-	margin: 0 0 0.15rem -0.2rem;
+	margin: 0.2rem 0 0 -0.2rem;
 }
 
 @media (min-width: 576px) {
 	.ConstructorForm-Counter {
+		grid-row: auto;
 		width: auto;
 		margin: 0;
 	}
