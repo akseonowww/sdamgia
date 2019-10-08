@@ -888,40 +888,21 @@ const Constructor = () => {
 						<div className="ConstructorForm-ExtraContent">
 							<div className="ConstructorForm-Row ConstructorForm-Row_label">
 								<div className="ConstructorForm-Topic">
-									<a className="Link Link_pseudo">
+									<span className="Link Link_pseudo">
 										Задания, не входящие в ЕГЭ этого года
-									</a>
+									</span>
 								</div>
 							</div>
 							<div className="ConstructorForm-ExtraTopics">
 								<div className="ConstructorForm-Row">
-									<div className="ConstructorForm-Counter">
-										<button
-											className={
-												'ConstructorForm-CounterButton ' +
-												(values.count1 == 0 &&
-													'ConstructorForm-CounterButton_disabled')
-											}
-											data-input="count1"
-											onClick={decrement}
-										>
-											−
-										</button>
-										<input
-											className="ConstructorForm-CounterInput Input"
-											type="text"
-											name="count1"
-											value={values.count1}
-											onInput={handleInputChange}
-										/>
-										<button
-											class="ConstructorForm-CounterButton"
-											data-input="count1"
-											onClick={increment}
-										>
-											+
-										</button>
-									</div>
+									<Counter
+										className="ConstructorForm-Counter"
+										name="count1"
+										values={values}
+										decrement={decrement}
+										increment={increment}
+										handleInputChange={handleInputChange}
+									/>
 									<div className="ConstructorForm-Topic">
 										<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 											<div className="ConstructorForm-TopicNumber">

@@ -2,9 +2,16 @@ import React, { useRef } from 'react';
 
 import './Counter.css';
 
-const Counter = ({ className, name, values, decrement, increment, handleInputChange }) => {
+const Counter = ({
+	className,
+	name,
+	values,
+	decrement,
+	increment,
+	handleInputChange
+}) => {
 	const countInput = useRef(null);
-	
+
 	const handleInputFocus = () => {
 		countInput.current.setSelectionRange(0, 9999);
 	};
@@ -14,6 +21,7 @@ const Counter = ({ className, name, values, decrement, increment, handleInputCha
 			<button
 				className={
 					'Counter-Button ' +
+					// eslint-disable-next-line
 					(values[name] == 0 && 'Counter-Button_disabled')
 				}
 				data-input={name}
@@ -30,7 +38,11 @@ const Counter = ({ className, name, values, decrement, increment, handleInputCha
 				onClick={handleInputFocus}
 				onChange={handleInputChange}
 			/>
-			<button className="Counter-Button" data-input={name} onClick={increment}>
+			<button
+				className="Counter-Button"
+				data-input={name}
+				onClick={increment}
+			>
 				+
 			</button>
 			<span className="Counter-Caption">шт.</span>
