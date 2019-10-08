@@ -6,7 +6,7 @@ const Counter = ({ className, name, values, decrement, increment, handleInputCha
 	const countInput = useRef(null);
 	
 	const handleInputFocus = () => {
-		countInput.current.select();
+		countInput.current.setSelectionRange(0, 9999);
 	};
 
 	return (
