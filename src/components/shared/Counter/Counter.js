@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import './Counter.css';
 
-const Counter = ({ name, values, decrement, increment, handleInputChange }) => {
+const Counter = ({ className, name, values, decrement, increment, handleInputChange }) => {
 	const countInput = useRef(null);
 	
 	const handleInputFocus = () => {
@@ -10,7 +10,7 @@ const Counter = ({ name, values, decrement, increment, handleInputChange }) => {
 	};
 
 	return (
-		<div className="Counter">
+		<div className={`Counter ${className}`}>
 			<button
 				className={
 					'CounterButton ' +
@@ -27,7 +27,7 @@ const Counter = ({ name, values, decrement, increment, handleInputChange }) => {
 				name={name}
 				value={values[name]}
 				ref={countInput}
-				onFocus={handleInputFocus}
+				onClick={handleInputFocus}
 				onChange={handleInputChange}
 			/>
 			<button class="CounterButton" data-input={name} onClick={increment}>

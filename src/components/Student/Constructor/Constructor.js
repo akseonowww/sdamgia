@@ -113,7 +113,6 @@ const Constructor = () => {
 			...{
 				testPart: !values.testPart,
 				count1: value,
-				count1: value,
 				count2: value,
 				count3: value,
 				count4: value,
@@ -180,6 +179,7 @@ const Constructor = () => {
 						<div className="ConstructorForm-MainContent">
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count1"
 									values={values}
 									decrement={decrement}
@@ -187,7 +187,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											1.
 										</div>
@@ -196,7 +196,7 @@ const Constructor = () => {
 												Простейшие текстовые задачи
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -206,6 +206,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count2"
 									values={values}
 									decrement={decrement}
@@ -213,7 +214,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											2.
 										</div>
@@ -222,7 +223,7 @@ const Constructor = () => {
 												Чтение графиков и диаграмм
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -232,6 +233,37 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
+									name="count2"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											2.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Литосфера. Гидросфера.
+												Атмосфера. Географическая
+												оболочка Земли. Широтная
+												зональность и высотная поясность
+											</u>
+										</div>
+									</div>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+
+							<div className="ConstructorForm-Row">
+								<Counter
+									className="ConstructorForm-Counter"
 									name="count3"
 									values={values}
 									decrement={decrement}
@@ -239,7 +271,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											3.
 										</div>
@@ -249,7 +281,7 @@ const Constructor = () => {
 												плоскость
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -259,6 +291,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count4"
 									values={values}
 									decrement={decrement}
@@ -266,7 +299,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											4.
 										</div>
@@ -275,7 +308,7 @@ const Constructor = () => {
 												Начала теории вероятностей
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -285,6 +318,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count5"
 									values={values}
 									decrement={decrement}
@@ -292,7 +326,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											5.
 										</div>
@@ -301,7 +335,7 @@ const Constructor = () => {
 												Простейшие уравнения
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -311,6 +345,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count6"
 									values={values}
 									decrement={decrement}
@@ -318,7 +353,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button
+									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
 										data-subtopics="subtopics6"
 										onClick={handleTopicClick}
@@ -331,7 +366,7 @@ const Constructor = () => {
 												Планиметрия
 											</u>
 										</div>
-									</button>
+									</div>
 
 									{subtopics.subtopics6 && (
 										<div
@@ -341,6 +376,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic61"
 														value={
 															values.subtopic61
@@ -359,6 +395,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic62"
 														value={
 															values.subtopic62
@@ -377,6 +414,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic63"
 														value={
 															values.subtopic63
@@ -394,6 +432,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic64"
 														value={
 															values.subtopic64
@@ -411,6 +450,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic65"
 														value={
 															values.subtopic65
@@ -429,6 +469,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic66"
 														value={
 															values.subtopic66
@@ -446,6 +487,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic67"
 														value={
 															values.subtopic67
@@ -463,6 +505,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic68"
 														value={
 															values.subtopic68
@@ -480,6 +523,7 @@ const Constructor = () => {
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
 													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
 														name="subtopic69"
 														value={
 															values.subtopic69
@@ -500,6 +544,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count7"
 									values={values}
 									decrement={decrement}
@@ -507,7 +552,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											7.
 										</div>
@@ -516,7 +561,7 @@ const Constructor = () => {
 												Производная и первообразная
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -526,6 +571,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count8"
 									values={values}
 									decrement={decrement}
@@ -533,7 +579,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											8.
 										</div>
@@ -542,7 +588,7 @@ const Constructor = () => {
 												Стереометрия
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -552,6 +598,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count9"
 									values={values}
 									decrement={decrement}
@@ -559,7 +606,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											9.
 										</div>
@@ -568,7 +615,7 @@ const Constructor = () => {
 												Вычисления и преобразования
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -578,6 +625,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count10"
 									values={values}
 									decrement={decrement}
@@ -585,7 +633,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											10.
 										</div>
@@ -594,7 +642,7 @@ const Constructor = () => {
 												Задачи с прикладным содержанием
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -604,6 +652,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count11"
 									values={values}
 									decrement={decrement}
@@ -611,7 +660,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											11.
 										</div>
@@ -620,7 +669,7 @@ const Constructor = () => {
 												Текстовые задачи
 											</u>
 										</div>
-									</button>
+									</div>
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
 									</div>
@@ -629,6 +678,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count12"
 									values={values}
 									decrement={decrement}
@@ -636,7 +686,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											12.
 										</div>
@@ -646,7 +696,7 @@ const Constructor = () => {
 												функций
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -661,6 +711,7 @@ const Constructor = () => {
 							</div>
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count13"
 									values={values}
 									decrement={decrement}
@@ -668,7 +719,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											13.
 										</div>
@@ -677,7 +728,7 @@ const Constructor = () => {
 												Уравнения
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -687,6 +738,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count14"
 									values={values}
 									decrement={decrement}
@@ -694,7 +746,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											14.
 										</div>
@@ -703,7 +755,7 @@ const Constructor = () => {
 												Стереометрическая задача
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -713,6 +765,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count15"
 									values={values}
 									decrement={decrement}
@@ -720,7 +773,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											15.
 										</div>
@@ -729,7 +782,7 @@ const Constructor = () => {
 												Неравенства
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -739,6 +792,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count16"
 									values={values}
 									decrement={decrement}
@@ -746,7 +800,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											16.
 										</div>
@@ -755,7 +809,7 @@ const Constructor = () => {
 												Планиметрическая задача
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -765,6 +819,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count17"
 									values={values}
 									decrement={decrement}
@@ -772,7 +827,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											17.
 										</div>
@@ -781,7 +836,7 @@ const Constructor = () => {
 												Финансовая математика
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -791,6 +846,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count18"
 									values={values}
 									decrement={decrement}
@@ -798,7 +854,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											18.
 										</div>
@@ -807,7 +863,7 @@ const Constructor = () => {
 												Задача с параметром
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -817,6 +873,7 @@ const Constructor = () => {
 
 							<div className="ConstructorForm-Row">
 								<Counter
+									className="ConstructorForm-Counter"
 									name="count19"
 									values={values}
 									decrement={decrement}
@@ -824,7 +881,7 @@ const Constructor = () => {
 									handleInputChange={handleInputChange}
 								/>
 								<div className="ConstructorForm-Topic">
-									<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 										<div className="ConstructorForm-TopicNumber">
 											19.
 										</div>
@@ -833,7 +890,7 @@ const Constructor = () => {
 												Числа и их свойства
 											</u>
 										</div>
-									</button>
+									</div>
 
 									<div className="ConstructorForm-TopicSubs">
 										Вычисления
@@ -845,9 +902,9 @@ const Constructor = () => {
 						<div className="ConstructorForm-ExtraContent">
 							<div className="ConstructorForm-Row ConstructorForm-Row_label">
 								<div className="ConstructorForm-Topic">
-									<button class="Link Link_pseudo">
+									<a className="Link Link_pseudo">
 										Задания, не входящие в ЕГЭ этого года
-									</button>
+									</a>
 								</div>
 							</div>
 							<div className="ConstructorForm-ExtraTopics">
@@ -880,7 +937,7 @@ const Constructor = () => {
 										</button>
 									</div>
 									<div className="ConstructorForm-Topic">
-										<button className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
 											<div className="ConstructorForm-TopicNumber">
 												Д1.
 											</div>
@@ -889,7 +946,7 @@ const Constructor = () => {
 													Выбор оптимального варианта
 												</u>
 											</div>
-										</button>
+										</div>
 										<div className="ConstructorForm-TopicSubs">
 											Выбор варианта из двух возможных
 										</div>
@@ -935,9 +992,7 @@ const Constructor = () => {
 							</div>
 
 							<button className="Link Link_pseudo Link_wrap ConstructorForm-ResetButton">
-								<span>
-									×
-								</span>
+								<span>×</span>
 								<u className="Link-U Link_pseudo-U Link_wrap-U ConstructorForm-ResetButtonText">
 									Очистить поля
 								</u>

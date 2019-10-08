@@ -16,14 +16,14 @@ const TeacherVariant = () => (
 		</p>
 
 		<form action="/test" method="POST">
-			<div class="Form_oneLine">
+			<div className="Form_oneLine">
 				<input
-					class="Input Form_oneLine-Input"
+					className="Input Form_oneLine-Input"
 					type="text"
 					name="id"
 					placeholder="Номер варианта"
 				/>
-				<input class="Button" type="submit" value="Открыть" />
+				<input className="Button" type="submit" value="Открыть" />
 			</div>
 		</form>
 	</div>

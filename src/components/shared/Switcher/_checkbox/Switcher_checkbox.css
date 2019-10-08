@@ -1,6 +1,6 @@
 .Switcher_checkbox-Label {
 	display: flex;
-	padding: .4rem;
+	padding: 0.4rem;
 }
 
 .Switcher_checkbox-Label:hover,
@@ -9,7 +9,9 @@
 }
 
 .Switcher_checkbox-Text {
-	padding: 0 0 0 .6rem;
+	padding: 0 0 0 0.6rem;
+
+	line-height: 1.2rem;
 
 	background: transparent !important;
 }

@@ -1,25 +1,56 @@
 .ConstructorForm-TopicList {
-	grid-column: 1/16;
+	grid-column: 1/21;
+	grid-row: 1;
 }
 
 .ConstructorForm-Buttons {
-	grid-column: 16/21;
+	grid-column: 1/21;
+	grid-row: 2;
+}
+
+@media (min-width: 768px) {
+	.ConstructorForm-TopicList {
+		grid-column: 1/16;
+	}
+
+	.ConstructorForm-Buttons {
+		grid-column: 16/21;
+		grid-row: 1;
+	}
+}
+
+.ConstructorForm-ExtraTopics {
+	display: none;
 }
 
 .ConstructorForm-Row {
 	display: grid;
-	grid-template-columns: 105px 1fr;
+	grid-template-columns: 1fr;
 	grid-column-gap: 0.75rem;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+	.ConstructorForm-Row {
+		grid-template-columns: 105px 1fr;
+		margin-bottom: 0.75rem;
+	}
 }
 
 .ConstructorForm-Row_head {
+	display: none;
 	padding-bottom: 0.75rem;
 
 	font-weight: bold;
 	color: #006;
 
 	border-bottom: 0.05rem solid rgba(0, 0, 102, 0.25);
+}
+
+@media (min-width: 576px) {
+	.ConstructorForm-Row_head {
+		display: grid;
+	}
 }
 
 .ConstructorForm-Row_label {
@@ -34,19 +65,40 @@
 	margin-top: -0.25rem;
 }
 
-.ConstructorForm-ExtraTopics {
-	display: none;
+.ConstructorForm-Counter {
+	width: 135px;
+	margin: 0 0 0.15rem -0.2rem;
+}
+
+@media (min-width: 576px) {
+	.ConstructorForm-Counter {
+		width: auto;
+		margin: 0;
+	}
 }
 
 .ConstructorForm-TopicName {
 	display: grid;
 	grid-template-columns: 1.65rem 1fr;
 	grid-column-gap: 0.35rem;
-	padding: 0.3rem 1.5rem 0.4rem 0;
+	padding: 0.2rem 0 0.4rem;
+
+	line-height: 1.5rem;
+}
+
+@media (min-width: 576px) {
+	.ConstructorForm-TopicName {
+		box-sizing: border-box;
+		padding-right: 1.5rem;
+	}
 }
 
 .ConstructorForm-TopicNumber {
 	text-align: right;
+}
+
+.ConstructorForm-TopicSubCheckbox {
+	margin-top: 0.15rem;
 }
 
 .ConstructorForm-TopicSubs {
@@ -78,4 +130,6 @@
 
 .ConstructorForm-ResetButtonText {
 	margin-left: 0.45rem;
+
+	font-size: 1rem;
 }

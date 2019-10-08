@@ -1,5 +1,5 @@
 .TwoColumns-Col {
-	grid-column: span 20;
+	grid-column: 1/21;
 }
 
 .TwoColumns-Col_1 {

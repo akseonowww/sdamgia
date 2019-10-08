@@ -4,5 +4,6 @@
 
 .Form_oneLine-Input {
 	flex-grow: 1;
+	flex-shrink: 1;
 	margin-right: 0.25rem !important;
 }
