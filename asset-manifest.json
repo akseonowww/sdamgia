@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/sdamgia-variant-constructor/static/css/main.52b7b944.chunk.css",
+    "main.js": "/sdamgia-variant-constructor/static/js/main.14ea4873.chunk.js",
+    "main.js.map": "/sdamgia-variant-constructor/static/js/main.14ea4873.chunk.js.map",
+    "runtime-main.js": "/sdamgia-variant-constructor/static/js/runtime-main.17e9285f.js",
+    "runtime-main.js.map": "/sdamgia-variant-constructor/static/js/runtime-main.17e9285f.js.map",
+    "static/js/2.caecbf53.chunk.js": "/sdamgia-variant-constructor/static/js/2.caecbf53.chunk.js",
+    "static/js/2.caecbf53.chunk.js.map": "/sdamgia-variant-constructor/static/js/2.caecbf53.chunk.js.map",
+    "index.html": "/sdamgia-variant-constructor/index.html",
+    "precache-manifest.b3ef46c16b38cb9f2b94ad86a84e24eb.js": "/sdamgia-variant-constructor/precache-manifest.b3ef46c16b38cb9f2b94ad86a84e24eb.js",
+    "service-worker.js": "/sdamgia-variant-constructor/service-worker.js",
+    "static/css/main.52b7b944.chunk.css.map": "/sdamgia-variant-constructor/static/css/main.52b7b944.chunk.css.map",
+    "static/media/contentBannerBottomAd.png": "/sdamgia-variant-constructor/static/media/contentBannerBottomAd.488c4574.png",
+    "static/media/contentBannerTopAd.png": "/sdamgia-variant-constructor/static/media/contentBannerTopAd.06163253.png",
+    "static/media/sidebarBannerAd.png": "/sdamgia-variant-constructor/static/media/sidebarBannerAd.931231ae.png",
+    "static/media/Checkbox.css": "/sdamgia-variant-constructor/static/media/tick_blue.8599a7e0.svg"
+  }
+}
