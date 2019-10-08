@@ -36,9 +36,14 @@ const useCounter = (initial = { count1: 0, count2: 0 }) => {
 
 		e.preventDefault();
 
+		let newTotalTasksNumber = 'из 9 заданий';
+		if (input === 'count19') {
+			newTotalTasksNumber = 'из 10 заданий';
+		}
+
 		setValues({
 			...values,
-			...{ [input]: newValue }
+			...{ totalTasksNumber: newTotalTasksNumber, [input]: newValue }
 		});
 	};
 
@@ -47,6 +52,7 @@ const useCounter = (initial = { count1: 0, count2: 0 }) => {
 
 const Constructor = () => {
 	const { values, setValues, increment, decrement } = useCounter({
+		totalTasksNumber: 'из 9 заданий',
 		testPart: false,
 		count1: 0,
 		count2: 0,
@@ -62,7 +68,6 @@ const Constructor = () => {
 		subtopic66: true,
 		subtopic67: true,
 		subtopic68: true,
-		subtopic69: true,
 		count7: 0,
 		count8: 0,
 		count9: 0,
@@ -461,8 +466,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задания тренировочных
-													и диагностических работ
+													Центральные и вписанные углы
 												</div>
 											</label>
 
@@ -480,7 +484,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Центральные и вписанные углы
+													Касательная, хорда, секущая
 												</div>
 											</label>
 
@@ -498,7 +502,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Касательная, хорда, секущая
+													Вписанные окружности
 												</div>
 											</label>
 
@@ -509,24 +513,6 @@ const Constructor = () => {
 														name="subtopic68"
 														value={
 															values.subtopic68
-														}
-														onChange={
-															handleInputChange
-														}
-													/>
-												</div>
-												<div className="ConstructorForm-TopicDesc">
-													Вписанные окружности
-												</div>
-											</label>
-
-											<label className="Link_wrap ConstructorForm-TopicName Label">
-												<div className="ConstructorForm-TopicNumber">
-													<Checkbox
-														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
-														name="subtopic69"
-														value={
-															values.subtopic69
 														}
 														onChange={
 															handleInputChange
@@ -961,7 +947,7 @@ const Constructor = () => {
 							<input
 								className="Button ConstructorForm-SubmitButton"
 								type="submit"
-								value="Составить вариант"
+								value={`Составить вариант ${values.totalTasksNumber}`}
 							/>
 
 							<div className="Switcher Switcher_vertical Switcher_checkbox ConstructorForm-Switcher">
