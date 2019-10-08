@@ -33,16 +33,6 @@ html {
 	clear: both;
 }
 
-.PageLayout-Sidebar {
-	display: none;
-	margin-top: 0.4rem;
-	padding-right: 0.4rem;
-}
-
-.PageLayout-Content {
-	margin: 0.4rem 0.4rem 0 0.4rem;
-}
-
 @media (min-width: 576px) {
 	.PageLayout-Nav_mobile {
 		display: none;
@@ -53,13 +43,23 @@ html {
 	}
 }
 
+.PageLayout-Sidebar {
+	display: none;
+	margin-top: 0.4rem;
+	padding-right: 0.4rem;
+}
+
+.PageLayout-Content {
+	margin: 0.4rem 0.5rem 0 0.5rem;
+}
+
 @media (min-width: 1000px) {
 	.PageLayout-Sidebar {
 		display: block;
 	}
 
 	.PageLayout-Content {
-		margin-left: 175px;
+		margin: 0.4rem 0.4rem 0 175px;
 	}
 }
 
