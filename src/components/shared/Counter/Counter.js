@@ -13,8 +13,8 @@ const Counter = ({ className, name, values, decrement, increment, handleInputCha
 		<div className={`Counter ${className}`}>
 			<button
 				className={
-					'CounterButton ' +
-					(values[name] == 0 && 'CounterButton_disabled')
+					'Counter-Button ' +
+					(values[name] == 0 && 'Counter-Button_disabled')
 				}
 				data-input={name}
 				onClick={decrement}
@@ -22,7 +22,7 @@ const Counter = ({ className, name, values, decrement, increment, handleInputCha
 				−
 			</button>
 			<input
-				className="CounterInput Input"
+				className="Counter-Input Input"
 				type="text"
 				name={name}
 				value={values[name]}
@@ -30,9 +30,10 @@ const Counter = ({ className, name, values, decrement, increment, handleInputCha
 				onClick={handleInputFocus}
 				onChange={handleInputChange}
 			/>
-			<button class="CounterButton" data-input={name} onClick={increment}>
+			<button className="Counter-Button" data-input={name} onClick={increment}>
 				+
 			</button>
+			<span className="Counter-Caption">шт.</span>
 		</div>
 	);
 };
