@@ -55,14 +55,26 @@
 
 .ConstructorForm-Row_label {
 	grid-template-columns: 1fr;
-	margin-top: 1rem;
+	margin-top: 2rem;
 
 	color: #006;
 	font-style: italic;
 }
 
+@media (min-width: 576px) {
+	.ConstructorForm-Row_label {
+		margin-top: 1rem;
+	}
+}
+
 .ConstructorForm-Row_head + .ConstructorForm-Row_label {
-	margin-top: -0.25rem;
+	margin-top: 0.25rem;
+}
+
+@media (min-width: 576px) {
+	.ConstructorForm-Row_head + .ConstructorForm-Row_label {
+		margin-top: -0.25rem;
+	}
 }
 
 .ConstructorForm-Counter {
