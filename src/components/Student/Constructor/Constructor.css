@@ -96,8 +96,9 @@
 	display: grid;
 	grid-template-columns: 1.65rem 1fr;
 	grid-column-gap: 0.35rem;
-	padding: 0.2rem 0 0.4rem;
+	padding: 0.15rem 0 0.4rem;
 
+	font-size: 1rem;
 	line-height: 1.5rem;
 }
 
