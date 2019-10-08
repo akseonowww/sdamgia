@@ -31,7 +31,7 @@
 	content: '';
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.VariantsLink_new::after {
 		top: -0.25rem;
 		right: -0.35rem;
@@ -56,7 +56,7 @@
 	cursor: pointer;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.VariantsLink {
 		padding: 0.25rem 0 0.35rem;
 	}

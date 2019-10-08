@@ -4,7 +4,7 @@
 	align-items: center;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.Counter {
 		align-items: flex-start;
 	}
@@ -48,7 +48,7 @@
 	display: block;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.Counter-Caption {
 		display: none;
 

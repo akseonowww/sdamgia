@@ -18,7 +18,7 @@
 	text-align: left;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.Section-ComplexHeader {
 		flex-direction: row;
 		justify-content: space-between;
