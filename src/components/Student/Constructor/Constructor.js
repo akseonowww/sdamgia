@@ -89,14 +89,22 @@ const Constructor = () => {
 	});
 
 	const handleInputChange = e => {
-		const target = e.target;
-		const value =
-			target.type === 'checkbox' ? target.checked : target.value;
-		const name = target.name;
+		const { name, type, value, checked } = e.target;
+		let newValue;
 
+		if (type === 'checkbox') {
+			newValue = checked;
+		}
+		else {
+			// allow only number in counter input
+			if (/\D/.test(value) && value !== '') return;
+
+			newValue = value;
+		}
+	
 		setValues({
 			...values,
-			...{ [name]: value }
+			...{ [name]: newValue }
 		});
 	};
 
@@ -291,7 +299,7 @@ const Constructor = () => {
 									</div>
 								</div>
 							</div>
-							
+
 							<div className="ConstructorForm-Row">
 								<Counter
 									className="ConstructorForm-Counter"
