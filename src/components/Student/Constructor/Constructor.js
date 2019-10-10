@@ -240,36 +240,6 @@ const Constructor = () => {
 							<div className="ConstructorForm-Row">
 								<Counter
 									className="ConstructorForm-Counter"
-									name="count2"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
-								/>
-								<div className="ConstructorForm-Topic">
-									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
-										<div className="ConstructorForm-TopicNumber">
-											2.
-										</div>
-										<div className="ConstructorForm-TopicDesc">
-											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
-												Литосфера. Гидросфера.
-												Атмосфера. Географическая
-												оболочка Земли. Широтная
-												зональность и высотная поясность
-											</u>
-										</div>
-									</div>
-
-									<div className="ConstructorForm-TopicSubs">
-										Вычисления
-									</div>
-								</div>
-							</div>
-
-							<div className="ConstructorForm-Row">
-								<Counter
-									className="ConstructorForm-Counter"
 									name="count3"
 									values={values}
 									decrement={decrement}
@@ -312,6 +282,36 @@ const Constructor = () => {
 										<div className="ConstructorForm-TopicDesc">
 											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
 												Начала теории вероятностей
+											</u>
+										</div>
+									</div>
+
+									<div className="ConstructorForm-TopicSubs">
+										Вычисления
+									</div>
+								</div>
+							</div>
+							
+							<div className="ConstructorForm-Row">
+								<Counter
+									className="ConstructorForm-Counter"
+									name="count4"
+									values={values}
+									decrement={decrement}
+									increment={increment}
+									handleInputChange={handleInputChange}
+								/>
+								<div className="ConstructorForm-Topic">
+									<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
+										<div className="ConstructorForm-TopicNumber">
+											4.
+										</div>
+										<div className="ConstructorForm-TopicDesc">
+											<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+												Литосфера. Гидросфера.
+												Атмосфера. Географическая
+												оболочка Земли. Широтная
+												зональность и высотная поясность
 											</u>
 										</div>
 									</div>
