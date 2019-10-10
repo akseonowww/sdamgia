@@ -66,7 +66,7 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</header>
 
-					<div class="Nav PageLayout-Nav_mobile">≡ математика</div>
+					<div class="Nav PageLayout-Nav PageLayout-Nav_mobile">≡ математика</div>
 					<nav className="Nav PageLayout-Nav PageLayout-Nav_desktop">
 						<a
 							className="subjhr"
