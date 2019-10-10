@@ -135,7 +135,7 @@
 	background: #f0f5ff;
 }
 
-@media (min-width: 568px) {
+@media (min-width: 768px) {
 	.ConstructorForm-ButtonsPanel {
 		margin: 28px 0 0;
 	}
