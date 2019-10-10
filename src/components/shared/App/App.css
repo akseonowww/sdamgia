@@ -1308,12 +1308,6 @@ input[type='submit'] {
 	border-bottom: none;
 }
 
-.sdamgia_btns {
-	display: none;
-	margin: 0;
-	padding: 0;
-}
-
 .SidebarBtns {
 	display: block;
 	clear: both;
@@ -1611,7 +1605,7 @@ input[type='submit'] {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.sdamgia_btns {
 		display: block;
 	}
