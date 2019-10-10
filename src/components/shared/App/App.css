@@ -48,7 +48,7 @@ html {
 .PageLayout-Sidebar {
 	display: none;
 	margin-top: 0.4rem;
-	padding-right: 0.4rem;
+	padding: 0 0.4rem;
 }
 
 .PageLayout-Content {
@@ -58,6 +58,16 @@ html {
 @media (min-width: 768px) {
 	.PageLayout-Sidebar {
 		display: block;
+	}
+
+	.PageLayout-Content {
+		margin: 0.4rem 0.4rem 0 180px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.PageLayout-Sidebar {
+		padding-left: 0;
 	}
 
 	.PageLayout-Content {
@@ -72,6 +82,12 @@ html {
 @media (min-width: 768px) {
 	.PageLayout-Footer {
 		margin-left: 180px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.PageLayout-Footer {
+		margin-left: 175px;
 	}
 }
 
