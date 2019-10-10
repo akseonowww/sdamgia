@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e793ef751ae90d73c4003cdc76628e4",
+    "revision": "76ae2d5f522df2eef51a2cd344430afa",
     "url": "/sdamgia-variant-constructor/index.html"
   },
   {
-    "revision": "4a2e235e142cfa91d424",
+    "revision": "0b655cd04e824a220698",
     "url": "/sdamgia-variant-constructor/static/css/main.cf953ba6.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sdamgia-variant-constructor/static/js/2.caecbf53.chunk.js"
   },
   {
-    "revision": "4a2e235e142cfa91d424",
-    "url": "/sdamgia-variant-constructor/static/js/main.1c815754.chunk.js"
+    "revision": "0b655cd04e824a220698",
+    "url": "/sdamgia-variant-constructor/static/js/main.ef628afe.chunk.js"
   },
   {
     "revision": "e5a85f1a37d29281d51f",
