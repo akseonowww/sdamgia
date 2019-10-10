@@ -66,7 +66,9 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</header>
 
-					<div class="Nav PageLayout-Nav PageLayout-Nav_mobile">≡ математика</div>
+					<div class="Nav PageLayout-Nav PageLayout-Nav_mobile">
+						≡ математика
+					</div>
 					<nav className="Nav PageLayout-Nav PageLayout-Nav_desktop">
 						<a
 							className="subjhr"
@@ -331,12 +333,6 @@ function App() {
 								</a>
 							</form>
 							<div className="ChatButton">Чат</div>
-							<div
-								className="HelpButton"
-								style={{
-									backgroundImage: `url(${helpButtonIcon})`
-								}}
-							></div>
 							<a
 								className="news news_urgent"
 								href="https://ege.sdamgia.ru/game.htm"
@@ -586,6 +582,12 @@ function App() {
 							</a>
 						</center>
 					</footer>
+					<div
+						className="HelpButton"
+						style={{
+							backgroundImage: `url(${helpButtonIcon})`
+						}}
+					></div>
 				</div>
 			</BrowserRouter>
 		</div>
