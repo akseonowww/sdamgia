@@ -4,37 +4,16 @@
 }
 
 .LarinVariants-TitleWord3 {
-	display: inline-block;
-}
-
-@media (min-width: 404px) {
-	.LarinVariants-TitleWord1,
-	.LarinVariants-TitleWord2 {
-		display: inline;
-	}
-
-	.LarinVariants-TitleWord3 {
-		display: inline-block;
-	}
+	display: inline;
 }
 
 @media (min-width: 430px) {
 	.LarinVariants-TitleWord2 {
 		display: inline;
 	}
-
-	.LarinVariants-TitleWord3 {
-		display: inline;
-	}
 }
 
-@media (min-width: 547px) {
-	.LarinVariants-TitleWord1 {
-		display: block;
-	}
-}
-
-@media (min-width: 576px) {
+@media (min-width: 637px) {
 	.LarinVariants-TitleWord1 {
 		display: inline;
 	}
@@ -57,7 +36,7 @@
 
 @media (min-width: 768px) {
 	.LarinVariants-Variants {
-		grid-template-columns: repeat(15, 1fr);
+		grid-template-columns: repeat(10, 1fr);
 	}
 
 	.LarinVariants-Variants_cut {
