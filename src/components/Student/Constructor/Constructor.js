@@ -194,10 +194,13 @@ const Constructor = () => {
 		subtopic191: true,
 		subtopic192: true,
 		subtopic193: true,
-		subtopic194: true
+		subtopic194: true,
+		extraSubtopic11: true,
+		extraSubtopic12: true,
+		extraSubtopic13: true
 	});
 
-	const [subtopics, setSubtopics] = useState({
+	const [topics, setTopics] = useState({
 		subtopics1: false,
 		subtopics2: false,
 		subtopics3: false,
@@ -216,7 +219,9 @@ const Constructor = () => {
 		subtopics16: false,
 		subtopics17: false,
 		subtopics18: false,
-		subtopics19: false
+		subtopics19: false,
+		topicsExtra: false,
+		extraSubtopics1: false
 	});
 
 	const handleInputChange = e => {
@@ -239,13 +244,13 @@ const Constructor = () => {
 	};
 
 	const handleTopicClick = e => {
-		const { subtopics: subtopicsName } = e.currentTarget.dataset;
+		const { topics: topicsName } = e.currentTarget.dataset;
 
 		e.preventDefault();
 
-		setSubtopics({
-			...subtopics,
-			...{ [subtopicsName]: !subtopics[subtopicsName] }
+		setTopics({
+			...topics,
+			...{ [topicsName]: !topics[topicsName] }
 		});
 	};
 
@@ -333,7 +338,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics1"
+										data-topics="subtopics1"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -346,7 +351,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics1 && (
+									{topics.subtopics1 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -386,7 +391,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Округление с недостатком&nbsp;·&nbsp;
+													Округление
+													с недостатком&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=1"
 														className="Link Link_black"
@@ -410,7 +416,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Округление с избытком&nbsp;·&nbsp;
+													Округление
+													с избытком&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=2"
 														className="Link Link_black"
@@ -458,7 +465,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Проценты и округление&nbsp;·&nbsp;
+													Проценты
+													и округление&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=5"
 														className="Link Link_black"
@@ -484,7 +492,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics2"
+										data-topics="subtopics2"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -497,7 +505,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics2 && (
+									{topics.subtopics2 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -564,7 +572,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Вычисление величин
-													по графику или диаграмме&nbsp;·&nbsp;
+													по графику или
+													диаграмме&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=7"
 														className="Link Link_black"
@@ -590,7 +599,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics3"
+										data-topics="subtopics3"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -604,7 +613,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics3 && (
+									{topics.subtopics3 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -670,7 +679,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Круг и его элементы&nbsp;·&nbsp;
+													Круг и его
+													элементы&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=123"
 														className="Link Link_black"
@@ -694,7 +704,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Координатная плоскость&nbsp;·&nbsp;
+													Координатная
+													плоскость&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=181"
 														className="Link Link_black"
@@ -720,7 +731,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics4"
+										data-topics="subtopics4"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -738,7 +749,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics4 && (
+									{topics.subtopics4 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -806,7 +817,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics5"
+										data-topics="subtopics5"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -819,7 +830,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics5 && (
+									{topics.subtopics5 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -836,7 +847,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Линейные, квадратные,
-													кубические уравнения&nbsp;·&nbsp;
+													кубические
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=14"
 														className="Link Link_black"
@@ -860,7 +872,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Рациональные уравнения&nbsp;·&nbsp;
+													Рациональные
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=9"
 														className="Link Link_black"
@@ -884,7 +897,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Иррациональные уравнения&nbsp;·&nbsp;
+													Иррациональные
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=10"
 														className="Link Link_black"
@@ -908,7 +922,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Показательные уравнения&nbsp;·&nbsp;
+													Показательные
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=11"
 														className="Link Link_black"
@@ -932,7 +947,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Логарифмические уравнения&nbsp;·&nbsp;
+													Логарифмические
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=12"
 														className="Link Link_black"
@@ -956,7 +972,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Тригонометрические уравнения&nbsp;·&nbsp;
+													Тригонометрические
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=13"
 														className="Link Link_black"
@@ -982,7 +999,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics6"
+										data-topics="subtopics6"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -995,7 +1012,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics6 && (
+									{topics.subtopics6 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -1061,7 +1078,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Треугольники общего вида&nbsp;·&nbsp;
+													Треугольники общего
+													вида&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1133,7 +1151,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Центральные и вписанные углы&nbsp;·&nbsp;
+													Центральные и вписанные
+													углы&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1157,7 +1176,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Касательная, хорда, секущая&nbsp;·&nbsp;
+													Касательная, хорда,
+													секущая&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1181,7 +1201,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Вписанные окружности&nbsp;·&nbsp;
+													Вписанные
+													окружности&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1205,7 +1226,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Описанные окружности&nbsp;·&nbsp;
+													Описанные
+													окружности&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1231,7 +1253,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics7"
+										data-topics="subtopics7"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -1244,7 +1266,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics7 && (
+									{topics.subtopics7 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -1260,7 +1282,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Физический смысл производной&nbsp;·&nbsp;
+													Физический смысл
+													производной&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=69"
 														className="Link Link_black"
@@ -1285,7 +1308,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Геометрический смысл
-													производной, касательная&nbsp;·&nbsp;
+													производной,
+													касательная&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=68"
 														className="Link Link_black"
@@ -1310,7 +1334,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Применение производной
-													к исследованию функций&nbsp;·&nbsp;
+													к исследованию
+													функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=70"
 														className="Link Link_black"
@@ -1360,7 +1385,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics8"
+										data-topics="subtopics8"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -1373,7 +1398,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics8 && (
+									{topics.subtopics8 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -1413,7 +1438,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Прямоугольный параллелепипед&nbsp;·&nbsp;
+													Прямоугольный
+													параллелепипед&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=193"
 														className="Link Link_black"
@@ -1463,7 +1489,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Площадь поверхности
-													составного многогранника&nbsp;·&nbsp;
+													составного
+													многогранника&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=148"
 														className="Link Link_black"
@@ -1658,7 +1685,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics9"
+										data-topics="subtopics9"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -1671,7 +1698,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics9 && (
+									{topics.subtopics9 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -1688,7 +1715,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													рациональных выражений&nbsp;·&nbsp;
+													рациональных
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=55"
 														className="Link Link_black"
@@ -1739,7 +1767,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													иррациональных выражений&nbsp;·&nbsp;
+													иррациональных
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=56"
 														className="Link Link_black"
@@ -1764,7 +1793,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования буквенных
-													иррациональных выражений&nbsp;·&nbsp;
+													иррациональных
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=61"
 														className="Link Link_black"
@@ -1789,7 +1819,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Вычисление значений
-													степенных выражений&nbsp;·&nbsp;
+													степенных
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=57"
 														className="Link Link_black"
@@ -1813,7 +1844,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Действия со степенями&nbsp;·&nbsp;
+													Действия со
+													степенями&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=62"
 														className="Link Link_black"
@@ -1838,7 +1870,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													логарифмических выражений&nbsp;·&nbsp;
+													логарифмических
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=58"
 														className="Link Link_black"
@@ -1863,7 +1896,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования буквенных
-													логарифмических выражений&nbsp;·&nbsp;
+													логарифмических
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=63"
 														className="Link Link_black"
@@ -1888,7 +1922,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Вычисление значений
-													тригонометрических выражений&nbsp;·&nbsp;
+													тригонометрических
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=65"
 														className="Link Link_black"
@@ -1913,7 +1948,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													тригонометрических выражений&nbsp;·&nbsp;
+													тригонометрических
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=59"
 														className="Link Link_black"
@@ -1938,7 +1974,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования буквенных
-													тригонометрических выражений&nbsp;·&nbsp;
+													тригонометрических
+													выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=64"
 														className="Link Link_black"
@@ -1964,7 +2001,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics10"
+										data-topics="subtopics10"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -1977,7 +2014,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics10 && (
+									{topics.subtopics10 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -2019,7 +2056,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Квадратные и степенные
-													уравнения и неравенства&nbsp;·&nbsp;
+													уравнения
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=72"
 														className="Link Link_black"
@@ -2194,7 +2232,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics11"
+										data-topics="subtopics11"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -2207,7 +2245,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics11 && (
+									{topics.subtopics11 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -2248,7 +2286,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на движение по прямой&nbsp;·&nbsp;
+													Задачи на движение
+													по прямой&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=84"
 														className="Link Link_black"
@@ -2297,7 +2336,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на движение по воде&nbsp;·&nbsp;
+													Задачи на движение
+													по воде&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=86"
 														className="Link Link_black"
@@ -2321,7 +2361,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на совместную работу&nbsp;·&nbsp;
+													Задачи на совместную
+													работу&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=87"
 														className="Link Link_black"
@@ -2345,7 +2386,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на прогрессии&nbsp;·&nbsp;
+													Задачи
+													на прогрессии&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=89"
 														className="Link Link_black"
@@ -2371,7 +2413,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics12"
+										data-topics="subtopics12"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -2385,7 +2427,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics12 && (
+									{topics.subtopics12 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -2402,7 +2444,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование степенных
-													и иррациональных функций&nbsp;·&nbsp;
+													и иррациональных
+													функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=81"
 														className="Link Link_black"
@@ -2426,7 +2469,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Исследование частных&nbsp;·&nbsp;
+													Исследование
+													частных&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=83"
 														className="Link Link_black"
@@ -2450,7 +2494,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Исследование произведений&nbsp;·&nbsp;
+													Исследование
+													произведений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=82"
 														className="Link Link_black"
@@ -2475,7 +2520,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование показательных
-													и логарифмических функций&nbsp;·&nbsp;
+													и логарифмических
+													функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=80"
 														className="Link Link_black"
@@ -2500,7 +2546,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование
-													тригонометрических функций&nbsp;·&nbsp;
+													тригонометрических
+													функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=78"
 														className="Link Link_black"
@@ -2525,7 +2572,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование функций
-													без&nbsp;помощи производной&nbsp;·&nbsp;
+													без&nbsp;помощи
+													производной&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=175"
 														className="Link Link_black"
@@ -2556,7 +2604,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics13"
+										data-topics="subtopics13"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -2569,7 +2617,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics13 && (
+									{topics.subtopics13 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -2585,7 +2633,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Иррациональные уравнения&nbsp;·&nbsp;
+													Иррациональные
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=275"
 														className="Link Link_black"
@@ -2609,7 +2658,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Рациональные уравнения&nbsp;·&nbsp;
+													Рациональные
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=290"
 														className="Link Link_black"
@@ -2660,7 +2710,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Логарифмические
-													и показательные уравнения&nbsp;·&nbsp;
+													и показательные
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=186"
 														className="Link Link_black"
@@ -2684,7 +2735,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Тригонометрические уравнения&nbsp;·&nbsp;
+													Тригонометрические
+													уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=167"
 														className="Link Link_black"
@@ -2761,7 +2813,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics14"
+										data-topics="subtopics14"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -2774,7 +2826,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics14 && (
+									{topics.subtopics14 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -2816,7 +2868,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Расстояние от точки
-													до прямой и до плоскости&nbsp;·&nbsp;
+													до прямой
+													и до плоскости&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=281"
 														className="Link Link_black"
@@ -2840,7 +2893,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Сечения многогранников&nbsp;·&nbsp;
+													Сечения
+													многогранников&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=282"
 														className="Link Link_black"
@@ -2864,7 +2918,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Угол между&nbsp;плоскостями&nbsp;·&nbsp;
+													Угол
+													между&nbsp;плоскостями&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=283"
 														className="Link Link_black"
@@ -2938,7 +2993,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Объемы многогранников&nbsp;·&nbsp;
+													Объемы
+													многогранников&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=257"
 														className="Link Link_black"
@@ -2989,7 +3045,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics15"
+										data-topics="subtopics15"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -3002,7 +3058,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics15 && (
+									{topics.subtopics15 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -3018,7 +3074,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Рациональные неравенства&nbsp;·&nbsp;
+													Рациональные
+													неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=242"
 														className="Link Link_black"
@@ -3067,7 +3124,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Показательные неравенства&nbsp;·&nbsp;
+													Показательные
+													неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=237"
 														className="Link Link_black"
@@ -3091,7 +3149,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Логарифмические неравенства&nbsp;·&nbsp;
+													Логарифмические
+													неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=238"
 														className="Link Link_black"
@@ -3116,7 +3175,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Неравенства с логарифмами
-													по переменному основанию&nbsp;·&nbsp;
+													по переменному
+													основанию&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=239"
 														className="Link Link_black"
@@ -3140,7 +3200,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Неравенства с модулем&nbsp;·&nbsp;
+													Неравенства
+													с модулем&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=244"
 														className="Link Link_black"
@@ -3164,7 +3225,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Смешанные неравенства&nbsp;·&nbsp;
+													Смешанные
+													неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=201"
 														className="Link Link_black"
@@ -3190,7 +3252,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics16"
+										data-topics="subtopics16"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -3203,7 +3265,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics16 && (
+									{topics.subtopics16 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -3219,7 +3281,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Многоугольники и их свойства&nbsp;·&nbsp;
+													Многоугольники
+													и их свойства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=276"
 														className="Link Link_black"
@@ -3268,7 +3331,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Окружности и треугольники&nbsp;·&nbsp;
+													Окружности
+													и треугольники&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=278"
 														className="Link Link_black"
@@ -3319,7 +3383,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics17"
+										data-topics="subtopics17"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -3332,7 +3396,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics17 && (
+									{topics.subtopics17 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -3348,7 +3412,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на оптимальный выбор&nbsp;·&nbsp;
+													Задачи на оптимальный
+													выбор&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=276"
 														className="Link Link_black"
@@ -3372,7 +3437,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Банки, вклады,&nbsp;кредиты&nbsp;·&nbsp;
+													Банки,
+													вклады,&nbsp;кредиты&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=277"
 														className="Link Link_black"
@@ -3398,7 +3464,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics18"
+										data-topics="subtopics18"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -3411,7 +3477,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics18 && (
+									{topics.subtopics18 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -3427,7 +3493,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Комбинация «кривых»&nbsp;·&nbsp;
+													Комбинация
+													«кривых»&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=268"
 														className="Link Link_black"
@@ -3451,7 +3518,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Комбинация прямых&nbsp;·&nbsp;
+													Комбинация
+													прямых&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=267"
 														className="Link Link_black"
@@ -3475,7 +3543,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Координаты (x, a)&nbsp;·&nbsp;
+													Координаты (x,
+													a)&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=271"
 														className="Link Link_black"
@@ -3574,7 +3643,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Подвижная галочка&nbsp;·&nbsp;
+													Подвижная
+													галочка&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=270"
 														className="Link Link_black"
@@ -3623,7 +3693,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Симметрия в решениях&nbsp;·&nbsp;
+													Симметрия
+													в решениях&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=273"
 														className="Link Link_black"
@@ -3647,7 +3718,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Уравнение окружности&nbsp;·&nbsp;
+													Уравнение
+													окружности&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=266"
 														className="Link Link_black"
@@ -3696,7 +3768,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Уравнения с параметром&nbsp;·&nbsp;
+													Уравнения
+													с параметром&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=171"
 														className="Link Link_black"
@@ -3721,7 +3794,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Расположение корней
-													квадратного трехчлена&nbsp;·&nbsp;
+													квадратного
+													трехчлена&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=207"
 														className="Link Link_black"
@@ -3746,7 +3820,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Использование симметрий,
-													оценок, монотонности&nbsp;·&nbsp;
+													оценок,
+													монотонности&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=208"
 														className="Link Link_black"
@@ -3772,7 +3847,7 @@ const Constructor = () => {
 								<div className="ConstructorForm-Topic">
 									<div
 										className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-										data-subtopics="subtopics19"
+										data-topics="subtopics19"
 										onClick={handleTopicClick}
 									>
 										<div className="ConstructorForm-TopicNumber">
@@ -3785,7 +3860,7 @@ const Constructor = () => {
 										</div>
 									</div>
 
-									{subtopics.subtopics19 && (
+									{topics.subtopics19 && (
 										<div className="ConstructorForm-TopicSubs">
 											<label className="Link_wrap ConstructorForm-TopicName Label">
 												<div className="ConstructorForm-TopicNumber">
@@ -3801,7 +3876,8 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Числа и их свойства&nbsp;·&nbsp;
+													Числа
+													и их свойства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=172"
 														className="Link Link_black"
@@ -3876,7 +3952,8 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Сюжетные задачи: кино,
-													театр, мотки&nbsp;верёвки&nbsp;·&nbsp;
+													театр,
+													мотки&nbsp;верёвки&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=210"
 														className="Link Link_black"
@@ -3893,39 +3970,132 @@ const Constructor = () => {
 
 						<div className="ConstructorForm-ExtraContent">
 							<div className="ConstructorForm-Row ConstructorForm-Row_label">
-								<div className="ConstructorForm-Topic">
-									<span className="Link Link_pseudo">
+								<div
+									className="Link Link_pseudo Link_wrap ConstructorForm-Topic"
+									data-topics="topicsExtra"
+									onClick={handleTopicClick}
+								>
+									<u className="Link-U Link_pseudo-U Link_wrap-U">
 										Задания, не входящие в ЕГЭ этого года
-									</span>
+									</u>
 								</div>
 							</div>
-							<div className="ConstructorForm-ExtraTopics">
-								<div className="ConstructorForm-Row">
-									<Counter
-										className="ConstructorForm-Counter"
-										name="count1"
-										values={values}
-										decrement={decrement}
-										increment={increment}
-										handleInputChange={handleInputChange}
-									/>
-									<div className="ConstructorForm-Topic">
-										<div className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName">
-											<div className="ConstructorForm-TopicNumber">
-												Д1.
+
+							{topics.topicsExtra && (
+								<div className="ConstructorForm-ExtraTopics">
+									<div className="ConstructorForm-Row">
+										<Counter
+											className="ConstructorForm-Counter"
+											name="count19"
+											values={values}
+											decrement={decrement}
+											increment={increment}
+											handleInputChange={
+												handleInputChange
+											}
+										/>
+										<div className="ConstructorForm-Topic">
+											<div
+												className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
+												data-topics="extraSubtopics1"
+												onClick={handleTopicClick}
+											>
+												<div className="ConstructorForm-TopicNumber">
+													Д1.
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+														Выбор оптимального
+														варианта
+													</u>
+												</div>
 											</div>
-											<div className="ConstructorForm-TopicDesc">
-												<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
-													Выбор оптимального варианта
-												</u>
-											</div>
-										</div>
-										<div className="ConstructorForm-TopicSubs">
-											Выбор варианта из двух возможных
+
+											{topics.extraSubtopics1 && (
+												<div className="ConstructorForm-TopicSubs">
+													<label className="Link_wrap ConstructorForm-TopicName Label">
+														<div className="ConstructorForm-TopicNumber">
+															<Checkbox
+																fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+																name="extraSubtopic11"
+																value={
+																	values.extraSubtopic11
+																}
+																onChange={
+																	handleInputChange
+																}
+															/>
+														</div>
+														<div className="ConstructorForm-TopicDesc">
+															Выбор варианта
+															из двух
+															возможных&nbsp;·&nbsp;
+															<a
+																href="https://ege.sdamgia.ru/test?theme=54"
+																className="Link Link_black"
+															>
+																5 шт.
+															</a>
+														</div>
+													</label>
+
+													<label className="Link_wrap ConstructorForm-TopicName Label">
+														<div className="ConstructorForm-TopicNumber">
+															<Checkbox
+																fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+																name="extraSubtopic12"
+																value={
+																	values.extraSubtopic12
+																}
+																onChange={
+																	handleInputChange
+																}
+															/>
+														</div>
+														<div className="ConstructorForm-TopicDesc">
+															Выбор варианта
+															из трех
+															возможных&nbsp;·&nbsp;
+															<a
+																href="https://ege.sdamgia.ru/test?theme=53"
+																className="Link Link_black"
+															>
+																25 шт.
+															</a>
+														</div>
+													</label>
+
+													<label className="Link_wrap ConstructorForm-TopicName Label">
+														<div className="ConstructorForm-TopicNumber">
+															<Checkbox
+																fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+																name="extraSubtopic13"
+																value={
+																	values.extraSubtopic13
+																}
+																onChange={
+																	handleInputChange
+																}
+															/>
+														</div>
+														<div className="ConstructorForm-TopicDesc">
+															Выбор варианта
+															из четырех
+															возможных&nbsp;·&nbsp;
+															<a
+																href="https://ege.sdamgia.ru/test?theme=173"
+																className="Link Link_black"
+															>
+																5 шт.
+															</a>
+														</div>
+													</label>
+												</div>
+											)}
 										</div>
 									</div>
 								</div>
-							</div>
+							)}
 						</div>
 					</div>
 

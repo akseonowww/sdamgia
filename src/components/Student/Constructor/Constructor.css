@@ -19,10 +19,6 @@
 	}
 }
 
-.ConstructorForm-ExtraTopics {
-	display: none;
-}
-
 .ConstructorForm-Row {
 	display: grid;
 	grid-template-columns: 1fr;
