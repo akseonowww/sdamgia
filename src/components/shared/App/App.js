@@ -1,5 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
+import {
+	BrowserRouter,
+	Switch,
+	Route,
+	NavLink,
+	Redirect
+} from 'react-router-dom';
 
 import Student from '../../Student';
 import Test from '../../Test';
@@ -551,6 +557,7 @@ function App() {
 						<Switch>
 							<Route path="/" component={Student} exact />
 							<Route path="/test" component={Test} />
+							<Redirect to="/" />
 						</Switch>
 
 						<img
