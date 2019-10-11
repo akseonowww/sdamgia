@@ -1,6 +1,6 @@
 {
-	"name": "sdamgia-variant-constructor",
-	"homepage": "https://ilyasidorchik.github.io/sdamgia-variant-constructor/",
+	"name": "sdamgia",
+	"homepage": "https://ilyasidorchik.github.io/sdamgia/",
 	"version": "0.1.0",
 	"private": false,
 	"dependencies": {
