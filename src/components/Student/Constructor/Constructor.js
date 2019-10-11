@@ -362,7 +362,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Вычисления ·&nbsp;
+													Вычисления&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=174"
 														className="Link Link_black"
@@ -386,8 +386,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Округление с недостатком
-													·&nbsp;
+													Округление с недостатком&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=1"
 														className="Link Link_black"
@@ -411,8 +410,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Округление с избытком
-													·&nbsp;
+													Округление с избытком&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=2"
 														className="Link Link_black"
@@ -436,7 +434,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Проценты ·&nbsp;
+													Проценты&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=249"
 														className="Link Link_black"
@@ -460,8 +458,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Проценты и округление
-													·&nbsp;
+													Проценты и округление&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=5"
 														className="Link Link_black"
@@ -517,7 +514,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Определение величины
-													по графику ·&nbsp;
+													по графику&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=6"
 														className="Link Link_black"
@@ -542,7 +539,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Определение величины
-													по диаграмме ·&nbsp;
+													по диаграмме&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=8"
 														className="Link Link_black"
@@ -567,8 +564,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Вычисление величин
-													по графику или диаграмме
-													·&nbsp;
+													по графику или диаграмме&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=7"
 														className="Link Link_black"
@@ -625,7 +621,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Многоугольники: вычисление
-													длин и углов ·&nbsp;
+													длин и углов&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=252"
 														className="Link Link_black"
@@ -650,7 +646,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Многоугольники: вычисление
-													площадей ·&nbsp;
+													площадей&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=190"
 														className="Link Link_black"
@@ -674,7 +670,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Круг и его элементы ·&nbsp;
+													Круг и его элементы&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=123"
 														className="Link Link_black"
@@ -698,8 +694,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Координатная плоскость
-													·&nbsp;
+													Координатная плоскость&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=181"
 														className="Link Link_black"
@@ -760,7 +755,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Классическое определение
-													вероятности ·&nbsp;
+													вероятности&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=166"
 														className="Link Link_black"
@@ -785,7 +780,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Теоремы о вероятностях
-													событий ·&nbsp;
+													событий&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=185"
 														className="Link Link_black"
@@ -841,7 +836,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Линейные, квадратные,
-													кубические уравнения ·&nbsp;
+													кубические уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=14"
 														className="Link Link_black"
@@ -865,8 +860,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Рациональные уравнения
-													·&nbsp;
+													Рациональные уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=9"
 														className="Link Link_black"
@@ -890,8 +884,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Иррациональные уравнения
-													·&nbsp;
+													Иррациональные уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=10"
 														className="Link Link_black"
@@ -915,8 +908,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Показательные уравнения
-													·&nbsp;
+													Показательные уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=11"
 														className="Link Link_black"
@@ -940,8 +932,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Логарифмические уравнения
-													·&nbsp;
+													Логарифмические уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=12"
 														className="Link Link_black"
@@ -965,8 +956,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Тригонометрические уравнения
-													·&nbsp;
+													Тригонометрические уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=13"
 														className="Link Link_black"
@@ -1022,7 +1012,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Решение прямоугольного
-													треугольника ·&nbsp;
+													треугольника&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1047,7 +1037,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Решение равнобедренного
-													треугольника ·&nbsp;
+													треугольника&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1071,8 +1061,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Треугольники общего вида
-													·&nbsp;
+													Треугольники общего вида&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1096,7 +1085,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Параллелограммы ·&nbsp;
+													Параллелограммы&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1120,7 +1109,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Трапеция ·&nbsp;
+													Трапеция&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1144,8 +1133,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Центральные и вписанные углы
-													·&nbsp;
+													Центральные и вписанные углы&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1169,8 +1157,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Касательная, хорда, секущая
-													·&nbsp;
+													Касательная, хорда, секущая&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1194,7 +1181,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Вписанные окружности ·&nbsp;
+													Вписанные окружности&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1218,7 +1205,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Описанные окружности ·&nbsp;
+													Описанные окружности&nbsp;·&nbsp;
 													<a
 														href="https://math-ege.sdamgia.ru/test?theme=79"
 														className="Link Link_black"
@@ -1273,8 +1260,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Физический смысл производной
-													·&nbsp;
+													Физический смысл производной&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=69"
 														className="Link Link_black"
@@ -1299,8 +1285,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Геометрический смысл
-													производной, касательная
-													·&nbsp;
+													производной, касательная&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=68"
 														className="Link Link_black"
@@ -1325,8 +1310,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Применение производной
-													к исследованию функций
-													·&nbsp;
+													к исследованию функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=70"
 														className="Link Link_black"
@@ -1350,7 +1334,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Первообразная ·&nbsp;
+													Первообразная&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=183"
 														className="Link Link_black"
@@ -1405,7 +1389,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Куб ·&nbsp;
+													Куб&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=192"
 														className="Link Link_black"
@@ -1429,8 +1413,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Прямоугольный параллелепипед
-													·&nbsp;
+													Прямоугольный параллелепипед&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=193"
 														className="Link Link_black"
@@ -1455,7 +1438,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Элементы составных
-													многогранников ·&nbsp;
+													многогранников&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=180"
 														className="Link Link_black"
@@ -1480,8 +1463,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Площадь поверхности
-													составного многогранника
-													·&nbsp;
+													составного многогранника&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=148"
 														className="Link Link_black"
@@ -1506,7 +1488,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Объем составного
-													многогранника ·&nbsp;
+													многогранника&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=140"
 														className="Link Link_black"
@@ -1530,7 +1512,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Призма ·&nbsp;
+													Призма&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=178"
 														className="Link Link_black"
@@ -1554,7 +1536,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Пирамида ·&nbsp;
+													Пирамида&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=177"
 														className="Link Link_black"
@@ -1578,7 +1560,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Комбинации тел ·&nbsp;
+													Комбинации тел&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=197"
 														className="Link Link_black"
@@ -1602,7 +1584,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Цилиндр ·&nbsp;
+													Цилиндр&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=194"
 														className="Link Link_black"
@@ -1626,7 +1608,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Конус ·&nbsp;
+													Конус&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=144"
 														className="Link Link_black"
@@ -1650,7 +1632,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Шар ·&nbsp;
+													Шар&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=151"
 														className="Link Link_black"
@@ -1706,8 +1688,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													рациональных выражений
-													·&nbsp;
+													рациональных выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=55"
 														className="Link Link_black"
@@ -1733,7 +1714,7 @@ const Constructor = () => {
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования
 													алгебраических выражений
-													и дробей ·&nbsp;
+													и дробей&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=60"
 														className="Link Link_black"
@@ -1758,8 +1739,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													иррациональных выражений
-													·&nbsp;
+													иррациональных выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=56"
 														className="Link Link_black"
@@ -1784,8 +1764,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования буквенных
-													иррациональных выражений
-													·&nbsp;
+													иррациональных выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=61"
 														className="Link Link_black"
@@ -1810,7 +1789,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Вычисление значений
-													степенных выражений ·&nbsp;
+													степенных выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=57"
 														className="Link Link_black"
@@ -1834,8 +1813,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Действия со степенями
-													·&nbsp;
+													Действия со степенями&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=62"
 														className="Link Link_black"
@@ -1860,8 +1838,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													логарифмических выражений
-													·&nbsp;
+													логарифмических выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=58"
 														className="Link Link_black"
@@ -1886,8 +1863,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования буквенных
-													логарифмических выражений
-													·&nbsp;
+													логарифмических выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=63"
 														className="Link Link_black"
@@ -1912,8 +1888,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Вычисление значений
-													тригонометрических выражений
-													·&nbsp;
+													тригонометрических выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=65"
 														className="Link Link_black"
@@ -1938,8 +1913,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования числовых
-													тригонометрических выражений
-													·&nbsp;
+													тригонометрических выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=59"
 														className="Link Link_black"
@@ -1964,8 +1938,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Преобразования буквенных
-													тригонометрических выражений
-													·&nbsp;
+													тригонометрических выражений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=64"
 														className="Link Link_black"
@@ -2021,7 +1994,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Линейные уравнения
-													и неравенства ·&nbsp;
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=71"
 														className="Link Link_black"
@@ -2046,8 +2019,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Квадратные и степенные
-													уравнения и неравенства
-													·&nbsp;
+													уравнения и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=72"
 														className="Link Link_black"
@@ -2072,7 +2044,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Рациональные уравнения
-													и неравенства ·&nbsp;
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=76"
 														className="Link Link_black"
@@ -2097,7 +2069,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Иррациональные уравнения
-													и неравенства ·&nbsp;
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=77"
 														className="Link Link_black"
@@ -2122,7 +2094,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Показательные уравнения
-													и неравенства ·&nbsp;
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=73"
 														className="Link Link_black"
@@ -2147,7 +2119,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Логарифмические уравнения
-													и неравенства ·&nbsp;
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=74"
 														className="Link Link_black"
@@ -2172,7 +2144,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Тригонометрические уравнения
-													и неравенства ·&nbsp;
+													и неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=75"
 														className="Link Link_black"
@@ -2196,7 +2168,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Разные задачи ·&nbsp;
+													Разные задачи&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=184"
 														className="Link Link_black"
@@ -2252,7 +2224,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Задачи на проценты, сплавы
-													и смеси ·&nbsp;
+													и смеси&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=88"
 														className="Link Link_black"
@@ -2276,8 +2248,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на движение по прямой
-													·&nbsp;
+													Задачи на движение по прямой&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=84"
 														className="Link Link_black"
@@ -2302,7 +2273,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Задачи на движение
-													по окружности ·&nbsp;
+													по окружности&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=85"
 														className="Link Link_black"
@@ -2326,8 +2297,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на движение по воде
-													·&nbsp;
+													Задачи на движение по воде&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=86"
 														className="Link Link_black"
@@ -2351,8 +2321,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на совместную работу
-													·&nbsp;
+													Задачи на совместную работу&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=87"
 														className="Link Link_black"
@@ -2376,7 +2345,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на прогрессии ·&nbsp;
+													Задачи на прогрессии&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=89"
 														className="Link Link_black"
@@ -2433,8 +2402,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование степенных
-													и иррациональных функций
-													·&nbsp;
+													и иррациональных функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=81"
 														className="Link Link_black"
@@ -2458,7 +2426,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Исследование частных ·&nbsp;
+													Исследование частных&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=83"
 														className="Link Link_black"
@@ -2482,8 +2450,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Исследование произведений
-													·&nbsp;
+													Исследование произведений&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=82"
 														className="Link Link_black"
@@ -2508,8 +2475,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование показательных
-													и логарифмических функций
-													·&nbsp;
+													и логарифмических функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=80"
 														className="Link Link_black"
@@ -2534,8 +2500,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование
-													тригонометрических функций
-													·&nbsp;
+													тригонометрических функций&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=78"
 														className="Link Link_black"
@@ -2560,8 +2525,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Исследование функций
-													без&nbsp;помощи производной
-													·&nbsp;
+													без&nbsp;помощи производной&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=175"
 														className="Link Link_black"
@@ -2621,8 +2585,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Иррациональные уравнения
-													·&nbsp;
+													Иррациональные уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=275"
 														className="Link Link_black"
@@ -2646,8 +2609,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Рациональные уравнения
-													·&nbsp;
+													Рациональные уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=290"
 														className="Link Link_black"
@@ -2673,7 +2635,7 @@ const Constructor = () => {
 												<div className="ConstructorForm-TopicDesc">
 													Тригонометрические
 													уравнения, разложение
-													на множители ·&nbsp;
+													на множители&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=291"
 														className="Link Link_black"
@@ -2698,8 +2660,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Логарифмические
-													и показательные уравнения
-													·&nbsp;
+													и показательные уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=186"
 														className="Link Link_black"
@@ -2723,8 +2684,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Тригонометрические уравнения
-													·&nbsp;
+													Тригонометрические уравнения&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=167"
 														className="Link Link_black"
@@ -2750,8 +2710,7 @@ const Constructor = () => {
 												<div className="ConstructorForm-TopicDesc">
 													Тригонометрические
 													уравнения,
-													исследование&nbsp;ОДЗ
-													·&nbsp;
+													исследование&nbsp;ОДЗ&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=202"
 														className="Link Link_black"
@@ -2776,7 +2735,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Уравнения
-													смешанного&nbsp;типа ·&nbsp;
+													смешанного&nbsp;типа&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=201"
 														className="Link Link_black"
@@ -2832,7 +2791,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Расстояние между прямыми
-													и плоскостями ·&nbsp;
+													и плоскостями&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=280"
 														className="Link Link_black"
@@ -2857,8 +2816,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Расстояние от точки
-													до прямой и до плоскости
-													·&nbsp;
+													до прямой и до плоскости&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=281"
 														className="Link Link_black"
@@ -2882,8 +2840,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Сечения многогранников
-													·&nbsp;
+													Сечения многогранников&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=282"
 														className="Link Link_black"
@@ -2907,8 +2864,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Угол между&nbsp;плоскостями
-													·&nbsp;
+													Угол между&nbsp;плоскостями&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=283"
 														className="Link Link_black"
@@ -2933,7 +2889,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Угол между прямой
-													и плоскостью ·&nbsp;
+													и плоскостью&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=284"
 														className="Link Link_black"
@@ -2958,7 +2914,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Угол между скрещивающимися
-													прямыми ·&nbsp;
+													прямыми&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=285"
 														className="Link Link_black"
@@ -2982,8 +2938,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Объемы многогранников
-													·&nbsp;
+													Объемы многогранников&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=257"
 														className="Link Link_black"
@@ -3008,7 +2963,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Круглые тела: цилиндр,
-													конус,&nbsp;шар ·&nbsp;
+													конус,&nbsp;шар&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=206"
 														className="Link Link_black"
@@ -3063,8 +3018,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Рациональные неравенства
-													·&nbsp;
+													Рациональные неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=242"
 														className="Link Link_black"
@@ -3089,7 +3043,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Неравенства, содержащие
-													радикалы ·&nbsp;
+													радикалы&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=243"
 														className="Link Link_black"
@@ -3113,8 +3067,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Показательные неравенства
-													·&nbsp;
+													Показательные неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=237"
 														className="Link Link_black"
@@ -3138,8 +3091,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Логарифмические неравенства
-													·&nbsp;
+													Логарифмические неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=238"
 														className="Link Link_black"
@@ -3164,8 +3116,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Неравенства с логарифмами
-													по переменному основанию
-													·&nbsp;
+													по переменному основанию&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=239"
 														className="Link Link_black"
@@ -3189,8 +3140,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Неравенства с модулем
-													·&nbsp;
+													Неравенства с модулем&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=244"
 														className="Link Link_black"
@@ -3214,8 +3164,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Смешанные неравенства
-													·&nbsp;
+													Смешанные неравенства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=201"
 														className="Link Link_black"
@@ -3270,8 +3219,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Многоугольники и их свойства
-													·&nbsp;
+													Многоугольники и их свойства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=276"
 														className="Link Link_black"
@@ -3296,7 +3244,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Окружности и системы
-													окружностей ·&nbsp;
+													окружностей&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=277"
 														className="Link Link_black"
@@ -3320,8 +3268,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Окружности и треугольники
-													·&nbsp;
+													Окружности и треугольники&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=278"
 														className="Link Link_black"
@@ -3346,7 +3293,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Окружности
-													и четырёхугольники ·&nbsp;
+													и четырёхугольники&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=279"
 														className="Link Link_black"
@@ -3401,8 +3348,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Задачи на оптимальный выбор
-													·&nbsp;
+													Задачи на оптимальный выбор&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=276"
 														className="Link Link_black"
@@ -3426,8 +3372,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Банки, вклады,&nbsp;кредиты
-													·&nbsp;
+													Банки, вклады,&nbsp;кредиты&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=277"
 														className="Link Link_black"
@@ -3482,7 +3427,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Комбинация «кривых» ·&nbsp;
+													Комбинация «кривых»&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=268"
 														className="Link Link_black"
@@ -3506,7 +3451,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Комбинация прямых ·&nbsp;
+													Комбинация прямых&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=267"
 														className="Link Link_black"
@@ -3530,7 +3475,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Координаты (x, a) ·&nbsp;
+													Координаты (x, a)&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=271"
 														className="Link Link_black"
@@ -3555,7 +3500,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Кусочное построение графика
-													функции ·&nbsp;
+													функции&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=272"
 														className="Link Link_black"
@@ -3581,7 +3526,7 @@ const Constructor = () => {
 												<div className="ConstructorForm-TopicDesc">
 													Левая и правая части
 													в качестве отдельных
-													графиков ·&nbsp;
+													графиков&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=265"
 														className="Link Link_black"
@@ -3605,7 +3550,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Перебор случаев ·&nbsp;
+													Перебор случаев&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=274"
 														className="Link Link_black"
@@ -3629,7 +3574,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Подвижная галочка ·&nbsp;
+													Подвижная галочка&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=270"
 														className="Link Link_black"
@@ -3654,7 +3599,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Расстояние
-													между&nbsp;точками ·&nbsp;
+													между&nbsp;точками&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=269"
 														className="Link Link_black"
@@ -3678,7 +3623,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Симметрия в решениях ·&nbsp;
+													Симметрия в решениях&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=273"
 														className="Link Link_black"
@@ -3702,7 +3647,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Уравнение окружности ·&nbsp;
+													Уравнение окружности&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=266"
 														className="Link Link_black"
@@ -3727,7 +3672,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Функции, зависящие
-													от параметра ·&nbsp;
+													от параметра&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme235"
 														className="Link Link_black"
@@ -3751,8 +3696,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Уравнения с параметром
-													·&nbsp;
+													Уравнения с параметром&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=171"
 														className="Link Link_black"
@@ -3777,8 +3721,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Расположение корней
-													квадратного трехчлена
-													·&nbsp;
+													квадратного трехчлена&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=207"
 														className="Link Link_black"
@@ -3803,7 +3746,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Использование симметрий,
-													оценок, монотонности ·&nbsp;
+													оценок, монотонности&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=208"
 														className="Link Link_black"
@@ -3858,7 +3801,7 @@ const Constructor = () => {
 													/>
 												</div>
 												<div className="ConstructorForm-TopicDesc">
-													Числа и их свойства ·&nbsp;
+													Числа и их свойства&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=172"
 														className="Link Link_black"
@@ -3883,7 +3826,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Числовые наборы на карточках
-													и досках ·&nbsp;
+													и досках&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=217"
 														className="Link Link_black"
@@ -3908,7 +3851,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Последовательности
-													и прогрессии ·&nbsp;
+													и прогрессии&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=209"
 														className="Link Link_black"
@@ -3933,8 +3876,7 @@ const Constructor = () => {
 												</div>
 												<div className="ConstructorForm-TopicDesc">
 													Сюжетные задачи: кино,
-													театр, мотки&nbsp;верёвки
-													·&nbsp;
+													театр, мотки&nbsp;верёвки&nbsp;·&nbsp;
 													<a
 														href="https://ege.sdamgia.ru/test?theme=210"
 														className="Link Link_black"
