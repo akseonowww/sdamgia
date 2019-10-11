@@ -143,12 +143,58 @@ const Constructor = () => {
 		subtopic126: true,
 		detailedPart: false,
 		count13: 0,
+		subtopic131: true,
+		subtopic132: true,
+		subtopic133: true,
+		subtopic134: true,
+		subtopic135: true,
+		subtopic136: true,
+		subtopic137: true,
 		count14: 0,
+		subtopic141: true,
+		subtopic142: true,
+		subtopic143: true,
+		subtopic144: true,
+		subtopic145: true,
+		subtopic146: true,
+		subtopic147: true,
+		subtopic148: true,
 		count15: 0,
+		subtopic151: true,
+		subtopic152: true,
+		subtopic153: true,
+		subtopic154: true,
+		subtopic155: true,
+		subtopic156: true,
+		subtopic157: true,
 		count16: 0,
+		subtopic161: true,
+		subtopic162: true,
+		subtopic163: true,
+		subtopic164: true,
 		count17: 0,
+		subtopic171: true,
+		subtopic172: true,
 		count18: 0,
-		count19: 0
+		subtopic181: true,
+		subtopic182: true,
+		subtopic183: true,
+		subtopic184: true,
+		subtopic185: true,
+		subtopic186: true,
+		subtopic187: true,
+		subtopic188: true,
+		subtopic189: true,
+		subtopic1810: true,
+		subtopic1811: true,
+		subtopic1812: true,
+		subtopic1813: true,
+		subtopic1814: true,
+		count19: 0,
+		subtopic191: true,
+		subtopic192: true,
+		subtopic193: true,
+		subtopic194: true
 	});
 
 	const [subtopics, setSubtopics] = useState({
@@ -2561,7 +2607,184 @@ const Constructor = () => {
 
 									{subtopics.subtopics13 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic131"
+														value={
+															values.subtopic131
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Иррациональные уравнения
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=275"
+														className="Link Link_black"
+													>
+														9 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic132"
+														value={
+															values.subtopic132
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Рациональные уравнения
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=290"
+														className="Link Link_black"
+													>
+														3 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic133"
+														value={
+															values.subtopic133
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Тригонометрические
+													уравнения, разложение
+													на множители ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=291"
+														className="Link Link_black"
+													>
+														25 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic134"
+														value={
+															values.subtopic134
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Логарифмические
+													и показательные уравнения
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=186"
+														className="Link Link_black"
+													>
+														11 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic135"
+														value={
+															values.subtopic135
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Тригонометрические уравнения
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=167"
+														className="Link Link_black"
+													>
+														35 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic136"
+														value={
+															values.subtopic136
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Тригонометрические
+													уравнения,
+													исследование&nbsp;ОДЗ
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=202"
+														className="Link Link_black"
+													>
+														30 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic137"
+														value={
+															values.subtopic137
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Уравнения
+													смешанного&nbsp;типа ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=201"
+														className="Link Link_black"
+													>
+														22 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
@@ -2594,7 +2817,206 @@ const Constructor = () => {
 
 									{subtopics.subtopics14 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic141"
+														value={
+															values.subtopic141
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Расстояние между прямыми
+													и плоскостями ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=280"
+														className="Link Link_black"
+													>
+														9 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic142"
+														value={
+															values.subtopic142
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Расстояние от точки
+													до прямой и до плоскости
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=281"
+														className="Link Link_black"
+													>
+														11 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic143"
+														value={
+															values.subtopic143
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Сечения многогранников
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=282"
+														className="Link Link_black"
+													>
+														27 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic144"
+														value={
+															values.subtopic144
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Угол между&nbsp;плоскостями
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=283"
+														className="Link Link_black"
+													>
+														19 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic145"
+														value={
+															values.subtopic145
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Угол между прямой
+													и плоскостью ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=284"
+														className="Link Link_black"
+													>
+														15 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic146"
+														value={
+															values.subtopic146
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Угол между скрещивающимися
+													прямыми ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=285"
+														className="Link Link_black"
+													>
+														12 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic147"
+														value={
+															values.subtopic147
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Объемы многогранников
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=257"
+														className="Link Link_black"
+													>
+														19 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic148"
+														value={
+															values.subtopic148
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Круглые тела: цилиндр,
+													конус,&nbsp;шар ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=206"
+														className="Link Link_black"
+													>
+														19 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
@@ -2627,7 +3049,181 @@ const Constructor = () => {
 
 									{subtopics.subtopics15 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic151"
+														value={
+															values.subtopic151
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Рациональные неравенства
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=242"
+														className="Link Link_black"
+													>
+														28 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic152"
+														value={
+															values.subtopic152
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Неравенства, содержащие
+													радикалы ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=243"
+														className="Link Link_black"
+													>
+														8 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic153"
+														value={
+															values.subtopic153
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Показательные неравенства
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=237"
+														className="Link Link_black"
+													>
+														102 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic154"
+														value={
+															values.subtopic154
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Логарифмические неравенства
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=238"
+														className="Link Link_black"
+													>
+														76 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic155"
+														value={
+															values.subtopic155
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Неравенства с логарифмами
+													по переменному основанию
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=239"
+														className="Link Link_black"
+													>
+														80 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic156"
+														value={
+															values.subtopic156
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Неравенства с модулем
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=244"
+														className="Link Link_black"
+													>
+														14 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic157"
+														value={
+															values.subtopic157
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Смешанные неравенства
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=201"
+														className="Link Link_black"
+													>
+														56 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
@@ -2660,7 +3256,105 @@ const Constructor = () => {
 
 									{subtopics.subtopics16 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic161"
+														value={
+															values.subtopic161
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Многоугольники и их свойства
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=276"
+														className="Link Link_black"
+													>
+														52 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic162"
+														value={
+															values.subtopic162
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Окружности и системы
+													окружностей ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=277"
+														className="Link Link_black"
+													>
+														14 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic163"
+														value={
+															values.subtopic163
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Окружности и треугольники
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=278"
+														className="Link Link_black"
+													>
+														35 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic164"
+														value={
+															values.subtopic164
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Окружности
+													и четырёхугольники ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=279"
+														className="Link Link_black"
+													>
+														38 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
@@ -2693,7 +3387,55 @@ const Constructor = () => {
 
 									{subtopics.subtopics17 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic171"
+														value={
+															values.subtopic171
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Задачи на оптимальный выбор
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=276"
+														className="Link Link_black"
+													>
+														51 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic172"
+														value={
+															values.subtopic172
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Банки, вклады,&nbsp;кредиты
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=277"
+														className="Link Link_black"
+													>
+														114 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
@@ -2726,7 +3468,350 @@ const Constructor = () => {
 
 									{subtopics.subtopics18 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic181"
+														value={
+															values.subtopic181
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Комбинация «кривых» ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=268"
+														className="Link Link_black"
+													>
+														10 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic182"
+														value={
+															values.subtopic182
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Комбинация прямых ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=267"
+														className="Link Link_black"
+													>
+														8 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic183"
+														value={
+															values.subtopic183
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Координаты (x, a) ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=271"
+														className="Link Link_black"
+													>
+														14 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic184"
+														value={
+															values.subtopic184
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Кусочное построение графика
+													функции ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=272"
+														className="Link Link_black"
+													>
+														9 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic185"
+														value={
+															values.subtopic185
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Левая и правая части
+													в качестве отдельных
+													графиков ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=265"
+														className="Link Link_black"
+													>
+														11 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic186"
+														value={
+															values.subtopic186
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Перебор случаев ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=274"
+														className="Link Link_black"
+													>
+														50 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic187"
+														value={
+															values.subtopic187
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Подвижная галочка ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=270"
+														className="Link Link_black"
+													>
+														4 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic188"
+														value={
+															values.subtopic188
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Расстояние
+													между&nbsp;точками ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=269"
+														className="Link Link_black"
+													>
+														7 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic189"
+														value={
+															values.subtopic189
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Симметрия в решениях ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=273"
+														className="Link Link_black"
+													>
+														15 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic1810"
+														value={
+															values.subtopic1810
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Уравнение окружности ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=266"
+														className="Link Link_black"
+													>
+														24 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic1811"
+														value={
+															values.subtopic1811
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Функции, зависящие
+													от параметра ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme235"
+														className="Link Link_black"
+													>
+														14 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic1812"
+														value={
+															values.subtopic1812
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Уравнения с параметром
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=171"
+														className="Link Link_black"
+													>
+														20 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic1813"
+														value={
+															values.subtopic1813
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Расположение корней
+													квадратного трехчлена
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=207"
+														className="Link Link_black"
+													>
+														8 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic1814"
+														value={
+															values.subtopic1814
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Использование симметрий,
+													оценок, монотонности ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=208"
+														className="Link Link_black"
+													>
+														27 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
@@ -2759,7 +3844,105 @@ const Constructor = () => {
 
 									{subtopics.subtopics19 && (
 										<div className="ConstructorForm-TopicSubs">
-											Здесь будут подтемы
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic191"
+														value={
+															values.subtopic191
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Числа и их свойства ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=172"
+														className="Link Link_black"
+													>
+														70 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic192"
+														value={
+															values.subtopic192
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Числовые наборы на карточках
+													и досках ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=217"
+														className="Link Link_black"
+													>
+														33 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic193"
+														value={
+															values.subtopic193
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Последовательности
+													и прогрессии ·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=209"
+														className="Link Link_black"
+													>
+														43 шт.
+													</a>
+												</div>
+											</label>
+
+											<label className="Link_wrap ConstructorForm-TopicName Label">
+												<div className="ConstructorForm-TopicNumber">
+													<Checkbox
+														fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+														name="subtopic194"
+														value={
+															values.subtopic194
+														}
+														onChange={
+															handleInputChange
+														}
+													/>
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													Сюжетные задачи: кино,
+													театр, мотки&nbsp;верёвки
+													·&nbsp;
+													<a
+														href="https://ege.sdamgia.ru/test?theme=210"
+														className="Link Link_black"
+													>
+														51 шт.
+													</a>
+												</div>
+											</label>
 										</div>
 									)}
 								</div>
