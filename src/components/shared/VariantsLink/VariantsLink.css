@@ -47,6 +47,7 @@
 	width: 1.35rem;
 	height: 1.35rem;
 
+	color: #000;
 	text-align: center;
 
 	background: linear-gradient(#d2e2ff, #9dccff);
@@ -54,6 +55,12 @@
 	box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
 
 	cursor: pointer;
+}
+
+.VariantsLink-Hint:hover {
+	background-color: #dbe8ff;
+	background: -khtml-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+	background: linear-gradient(to bottom, #dbe8ff, #b1d6ff);
 }
 
 @media (min-width: 768px) {
