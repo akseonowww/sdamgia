@@ -19,7 +19,7 @@ const TeacherVariant = () => (
 			<div className="Form_oneLine">
 				<input
 					className="Input Form_oneLine-Input"
-					type="text"
+					type="tel"
 					name="id"
 					placeholder="Номер варианта"
 				/>
