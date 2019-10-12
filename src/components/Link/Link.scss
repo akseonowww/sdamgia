@@ -1,8 +1,7 @@
 @import '../../variables';
 @import '../../transitions';
 
-.Link,
-.Link-U {
+@mixin Link-Style {
 	font-style: inherit;
 	font-weight: inherit;
 	color: $primary;
@@ -15,108 +14,138 @@
 	@include transition;
 }
 
-.Link_black,
-.Link_black-U {
-	color: $black;
-
-	border-bottom-color: $border-black;
-}
-
-.Link_white,
-.Link_white-U {
-	color: $white;
-
-	border-bottom-color: $border-white;
-}
-
-.Link:not(.Link_static):not(.Link_black):not(.Link_white):not(.Link_pseudo):visited,
-.Link-U:not(.Link_static-U):not(.Link_black-U):not(.Link_white-U):not(.Link_pseudo-U):visited {
-	color: $visited;
-
-	border-color: $border-visited;
-}
-
-.Link_pseudo {
-	margin: 0;
-	padding: 0;
-
-	font-family: inherit;
-	font-size: inherit;
-	text-align: left;
-
-	background: transparent;
-	border: none;
-	outline: none;
-}
-
-.Link_pseudo,
-.Link_pseudo-U {
+@mixin Link_pseudo-Style {
 	border-bottom-width: 0.1rem;
 	border-bottom-style: dashed;
 	border-color: rgba(9, 9, 73, 0.25);
-
 	cursor: pointer;
 }
 
-.Link_pseudo-black,
-.Link_pseudo-black-U {
-	color: $black;
+.Link {
+	@include Link-Style;
 
-	border-color: rgba(0, 0, 0, 0.25);
-}
+	&-U {
+		@include Link-Style;
+	}
 
-.Link_pseudo-white,
-.Link_pseudo-white-U {
-	color: $white;
+	&_black {
+		color: $black;
 
-	border-color: $border-white;
-}
+		border-bottom-color: $border-black;
 
-.Link:hover {
-	color: $danger !important;
+		&-U {
+			color: $black;
 
-	border-color: $border-danger !important;
+			border-bottom-color: $border-black;
+		}
+	}
 
-	@include transition-reset;
-}
+	&_white {
+		color: $white;
 
-.Link_white:hover {
-	color: $white !important;
+		&-U {
+			border-bottom-color: $border-white;
+		}
+	}
 
-	border-bottom-color: $white !important;
-}
+	&:not(&_static):not(&_black):not(&_white):not(&_pseudo):visited,
+	&-U:not(&_static-U):not(&_black-U):not(&_white-U):not(&_pseudo-U):visited {
+		color: $visited;
 
-.Link_pseudo:hover {
-	border-color: rgba(255, 102, 0, 0.5) !important;
-}
+		border-color: $border-visited;
+	}
 
-.Link_wrap {
-	width: 100%;
+	&_pseudo {
+		margin: 0;
+		padding: 0;
 
-	text-align: left;
+		font-family: inherit;
+		font-size: inherit;
+		text-align: left;
 
-	background: transparent;
-	border: none;
-}
+		background: transparent;
+		border: none;
+		outline: none;
 
-.Link_wrap-U {
-	color: inherit;
+		@include Link_pseudo-Style;
 
-	text-decoration: none;
+		&-U {
+			@include Link_pseudo-Style;
+		}
+	}
 
-	@include transition-reset;
-}
+	&_pseudo-black {
+		color: $black;
 
-.Link_wrap:hover .Link-U {
-	border-color: $border-danger !important;
+		border-color: $border-black;
 
-	@include transition-reset;
-}
+		&-U {
+			color: $black;
 
-.Link_wrap:hover .Link_white-U {
-	border-color: $white !important;
-}
+			border-color: $border-black;
+		}
+	}
 
-.Link_wrap:hover .Link_pseudo-U {
-	border-color: rgba(255, 102, 0, 0.5) !important;
+	&_pseudo-white {
+		color: $white;
+
+		border-color: $border-white;
+
+		&-U {
+			color: $white;
+
+			border-color: $border-white;
+		}
+	}
+
+	&:hover {
+		color: $danger !important;
+
+		border-color: $border-danger !important;
+
+		@include transition-reset;
+	}
+
+	&_white:hover {
+		color: $white !important;
+
+		border-bottom-color: $white !important;
+	}
+
+	&_pseudo:hover {
+		border-color: $border-dangerous !important;
+	}
+
+	&_wrap {
+		width: 100%;
+
+		text-align: left;
+
+		background: transparent;
+		border: none;
+
+		&-U {
+			color: inherit;
+
+			text-decoration: none;
+
+			@include transition-reset;
+		}
+
+		&:hover {
+			.Link-U {
+				border-color: $border-danger !important;
+
+				@include transition-reset;
+			}
+
+			.Link_white-U {
+				border-color: $white !important;
+			}
+
+			.Link_pseudo-U {
+				border-color: $border-dangerous !important;
+			}
+		}
+	}
 }
