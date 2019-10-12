@@ -313,8 +313,8 @@ const LarinVariants = () => {
                     <VariantsLink to="/test?id=5410470" title="Александр Ларин, тренировочный вариант ЕГЭ № 1">1</VariantsLink>
                 </Grid>
                 {!areVariantsAll && (
-                    <div className="VariantsBox-Control">
-                        <button className="Link Link_pseudo" onClick={() => setAreVariantsAll(true)}>Показать все</button>
+                    <div className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control" onClick={() => setAreVariantsAll(true)}>
+                        <u className="Link-U Link_pseudo-U Link_wrap-U">Показать все</u>
                     </div>
                 )}
             </div>
