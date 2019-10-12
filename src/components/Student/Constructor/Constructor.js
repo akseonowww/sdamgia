@@ -195,6 +195,7 @@ const Constructor = () => {
 		subtopic192: true,
 		subtopic193: true,
 		subtopic194: true,
+		extraCount1: 0,
 		extraSubtopic11: true,
 		extraSubtopic12: true,
 		extraSubtopic13: true
@@ -3986,7 +3987,7 @@ const Constructor = () => {
 									<div className="ConstructorForm-Row">
 										<Counter
 											className="ConstructorForm-Counter"
-											name="count19"
+											name="extraCount1"
 											values={values}
 											decrement={decrement}
 											increment={increment}
