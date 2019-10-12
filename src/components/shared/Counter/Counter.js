@@ -31,7 +31,7 @@ const Counter = ({
 			</button>
 			<input
 				className="Counter-Input Input"
-				type="text"
+				type="tel"
 				name={name}
 				value={values[name]}
 				ref={countInput}
