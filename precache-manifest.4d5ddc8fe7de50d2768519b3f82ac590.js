@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "08c6a02a1c9f52874829ae24afe74e00",
+    "revision": "b10c34290350604eb733327caf001eb6",
     "url": "/sdamgia/index.html"
   },
   {
-    "revision": "d885ba4996f7d29fe6b6",
+    "revision": "434a633c732df1fad5d0",
     "url": "/sdamgia/static/css/main.e2160eb1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sdamgia/static/js/2.3e5222c8.chunk.js"
   },
   {
-    "revision": "d885ba4996f7d29fe6b6",
-    "url": "/sdamgia/static/js/main.a76a9df5.chunk.js"
+    "revision": "434a633c732df1fad5d0",
+    "url": "/sdamgia/static/js/main.8ad3e6a9.chunk.js"
   },
   {
     "revision": "22209ff448b29e0f360a",
