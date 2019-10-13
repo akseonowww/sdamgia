@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import nahStep from '../Form/nahStep';
 import './Counter.css';
 
-const useCounter = (value, setValue, countInput) => {
+const useCounter = (value, setValue, countInput, switchOffPart) => {
 	const handleCounterInputFocus = () => {
 		countInput.current.setSelectionRange(0, 9999);
 	};
@@ -24,6 +24,8 @@ const useCounter = (value, setValue, countInput) => {
 		}
 
 		setValue(newValue);
+
+		if (!newValue) switchOffPart();
 	};
 
 	const decrement = e => {
@@ -36,6 +38,8 @@ const useCounter = (value, setValue, countInput) => {
 		}
 
 		setValue(newValue);
+
+		if (!newValue) switchOffPart();
 	};
 
 	const increment = e => {
@@ -44,6 +48,8 @@ const useCounter = (value, setValue, countInput) => {
 		const newValue = Number(value) + 1;
 
 		setValue(newValue);
+
+		if (!newValue) switchOffPart();
 	};
 
 	return {
@@ -54,14 +60,14 @@ const useCounter = (value, setValue, countInput) => {
 	};
 };
 
-const Counter = ({ className, name, value, setValue }) => {
+const Counter = ({ className, name, value, setValue, switchOffPart }) => {
 	const countInput = useRef(null);
 	const {
 		handleCounterInputFocus,
 		handleCounterInputChange,
 		increment,
 		decrement
-	} = useCounter(value, setValue, countInput);
+	} = useCounter(value, setValue, countInput, switchOffPart);
 
 	return (
 		<div className={`Counter ${className}`}>

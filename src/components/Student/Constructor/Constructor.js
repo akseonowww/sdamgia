@@ -163,6 +163,14 @@ const Constructor = () => {
 	const [testPart, setTestPart] = useState(false);
 	const [detailedPart, setDetailedPart] = useState(false);
 
+	const switchOffTestPart = () => {
+		setTestPart(false);
+	};
+
+	const switchOffDetailedPart = () => {
+		setDetailedPart(false);
+	};
+
 	const [topics, setTopics] = useState({
 		subtopics1: false,
 		subtopics2: false,
@@ -313,6 +321,7 @@ const Constructor = () => {
 									name="count1"
 									value={count1}
 									setValue={setCount1}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -465,6 +474,7 @@ const Constructor = () => {
 									name="count2"
 									value={count2}
 									setValue={setCount2}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -570,6 +580,7 @@ const Constructor = () => {
 									name="count3"
 									value={count3}
 									setValue={setCount3}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -700,6 +711,7 @@ const Constructor = () => {
 									name="count4"
 									value={count4}
 									setValue={setCount4}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -784,6 +796,7 @@ const Constructor = () => {
 									name="count5"
 									value={count5}
 									setValue={setCount5}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -964,6 +977,7 @@ const Constructor = () => {
 									name="count6"
 									value={count6}
 									setValue={setCount6}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1216,6 +1230,7 @@ const Constructor = () => {
 									name="count7"
 									value={count7}
 									setValue={setCount7}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1346,6 +1361,7 @@ const Constructor = () => {
 									name="count8"
 									value={count8}
 									setValue={setCount8}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1644,6 +1660,7 @@ const Constructor = () => {
 									name="count9"
 									value={count9}
 									setValue={setCount9}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1958,6 +1975,7 @@ const Constructor = () => {
 									name="count10"
 									value={count10}
 									setValue={setCount10}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2187,6 +2205,7 @@ const Constructor = () => {
 									name="count11"
 									value={count11}
 									setValue={setCount11}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2366,6 +2385,7 @@ const Constructor = () => {
 									name="count12"
 									value={count12}
 									setValue={setCount12}
+									switchOffPart={switchOffTestPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2555,6 +2575,7 @@ const Constructor = () => {
 									name="count13"
 									value={count13}
 									setValue={setCount13}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2762,6 +2783,7 @@ const Constructor = () => {
 									name="count14"
 									value={count14}
 									setValue={setCount14}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2992,6 +3014,7 @@ const Constructor = () => {
 									name="count15"
 									value={count15}
 									setValue={setCount15}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3197,6 +3220,7 @@ const Constructor = () => {
 									name="count16"
 									value={count16}
 									setValue={setCount16}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3326,6 +3350,7 @@ const Constructor = () => {
 									name="count17"
 									value={count17}
 									setValue={setCount17}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3405,6 +3430,7 @@ const Constructor = () => {
 									name="count18"
 									value={count18}
 									setValue={setCount18}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3786,6 +3812,7 @@ const Constructor = () => {
 									name="count19"
 									value={count19}
 									setValue={setCount19}
+									switchOffPart={switchOffDetailedPart}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
