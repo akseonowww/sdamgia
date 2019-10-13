@@ -282,6 +282,9 @@ const Constructor = () => {
 		setCount17(0);
 		setCount18(0);
 		setCount19(0);
+
+		switchOffTestPart();
+		switchOffDetailedPart();
 	};
 
 	return (
