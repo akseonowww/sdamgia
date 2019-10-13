@@ -74,10 +74,7 @@ const Counter = ({ className, name, value, setValue }) => {
 				onClick={handleCounterInputFocus}
 				onChange={handleCounterInputChange}
 			/>
-			<button
-				className="Counter-Button"
-				onClick={increment}
-			>
+			<button className="Counter-Button" onClick={increment}>
 				+
 			</button>
 			<span className="Counter-Caption">шт.</span>

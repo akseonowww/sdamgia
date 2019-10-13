@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Section from '../../shared/Section';
 import Grid from '../../shared/Grid';
 import Title from '../../shared/Title';
-import Counter, { useCounter } from '../../shared/Counter/Counter';
+import Counter from '../../shared/Counter/Counter';
 import Checkbox from '../../shared/Checkbox';
 import '../../shared/Switcher/Switcher.css';
 import '../../shared/Switcher/_vertical/Switcher_vertical.css';
