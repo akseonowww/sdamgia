@@ -34,7 +34,6 @@ const Constructor = () => {
 	const [extraCount1, setExtraCount1] = useState(0);
 
 	const [values, setValues] = useState({
-		totalTasksNumber: 'из 9 заданий',
 		testPart: false,
 		subtopic11: true,
 		subtopic12: true,
@@ -185,6 +184,11 @@ const Constructor = () => {
 		subtopics19: false,
 		topicsExtra: false,
 		extraSubtopics1: false
+	});
+
+	const [testTotal, setTestTotal] = useState({
+		amount: 0,
+		text: ''
 	});
 
 	const handleCheckboxChange = e => {
@@ -4015,7 +4019,7 @@ const Constructor = () => {
 							<input
 								className="Button ConstructorForm-SubmitButton"
 								type="submit"
-								value={`Составить вариант ${values.totalTasksNumber}`}
+								value={`Составить вариант ${testTotal.text}`}
 							/>
 
 							<div className="Switcher Switcher_vertical Switcher_checkbox ConstructorForm-Switcher">
