@@ -39,6 +39,10 @@
 }
 
 .Counter-Input {
+	z-index: 1;
+	position: relative;
+	top: 0;
+
 	width: 3rem;
 
 	text-align: center;

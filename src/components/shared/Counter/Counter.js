@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 
+import nahStep from '../Form/nahStep';
 import './Counter.css';
 
 const useCounter = (value, setValue, countInput) => {
@@ -10,8 +11,17 @@ const useCounter = (value, setValue, countInput) => {
 	const handleCounterInputChange = e => {
 		const { value: newValue } = e.target;
 
-		// allow only number in counter input
-		if (/\D/.test(newValue) && newValue !== '') return;
+		// allow only number in counter input and show nah amination
+		if (/\D/.test(newValue) && newValue !== '') {
+			countInput.current.style.left = 0;
+			let x = 0,
+				m = 0,
+				nahStepTimeOut;
+
+			nahStep(countInput.current, m, x, nahStepTimeOut);
+
+			return;
+		}
 
 		setValue(newValue);
 	};
@@ -73,6 +83,7 @@ const Counter = ({ className, name, value, setValue }) => {
 				ref={countInput}
 				onClick={handleCounterInputFocus}
 				onChange={handleCounterInputChange}
+				style={{ left: 0 }}
 			/>
 			<button className="Counter-Button" onClick={increment}>
 				+
