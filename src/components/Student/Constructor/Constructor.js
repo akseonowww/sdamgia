@@ -216,18 +216,20 @@ const Constructor = () => {
 		const newValue = !testPart;
 		const countValue = newValue ? 1 : 0;
 
-		setCount1(count1 > 1 ? count1 : countValue);
-		setCount2(count2 > 1 ? count2 : countValue);
-		setCount3(count3 > 1 ? count3 : countValue);
-		setCount4(count4 > 1 ? count4 : countValue);
-		setCount5(count5 > 1 ? count5 : countValue);
-		setCount6(count6 > 1 ? count6 : countValue);
-		setCount7(count7 > 1 ? count7 : countValue);
-		setCount8(count8 > 1 ? count8 : countValue);
-		setCount9(count9 > 1 ? count9 : countValue);
-		setCount10(count10 > 1 ? count10 : countValue);
-		setCount11(count11 > 1 ? count11 : countValue);
-		setCount12(count12 > 1 ? count12 : countValue);
+		const willBeSaved = countValue === 1;
+
+		setCount1(count1 > 1 && willBeSaved ? count1 : countValue);
+		setCount2(count2 > 1 && willBeSaved ? count2 : countValue);
+		setCount3(count3 > 1 && willBeSaved ? count3 : countValue);
+		setCount4(count4 > 1 && willBeSaved ? count4 : countValue);
+		setCount5(count5 > 1 && willBeSaved ? count5 : countValue);
+		setCount6(count6 > 1 && willBeSaved ? count6 : countValue);
+		setCount7(count7 > 1 && willBeSaved ? count7 : countValue);
+		setCount8(count8 > 1 && willBeSaved ? count8 : countValue);
+		setCount9(count9 > 1 && willBeSaved ? count9 : countValue);
+		setCount10(count10 > 1 && willBeSaved ? count10 : countValue);
+		setCount11(count11 > 1 && willBeSaved ? count11 : countValue);
+		setCount12(count12 > 1 && willBeSaved ? count12 : countValue);
 
 		setTestPart(newValue);
 	};
@@ -236,13 +238,15 @@ const Constructor = () => {
 		const newValue = !detailedPart;
 		const countValue = newValue ? 1 : 0;
 
-		setCount13(count13 > 1 ? count13 : countValue);
-		setCount14(count14 > 1 ? count14 : countValue);
-		setCount15(count15 > 1 ? count15 : countValue);
-		setCount16(count16 > 1 ? count16 : countValue);
-		setCount17(count17 > 1 ? count17 : countValue);
-		setCount18(count18 > 1 ? count18 : countValue);
-		setCount19(count19 > 1 ? count19 : countValue);
+		const willBeSaved = countValue === 1;
+
+		setCount13(count13 > 1 && willBeSaved ? count13 : countValue);
+		setCount14(count14 > 1 && willBeSaved ? count14 : countValue);
+		setCount15(count15 > 1 && willBeSaved ? count15 : countValue);
+		setCount16(count16 > 1 && willBeSaved ? count16 : countValue);
+		setCount17(count17 > 1 && willBeSaved ? count17 : countValue);
+		setCount18(count18 > 1 && willBeSaved ? count18 : countValue);
+		setCount19(count19 > 1 && willBeSaved ? count19 : countValue);
 
 		setDetailedPart(newValue);
 	};
