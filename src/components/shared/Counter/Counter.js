@@ -1,6 +1,45 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 import './Counter.css';
+
+export const useCounter = (initial = { count1: 0, count2: 0 }) => {
+	const [values, setValues] = useState(initial);
+
+	const decrement = e => {
+		const { input } = e.target.dataset;
+		let newValue = Number(values[input]);
+
+		e.preventDefault();
+
+		if (values[input] > 0) {
+			newValue = newValue - 1;
+		}
+
+		setValues({
+			...values,
+			...{ [input]: newValue }
+		});
+	};
+
+	const increment = e => {
+		const { input } = e.target.dataset;
+		let newValue = Number(values[input]) + 1;
+
+		e.preventDefault();
+
+		let newTotalTasksNumber = 'из 9 заданий';
+		if (input === 'count19') {
+			newTotalTasksNumber = 'из 10 заданий';
+		}
+
+		setValues({
+			...values,
+			...{ totalTasksNumber: newTotalTasksNumber, [input]: newValue }
+		});
+	};
+
+	return { values, setValues, increment, decrement };
+};
 
 const Counter = ({
 	className,

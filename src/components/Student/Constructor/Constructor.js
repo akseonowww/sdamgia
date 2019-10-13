@@ -3,52 +3,13 @@ import React, { useState } from 'react';
 import Section from '../../shared/Section';
 import Grid from '../../shared/Grid';
 import Title from '../../shared/Title';
-import Counter from '../../shared/Counter/Counter';
+import Counter, { useCounter } from '../../shared/Counter/Counter';
 import Checkbox from '../../shared/Checkbox';
 import '../../shared/Switcher/Switcher.css';
 import '../../shared/Switcher/_vertical/Switcher_vertical.css';
 import '../../shared/Switcher/_checkbox/Switcher_checkbox.css';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
-
-const useCounter = (initial = { count1: 0, count2: 0 }) => {
-	const [values, setValues] = useState(initial);
-
-	const decrement = e => {
-		const { input } = e.target.dataset;
-		let newValue = Number(values[input]);
-
-		e.preventDefault();
-
-		if (values[input] > 0) {
-			newValue = newValue - 1;
-		}
-
-		setValues({
-			...values,
-			...{ [input]: newValue }
-		});
-	};
-
-	const increment = e => {
-		const { input } = e.target.dataset;
-		let newValue = Number(values[input]) + 1;
-
-		e.preventDefault();
-
-		let newTotalTasksNumber = 'из 9 заданий';
-		if (input === 'count19') {
-			newTotalTasksNumber = 'из 10 заданий';
-		}
-
-		setValues({
-			...values,
-			...{ totalTasksNumber: newTotalTasksNumber, [input]: newValue }
-		});
-	};
-
-	return { values, setValues, increment, decrement };
-};
 
 const Constructor = () => {
 	const { values, setValues, increment, decrement } = useCounter({
