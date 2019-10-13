@@ -34,7 +34,6 @@ const Constructor = () => {
 	const [extraCount1, setExtraCount1] = useState(0);
 
 	const [values, setValues] = useState({
-		testPart: false,
 		subtopic11: true,
 		subtopic12: true,
 		subtopic13: true,
@@ -110,7 +109,6 @@ const Constructor = () => {
 		subtopic124: true,
 		subtopic125: true,
 		subtopic126: true,
-		detailedPart: false,
 		subtopic131: true,
 		subtopic132: true,
 		subtopic133: true,
@@ -162,6 +160,9 @@ const Constructor = () => {
 		extraSubtopic13: true
 	});
 
+	const [testPart, setTestPart] = useState(false);
+	const [detailedPart, setDetailedPart] = useState(false);
+
 	const [topics, setTopics] = useState({
 		subtopics1: false,
 		subtopics2: false,
@@ -212,44 +213,38 @@ const Constructor = () => {
 	};
 
 	const switchTestPart = () => {
-		const value = !values.testPart ? 1 : 0;
+		const newValue = !testPart;
+		const countValue = newValue ? 1 : 0;
 
-		setValues({
-			...values,
-			...{
-				testPart: !values.testPart,
-				count1: value,
-				count2: value,
-				count3: value,
-				count4: value,
-				count5: value,
-				count6: value,
-				count7: value,
-				count8: value,
-				count9: value,
-				count10: value,
-				count11: value,
-				count12: value
-			}
-		});
+		setCount1(countValue);
+		setCount2(countValue);
+		setCount3(countValue);
+		setCount4(countValue);
+		setCount5(countValue);
+		setCount6(countValue);
+		setCount7(countValue);
+		setCount8(countValue);
+		setCount9(countValue);
+		setCount10(countValue);
+		setCount11(countValue);
+		setCount12(countValue);
+
+		setTestPart(newValue);
 	};
 
 	const switchDetailedPart = () => {
-		const value = !values.detailedPart ? 1 : 0;
+		const newValue = !detailedPart;
+		const countValue = newValue ? 1 : 0;
 
-		setValues({
-			...values,
-			...{
-				detailedPart: !values.detailedPart,
-				count13: value,
-				count14: value,
-				count15: value,
-				count16: value,
-				count17: value,
-				count18: value,
-				count19: value
-			}
-		});
+		setCount13(countValue);
+		setCount14(countValue);
+		setCount15(countValue);
+		setCount16(countValue);
+		setCount17(countValue);
+		setCount18(countValue);
+		setCount19(countValue);
+
+		setDetailedPart(newValue);
 	};
 
 	return (
@@ -4028,7 +4023,7 @@ const Constructor = () => {
 										className="Switcher-Input"
 										fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
 										name="testPart"
-										value={values.testPart}
+										value={testPart}
 										onChange={switchTestPart}
 									/>
 									<span className="Switcher-Text Switcher_checkbox-Text">
@@ -4040,7 +4035,7 @@ const Constructor = () => {
 										className="Switcher-Input"
 										fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
 										name="detailedPart"
-										value={values.detailedPart}
+										value={detailedPart}
 										onChange={switchDetailedPart}
 									/>
 									<span className="Switcher-Text Switcher_checkbox-Text">
