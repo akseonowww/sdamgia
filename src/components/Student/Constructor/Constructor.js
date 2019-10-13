@@ -251,6 +251,31 @@ const Constructor = () => {
 		setDetailedPart(newValue);
 	};
 
+	const handleResetClick = e => {
+		e.preventDefault();
+
+		setCount1(0);
+		setCount2(0);
+		setCount3(0);
+		setCount4(0);
+		setCount5(0);
+		setCount6(0);
+		setCount7(0);
+		setCount8(0);
+		setCount9(0);
+		setCount10(0);
+		setCount11(0);
+		setCount12(0);
+
+		setCount13(0);
+		setCount14(0);
+		setCount15(0);
+		setCount16(0);
+		setCount17(0);
+		setCount18(0);
+		setCount19(0);
+	};
+
 	return (
 		<Section>
 			<Title>Конструктор варианта</Title>
@@ -4048,7 +4073,10 @@ const Constructor = () => {
 								</label>
 							</div>
 
-							<button className="Link Link_pseudo Link_wrap ConstructorForm-ResetButton">
+							<button
+								className="Link Link_pseudo Link_wrap ConstructorForm-ResetButton"
+								onClick={handleResetClick}
+							>
 								<span>×</span>
 								<u className="Link-U Link_pseudo-U Link_wrap-U ConstructorForm-ResetButtonText">
 									Очистить поля
