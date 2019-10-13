@@ -12,35 +12,50 @@ import '../../shared/Link/Link.css';
 import './Constructor.css';
 
 const Constructor = () => {
-	const { values, setValues, increment, decrement } = useCounter({
+	const [count1, setCount1] = useState(0);
+	const [count2, setCount2] = useState(0);
+	const [count3, setCount3] = useState(0);
+	const [count4, setCount4] = useState(0);
+	const [count5, setCount5] = useState(0);
+	const [count6, setCount6] = useState(0);
+	const [count7, setCount7] = useState(0);
+	const [count8, setCount8] = useState(0);
+	const [count9, setCount9] = useState(0);
+	const [count10, setCount10] = useState(0);
+	const [count11, setCount11] = useState(0);
+	const [count12, setCount12] = useState(0);
+	const [count13, setCount13] = useState(0);
+	const [count14, setCount14] = useState(0);
+	const [count15, setCount15] = useState(0);
+	const [count16, setCount16] = useState(0);
+	const [count17, setCount17] = useState(0);
+	const [count18, setCount18] = useState(0);
+	const [count19, setCount19] = useState(0);
+	const [extraCount1, setExtraCount1] = useState(0);
+
+	const [values, setValues] = useState({
 		totalTasksNumber: 'из 9 заданий',
 		testPart: false,
-		count1: 0,
 		subtopic11: true,
 		subtopic12: true,
 		subtopic13: true,
 		subtopic14: true,
 		subtopic15: true,
-		count2: 0,
 		subtopic21: true,
 		subtopic22: true,
 		subtopic23: true,
-		count3: 0,
 		subtopic31: true,
 		subtopic32: true,
 		subtopic33: true,
 		subtopic34: true,
-		count4: 0,
 		subtopic41: true,
 		subtopic42: true,
-		count5: 0,
 		subtopic51: true,
 		subtopic52: true,
 		subtopic53: true,
 		subtopic54: true,
 		subtopic55: true,
 		subtopic56: true,
-		count6: 0,
 		subtopic61: true,
 		subtopic62: true,
 		subtopic63: true,
@@ -50,12 +65,10 @@ const Constructor = () => {
 		subtopic67: true,
 		subtopic68: true,
 		subtopic69: true,
-		count7: 0,
 		subtopic71: true,
 		subtopic72: true,
 		subtopic73: true,
 		subtopic74: true,
-		count8: 0,
 		subtopic81: true,
 		subtopic82: true,
 		subtopic83: true,
@@ -67,7 +80,6 @@ const Constructor = () => {
 		subtopic89: true,
 		subtopic810: true,
 		subtopic811: true,
-		count9: 0,
 		subtopic91: true,
 		subtopic92: true,
 		subtopic93: true,
@@ -79,7 +91,6 @@ const Constructor = () => {
 		subtopic99: true,
 		subtopic910: true,
 		subtopic911: true,
-		count10: 0,
 		subtopic101: true,
 		subtopic102: true,
 		subtopic103: true,
@@ -88,14 +99,12 @@ const Constructor = () => {
 		subtopic106: true,
 		subtopic107: true,
 		subtopic108: true,
-		count11: 0,
 		subtopic111: true,
 		subtopic112: true,
 		subtopic113: true,
 		subtopic114: true,
 		subtopic115: true,
 		subtopic116: true,
-		count12: 0,
 		subtopic121: true,
 		subtopic122: true,
 		subtopic123: true,
@@ -103,7 +112,6 @@ const Constructor = () => {
 		subtopic125: true,
 		subtopic126: true,
 		detailedPart: false,
-		count13: 0,
 		subtopic131: true,
 		subtopic132: true,
 		subtopic133: true,
@@ -111,7 +119,6 @@ const Constructor = () => {
 		subtopic135: true,
 		subtopic136: true,
 		subtopic137: true,
-		count14: 0,
 		subtopic141: true,
 		subtopic142: true,
 		subtopic143: true,
@@ -120,7 +127,6 @@ const Constructor = () => {
 		subtopic146: true,
 		subtopic147: true,
 		subtopic148: true,
-		count15: 0,
 		subtopic151: true,
 		subtopic152: true,
 		subtopic153: true,
@@ -128,15 +134,12 @@ const Constructor = () => {
 		subtopic155: true,
 		subtopic156: true,
 		subtopic157: true,
-		count16: 0,
 		subtopic161: true,
 		subtopic162: true,
 		subtopic163: true,
 		subtopic164: true,
-		count17: 0,
 		subtopic171: true,
 		subtopic172: true,
-		count18: 0,
 		subtopic181: true,
 		subtopic182: true,
 		subtopic183: true,
@@ -151,12 +154,10 @@ const Constructor = () => {
 		subtopic1812: true,
 		subtopic1813: true,
 		subtopic1814: true,
-		count19: 0,
 		subtopic191: true,
 		subtopic192: true,
 		subtopic193: true,
 		subtopic194: true,
-		extraCount1: 0,
 		extraSubtopic11: true,
 		extraSubtopic12: true,
 		extraSubtopic13: true
@@ -186,18 +187,8 @@ const Constructor = () => {
 		extraSubtopics1: false
 	});
 
-	const handleInputChange = e => {
-		const { name, type, value, checked } = e.target;
-		let newValue;
-
-		if (type === 'checkbox') {
-			newValue = checked;
-		} else {
-			// allow only number in counter input
-			if (/\D/.test(value) && value !== '') return;
-
-			newValue = value;
-		}
+	const handleCheckboxChange = e => {
+		const { name, checked: newValue } = e.target;
 
 		setValues({
 			...values,
@@ -292,10 +283,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count1"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count1}
+									setValue={setCount1}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -324,7 +313,7 @@ const Constructor = () => {
 															values.subtopic11
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -348,7 +337,7 @@ const Constructor = () => {
 															values.subtopic12
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -373,7 +362,7 @@ const Constructor = () => {
 															values.subtopic13
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -398,7 +387,7 @@ const Constructor = () => {
 															values.subtopic14
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -422,7 +411,7 @@ const Constructor = () => {
 															values.subtopic15
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -446,10 +435,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count2"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count2}
+									setValue={setCount2}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -478,7 +465,7 @@ const Constructor = () => {
 															values.subtopic21
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -503,7 +490,7 @@ const Constructor = () => {
 															values.subtopic22
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -528,7 +515,7 @@ const Constructor = () => {
 															values.subtopic13
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -553,10 +540,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count3"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count3}
+									setValue={setCount3}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -586,7 +571,7 @@ const Constructor = () => {
 															values.subtopic31
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -611,7 +596,7 @@ const Constructor = () => {
 															values.subtopic32
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -636,7 +621,7 @@ const Constructor = () => {
 															values.subtopic33
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -661,7 +646,7 @@ const Constructor = () => {
 															values.subtopic34
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -685,10 +670,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count4"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count4}
+									setValue={setCount4}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -722,7 +705,7 @@ const Constructor = () => {
 															values.subtopic41
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -747,7 +730,7 @@ const Constructor = () => {
 															values.subtopic42
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -771,10 +754,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count5"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count5}
+									setValue={setCount5}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -803,7 +784,7 @@ const Constructor = () => {
 															values.subtopic51
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -829,7 +810,7 @@ const Constructor = () => {
 															values.subtopic52
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -854,7 +835,7 @@ const Constructor = () => {
 															values.subtopic53
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -879,7 +860,7 @@ const Constructor = () => {
 															values.subtopic54
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -904,7 +885,7 @@ const Constructor = () => {
 															values.subtopic55
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -929,7 +910,7 @@ const Constructor = () => {
 															values.subtopic56
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -953,10 +934,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count6"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count6}
+									setValue={setCount6}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -985,7 +964,7 @@ const Constructor = () => {
 															values.subtopic61
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1010,7 +989,7 @@ const Constructor = () => {
 															values.subtopic62
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1035,7 +1014,7 @@ const Constructor = () => {
 															values.subtopic63
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1060,7 +1039,7 @@ const Constructor = () => {
 															values.subtopic64
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1084,7 +1063,7 @@ const Constructor = () => {
 															values.subtopic65
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1108,7 +1087,7 @@ const Constructor = () => {
 															values.subtopic66
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1133,7 +1112,7 @@ const Constructor = () => {
 															values.subtopic67
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1158,7 +1137,7 @@ const Constructor = () => {
 															values.subtopic68
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1183,7 +1162,7 @@ const Constructor = () => {
 															values.subtopic69
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1207,10 +1186,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count7"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count7}
+									setValue={setCount7}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1239,7 +1216,7 @@ const Constructor = () => {
 															values.subtopic71
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1264,7 +1241,7 @@ const Constructor = () => {
 															values.subtopic82
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1290,7 +1267,7 @@ const Constructor = () => {
 															values.subtopic73
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1316,7 +1293,7 @@ const Constructor = () => {
 															values.subtopic54
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1339,10 +1316,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count8"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count8}
+									setValue={setCount8}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1371,7 +1346,7 @@ const Constructor = () => {
 															values.subtopic81
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1395,7 +1370,7 @@ const Constructor = () => {
 															values.subtopic82
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1420,7 +1395,7 @@ const Constructor = () => {
 															values.subtopic83
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1445,7 +1420,7 @@ const Constructor = () => {
 															values.subtopic84
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1471,7 +1446,7 @@ const Constructor = () => {
 															values.subtopic85
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1496,7 +1471,7 @@ const Constructor = () => {
 															values.subtopic86
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1520,7 +1495,7 @@ const Constructor = () => {
 															values.subtopic87
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1544,7 +1519,7 @@ const Constructor = () => {
 															values.subtopic88
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1568,7 +1543,7 @@ const Constructor = () => {
 															values.subtopic89
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1592,7 +1567,7 @@ const Constructor = () => {
 															values.subtopic810
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1616,7 +1591,7 @@ const Constructor = () => {
 															values.subtopic811
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1639,10 +1614,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count9"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count9}
+									setValue={setCount9}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1671,7 +1644,7 @@ const Constructor = () => {
 															values.subtopic91
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1697,7 +1670,7 @@ const Constructor = () => {
 															values.subtopic92
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1723,7 +1696,7 @@ const Constructor = () => {
 															values.subtopic93
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1749,7 +1722,7 @@ const Constructor = () => {
 															values.subtopic94
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1775,7 +1748,7 @@ const Constructor = () => {
 															values.subtopic95
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1801,7 +1774,7 @@ const Constructor = () => {
 															values.subtopic96
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1826,7 +1799,7 @@ const Constructor = () => {
 															values.subtopic97
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1852,7 +1825,7 @@ const Constructor = () => {
 															values.subtopic98
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1878,7 +1851,7 @@ const Constructor = () => {
 															values.subtopic99
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1904,7 +1877,7 @@ const Constructor = () => {
 															values.subtopic910
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1930,7 +1903,7 @@ const Constructor = () => {
 															values.subtopic911
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -1955,10 +1928,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count10"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count10}
+									setValue={setCount10}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -1987,7 +1958,7 @@ const Constructor = () => {
 															values.subtopic101
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2012,7 +1983,7 @@ const Constructor = () => {
 															values.subtopic102
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2038,7 +2009,7 @@ const Constructor = () => {
 															values.subtopic103
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2063,7 +2034,7 @@ const Constructor = () => {
 															values.subtopic104
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2088,7 +2059,7 @@ const Constructor = () => {
 															values.subtopic105
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2113,7 +2084,7 @@ const Constructor = () => {
 															values.subtopic106
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2138,7 +2109,7 @@ const Constructor = () => {
 															values.subtopic107
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2163,7 +2134,7 @@ const Constructor = () => {
 															values.subtopic108
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2186,10 +2157,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count11"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count11}
+									setValue={setCount11}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2218,7 +2187,7 @@ const Constructor = () => {
 															values.subtopic111
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2243,7 +2212,7 @@ const Constructor = () => {
 															values.subtopic112
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2268,7 +2237,7 @@ const Constructor = () => {
 															values.subtopic113
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2293,7 +2262,7 @@ const Constructor = () => {
 															values.subtopic114
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2318,7 +2287,7 @@ const Constructor = () => {
 															values.subtopic115
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2343,7 +2312,7 @@ const Constructor = () => {
 															values.subtopic116
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2367,10 +2336,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count12"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count12}
+									setValue={setCount12}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2400,7 +2367,7 @@ const Constructor = () => {
 															values.subtopic121
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2426,7 +2393,7 @@ const Constructor = () => {
 															values.subtopic122
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2451,7 +2418,7 @@ const Constructor = () => {
 															values.subtopic123
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2476,7 +2443,7 @@ const Constructor = () => {
 															values.subtopic124
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2502,7 +2469,7 @@ const Constructor = () => {
 															values.subtopic125
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2528,7 +2495,7 @@ const Constructor = () => {
 															values.subtopic126
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2558,10 +2525,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count13"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count13}
+									setValue={setCount13}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2590,7 +2555,7 @@ const Constructor = () => {
 															values.subtopic131
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2615,7 +2580,7 @@ const Constructor = () => {
 															values.subtopic132
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2640,7 +2605,7 @@ const Constructor = () => {
 															values.subtopic133
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2666,7 +2631,7 @@ const Constructor = () => {
 															values.subtopic134
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2692,7 +2657,7 @@ const Constructor = () => {
 															values.subtopic135
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2717,7 +2682,7 @@ const Constructor = () => {
 															values.subtopic136
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2743,7 +2708,7 @@ const Constructor = () => {
 															values.subtopic137
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2767,10 +2732,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count14"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count14}
+									setValue={setCount14}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -2799,7 +2762,7 @@ const Constructor = () => {
 															values.subtopic141
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2824,7 +2787,7 @@ const Constructor = () => {
 															values.subtopic142
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2850,7 +2813,7 @@ const Constructor = () => {
 															values.subtopic143
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2875,7 +2838,7 @@ const Constructor = () => {
 															values.subtopic144
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2900,7 +2863,7 @@ const Constructor = () => {
 															values.subtopic145
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2925,7 +2888,7 @@ const Constructor = () => {
 															values.subtopic146
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2950,7 +2913,7 @@ const Constructor = () => {
 															values.subtopic147
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2975,7 +2938,7 @@ const Constructor = () => {
 															values.subtopic148
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -2999,10 +2962,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count15"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count15}
+									setValue={setCount15}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3031,7 +2992,7 @@ const Constructor = () => {
 															values.subtopic151
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3056,7 +3017,7 @@ const Constructor = () => {
 															values.subtopic152
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3081,7 +3042,7 @@ const Constructor = () => {
 															values.subtopic153
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3106,7 +3067,7 @@ const Constructor = () => {
 															values.subtopic154
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3131,7 +3092,7 @@ const Constructor = () => {
 															values.subtopic155
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3157,7 +3118,7 @@ const Constructor = () => {
 															values.subtopic156
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3182,7 +3143,7 @@ const Constructor = () => {
 															values.subtopic157
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3206,10 +3167,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count16"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count16}
+									setValue={setCount16}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3238,7 +3197,7 @@ const Constructor = () => {
 															values.subtopic161
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3263,7 +3222,7 @@ const Constructor = () => {
 															values.subtopic162
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3288,7 +3247,7 @@ const Constructor = () => {
 															values.subtopic163
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3313,7 +3272,7 @@ const Constructor = () => {
 															values.subtopic164
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3337,10 +3296,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count17"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count17}
+									setValue={setCount17}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3369,7 +3326,7 @@ const Constructor = () => {
 															values.subtopic171
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3394,7 +3351,7 @@ const Constructor = () => {
 															values.subtopic172
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3418,10 +3375,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count18"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count18}
+									setValue={setCount18}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3450,7 +3405,7 @@ const Constructor = () => {
 															values.subtopic181
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3475,7 +3430,7 @@ const Constructor = () => {
 															values.subtopic182
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3500,7 +3455,7 @@ const Constructor = () => {
 															values.subtopic183
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3525,7 +3480,7 @@ const Constructor = () => {
 															values.subtopic184
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3550,7 +3505,7 @@ const Constructor = () => {
 															values.subtopic185
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3576,7 +3531,7 @@ const Constructor = () => {
 															values.subtopic186
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3600,7 +3555,7 @@ const Constructor = () => {
 															values.subtopic187
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3625,7 +3580,7 @@ const Constructor = () => {
 															values.subtopic188
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3650,7 +3605,7 @@ const Constructor = () => {
 															values.subtopic189
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3675,7 +3630,7 @@ const Constructor = () => {
 															values.subtopic1810
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3700,7 +3655,7 @@ const Constructor = () => {
 															values.subtopic1811
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3725,7 +3680,7 @@ const Constructor = () => {
 															values.subtopic1812
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3750,7 +3705,7 @@ const Constructor = () => {
 															values.subtopic1813
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3776,7 +3731,7 @@ const Constructor = () => {
 															values.subtopic1814
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3801,10 +3756,8 @@ const Constructor = () => {
 								<Counter
 									className="ConstructorForm-Counter"
 									name="count19"
-									values={values}
-									decrement={decrement}
-									increment={increment}
-									handleInputChange={handleInputChange}
+									value={count19}
+									setValue={setCount19}
 								/>
 								<div className="ConstructorForm-Topic">
 									<div
@@ -3833,7 +3786,7 @@ const Constructor = () => {
 															values.subtopic191
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3858,7 +3811,7 @@ const Constructor = () => {
 															values.subtopic192
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3883,7 +3836,7 @@ const Constructor = () => {
 															values.subtopic193
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3908,7 +3861,7 @@ const Constructor = () => {
 															values.subtopic194
 														}
 														onChange={
-															handleInputChange
+															handleCheckboxChange
 														}
 													/>
 												</div>
@@ -3949,12 +3902,8 @@ const Constructor = () => {
 										<Counter
 											className="ConstructorForm-Counter"
 											name="extraCount1"
-											values={values}
-											decrement={decrement}
-											increment={increment}
-											handleInputChange={
-												handleInputChange
-											}
+											value={extraCount1}
+											setValue={setExtraCount1}
 										/>
 										<div className="ConstructorForm-Topic">
 											<div
@@ -3984,7 +3933,7 @@ const Constructor = () => {
 																	values.extraSubtopic11
 																}
 																onChange={
-																	handleInputChange
+																	handleCheckboxChange
 																}
 															/>
 														</div>
@@ -4010,7 +3959,7 @@ const Constructor = () => {
 																	values.extraSubtopic12
 																}
 																onChange={
-																	handleInputChange
+																	handleCheckboxChange
 																}
 															/>
 														</div>
@@ -4036,7 +3985,7 @@ const Constructor = () => {
 																	values.extraSubtopic13
 																}
 																onChange={
-																	handleInputChange
+																	handleCheckboxChange
 																}
 															/>
 														</div>

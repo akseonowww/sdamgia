@@ -1,59 +1,57 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 
 import './Counter.css';
 
-export const useCounter = (initial = { count1: 0, count2: 0 }) => {
-	const [values, setValues] = useState(initial);
+const useCounter = (value, setValue, countInput) => {
+	const handleCounterInputFocus = () => {
+		countInput.current.setSelectionRange(0, 9999);
+	};
+
+	const handleCounterInputChange = e => {
+		const { value: newValue } = e.target;
+
+		// allow only number in counter input
+		if (/\D/.test(newValue) && newValue !== '') return;
+
+		setValue(newValue);
+	};
 
 	const decrement = e => {
-		const { input } = e.target.dataset;
-		let newValue = Number(values[input]);
-
 		e.preventDefault();
 
-		if (values[input] > 0) {
+		let newValue = Number(value);
+
+		if (value > 0) {
 			newValue = newValue - 1;
 		}
 
-		setValues({
-			...values,
-			...{ [input]: newValue }
-		});
+		setValue(newValue);
 	};
 
 	const increment = e => {
-		const { input } = e.target.dataset;
-		let newValue = Number(values[input]) + 1;
-
 		e.preventDefault();
 
-		let newTotalTasksNumber = 'из 9 заданий';
-		if (input === 'count19') {
-			newTotalTasksNumber = 'из 10 заданий';
-		}
+		const newValue = Number(value) + 1;
 
-		setValues({
-			...values,
-			...{ totalTasksNumber: newTotalTasksNumber, [input]: newValue }
-		});
+		setValue(newValue);
 	};
 
-	return { values, setValues, increment, decrement };
+	return {
+		handleCounterInputFocus,
+		handleCounterInputChange,
+		increment,
+		decrement
+	};
 };
 
-const Counter = ({
-	className,
-	name,
-	values,
-	decrement,
-	increment,
-	handleInputChange
-}) => {
+const Counter = ({ className, name, value, setValue }) => {
 	const countInput = useRef(null);
-
-	const handleInputFocus = () => {
-		countInput.current.setSelectionRange(0, 9999);
-	};
+	const {
+		handleCounterInputFocus,
+		handleCounterInputChange,
+		increment,
+		decrement
+	} = useCounter(value, setValue, countInput);
 
 	return (
 		<div className={`Counter ${className}`}>
@@ -61,9 +59,8 @@ const Counter = ({
 				className={
 					'Counter-Button ' +
 					// eslint-disable-next-line
-					(values[name] == 0 && 'Counter-Button_disabled')
+					(value == 0 && 'Counter-Button_disabled')
 				}
-				data-input={name}
 				onClick={decrement}
 			>
 				−
@@ -72,14 +69,13 @@ const Counter = ({
 				className="Counter-Input Input"
 				type="tel"
 				name={name}
-				value={values[name]}
+				value={value}
 				ref={countInput}
-				onClick={handleInputFocus}
-				onChange={handleInputChange}
+				onClick={handleCounterInputFocus}
+				onChange={handleCounterInputChange}
 			/>
 			<button
 				className="Counter-Button"
-				data-input={name}
 				onClick={increment}
 			>
 				+
