@@ -3,7 +3,14 @@ import React, { useRef } from 'react';
 import nahStep from '../Form/nahStep';
 import './Counter.css';
 
-const useCounter = (value, setValue, countInput, switchOffPart) => {
+const useCounter = (
+	value,
+	list,
+	index,
+	setValue,
+	countInput,
+	switchOffPart
+) => {
 	const handleCounterInputFocus = () => {
 		countInput.current.setSelectionRange(0, 9999);
 	};
@@ -23,7 +30,8 @@ const useCounter = (value, setValue, countInput, switchOffPart) => {
 			return;
 		}
 
-		setValue(newValue);
+		list[index] = { ...list[index], value: newValue };
+		setValue(list);
 
 		if (!newValue) switchOffPart();
 	};
@@ -37,7 +45,8 @@ const useCounter = (value, setValue, countInput, switchOffPart) => {
 			newValue = newValue - 1;
 		}
 
-		setValue(newValue);
+		list[index] = { ...list[index], value: newValue };
+		setValue(list);
 
 		if (!newValue) switchOffPart();
 	};
@@ -47,7 +56,8 @@ const useCounter = (value, setValue, countInput, switchOffPart) => {
 
 		const newValue = Number(value) + 1;
 
-		setValue(newValue);
+		list[index] = { ...list[index], value: newValue };
+		setValue(list);
 
 		if (!newValue) switchOffPart();
 	};
@@ -60,14 +70,22 @@ const useCounter = (value, setValue, countInput, switchOffPart) => {
 	};
 };
 
-const Counter = ({ className, name, value, setValue, switchOffPart }) => {
+const Counter = ({
+	className,
+	name,
+	value,
+	list,
+	index,
+	setValue,
+	switchOffPart
+}) => {
 	const countInput = useRef(null);
 	const {
 		handleCounterInputFocus,
 		handleCounterInputChange,
 		increment,
 		decrement
-	} = useCounter(value, setValue, countInput, switchOffPart);
+	} = useCounter(value, list, index, setValue, countInput, switchOffPart);
 
 	return (
 		<div className={`Counter ${className}`}>
