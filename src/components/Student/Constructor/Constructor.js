@@ -219,7 +219,8 @@ const Constructor = () => {
 																	}
 																	onChange={() =>
 																		handleCheckboxChange(
-																			i,
+																			id -
+																				1,
 																			subI
 																		)
 																	}
