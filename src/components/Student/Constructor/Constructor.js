@@ -149,6 +149,9 @@ const Constructor = () => {
 					case 'extra':
 						partName = 'Задания, не входящие в экзамен этого года';
 						break;
+					default:
+						partName = '';
+						break;
 				}
 
 				return (
