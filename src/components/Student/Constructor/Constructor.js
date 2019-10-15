@@ -123,16 +123,17 @@ const Constructor = () => {
 	const getContentByParts = () => {
 		if (topicsList) {
 			const parted = topicsList.reduce(
-				(acc, { id, part, title, value, checked, subtopics }) => (
-					(acc[part] = acc[part] || []).push({
+				(acc, { id, part, title, value, checked, subtopics }) => {
+					acc[part] = acc[part] || [];
+					acc[part].push({
 						id,
 						title,
 						value,
 						checked,
 						subtopics
-					}),
-					acc
-				),
+					});
+					return acc;
+				},
 				{}
 			);
 
