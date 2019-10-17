@@ -12,6 +12,8 @@ const useCounter = (
 	countInput,
 	testTotal,
 	setTestTotal,
+	part,
+	switchOnPart,
 	switchOffPart
 ) => {
 	const handleCounterInputFocus = () => {
@@ -44,7 +46,14 @@ const useCounter = (
 			text: newTestTotalText
 		});
 
-		if (!newValue) switchOffPart();
+		if (newValue) {
+			for (let i = 0; i < list.length; i++) {
+				if (list[i].part === part && list[i].value < 1) return;
+			}
+			switchOnPart(part);
+		} else {
+			switchOffPart(part);
+		}
 	};
 
 	const decrement = e => {
@@ -66,7 +75,7 @@ const useCounter = (
 			text: newTestTotalText
 		});
 
-		if (!newValue) switchOffPart();
+		if (!newValue) switchOffPart(part);
 	};
 
 	const increment = e => {
@@ -83,6 +92,11 @@ const useCounter = (
 			amount: newTestTotalAmount,
 			text: newTestTotalText
 		});
+
+		for (let i = 0; i < list.length; i++) {
+			if (list[i].part === part && list[i].value < 1) return;
+		}
+		switchOnPart(part);
 	};
 
 	return {
@@ -102,6 +116,8 @@ const Counter = ({
 	setValue,
 	testTotal,
 	setTestTotal,
+	part,
+	switchOnPart,
 	switchOffPart
 }) => {
 	const countInput = useRef(null);
@@ -118,6 +134,8 @@ const Counter = ({
 		countInput,
 		testTotal,
 		setTestTotal,
+		part,
+		switchOnPart,
 		switchOffPart
 	);
 

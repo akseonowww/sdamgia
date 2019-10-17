@@ -135,6 +135,13 @@ const Constructor = () => {
 		});
 	};
 
+	const switchOnPart = part => {
+		setParts({
+			...parts,
+			[part]: true
+		});
+	};
+
 	const handleResetClick = e => {
 		e.preventDefault();
 
@@ -240,9 +247,9 @@ const Constructor = () => {
 											testTotal={testTotal}
 											setValue={setTopicsList}
 											setTestTotal={setTestTotal}
-											switchOffPart={() =>
-												switchOffPart(part)
-											}
+											part={part}
+											switchOnPart={switchOnPart}
+											switchOffPart={switchOffPart}
 										/>
 										<div className="ConstructorForm-Topic">
 											<div
