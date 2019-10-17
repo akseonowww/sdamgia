@@ -135,10 +135,14 @@
 
 .ConstructorForm-SubmitButton {
 	width: 100%;
+	max-width: 189.45px;
 	height: 4.25rem;
 	margin-bottom: 0.9rem !important;
 
 	white-space: normal;
+	text-overflow: ellipsis;
+
+	overflow: hidden;
 }
 
 .ConstructorForm-Switcher {
