@@ -12,6 +12,19 @@ import '../../shared/Switcher/_checkbox/Switcher_checkbox.css';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
 
+export const getNewTestTotalText = total => {
+	if (total > 0) {
+		const totalWord = 'задани';
+
+		const newTotalWord =
+			totalWord + (total % 10 === 1 && total % 100 !== 11 ? 'я' : 'й');
+
+		return 'из\u00A0' + total + '\u00A0' + newTotalWord;
+	} else {
+		return '';
+	}
+};
+
 const Constructor = () => {
 	const [topicsList, setTopicsList] = useState(null);
 
@@ -82,22 +95,32 @@ const Constructor = () => {
 		const willBeSaved = countValue === 1;
 
 		const list = [...topicsList];
+		let newTestTotalAmount = testTotal.amount;
 		for (let i = 0; i < list.length; i++) {
 			if (list[i].part === part) {
+				let oldValue = list[i].value;
+
 				list[i] = {
 					...list[i],
 					value:
-						list[i].value > 1 && willBeSaved
-							? list[i].value
-							: countValue
+						list[i].value > 1 && willBeSaved ? oldValue : countValue
 				};
+
+				newTestTotalAmount =
+					newTestTotalAmount + (list[i].value - oldValue);
 			}
 		}
-		setTopicsList(list);
 
 		setParts({
 			...parts,
 			[part]: newValue
+		});
+
+		setTopicsList(list);
+
+		setTestTotal({
+			amount: newTestTotalAmount,
+			text: getNewTestTotalText(newTestTotalAmount)
 		});
 	};
 
@@ -119,6 +142,11 @@ const Constructor = () => {
 			};
 		}
 		setTopicsList(list);
+
+		setTestTotal({
+			amount: 0,
+			text: ''
+		});
 
 		setParts({
 			test: false,
@@ -203,7 +231,9 @@ const Constructor = () => {
 											value={value}
 											list={[...topicsList]}
 											index={id - 1}
+											testTotal={testTotal}
 											setValue={setTopicsList}
+											setTestTotal={setTestTotal}
 											switchOffPart={() =>
 												switchOffPart(part)
 											}

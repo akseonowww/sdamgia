@@ -1,1 +1,1 @@
-export { default } from './Constructor';
+export { default, getNewTestTotalText } from './Constructor';

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 
 import nahStep from '../Form/nahStep';
+import { getNewTestTotalText } from '../../Student/Constructor';
 import './Counter.css';
 
 const useCounter = (
@@ -9,6 +10,8 @@ const useCounter = (
 	index,
 	setValue,
 	countInput,
+	testTotal,
+	setTestTotal,
 	switchOffPart
 ) => {
 	const handleCounterInputFocus = () => {
@@ -30,8 +33,16 @@ const useCounter = (
 			return;
 		}
 
+		const oldValue = list[index].value;
 		list[index] = { ...list[index], value: newValue };
 		setValue(list);
+
+		const newTestTotalAmount = testTotal.amount + (newValue - oldValue);
+		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
+		setTestTotal({
+			amount: newTestTotalAmount,
+			text: newTestTotalText
+		});
 
 		if (!newValue) switchOffPart();
 	};
@@ -48,6 +59,13 @@ const useCounter = (
 		list[index] = { ...list[index], value: newValue };
 		setValue(list);
 
+		const newTestTotalAmount = testTotal.amount - 1;
+		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
+		setTestTotal({
+			amount: newTestTotalAmount,
+			text: newTestTotalText
+		});
+
 		if (!newValue) switchOffPart();
 	};
 
@@ -58,6 +76,13 @@ const useCounter = (
 
 		list[index] = { ...list[index], value: newValue };
 		setValue(list);
+
+		const newTestTotalAmount = testTotal.amount + 1;
+		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
+		setTestTotal({
+			amount: newTestTotalAmount,
+			text: newTestTotalText
+		});
 
 		if (!newValue) switchOffPart();
 	};
@@ -77,6 +102,8 @@ const Counter = ({
 	list,
 	index,
 	setValue,
+	testTotal,
+	setTestTotal,
 	switchOffPart
 }) => {
 	const countInput = useRef(null);
@@ -85,7 +112,16 @@ const Counter = ({
 		handleCounterInputChange,
 		increment,
 		decrement
-	} = useCounter(value, list, index, setValue, countInput, switchOffPart);
+	} = useCounter(
+		value,
+		list,
+		index,
+		setValue,
+		countInput,
+		testTotal,
+		setTestTotal,
+		switchOffPart
+	);
 
 	return (
 		<div className={`Counter ${className}`}>
