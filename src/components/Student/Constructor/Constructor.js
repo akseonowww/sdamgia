@@ -25,6 +25,8 @@ const Constructor = () => {
 		text: ''
 	});
 
+	const [extraTopics, setExtraTopics] = useState(false);
+
 	useEffect(() => {
 		axios
 			.get('http://sidorchik.ru/reshuege/api/')
@@ -54,6 +56,10 @@ const Constructor = () => {
 		list[index] = { ...list[index], checked: !list[index].checked };
 
 		setTopicsList(list);
+	};
+
+	const handleExtraPartNameClick = () => {
+		setExtraTopics(!extraTopics);
 	};
 
 	const handleCheckboxChange = (i, subI) => {
@@ -141,116 +147,144 @@ const Constructor = () => {
 				let partName;
 				switch (part) {
 					case 'test':
-						partName = 'Тестовая часть';
+						partName = (
+							<div className="ConstructorForm-Row ConstructorForm-Row_label">
+								<div className="ConstructorForm-Topic">
+									Тестовая часть
+								</div>
+							</div>
+						);
 						break;
 					case 'detailed':
-						partName = 'Развернутая часть';
+						partName = (
+							<div className="ConstructorForm-Row ConstructorForm-Row_label">
+								<div className="ConstructorForm-Topic">
+									Развернутая часть
+								</div>
+							</div>
+						);
 						break;
 					case 'extra':
-						partName = 'Задания, не входящие в экзамен этого года';
+						partName = (
+							<div className="ConstructorForm-Row ConstructorForm-Row_label">
+								<div
+									className="ConstructorForm-Topic Link Link_pseudo Link_wrap"
+									onClick={() => handleExtraPartNameClick()}
+								>
+									<u className="Link-U Link_pseudo-U Link_wrap-U">
+										Задания, не входящие в ЕГЭ этого года
+									</u>
+								</div>
+							</div>
+						);
 						break;
 					default:
-						partName = '';
+						partName = null;
 						break;
 				}
 
 				return (
 					<div class="ConstructorForm-Part" key={partI}>
-						<div className="ConstructorForm-Row ConstructorForm-Row_label">
-							<div className="ConstructorForm-Topic">
-								{partName}
-							</div>
-						</div>
-						{topics.map(
-							({ id, title, value, checked, subtopics }, i) => (
-								<div
-									className="ConstructorForm-Row"
-									key={'topic' + partI + i}
-								>
-									<Counter
-										className="ConstructorForm-Counter"
-										name={`prob${id}`}
-										value={value}
-										list={[...topicsList]}
-										index={id - 1}
-										setValue={setTopicsList}
-										switchOffPart={() =>
-											switchOffPart(part)
-										}
-									/>
-									<div className="ConstructorForm-Topic">
-										<div
-											className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-											onClick={() => handleTopicClick(id)}
-										>
-											<div className="ConstructorForm-TopicNumber">
-												{part !== 'extra'
-													? id
-													: `Д${i + 1}`}
-												.
+						{partName}
+						{(part !== 'extra' ||
+							(part === 'extra' && extraTopics)) &&
+							topics.map(
+								(
+									{ id, title, value, checked, subtopics },
+									i
+								) => (
+									<div
+										className="ConstructorForm-Row"
+										key={'topic' + partI + i}
+									>
+										<Counter
+											className="ConstructorForm-Counter"
+											name={`prob${id}`}
+											value={value}
+											list={[...topicsList]}
+											index={id - 1}
+											setValue={setTopicsList}
+											switchOffPart={() =>
+												switchOffPart(part)
+											}
+										/>
+										<div className="ConstructorForm-Topic">
+											<div
+												className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
+												onClick={() =>
+													handleTopicClick(id)
+												}
+											>
+												<div className="ConstructorForm-TopicNumber">
+													{part !== 'extra'
+														? id
+														: `Д${i + 1}`}
+													.
+												</div>
+												<div className="ConstructorForm-TopicDesc">
+													<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+														{title}
+													</u>
+												</div>
 											</div>
-											<div className="ConstructorForm-TopicDesc">
-												<u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
-													{title}
-												</u>
-											</div>
-										</div>
 
-										{checked && (
-											<div className="ConstructorForm-TopicSubs">
-												{subtopics.map(
-													(subtopic, subI) => (
-														<label
-															className="Link_wrap ConstructorForm-TopicName Label"
-															key={
-																'subtopic' +
-																subtopic.id
-															}
-														>
-															<div className="ConstructorForm-TopicNumber">
-																<Checkbox
-																	fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
-																	name={
-																		'probtheme' +
-																		subtopic.id
-																	}
-																	value={
-																		subtopic.checked
-																	}
-																	onChange={() =>
-																		handleCheckboxChange(
-																			id -
-																				1,
-																			subI
-																		)
-																	}
-																/>
-															</div>
-															<div className="ConstructorForm-TopicDesc">
-																{subtopic.title}
-																&nbsp;·&nbsp;
-																<a
-																	className="Link Link_black"
-																	href={
-																		'https://ege.sdamgia.ru/test?theme=' +
-																		subtopic.id
-																	}
-																>
+											{checked && (
+												<div className="ConstructorForm-TopicSubs">
+													{subtopics.map(
+														(subtopic, subI) => (
+															<label
+																className="Link_wrap ConstructorForm-TopicName Label"
+																key={
+																	'subtopic' +
+																	subtopic.id
+																}
+															>
+																<div className="ConstructorForm-TopicNumber">
+																	<Checkbox
+																		fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
+																		name={
+																			'probtheme' +
+																			subtopic.id
+																		}
+																		value={
+																			subtopic.checked
+																		}
+																		onChange={() =>
+																			handleCheckboxChange(
+																				id -
+																					1,
+																				subI
+																			)
+																		}
+																	/>
+																</div>
+																<div className="ConstructorForm-TopicDesc">
 																	{
-																		subtopic.amount
+																		subtopic.title
 																	}
-																	&nbsp;шт.
-																</a>
-															</div>
-														</label>
-													)
-												)}
-											</div>
-										)}
+																	&nbsp;·&nbsp;
+																	<a
+																		className="Link Link_black"
+																		href={
+																			'https://ege.sdamgia.ru/test?theme=' +
+																			subtopic.id
+																		}
+																	>
+																		{
+																			subtopic.amount
+																		}
+																		&nbsp;шт.
+																	</a>
+																</div>
+															</label>
+														)
+													)}
+												</div>
+											)}
+										</div>
 									</div>
-								</div>
-							)
-						)}
+								)
+							)}
 					</div>
 				);
 			});
