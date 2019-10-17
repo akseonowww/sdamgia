@@ -83,8 +83,6 @@ const useCounter = (
 			amount: newTestTotalAmount,
 			text: newTestTotalText
 		});
-
-		if (!newValue) switchOffPart();
 	};
 
 	return {
