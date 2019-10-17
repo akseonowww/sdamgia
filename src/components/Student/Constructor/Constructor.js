@@ -89,39 +89,43 @@ const Constructor = () => {
 	};
 
 	const switchPart = part => {
-		const newValue = !parts[part];
-		const countValue = newValue ? 1 : 0;
+		if (topicsList) {
+			const newValue = !parts[part];
+			const countValue = newValue ? 1 : 0;
 
-		const willBeSaved = countValue === 1;
+			const willBeSaved = countValue === 1;
 
-		const list = [...topicsList];
-		let newTestTotalAmount = testTotal.amount;
-		for (let i = 0; i < list.length; i++) {
-			if (list[i].part === part) {
-				let oldValue = list[i].value;
+			setParts({
+				...parts,
+				[part]: newValue
+			});
 
-				list[i] = {
-					...list[i],
-					value:
-						list[i].value > 1 && willBeSaved ? oldValue : countValue
-				};
+			const list = [...topicsList];
+			let newTestTotalAmount = testTotal.amount;
+			for (let i = 0; i < list.length; i++) {
+				if (list[i].part === part) {
+					let oldValue = list[i].value;
 
-				newTestTotalAmount =
-					newTestTotalAmount + (list[i].value - oldValue);
+					list[i] = {
+						...list[i],
+						value:
+							list[i].value > 1 && willBeSaved
+								? oldValue
+								: countValue
+					};
+
+					newTestTotalAmount =
+						newTestTotalAmount + (list[i].value - oldValue);
+				}
 			}
+
+			setTopicsList(list);
+
+			setTestTotal({
+				amount: newTestTotalAmount,
+				text: getNewTestTotalText(newTestTotalAmount)
+			});
 		}
-
-		setParts({
-			...parts,
-			[part]: newValue
-		});
-
-		setTopicsList(list);
-
-		setTestTotal({
-			amount: newTestTotalAmount,
-			text: getNewTestTotalText(newTestTotalAmount)
-		});
 	};
 
 	const switchOffPart = part => {
@@ -134,24 +138,26 @@ const Constructor = () => {
 	const handleResetClick = e => {
 		e.preventDefault();
 
-		const list = [...topicsList];
-		for (let i = 0; i < list.length; i++) {
-			list[i] = {
-				...list[i],
-				value: 0
-			};
+		if (topicsList) {
+			const list = [...topicsList];
+			for (let i = 0; i < list.length; i++) {
+				list[i] = {
+					...list[i],
+					value: 0
+				};
+			}
+			setTopicsList(list);
+
+			setTestTotal({
+				amount: 0,
+				text: ''
+			});
+
+			setParts({
+				test: false,
+				detailed: false
+			});
 		}
-		setTopicsList(list);
-
-		setTestTotal({
-			amount: 0,
-			text: ''
-		});
-
-		setParts({
-			test: false,
-			detailed: false
-		});
 	};
 
 	const getContentByParts = () => {
