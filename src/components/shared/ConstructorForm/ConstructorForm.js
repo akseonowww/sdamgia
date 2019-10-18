@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import Grid from '../Grid';
-import FormParts from './FormPart/';
-import Buttons from './Buttons/';
+import TopicsByParts from './TopicsByParts';
+import Buttons from './Buttons';
 import './ConstructorForm.css';
 
 export const getNewTestTotalText = total => {
@@ -40,7 +40,7 @@ const ConstructorForm = ({ topicsList, setTopicsList }) => {
 						<div className="ConstructorForm-Topic">Тема</div>
 					</div>
 					{topicsList && (
-						<FormParts
+						<TopicsByParts
 							topicsList={topicsList}
 							setTopicsList={setTopicsList}
 							parts={parts}

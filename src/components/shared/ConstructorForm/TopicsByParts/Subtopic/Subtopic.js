@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import Checkbox from '../../../Checkbox';
 import nahStep from '../../../Form/nahStep';
 
-const SubtopicList = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
+const Subtopic = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
 	const subtopicLabel = useRef(null);
 
 	const handleCheckboxChange = (i, subI) => {
@@ -64,4 +64,4 @@ const SubtopicList = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
 	);
 };
 
-export default SubtopicList;
+export default Subtopic;

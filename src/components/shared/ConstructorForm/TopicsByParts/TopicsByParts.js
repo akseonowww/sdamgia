@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import Counter from '../../Counter/Counter';
-import SubtopicList from './SubtopicList/SubtopicList';
+import Subtopic from './Subtopic';
 
-const FormParts = ({
+const TopicsByParts = ({
 	topicsList,
 	setTopicsList,
 	parts,
@@ -138,7 +138,7 @@ const FormParts = ({
 									{checked && (
 										<div className="ConstructorForm-TopicSubs">
 											{subtopics.map((subtopic, subI) => (
-												<SubtopicList
+												<Subtopic
 													i={id - 1}
 													subtopic={subtopic}
 													subI={subI}
@@ -146,7 +146,9 @@ const FormParts = ({
 													setTopicsList={
 														setTopicsList
 													}
-													key={'subtopic' + subtopic.id}
+													key={
+														'subtopic' + subtopic.id
+													}
 												/>
 											))}
 										</div>
@@ -160,4 +162,4 @@ const FormParts = ({
 	});
 };
 
-export default FormParts;
+export default TopicsByParts;
