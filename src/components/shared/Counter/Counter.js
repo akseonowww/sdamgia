@@ -24,7 +24,7 @@ const useCounter = (
 		const { value: newValue } = e.target;
 
 		// allow only number in counter input and show nah amination
-		if (/\D/.test(newValue) && newValue !== '') {
+		if ((/\D/.test(newValue) && newValue !== '') || newValue > 999999) {
 			countInput.current.style.left = 0;
 			let x = 0,
 				m = 0,
