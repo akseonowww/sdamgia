@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import ConstructorForm from './ConstructorForm/';
 import Section from '../../shared/Section';
 import Title from '../../shared/Title';
+import ConstructorForm from '../../shared/ConstructorForm';
 import '../../shared/Link/Link.css';
 import './Constructor.css';
 

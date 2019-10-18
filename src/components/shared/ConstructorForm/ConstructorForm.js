@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
+import Grid from '../Grid';
 import FormParts from './FormPart/';
 import Buttons from './Buttons/';
-import Grid from '../../../shared/Grid';
 import './ConstructorForm.css';
 
 export const getNewTestTotalText = total => {
