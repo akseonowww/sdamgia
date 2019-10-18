@@ -4,13 +4,16 @@
 
 .Switcher-Label {
 	display: inline-block;
-	margin-right: -1px;
 
 	font-size: 1rem;
 	color: #006;
 
 	border: 0.05rem solid #006;
 	background: transparent;
+}
+
+.Switcher-Label:not(:first-child):not(.Switcher_vertical-Label) {
+	border-left: none;
 }
 
 .Switcher-Text {
