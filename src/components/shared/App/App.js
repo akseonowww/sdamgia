@@ -11,7 +11,6 @@ import Student from '../../Student';
 import Test from '../../Test';
 import './App.css';
 
-import sideAd from './assets/agm.gif';
 import vkBotImg from './assets/vkBotImg.png';
 import telegramBotImg from './assets/telegramBotImg.png';
 import signOutIcon from './assets/signOutIcon.png';
@@ -20,6 +19,7 @@ import sidebarBannerAd from './assets/sidebarBannerAd.png';
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
 import spbsut from './assets/spbsut.png';
+import SideMenu from './SideMenu/';
 
 function App() {
 	return (
@@ -189,95 +189,7 @@ function App() {
 							<a href="https://vpr.sdamgia.ru">РЕШУ ВПР</a>
 							<a href="https://ct.sdamgia.ru">РЕШУ ЦТ</a>
 						</div>
-						<div className="menu" width="100%">
-							<div style={{ width: '160px', margin: 'auto' }}>
-								<center>
-									<a
-										href="https://ege-study.ru/online-repeticionniy-matematika?utm_source=sdamgia&amp;utm_medium=sdamgia&amp;utm_campaign=online_probniy_sent"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<img
-											src={sideAd}
-											alt="Наши друзья. Рекомендуем"
-										/>
-									</a>
-								</center>
-							</div>
-							<a
-								href="/manual"
-								title="Шкалы, статистика, оценивание заданий"
-							>
-								<div className="menu_l">Об экзамене</div>
-							</a>
-							<a
-								href="/prob_catalog"
-								title="Рубрицированные задания, статистика по решенным и нерешенным заданиям"
-							>
-								<div className="menu_l">Каталог заданий</div>
-							</a>
-							<NavLink
-								to="/"
-								exact
-								activeClassName="NavLink_selected Link_selected"
-								title="Пройти тестирование, проверить себя"
-							>
-								<div className="menu_l">Ученику</div>
-							</NavLink>
-							<a
-								href="/teacher"
-								title="Создание и проверка работ для учащихся, классный журнал"
-							>
-								<div className="menu_l">Учителю</div>
-							</a>
-							<a
-								href="/methodist"
-								title="Подборка тренировочных работ, реальных экзаменационных вариантов предыдущих лет"
-							>
-								<div className="menu_l">
-									<font color="red">Варианты</font>
-								</div>
-							</a>
-							<a
-								href="/expert"
-								title="Критерии проверки работ, за что снижают баллы"
-							>
-								<div className="menu_l">Эксперту</div>
-							</a>
-							<a
-								href="/course"
-								title="Создать свой курс, задать задание учащимся дистанционно"
-							>
-								<div className="menu_l">Школа</div>
-							</a>
-							<a
-								href="/handbook"
-								title="Краткий справочник по предмету"
-							>
-								<div className="menu_l">Справочник</div>
-							</a>
-							<a href="/page/theory" title="Теория по предмету">
-								<div className="menu_l">Теория</div>
-							</a>
-							<a
-								href="/guestbook"
-								title="Сказать добрые слова редакции"
-							>
-								<div className="menu_l">Сказать спасибо</div>
-							</a>
-							<a
-								href="/callback?f=faq"
-								title="Задать вопрос об экзаменах и о работе портала"
-							>
-								<div className="menu_l">Вопрос — ответ</div>
-							</a>
-							<a href="/user_stat">
-								<div className="menu_l">Моя статистика</div>
-							</a>
-							<a href="/favorite">
-								<div className="menu_l">Избранное</div>
-							</a>
-						</div>
+						<SideMenu />
 						<form
 							className="search Sidebar-Search"
 							action="/problem"

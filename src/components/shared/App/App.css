@@ -410,20 +410,6 @@ a:hover {
 	color: #f60;
 }
 
-.menu {
-	font-size: 13px;
-	font-style: normal;
-	color: #006;
-	font-family: Verdana, Geneva, sans-serif;
-}
-
-.menu a,
-.menu a:hover {
-	font-size: 13px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-}
-
 .sape {
 	color: #a0a0ff;
 	font-family: Verdana, Geneva, sans-serif;
@@ -563,47 +549,6 @@ div[id=''] {
 	background: -khtml-linear-gradient(to top, #fff0e6, #ffd4a4);
 	box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
 	background-color: #ffe2c6;
-}
-
-.menu_l,
-.menu_l:hover,
-.menu_v:hover,
-.menu_v {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 9pt;
-	height: 18px;
-	padding-left: 5px;
-	padding-top: 6px;
-	border-radius: 3px 15px 15px 3px;
-	margin-bottom: 0;
-	margin-top: 3px;
-}
-
-.menu_l {
-	color: #000;
-
-	cursor: pointer;
-}
-
-.menu a {
-	color: #bfbfbf;
-}
-
-.Link_selected {
-	cursor: default;
-}
-
-.NavLink_selected {
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.menu a:hover {
-	color: #000;
-}
-
-.menu_v {
-	background-color: #eaeaff;
 }
 
 .tab_p {
