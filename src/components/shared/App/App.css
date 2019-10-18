@@ -572,7 +572,7 @@ div[id=''] {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 9pt;
 	height: 18px;
-	padding-left: 25px;
+	padding-left: 5px;
 	padding-top: 6px;
 	border-radius: 3px 15px 15px 3px;
 	margin-bottom: 0;
@@ -582,15 +582,7 @@ div[id=''] {
 .menu_l {
 	color: #000;
 
-	background-image: url(https://ege.sdamgia.ru/img/square.svg);
-	background-repeat: no-repeat;
-	background-position: center left;
-
 	cursor: pointer;
-}
-
-.menu_l:hover {
-	background-image: url(https://ege.sdamgia.ru/img/square-hover.svg);
 }
 
 .menu a {
@@ -602,13 +594,8 @@ div[id=''] {
 }
 
 .NavLink_selected {
+	font-weight: bold;
 	text-decoration: none;
-}
-
-.NavLink_selected .menu_l {
-	background-image: url(https://ege.sdamgia.ru/img/square-hover.svg) !important;
-
-	cursor: default;
 }
 
 .menu a:hover {
