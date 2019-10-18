@@ -108,7 +108,7 @@ const FormParts = ({
 		}
 
 		return (
-			<div class="ConstructorForm-Part" key={partI}>
+			<div className="ConstructorForm-Part" key={partI}>
 				{partName}
 				{(part !== 'extra' || (part === 'extra' && extraTopics)) &&
 					topics.map(

@@ -72,7 +72,7 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</header>
 
-					<div class="Nav PageLayout-Nav PageLayout-Nav_mobile">
+					<div className="Nav PageLayout-Nav PageLayout-Nav_mobile">
 						≡ математика
 					</div>
 					<nav className="Nav PageLayout-Nav PageLayout-Nav_desktop">
@@ -279,23 +279,23 @@ function App() {
 							</a>
 						</div>
 						<form
-							class="search Sidebar-Search"
+							className="search Sidebar-Search"
 							action="/problem"
 							method="POST"
 						>
 							<label
-								class="search__label"
+								className="search__label"
 								title="Для поиска нажмите клавишу Enter"
 							>
 								<input
-									class="Input search-input"
+									className="Input search-input"
 									type="text"
 									name="id"
 									placeholder="№/текст задания"
 								/>
-								<div class="search-icon search__search-icon">
+								<div className="search-icon search__search-icon">
 									<svg
-										class="search-icon__svg"
+										className="search-icon__svg"
 										version="1.1"
 										viewBox="0 0 27.9 50"
 										x="0px"
@@ -303,13 +303,13 @@ function App() {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<circle
-											class="search-icon__lens"
+											className="search-icon__lens"
 											cx="10.9"
 											cy="24.1"
 											r="9.4"
 										></circle>
 										<rect
-											class="search-icon__handle"
+											className="search-icon__handle"
 											width="3"
 											height="14.5"
 											x="20"
@@ -541,15 +541,15 @@ function App() {
 						</div>
 
 						<img
-							class="SidebarBannerAd Sidebar-BannerAd "
+							className="SidebarBannerAd Sidebar-BannerAd "
 							src={sidebarBannerAd}
 							alt="Реклама"
 						/>
 					</div>
 
-					<main class="PageLayout-Content">
+					<main className="PageLayout-Content">
 						<img
-							class="BannerAd"
+							className="BannerAd"
 							src={contentBannerTopAd}
 							alt="Реклама"
 						/>
@@ -561,7 +561,7 @@ function App() {
 						</Switch>
 
 						<img
-							class="BannerAd PageLayout-BannerAd"
+							className="BannerAd PageLayout-BannerAd"
 							src={contentBannerBottomAd}
 							alt="Реклама"
 						/>

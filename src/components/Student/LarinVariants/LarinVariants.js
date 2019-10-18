@@ -14,16 +14,16 @@ const LarinVariants = () => {
     return (
         <Section className="LarinVariants">
             <Title>
-                <span class="LarinVariants-TitleWord1">Все варианты </span>
-                <span class="LarinVariants-TitleWord2">Александра&nbsp;</span>
-                <span class="LarinVariants-TitleWord3">Ларина</span>
+                <span className="LarinVariants-TitleWord1">Все варианты </span>
+                <span className="LarinVariants-TitleWord2">Александра&nbsp;</span>
+                <span className="LarinVariants-TitleWord3">Ларина</span>
                 <span className="Title-Caption">с 2013 года</span>
             </Title>
 
             <p className="Section-Desc LarinVariants-Desc_desktop">
                 Для тех, кто ищет варианты посложнее, чем обычно предлагают на ЕГЭ,
                 публикуем задания с развернутым ответом из тренировочных вариантов
-                А.<span class="halfspace">&nbsp;</span>А. Ларина. Новые условия
+                А.<span className="halfspace">&nbsp;</span>А. Ларина. Новые условия
                 по субботам, решения по пятницам.
             </p>
 

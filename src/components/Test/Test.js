@@ -5,9 +5,9 @@ import Title from '../shared/Title';
 import './Test.css';
 
 const Test = () => (
-	<Section class="Test">
+	<Section className="Test">
 		<Title>Тест</Title>
-		<p class="Section-Desc">
+		<p className="Section-Desc">
 			При выполнении заданий с кратким ответом впишите в поле для ответа
 			цифру, которая соответствует номеру правильного ответа, или число,
 			слово, последовательность букв (слов) или цифр. Ответ следует
