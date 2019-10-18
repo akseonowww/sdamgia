@@ -1,0 +1,162 @@
+.ConstructorForm-TopicList {
+	grid-column: 1/21;
+	grid-row: 1;
+}
+
+.ConstructorForm-Buttons {
+	grid-column: 1/21;
+	grid-row: 2;
+}
+
+@media (min-width: 1000px) {
+	.ConstructorForm-TopicList {
+		grid-column: 1/16;
+	}
+
+	.ConstructorForm-Buttons {
+		grid-column: 16/21;
+		grid-row: 1;
+	}
+}
+
+.ConstructorForm-Row {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 568px) {
+	.ConstructorForm-Row {
+		grid-template-columns: 135px 1fr;
+		margin-bottom: 0.75rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.ConstructorForm-Row {
+		grid-template-columns: 105px 1fr;
+		margin-bottom: 0.75rem;
+	}
+}
+
+.ConstructorForm-Row_head {
+	display: none;
+	padding-bottom: 0.75rem;
+
+	font-weight: bold;
+	color: #006;
+
+	border-bottom: 0.05rem solid rgba(0, 0, 102, 0.25);
+}
+
+@media (min-width: 568px) {
+	.ConstructorForm-Row_head {
+		display: grid;
+	}
+}
+
+.ConstructorForm-Row_label {
+	grid-template-columns: 1fr;
+	margin-top: 2rem;
+
+	color: #006;
+	font-style: italic;
+}
+
+@media (min-width: 568px) {
+	.ConstructorForm-Row_label {
+		margin-top: 1rem;
+	}
+}
+
+.ConstructorForm-Row_head + .ConstructorForm-Row_label {
+	margin-top: 0.25rem;
+}
+
+@media (min-width: 568px) {
+	.ConstructorForm-Row_head + .ConstructorForm-Row_label {
+		margin-top: -0.25rem;
+	}
+}
+
+.ConstructorForm-Counter {
+	grid-row: 2;
+	width: 135px;
+	width: 169px;
+	margin: 0.2rem 0 0 -0.2rem;
+}
+
+@media (min-width: 568px) {
+	.ConstructorForm-Counter {
+		grid-row: auto;
+		width: auto;
+		margin: 0;
+	}
+}
+
+.ConstructorForm-TopicName {
+	position: relative;
+
+	display: grid;
+	grid-template-columns: 1.65rem 1fr;
+	grid-column-gap: 0.35rem;
+	padding: 0.15rem 0 0.4rem;
+
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.ConstructorForm-TopicName {
+		box-sizing: border-box;
+		padding-right: 1.5rem;
+	}
+}
+
+.ConstructorForm-TopicNumber {
+	text-align: right;
+}
+
+.ConstructorForm-TopicSubCheckbox {
+	margin-top: 0.15rem;
+}
+
+.ConstructorForm-ButtonsPanel {
+	margin: 1rem -0.5rem 0;
+	padding: 1rem 0.4rem 1.75rem;
+
+	background: #f0f5ff;
+}
+
+@media (min-width: 768px) {
+	.ConstructorForm-ButtonsPanel {
+		margin: 28px 0 0;
+	}
+}
+
+.ConstructorForm-SubmitButton {
+	width: 100%;
+	max-width: 189.45px;
+	height: 4.25rem;
+	margin-bottom: 0.9rem !important;
+
+	white-space: normal;
+	text-overflow: ellipsis;
+
+	overflow: hidden;
+}
+
+.ConstructorForm-Switcher {
+	margin-bottom: 0.75rem;
+}
+
+.ConstructorForm-ResetButton {
+	padding: 0 1rem 0.35rem;
+}
+
+.ConstructorForm-ResetButtonText {
+	margin-left: 0.45rem;
+
+	font-size: 1rem;
+}

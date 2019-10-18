@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Counter from '../../../shared/Counter/Counter';
+import Counter from '../../../../shared/Counter/Counter';
 import SubtopicList from './SubtopicList/SubtopicList';
 
 const FormParts = ({

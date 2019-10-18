@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
-import Checkbox from '../../../../shared/Checkbox';
-import nahStep from '../../../../shared/Form/nahStep';
+import Checkbox from '../../../../../shared/Checkbox';
+import nahStep from '../../../../../shared/Form/nahStep';
 
 const SubtopicList = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
 	const subtopicLabel = useRef(null);

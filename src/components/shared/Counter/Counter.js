@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import nahStep from '../Form/nahStep';
-import { getNewTestTotalText } from '../../Student/Constructor';
+import { getNewTestTotalText } from '../../Student/Constructor/ConstructorForm';
 import './Counter.css';
 
 const useCounter = (

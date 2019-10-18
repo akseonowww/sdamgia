@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Checkbox from '../../../shared/Checkbox';
-import '../../../shared/Switcher/Switcher.css';
-import '../../../shared/Switcher/_vertical/Switcher_vertical.css';
-import '../../../shared/Switcher/_checkbox/Switcher_checkbox.css';
+import Checkbox from '../../../../shared/Checkbox';
+import '../../../../shared/Switcher/Switcher.css';
+import '../../../../shared/Switcher/_vertical/Switcher_vertical.css';
+import '../../../../shared/Switcher/_checkbox/Switcher_checkbox.css';
 
 const Buttons = ({
 	topicsList,
