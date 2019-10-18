@@ -28,13 +28,25 @@ const FormParts = ({
 	const handleCheckboxChange = (i, subI) => {
 		const list = [...topicsList];
 		const topic = (list[i] = { ...list[i] });
-
 		topic.subtopics = [...topic.subtopics];
+
+		const newValue = !topic.subtopics[subI].checked;
+
+		// Allow more than one subtopic checked
+		const subtopicsLength = topic.subtopics.length;
+		let uncheckedNumber = 0;
+		for (let subtopicI = 0; subtopicI < subtopicsLength; subtopicI++) {
+			if (topic.subtopics[subtopicI].checked === false) {
+				uncheckedNumber++;
+			}
+		}
+		if (uncheckedNumber === subtopicsLength - 1 && newValue === false)
+			return;
+
 		topic.subtopics[subI] = {
 			...topic.subtopics[subI],
-			checked: !topic.subtopics[subI].checked
+			checked: newValue
 		};
-
 		setTopicsList(list);
 	};
 
