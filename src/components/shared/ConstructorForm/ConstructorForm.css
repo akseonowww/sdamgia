@@ -131,7 +131,11 @@
 
 @media (min-width: 768px) {
 	.ConstructorForm-ButtonsPanel {
-		margin: 28px 0 0;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0.5rem;
+
+		margin: 28px 0 0.95rem;
 	}
 }
 
