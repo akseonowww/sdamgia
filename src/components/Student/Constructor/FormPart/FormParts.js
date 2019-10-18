@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Counter from '../../../shared/Counter/Counter';
-import Checkbox from '../../../shared/Checkbox';
+import SubtopicList from './SubtopicList/SubtopicList';
 
 const FormParts = ({
 	topicsList,
@@ -23,31 +23,6 @@ const FormParts = ({
 
 	const handleExtraPartNameClick = () => {
 		setExtraTopics(!extraTopics);
-	};
-
-	const handleCheckboxChange = (i, subI) => {
-		const list = [...topicsList];
-		const topic = (list[i] = { ...list[i] });
-		topic.subtopics = [...topic.subtopics];
-
-		const newValue = !topic.subtopics[subI].checked;
-
-		// Allow more than one subtopic checked
-		const subtopicsLength = topic.subtopics.length;
-		let uncheckedNumber = 0;
-		for (let subtopicI = 0; subtopicI < subtopicsLength; subtopicI++) {
-			if (topic.subtopics[subtopicI].checked === false) {
-				uncheckedNumber++;
-			}
-		}
-		if (uncheckedNumber === subtopicsLength - 1 && newValue === false)
-			return;
-
-		topic.subtopics[subI] = {
-			...topic.subtopics[subI],
-			checked: newValue
-		};
-		setTopicsList(list);
 	};
 
 	const switchOffPart = part => {
@@ -163,45 +138,16 @@ const FormParts = ({
 									{checked && (
 										<div className="ConstructorForm-TopicSubs">
 											{subtopics.map((subtopic, subI) => (
-												<label
-													className="Link_wrap ConstructorForm-TopicName Label"
-													key={
-														'subtopic' + subtopic.id
+												<SubtopicList
+													i={id - 1}
+													subtopic={subtopic}
+													subI={subI}
+													topicsList={topicsList}
+													setTopicsList={
+														setTopicsList
 													}
-												>
-													<div className="ConstructorForm-TopicNumber">
-														<Checkbox
-															fakeCheckboxClassName="ConstructorForm-TopicSubCheckbox"
-															name={
-																'probtheme' +
-																subtopic.id
-															}
-															value={
-																subtopic.checked
-															}
-															onChange={() =>
-																handleCheckboxChange(
-																	id - 1,
-																	subI
-																)
-															}
-														/>
-													</div>
-													<div className="ConstructorForm-TopicDesc">
-														{subtopic.title}
-														&nbsp;·&nbsp;
-														<a
-															className="Link Link_black"
-															href={
-																'https://ege.sdamgia.ru/test?theme=' +
-																subtopic.id
-															}
-														>
-															{subtopic.amount}
-															&nbsp;шт.
-														</a>
-													</div>
-												</label>
+													key={'subtopic' + subtopic.id}
+												/>
 											))}
 										</div>
 									)}

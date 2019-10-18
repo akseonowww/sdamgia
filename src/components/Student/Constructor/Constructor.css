@@ -96,6 +96,8 @@
 }
 
 .ConstructorForm-TopicName {
+	position: relative;
+
 	display: grid;
 	grid-template-columns: 1.65rem 1fr;
 	grid-column-gap: 0.35rem;
