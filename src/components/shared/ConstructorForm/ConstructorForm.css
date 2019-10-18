@@ -8,6 +8,17 @@
 	grid-row: 2;
 }
 
+@media (min-width: 830px) {
+	.ConstructorForm-TopicList {
+		grid-column: 1/15;
+	}
+
+	.ConstructorForm-Buttons {
+		grid-column: 15/21;
+		grid-row: 1;
+	}
+}
+
 @media (min-width: 1000px) {
 	.ConstructorForm-TopicList {
 		grid-column: 1/16;
@@ -129,7 +140,7 @@
 	background: #f0f5ff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
 	.ConstructorForm-ButtonsPanel {
 		position: -webkit-sticky;
 		position: sticky;
@@ -141,7 +152,6 @@
 
 .ConstructorForm-SubmitButton {
 	width: 100%;
-	max-width: 189.45px;
 	height: 4.25rem;
 	margin-bottom: 0.9rem !important;
 
@@ -149,6 +159,12 @@
 	text-overflow: ellipsis;
 
 	overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+	.ConstructorForm-SubmitButton {
+		max-width: 189.45px;
+	}
 }
 
 .ConstructorForm-Switcher {
