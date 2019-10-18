@@ -204,6 +204,18 @@ function App() {
 									</a>
 								</center>
 							</div>
+							<a
+								href="/manual"
+								title="Шкалы, статистика, оценивание заданий"
+							>
+								<div className="menu_l">Об экзамене</div>
+							</a>
+							<a
+								href="/prob_catalog"
+								title="Рубрицированные задания, статистика по решенным и нерешенным заданиям"
+							>
+								<div className="menu_l">Каталог заданий</div>
+							</a>
 							<NavLink
 								to="/"
 								exact
@@ -217,18 +229,6 @@ function App() {
 								title="Создание и проверка работ для учащихся, классный журнал"
 							>
 								<div className="menu_l">Учителю</div>
-							</a>
-							<a
-								href="/manual"
-								title="Шкалы, статистика, оценивание заданий"
-							>
-								<div className="menu_l">Об экзамене</div>
-							</a>
-							<a
-								href="/prob_catalog"
-								title="Рубрицированные задания, статистика по решенным и нерешенным заданиям"
-							>
-								<div className="menu_l">Каталог заданий</div>
 							</a>
 							<a
 								href="/methodist"
