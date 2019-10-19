@@ -20,6 +20,7 @@ import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
 import spbsut from './assets/spbsut.png';
 import SideMenu from './SideMenu/';
+import NavMain from './NavMain/NavMain';
 
 function App() {
 	return (
@@ -72,110 +73,10 @@ function App() {
 						<div style={{ clear: 'both' }}></div>
 					</header>
 
+					<NavMain className="PageLayout-Nav PageLayout-Nav_desktop" />
 					<div className="Nav PageLayout-Nav PageLayout-Nav_mobile">
 						≡ математика
 					</div>
-					<nav className="Nav PageLayout-Nav PageLayout-Nav_desktop">
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://math-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">≡ Математика</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://inf-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Информатика</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://rus-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Русский язык</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://en-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Английский язык</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://de-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Немецкий язык</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://fr-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Французcкий язык</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://sp-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Испанский язык</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://phys-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Физика</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://chem-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Химия</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://bio-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Биология</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://geo-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">География</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://soc-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Обществознание</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://lit-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">Литература</div>
-						</a>
-						<a
-							className="subjhr"
-							rel="nofollow"
-							href="https://hist-ege.sdamgia.ru/?redir=1"
-						>
-							<div className="pred">История</div>
-						</a>
-						<div style={{ clear: 'both' }}></div>
-					</nav>
 
 					<div className="SidebarBtns">
 						сайты - меню - вход - новости

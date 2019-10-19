@@ -416,15 +416,6 @@ a:hover {
 	font-size: 11px;
 }
 
-.subjhr {
-	white-space: nowrap;
-	text-decoration: none;
-	font-size: 9pt;
-	color: #000;
-	font-family: Verdana, Geneva, sans-serif;
-	max-width: 129px;
-}
-
 .pane {
 	display: block;
 	position: absolute;
@@ -463,99 +454,6 @@ div[id=''] {
 	padding-top: 4px;
 	margin-bottom: 5px;
 	border-radius: 0 0 5px 5px;
-}
-
-.pred_pan {
-	font-size: 11px;
-	width: 1000px;
-	height: 23px;
-	min-height: 23px;
-	min-width: 1000px;
-	padding-left: 4px;
-	margin-top: 0;
-}
-
-.pred,
-.pred:hover,
-.pred_v:hover,
-.pred_v,
-.pred_0,
-.pred_no {
-	color: #000;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 11px;
-	float: left;
-	padding-top: 3px;
-	padding-bottom: 5px;
-	margin: 1px 1px 1px 0;
-}
-
-.pred,
-.pred:hover,
-.pred_v:hover,
-.pred_v,
-.pred_no {
-	border-radius: 10px;
-	border-radius: 14px 3px 14px 3px;
-	text-align: center;
-	min-width: 141px;
-	max-width: 141px;
-	width: 141px;
-}
-
-.pred,
-.pred:hover,
-.pred_v:hover,
-.pred_v,
-.pred_0,
-.pred_no {
-	padding: 5px 10px 5px 10px;
-	width: calc(14.28% - 21px);
-	max-width: none;
-	min-width: auto;
-}
-
-.pred_0 {
-	width: 64px;
-}
-
-.pred {
-	cursor: pointer;
-	background: linear-gradient(to bottom, #fff0e6, #ffd2b6);
-	background: -webkit-linear-gradient(to bottom, #fff0e6, #ffd2b6);
-	background: -khtml-linear-gradient(to bottom, #fff0e6, #ffd2b6);
-	background: -ms-linear-gradient(to bottom, #fff0e6, #ffd2b6);
-	background: -o-linear-gradient(to bottom, #fff0e6, #ffd2b6);
-	background: -moz-linear-gradient(to bottom, #fff0e6, #ffd2b6);
-	background-color: #ffe2c6;
-	box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
-}
-
-.pred:hover,
-.pred_v:hover {
-	background-color: #ffc788;
-	background: linear-gradient(to top, #fff0e6, #ffd2b6);
-	background: -webkit-linear-gradient(to top, #fff0e6, #ffd2b6);
-	background: -khtml-linear-gradient(to top, #fff0e6, #ffd2b6);
-	background: -moz-linear-gradient(to top, #fff0e6, #ffd2b6);
-	box-shadow: inset 0 1px 2px rgba(77, 77, 77, 0.15);
-}
-
-.pred_v {
-	font-weight: 700;
-	background-color: #ffe2c6;
-	background: linear-gradient(to top, #ffe6e6, #ffd4a4);
-	background: -webkit-linear-gradient(to top, #ffe6e6, #ffd4a4);
-	background: -moz-linear-gradient(to top, #ffe6e6, #ffd4a4);
-	background: -khtml-linear-gradient(to top, #fff0e6, #ffd4a4);
-	box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
-	background-color: #ffe2c6;
-}
-
-.tab_p {
-	max-width: 132px;
-	min-width: 132px;
-	width: 132px;
 }
 
 input[type='button'],
@@ -1373,45 +1271,6 @@ input[type='submit'] {
 	margin-top: 20px;
 }
 
-.pred,
-.pred:hover,
-.pred_v:hover,
-.pred_v,
-.pred_0,
-.pred_no {
-	padding: 5px 10px 5px 10px;
-	width: calc(14.28% - 21px);
-	max-width: none;
-	min-width: auto;
-}
-.topmenu_dd {
-	margin: 0;
-	padding: 0;
-	height: 24px;
-	overflow: visible;
-	display: inline-block;
-	width: 14.28%;
-	float: left;
-}
-.topmenu_dd .pred,
-.topmenu_dd .pred:hover {
-	width: calc(100% - 21px);
-}
-.topmenu_dd_c {
-	margin: 0;
-	padding: 0;
-	display: none;
-	z-index: 100;
-	position: absolute;
-	width: 142px;
-	background-color: rgba(255, 255, 255, 0.01);
-}
-.topmenu_dd:hover .topmenu_dd_c {
-	display: block;
-}
-.topmenu_dd:hover .topmenu_dd_h {
-	display: none;
-}
 .wrapper {
 	max-width: 1000px;
 	margin: auto;
@@ -1440,102 +1299,6 @@ input[type='submit'] {
 	text-decoration: none;
 	color: black;
 	border-radius: 2px;
-}
-.pred_pan {
-	width: auto;
-	height: auto;
-	min-height: auto;
-	min-width: auto;
-}
-.pred_btn {
-	display: none;
-	cursor: pointer;
-	text-align: center;
-	font-size: 16px;
-	background: linear-gradient(#fff0e6, #ffd2b6);
-	clear: both;
-}
-@media screen and (max-width: 830px) {
-	.pred,
-	.pred:hover,
-	.pred_v:hover,
-	.pred_v,
-	.pred_0,
-	.pred_no {
-		width: 100px;
-	}
-	.topmenu_dd {
-		width: 122px;
-	}
-}
-@media screen and (max-width: 610px) {
-	.pred,
-	.pred_v,
-	.pred_0,
-	.pred_no,
-	.topmenu_dd,
-	.pred:hover,
-	.pred_v:hover {
-		width: calc(25% - 22px);
-	}
-	.topmenu_dd {
-		width: 25%;
-	}
-	.topmenu_dd_c {
-		width: calc(100% - 22px);
-	}
-	.pred_pan {
-		display: none;
-	}
-	.pred_btn {
-		display: block;
-	}
-	.topmenu_dd {
-		height: auto;
-		width: 100%;
-		margin: 0 0 0 0;
-	}
-	.topmenu_dd_c {
-		display: block;
-		position: relative;
-		width: 100%;
-	}
-	.topmenu_dd_c .pred {
-		display: block;
-	}
-}
-@media screen and (max-width: 580px) {
-	.pred,
-	.pred_v,
-	.pred_0,
-	.pred_no,
-	.topmenu_dd,
-	.pred:hover,
-	.pred_v:hover {
-		width: calc(33.3% - 22px);
-		height: 20px;
-		line-height: 20px;
-		font-size: 14px;
-	}
-	.topmenu_dd {
-		width: 33.3%;
-		height: auto;
-	}
-}
-@media screen and (max-width: 430px) {
-	.pred,
-	.pred_v,
-	.pred_0,
-	.pred_no,
-	.topmenu_dd,
-	.pred:hover,
-	.pred_v:hover {
-		width: calc(50% - 22px);
-	}
-	.topmenu_dd {
-		width: 50%;
-		height: auto;
-	}
 }
 
 @media screen and (max-width: 767px) {
