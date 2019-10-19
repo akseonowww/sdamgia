@@ -1,7 +1,8 @@
 import React from 'react';
+import cx from 'classnames';
 
 const PartName = ({ part, handleExtraPartNameClick }) => {
-	let partName;
+	let partName = null;
 	switch (part) {
 		case 'test':
 			partName = 'Тестовая часть';
@@ -13,16 +14,15 @@ const PartName = ({ part, handleExtraPartNameClick }) => {
 			partName = 'Задания, не входящие в ЕГЭ этого года';
 			break;
 		default:
+			partName = null;
 			break;
 	}
 
 	return (
 		<div
-			className={
-				part !== 'extra'
-					? 'ConstructorForm-Row ConstructorForm-Row_label'
-					: 'ConstructorForm-Row ConstructorForm-Row_label Link Link_pseudo Link_wrap'
-			}
+			className={cx('ConstructorForm-Row ConstructorForm-Row_label', {
+				'Link Link_pseudo Link_wrap': part === 'extra'
+			})}
 			onClick={part === 'extra' && handleExtraPartNameClick}
 		>
 			<div className="ConstructorForm-Topic">
