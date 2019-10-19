@@ -16,6 +16,10 @@
 	border-bottom-color: rgba(0, 0, 0, 0.25);
 }
 
+.Link_selected {
+	cursor: default;
+}
+
 .Link:not(.Link_static):not(.Link_black):not(.Link_pseudo):visited,
 .Link-U:not(.Link_static-U):not(.Link_black-U):not(.Link_pseudo-U):visited {
 	color: #8f00af;
