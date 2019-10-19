@@ -10,25 +10,30 @@ const PartName = ({ part, handleExtraPartNameClick }) => {
 			partName = 'Развернутая часть';
 			break;
 		case 'extra':
-			return (
-				<div className="ConstructorForm-Row ConstructorForm-Row_label">
-					<div
-						className="ConstructorForm-Topic Link Link_pseudo Link_wrap"
-						onClick={handleExtraPartNameClick}
-					>
-						<u className="Link-U Link_pseudo-U Link_wrap-U">
-							Задания, не входящие в ЕГЭ этого года
-						</u>
-					</div>
-				</div>
-			);
+			partName = 'Задания, не входящие в ЕГЭ этого года';
+			break;
 		default:
 			break;
 	}
 
 	return (
-		<div className="ConstructorForm-Row ConstructorForm-Row_label">
-			<div className="ConstructorForm-Topic">{partName}</div>
+		<div
+			className={
+				part !== 'extra'
+					? 'ConstructorForm-Row ConstructorForm-Row_label'
+					: 'ConstructorForm-Row ConstructorForm-Row_label Link Link_pseudo Link_wrap'
+			}
+			onClick={part === 'extra' && handleExtraPartNameClick}
+		>
+			<div className="ConstructorForm-Topic">
+				{part !== 'extra' ? (
+					<>{partName}</>
+				) : (
+					<u className="Link-U Link_pseudo-U Link_wrap-U">
+						{partName}
+					</u>
+				)}
+			</div>
 		</div>
 	);
 };
