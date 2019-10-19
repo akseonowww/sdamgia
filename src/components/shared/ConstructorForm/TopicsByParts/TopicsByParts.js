@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Counter from '../../Counter/Counter';
 import Subtopic from './Subtopic';
+import PartName from './PartName/PartName';
 
 const TopicsByParts = ({
 	topicsList,
@@ -55,48 +56,12 @@ const TopicsByParts = ({
 	);
 
 	return Object.entries(parted).map(([part, topics], partI) => {
-		let partName;
-		switch (part) {
-			case 'test':
-				partName = (
-					<div className="ConstructorForm-Row ConstructorForm-Row_label">
-						<div className="ConstructorForm-Topic">
-							Тестовая часть
-						</div>
-					</div>
-				);
-				break;
-			case 'detailed':
-				partName = (
-					<div className="ConstructorForm-Row ConstructorForm-Row_label">
-						<div className="ConstructorForm-Topic">
-							Развернутая часть
-						</div>
-					</div>
-				);
-				break;
-			case 'extra':
-				partName = (
-					<div className="ConstructorForm-Row ConstructorForm-Row_label">
-						<div
-							className="ConstructorForm-Topic Link Link_pseudo Link_wrap"
-							onClick={() => handleExtraPartNameClick()}
-						>
-							<u className="Link-U Link_pseudo-U Link_wrap-U">
-								Задания, не входящие в ЕГЭ этого года
-							</u>
-						</div>
-					</div>
-				);
-				break;
-			default:
-				partName = null;
-				break;
-		}
-
 		return (
 			<div className="ConstructorForm-Part" key={partI}>
-				{partName}
+				<PartName
+					part={part}
+					handleExtraPartNameClick={handleExtraPartNameClick}
+				/>
 				{(part !== 'extra' || (part === 'extra' && extraTopics)) &&
 					topics.map(
 						({ id, title, value, checked, subtopics }, i) => (
