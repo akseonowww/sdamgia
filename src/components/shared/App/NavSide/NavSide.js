@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './SideMenu.css';
+import './NavSide.scss';
 
 import sideAd from '../assets/agm.gif';
 
-const SideMenu = () => {
+const NavSide = () => {
 	return (
-		<div className="Menu">
+		<div className="NavSide">
 			<div style={{ width: '160px', margin: 'auto' }}>
 				<center>
 					<a
@@ -20,16 +20,14 @@ const SideMenu = () => {
 				</center>
 			</div>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/manual"
 				title="Шкалы, статистика, оценивание заданий"
 			>
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Об экзамене
-				</u>
+				<u className="Link-U Link_black-U Link_wrap-U">Об экзамене</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/prob_catalog"
 				title="Рубрицированные задания, статистика по решенным и нерешенным заданиям"
 			>
@@ -38,68 +36,58 @@ const SideMenu = () => {
 				</u>
 			</a>
 			<NavLink
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				activeClassName="NavLink_selected Link_selected"
 				to="/"
 				exact
 				title="Пройти тестирование, проверить себя"
 			>
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Ученику
-				</u>
+				<u className="Link-U Link_black-U Link_wrap-U">Ученику</u>
 			</NavLink>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/teacher"
 				title="Создание и проверка работ для учащихся, классный журнал"
 			>
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Учителю
-				</u>
+				<u className="Link-U Link_black-U Link_wrap-U">Учителю</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/methodist"
 				title="Подборка тренировочных работ, реальных экзаменационных вариантов предыдущих лет"
 			>
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Варианты
-				</u>
+				<u className="Link-U Link_black-U Link_wrap-U">Варианты</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/expert"
 				title="Критерии проверки работ, за что снижают баллы"
 			>
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Эксперту
-				</u>
+				<u className="Link-U Link_black-U Link_wrap-U">Эксперту</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/course"
 				title="Создать свой курс, задать задание учащимся дистанционно"
 			>
 				<u className="Link-U Link_black-U Link_wrap-U">Школа</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/handbook"
 				title="Краткий справочник по предмету"
 			>
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Справочник
-				</u>
+				<u className="Link-U Link_black-U Link_wrap-U">Справочник</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/page/theory"
 				title="Теория по предмету"
 			>
 				<u className="Link-U Link_black-U Link_wrap-U">Теория</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/guestbook"
 				title="Сказать добрые слова редакции"
 			>
@@ -108,7 +96,7 @@ const SideMenu = () => {
 				</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/callback?f=faq"
 				title="Задать вопрос об экзаменах и о работе портала"
 			>
@@ -117,20 +105,18 @@ const SideMenu = () => {
 				</u>
 			</a>
 			<a
-				className="Link Link_black Link_wrap Menu-Link"
+				className="Link Link_black Link_wrap NavSide-Link"
 				href="/user_stat"
 			>
 				<u className="Link-U Link_black-U Link_wrap-U">
 					Моя статистика
 				</u>
 			</a>
-			<a className="Link Link_black Link_wrap Menu-Link" href="/favorite">
-				<u className="Link-U Link_black-U Link_wrap-U">
-					Избранное
-				</u>
+			<a className="Link Link_black Link_wrap NavSide-Link" href="/favorite">
+				<u className="Link-U Link_black-U Link_wrap-U">Избранное</u>
 			</a>
 		</div>
 	);
 };
 
-export default SideMenu;
+export default NavSide;

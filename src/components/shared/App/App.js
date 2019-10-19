@@ -19,7 +19,7 @@ import sidebarBannerAd from './assets/sidebarBannerAd.png';
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
 import spbsut from './assets/spbsut.png';
-import SideMenu from './SideMenu/';
+import SideMenu from './NavSide';
 import NavMain from './NavMain/NavMain';
 
 function App() {
