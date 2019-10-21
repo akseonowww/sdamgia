@@ -160,7 +160,7 @@ const Counter = ({
 				onClick={handleCounterInputFocus}
 				onChange={handleCounterInputChange}
 				style={{ left: 0 }}
-				tabindex={index + 1}
+				tabIndex={index + 1}
 			/>
 			<button className="Counter-Button" onClick={increment}>
 				+

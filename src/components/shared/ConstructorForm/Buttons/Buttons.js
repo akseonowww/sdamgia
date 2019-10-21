@@ -86,7 +86,7 @@ const Buttons = ({
 					className="Button ConstructorForm-SubmitButton"
 					type="submit"
 					value={`Составить вариант ${testTotal.text}`}
-					tabindex={topicsList ? topicsList.length : ''}
+					tabIndex={topicsList ? topicsList.length : ''}
 				/>
 
 				<div className="Switcher Switcher_vertical Switcher_checkbox ConstructorForm-Switcher">
