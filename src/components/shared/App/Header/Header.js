@@ -13,7 +13,7 @@ const Header = ({ className }) => (
 			/>
 		</NavLink>
 		<img
-			className="header_subj_logo"
+			className="Header-SubjectImg"
 			src="https://math.reshuct.by/img/headers/math.png"
 			style={{
 				float: 'right',
@@ -41,10 +41,10 @@ const Header = ({ className }) => (
 				РЕШУ ЕГЭ
 			</NavLink>
 		</div>
-		<div className="header_site_info">
-			Образовательный портал для подготовки к экзаменам
+		<div className="Header-WebsiteDesc">
+			Образовательный портал для подготовки к экзаменам
 		</div>
-		<div className="header_subj_name">Математика профильного уровня</div>
+		<div className="Header-SubjectTitle">Математика профильного уровня</div>
 		<div style={{ clear: 'both' }}></div>
 	</header>
 );
