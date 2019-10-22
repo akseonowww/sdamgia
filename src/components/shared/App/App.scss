@@ -1,3 +1,5 @@
+@import './breakpoints';
+
 html {
 	font-size: 18px;
 }
@@ -45,50 +47,53 @@ html {
 	}
 }
 
+.PageLayout-Grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0.5rem;
+	margin: 0.4rem 0 1.5rem;
+
+	@include media-breakpoint-up(md) {
+		& {
+			grid-template-columns: 175px 1fr;
+		}
+	}
+
+	@include media-breakpoint-up(mil) {
+		& {
+			grid-template-columns: 170px 1fr;
+		}
+	}
+}
+
 .PageLayout-Sidebar {
 	display: none;
-	margin-top: 0.4rem;
-	padding: 0 0.4rem;
+
+	@include media-breakpoint-up(md) {
+		& {
+			display: block;
+		}
+	}
 }
 
 .PageLayout-Content {
-	margin: 0.4rem 0.5rem 0 0.5rem;
-}
+	margin: 0 0.5rem;
 
-@media (min-width: 768px) {
-	.PageLayout-Sidebar {
-		display: block;
+	@include media-breakpoint-up(md) {
+		& {
+			margin-left: 0;
+		}
 	}
 
-	.PageLayout-Content {
-		margin: 0.4rem 0.4rem 0 180px;
-	}
-}
-
-@media (min-width: 1000px) {
-	.PageLayout-Sidebar {
-		padding-left: 0;
-	}
-
-	.PageLayout-Content {
-		margin: 0.4rem 0.4rem 0 175px;
+	@include media-breakpoint-up(mil) {
+		& {
+			margin-right: 0;
+		}
 	}
 }
 
-.PageLayout-Footer {
-	margin: 10px 5px 0 5px;
-}
-
-@media (min-width: 768px) {
-	.PageLayout-Footer {
-		margin-left: 180px;
-	}
-}
-
-@media (min-width: 1000px) {
-	.PageLayout-Footer {
-		margin-left: 175px;
-	}
+.PageLayout-Main {
+	margin-bottom: 1rem;
 }
 
 .Header {
@@ -1139,86 +1144,6 @@ input[type='submit'] {
 	border-bottom: none;
 }
 
-.SidebarBtns {
-	display: block;
-	clear: both;
-	margin-top: 0.4rem;
-
-	font-size: 16px;
-	text-align: center;
-
-	background: linear-gradient(#fff0e6, #ffd2b6);
-
-	cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-	.SidebarBtns {
-		display: none;
-	}
-}
-
-.Sidebar {
-	position: absolute;
-
-	clear: both;
-	width: 160px;
-	height: auto !important;
-
-	border-right: 2px solid silver;
-
-	color: #000;
-}
-
-.Sidebar-BannerAd {
-	margin-top: 50px;
-}
-
-.Sidebar-Search {
-	margin: 14px 0 7px;
-}
-.search__label {
-	position: relative;
-	display: block;
-	cursor: text;
-}
-.search-input {
-	width: 100%;
-	max-width: 100% !important;
-	margin: 0;
-	padding: 6px 2px 7px 26px !important;
-
-	font-size: 9pt;
-
-	background: #f0f0f0 !important;
-	border: none !important;
-	border-radius: 7px !important;
-	box-shadow: none !important;
-
-	outline: none;
-}
-.search__search-icon {
-	position: absolute;
-	/* top: 5px; */
-	top: 0;
-	left: 5.5px;
-}
-.search-icon {
-	width: 14px;
-}
-.search-icon__svg {
-	enable-background: new 0 0 27.9 50;
-}
-.search-icon__lens {
-	fill: none;
-	stroke: #006;
-	stroke-width: 3;
-	stroke-miterlimit: 10;
-}
-.search-icon__handle {
-	fill: #006;
-}
-
 .ChatButton {
 	position: fixed;
 	bottom: 50px;
@@ -1340,7 +1265,5 @@ input[type='submit'] {
 }
 
 .Footer {
-	clear: both;
-
 	font-size: 9pt;
 }
