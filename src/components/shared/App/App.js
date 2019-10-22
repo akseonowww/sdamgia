@@ -7,16 +7,16 @@ import {
 	Redirect
 } from 'react-router-dom';
 
+import Sidebar from './Sidebar/Sidebar';
 import NavMain from './NavMain/NavMain';
 import Student from '../../Student';
 import Test from '../../Test';
+import Footer from './Footer/Footer';
 import './App.scss';
 
 import helpButtonIcon from './assets/helpButtonIcon.png';
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
-import spbsut from './assets/spbsut.png';
-import Sidebar from './Sidebar/Sidebar';
 
 function App() {
 	return (
@@ -98,29 +98,7 @@ function App() {
 								/>
 							</main>
 
-							<footer className="Footer PageLayout-Footer">
-								<p style={{ float: 'left' }}>
-									<a href="/about">О проекте</a> ·{' '}
-									<a href="/staff">Редакция</a> ·{' '}
-									<a href="/legal">Правовая информация</a>{' '}
-								</p>
-								<p align="right">© Гущин Д. Д., 2011—2019</p>{' '}
-								<br />
-								<center>
-									<a
-										href="http://priem.sut.ru/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<img
-											src={spbsut}
-											alt="СПб ГУТ!"
-											title="priem.sut.ru"
-											width="160"
-										/>
-									</a>
-								</center>
-							</footer>
+							<Footer className="PageLayout-Footer" />
 						</div>
 					</div>
 					<div
