@@ -23,23 +23,23 @@ const Sidebar = () => (
 			</div>
 			<SideMenu />
 			<form
-				className="search Sidebar-Search"
+				className="Search Sidebar-Search"
 				action="/problem"
 				method="POST"
 			>
 				<label
-					className="search__label"
+					className="Search-Label"
 					title="Для поиска нажмите клавишу Enter"
 				>
 					<input
-						className="Input search-input"
+						className="Input Search-Input"
 						type="text"
 						name="id"
 						placeholder="№/текст задания"
 					/>
-					<div className="search-icon search__search-icon">
+					<div className="SearchIcon Search-SearchIcon">
 						<svg
-							className="search-icon__svg"
+							className="SearchIcon-Svg"
 							version="1.1"
 							viewBox="0 0 27.9 50"
 							x="0px"
@@ -47,13 +47,13 @@ const Sidebar = () => (
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<circle
-								className="search-icon__lens"
+								className="SearchIcon-Lens"
 								cx="10.9"
 								cy="24.1"
 								r="9.4"
 							></circle>
 							<rect
-								className="search-icon__handle"
+								className="SearchIcon-Handle"
 								width="3"
 								height="14.5"
 								x="20"
