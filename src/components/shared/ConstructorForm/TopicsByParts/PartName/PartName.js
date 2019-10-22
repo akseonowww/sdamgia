@@ -23,7 +23,7 @@ const PartName = ({ part, handleExtraPartNameClick }) => {
 			className={cx('ConstructorForm-Row ConstructorForm-Row_label', {
 				'Link Link_pseudo Link_wrap': part === 'extra'
 			})}
-			onClick={part === 'extra' && handleExtraPartNameClick}
+			onClick={part === 'extra' ? handleExtraPartNameClick : undefined}
 		>
 			<div className="ConstructorForm-Topic">
 				{part !== 'extra' ? (
