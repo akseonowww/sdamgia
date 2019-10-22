@@ -27,16 +27,13 @@ const CatalogSearch = () => {
 	const placeholder =
 		windowWidth > 836 ? 'Номер или текст задания' : '№/текст задания';
 
-	const descEnding =
-		windowWidth > 1000 ? ' с образцами решений' : ' с решениями';
-
 	return (
 		<div className="CatalogSearch">
 			<Title>Поиск в каталоге</Title>
 
 			<p className="Section-Desc">
 				Все задания открытого банка ЕГЭ по математике профильного уровня
-				{descEnding}.
+				с образцами&nbsp;решений.
 			</p>
 
 			<form action="/test" method="POST">
