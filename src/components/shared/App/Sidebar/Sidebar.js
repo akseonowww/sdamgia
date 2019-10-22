@@ -2,6 +2,7 @@ import React from 'react';
 
 import SideMenu from './NavSide';
 
+import '../../Input/Input.css';
 import './Sidebar.scss';
 
 import vkBotImg from './assets/vkBotImg.png';

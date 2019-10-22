@@ -45,17 +45,13 @@
 }
 .search-input {
 	width: 100%;
-	max-width: 100% !important;
+	max-width: 100%;
 	margin: 0;
-	padding: 6px 2px 7px 26px !important;
+	padding: 6px 2px 7px 26px;
 
-	font-size: 9pt !important;
+	font-size: 9pt;
 
-	background: #f0f0f0 !important;
-	border: none !important;
-	border-radius: 7px !important;
-	box-shadow: none !important;
-
+	border-radius: 7px;
 	outline: none;
 }
 .search__search-icon {
