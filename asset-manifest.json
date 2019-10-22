@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sdamgia/static/css/main.7b91268b.chunk.css",
+    "main.css": "/sdamgia/static/css/main.f2bba87c.chunk.css",
     "main.js": "/sdamgia/static/js/main.1343c66d.chunk.js",
     "main.js.map": "/sdamgia/static/js/main.1343c66d.chunk.js.map",
     "runtime-main.js": "/sdamgia/static/js/runtime-main.3beb3406.js",
@@ -8,9 +8,9 @@
     "static/js/2.7245aac4.chunk.js": "/sdamgia/static/js/2.7245aac4.chunk.js",
     "static/js/2.7245aac4.chunk.js.map": "/sdamgia/static/js/2.7245aac4.chunk.js.map",
     "index.html": "/sdamgia/index.html",
-    "precache-manifest.f4e8273605086744ce3fec827b33174e.js": "/sdamgia/precache-manifest.f4e8273605086744ce3fec827b33174e.js",
+    "precache-manifest.7cc92aeccc7a71a290b94eb36e745467.js": "/sdamgia/precache-manifest.7cc92aeccc7a71a290b94eb36e745467.js",
     "service-worker.js": "/sdamgia/service-worker.js",
-    "static/css/main.7b91268b.chunk.css.map": "/sdamgia/static/css/main.7b91268b.chunk.css.map",
+    "static/css/main.f2bba87c.chunk.css.map": "/sdamgia/static/css/main.f2bba87c.chunk.css.map",
     "static/media/contentBannerBottomAd.png": "/sdamgia/static/media/contentBannerBottomAd.488c4574.png",
     "static/media/contentBannerTopAd.png": "/sdamgia/static/media/contentBannerTopAd.06163253.png",
     "static/media/sidebarBannerAd.png": "/sdamgia/static/media/sidebarBannerAd.931231ae.png",
