@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../Input/Input.css';
-import './Checkbox.css';
+import './Checkbox.scss';
 
 const Checkbox = ({
 	className,
