@@ -1,9 +1,9 @@
 import React, { useState, useLayoutEffect } from 'react';
 
-import Title from '../../../components/Title';
-import '../../../components/Form/Form.css';
-import '../../../components/Input/Input.css';
-import '../../../components/Button/Button.css';
+import Title from '../../../../components/Title';
+import '../../../../components/Form/Form.css';
+import '../../../../components/Input/Input.css';
+import '../../../../components/Button/Button.css';
 import './CatalogSearch.css';
 
 const useWindowWidth = () => {

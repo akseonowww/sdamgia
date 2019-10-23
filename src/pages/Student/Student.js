@@ -1,11 +1,11 @@
 import React from 'react';
 
-import OurVariants from './OurVariants';
-import LarinVariants from './LarinVariants';
-import Constructor from './Constructor';
+import OurVariants from './components/OurVariants';
+import LarinVariants from './components/LarinVariants';
+import Constructor from './components/Constructor';
 import TwoColumns from '../../components/TwoColumns/TwoColumns';
-import TeacherVariant from './TeacherVariant';
-import CatalogSearch from './CatalogSearch';
+import TeacherVariant from './components/TeacherVariant';
+import CatalogSearch from './components/CatalogSearch';
 import './Student.css';
 
 const Student = () => (
