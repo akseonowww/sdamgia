@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Counter from '../../Counter/Counter';
 import Subtopic from './Subtopic';
 import PartName from './PartName/PartName';
+import {
+	saveTopicsList,
+	getExtraTopics,
+	saveExtraTopics,
+	saveParts
+} from '../../../utils/constructor';
 
 const TopicsByParts = ({
 	topicsList,
@@ -14,29 +20,41 @@ const TopicsByParts = ({
 }) => {
 	const [extraTopics, setExtraTopics] = useState(false);
 
+	useEffect(() => {
+		if (getExtraTopics()) setExtraTopics(getExtraTopics());
+	}, []);
+
 	const handleTopicClick = index => {
 		const list = [...topicsList];
 		list[index] = { ...list[index], checked: !list[index].checked };
 
 		setTopicsList(list);
+		saveTopicsList(list);
 	};
 
 	const handleExtraPartNameClick = () => {
-		setExtraTopics(!extraTopics);
+		const newValue = !extraTopics;
+
+		setExtraTopics(newValue);
+		saveExtraTopics(newValue);
 	};
 
 	const switchOffPart = part => {
-		setParts({
+		const newParts = {
 			...parts,
 			[part]: false
-		});
+		};
+		setParts(newParts);
+		saveParts(newParts);
 	};
 
 	const switchOnPart = part => {
-		setParts({
+		const newParts = {
 			...parts,
 			[part]: true
-		});
+		};
+		setParts(newParts);
+		saveParts(newParts);
 	};
 
 	const topicsListParted = topicsList.reduce(

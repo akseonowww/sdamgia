@@ -6,31 +6,38 @@ import Title from '../../../components/Title';
 import ConstructorForm from '../../../components/ConstructorForm';
 import '../../../components/Link/Link.css';
 import './Constructor.css';
+import { getTopicsList } from '../../../utils/constructor';
 
 const Constructor = () => {
 	const [topicsList, setTopicsList] = useState(null);
 
 	useEffect(() => {
-		axios
-			.get('http://sidorchik.ru/reshuege/api/')
-			.then(response => response.data)
-			.then(data =>
-				data.map(topic => ({
-					id: topic.id,
-					title: topic.title,
-					part: topic.part,
-					subtopics: topic.subtopics.map(subtopic => ({
-						id: subtopic.id,
-						title: subtopic.title,
-						amount: subtopic.amount,
-						checked: true
-					})),
-					value: 0,
-					checked: false
-				}))
-			)
-			.then(data => setTopicsList(data))
-			.catch(error => console.log(error));
+		const topicsListSaved = getTopicsList();
+
+		if (!topicsListSaved) {
+			axios
+				.get('http://sidorchik.ru/reshuege/api/')
+				.then(response => response.data)
+				.then(data =>
+					data.map(topic => ({
+						id: topic.id,
+						title: topic.title,
+						part: topic.part,
+						subtopics: topic.subtopics.map(subtopic => ({
+							id: subtopic.id,
+							title: subtopic.title,
+							amount: subtopic.amount,
+							checked: true
+						})),
+						value: 0,
+						checked: false
+					}))
+				)
+				.then(data => setTopicsList(data))
+				.catch(error => console.log(error));
+		} else {
+			setTopicsList(topicsListSaved);
+		}
 	}, []);
 
 	return (

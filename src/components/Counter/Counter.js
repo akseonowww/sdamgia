@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 
 import nahStep from '../Form/nahStep';
 import { getNewTestTotalText } from '../ConstructorForm';
+import { saveTopicsList, saveTestTotal } from '../../utils/constructor';
 import './Counter.css';
 
 const useCounter = (
@@ -38,13 +39,16 @@ const useCounter = (
 		const oldValue = list[index].value;
 		list[index] = { ...list[index], value: newValue };
 		setValue(list);
+		saveTopicsList(list);
 
 		const newTestTotalAmount = testTotal.amount + (newValue - oldValue);
 		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
-		setTestTotal({
+		const newTestTotal = {
 			amount: newTestTotalAmount,
 			text: newTestTotalText
-		});
+		};
+		setTestTotal(newTestTotal);
+		saveTestTotal(newTestTotal);
 
 		if (newValue) {
 			for (let i = 0; i < list.length; i++) {
@@ -67,13 +71,16 @@ const useCounter = (
 
 		list[index] = { ...list[index], value: newValue };
 		setValue(list);
+		saveTopicsList(list);
 
 		const newTestTotalAmount = testTotal.amount - 1;
 		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
-		setTestTotal({
+		const newTestTotal = {
 			amount: newTestTotalAmount,
 			text: newTestTotalText
-		});
+		};
+		setTestTotal(newTestTotal);
+		saveTestTotal(newTestTotal);
 
 		if (!newValue) switchOffPart(part);
 	};
@@ -85,13 +92,16 @@ const useCounter = (
 
 		list[index] = { ...list[index], value: newValue };
 		setValue(list);
+		saveTopicsList(list);
 
 		const newTestTotalAmount = testTotal.amount + 1;
 		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
-		setTestTotal({
+		const newTestTotal = {
 			amount: newTestTotalAmount,
 			text: newTestTotalText
-		});
+		};
+		setTestTotal(newTestTotal);
+		saveTestTotal(newTestTotal);
 
 		for (let i = 0; i < list.length; i++) {
 			if (list[i].part === part && list[i].value < 1) return;

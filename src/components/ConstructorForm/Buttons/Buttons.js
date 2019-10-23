@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Checkbox from '../../Checkbox';
+import {
+	saveTopicsList,
+	getParts,
+	saveParts,
+	getTestTotal,
+	saveTestTotal
+} from '../../../utils/constructor';
 import '../../Switcher/Switcher.css';
 import '../../Switcher/_vertical/Switcher_vertical.css';
 import '../../Switcher/_checkbox/Switcher_checkbox.css';
@@ -14,6 +21,11 @@ const Buttons = ({
 	setTestTotal,
 	getNewTestTotalText
 }) => {
+	useEffect(() => {
+		if (getTestTotal()) setTestTotal(getTestTotal());
+		if (getParts()) setParts(getParts());
+	}, [setParts, setTestTotal]);
+
 	const switchPart = part => {
 		if (topicsList) {
 			const newValue = !parts[part];
@@ -21,10 +33,12 @@ const Buttons = ({
 
 			const willBeSaved = countValue === 1;
 
-			setParts({
+			const newParts = {
 				...parts,
 				[part]: newValue
-			});
+			};
+			setParts(newParts);
+			saveParts(newParts);
 
 			const list = [...topicsList];
 			let newTestTotalAmount = testTotal.amount;
@@ -46,11 +60,14 @@ const Buttons = ({
 			}
 
 			setTopicsList(list);
+			saveTopicsList(list);
 
-			setTestTotal({
+			const newTestTotal = {
 				amount: newTestTotalAmount,
 				text: getNewTestTotalText(newTestTotalAmount)
-			});
+			};
+			setTestTotal(newTestTotal);
+			saveTestTotal(newTestTotal);
 		}
 	};
 
@@ -66,16 +83,21 @@ const Buttons = ({
 				};
 			}
 			setTopicsList(list);
+			saveTopicsList(list);
 
-			setTestTotal({
+			const newTestTotal = {
 				amount: 0,
 				text: ''
-			});
+			};
+			setTestTotal(newTestTotal);
+			saveTestTotal(newTestTotal);
 
-			setParts({
+			const newParts = {
 				test: false,
 				detailed: false
-			});
+			};
+			setParts(newParts);
+			saveParts(newParts);
 		}
 	};
 

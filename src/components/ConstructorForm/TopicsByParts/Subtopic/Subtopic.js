@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 
 import Checkbox from '../../../Checkbox';
 import nahStep from '../../../Form/nahStep';
+import { saveTopicsList } from '../../../../utils/constructor';
 
 const Subtopic = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
 	const subtopicLabel = useRef(null);
@@ -34,6 +35,7 @@ const Subtopic = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
 			checked: newValue
 		};
 		setTopicsList(list);
+		saveTopicsList(list);
 	};
 
 	return (

@@ -5,6 +5,7 @@ import TopicsByParts from './TopicsByParts';
 import Buttons from './Buttons';
 import './ConstructorForm.css';
 
+
 export const getNewTestTotalText = total => {
 	if (total > 0) {
 		const totalWord = 'задани';
