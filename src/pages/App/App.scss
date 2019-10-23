@@ -1159,4 +1159,11 @@ input[type='submit'] {
 
 .BannerAd {
 	width: 100%;
+
+	@include media-breakpoint-up(mil) {
+		& {
+			width: 823px;
+			height: 186px;
+		}
+	}
 }
