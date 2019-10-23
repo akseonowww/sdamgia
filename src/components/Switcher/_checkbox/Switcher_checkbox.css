@@ -1,6 +1,8 @@
 .Switcher_checkbox-Label {
 	display: flex;
 	padding: 0.4rem;
+
+	border-color: rgba(0, 0, 102, 0.25);
 }
 
 .Switcher_checkbox-Label:hover,
@@ -17,6 +19,5 @@
 }
 
 .Switcher_checkbox-FakeCheckbox {
-	border: 0.05rem solid !important;
-	border-color: #006 !important;
+	border: 0.05rem solid rgba(0, 0, 102, 0.25);
 }
