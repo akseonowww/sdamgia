@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import Section from '../../shared/Section';
-import Title from '../../shared/Title';
-import ConstructorForm from '../../shared/ConstructorForm';
-import '../../shared/Link/Link.css';
+import Section from '../../../components/Section';
+import Title from '../../../components/Title';
+import ConstructorForm from '../../../components/ConstructorForm';
+import '../../../components/Link/Link.css';
 import './Constructor.css';
 
 const Constructor = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Title from '../../shared/Title';
-import '../../shared/Form/Form.css';
-import '../../shared/Input/Input.css';
-import '../../shared/Button/Button.css';
+import Title from '../../../components/Title';
+import '../../../components/Form/Form.css';
+import '../../../components/Input/Input.css';
+import '../../../components/Button/Button.css';
 import './TeacherVariant.css';
 
 const TeacherVariant = () => (

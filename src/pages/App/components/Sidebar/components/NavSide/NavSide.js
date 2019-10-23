@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './NavSide.scss';
 
-import sideAd from '../assets/agm.gif';
+import sideAd from './assets/agm.gif';
 
 const NavSide = () => {
 	return (

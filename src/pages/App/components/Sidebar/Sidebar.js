@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SideMenu from './NavSide';
+import SideMenu from './components/NavSide';
 
-import '../../Input/Input.css';
+import '../../../../components/Input/Input.css';
 import './Sidebar.scss';
 
 import vkBotImg from './assets/vkBotImg.png';

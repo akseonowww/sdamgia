@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import Title from '../../shared/Title';
-import Section from '../../shared/Section';
-import Grid from '../../shared/Grid';
-import '../../shared/Link/Link.css';
-import VariantsLink from '../../shared/VariantsLink';
-import '../../shared/VariantsBox/VariantsBox.css';
+import Title from '../../../components/Title';
+import Section from '../../../components/Section';
+import Grid from '../../../components/Grid';
+import '../../../components/Link/Link.css';
+import VariantsLink from '../../../components/VariantsLink';
+import '../../../components/VariantsBox/VariantsBox.css';
 import './LarinVariants.css';
 
 const LarinVariants = () => {

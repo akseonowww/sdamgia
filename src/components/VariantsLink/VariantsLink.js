@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './VariantsLink.css';
-import '../../Student/OurVariants/OurVariants.css';
 import '../Link/Link.css';
 
 const VariantsLink = props => {
@@ -11,10 +10,8 @@ const VariantsLink = props => {
 
 	return (
 		<Link className={`VariantsLink Link ${className}`} to={to}>
-			{(!Number.isNaN(Number(children)) && dataWordClassName) && (
-				<span className={dataWordClassName}>
-					Вариант&nbsp;
-				</span>
+			{!Number.isNaN(Number(children)) && dataWordClassName && (
+				<span className={dataWordClassName}>Вариант&nbsp;</span>
 			)}
 			{children}
 		</Link>
