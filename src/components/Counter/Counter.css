@@ -24,6 +24,10 @@
 	border-radius: 50%;
 	box-shadow: none;
 	outline: none;
+
+	transition-property: border-color, color, fill;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-out;
 }
 
 .Counter-Button_disabled {
@@ -34,6 +38,8 @@
 	color: #f60;
 
 	border-color: rgba(255, 102, 51, 0.5);
+
+	transition: none;
 
 	cursor: pointer;
 }
