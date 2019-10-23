@@ -18,7 +18,7 @@ const OurVariants = () => (
 				<span className="Title-Caption">новые октябрьские</span>
 			</Title>
 			<div className="ComplexHeader-Link ComplexHeader-Link_desktop">
-				<Link className=" Link Link_static" to="/archive">
+				<Link className="Link Link_static" to="/archive">
 					Прошлые месяцы
 				</Link>
 			</div>
