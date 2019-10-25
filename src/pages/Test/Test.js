@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '../../components/Section';
 import Title from '../../components/Title';
-import './Test.css';
+import './Test.scss';
 
 const Test = () => (
 	<Section className="Test">
