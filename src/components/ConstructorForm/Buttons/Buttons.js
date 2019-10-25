@@ -8,6 +8,7 @@ import {
 	getTestTotal,
 	saveTestTotal
 } from '../../../utils/constructor';
+import '../../Button/Button.scss';
 import '../../Switcher/Switcher.css';
 import '../../Switcher/_vertical/Switcher_vertical.css';
 import '../../Switcher/_checkbox/Switcher_checkbox.css';

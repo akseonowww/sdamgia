@@ -456,7 +456,6 @@ input[type='submit'] {
 	cursor: pointer;
 	outline: none;
 	font-family: Verdana, Geneva, sans-serif;
-	padding: 5px 15px 6px;
 	border: none;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -478,9 +477,6 @@ input[type='submit'] {
 	-ms-transition-duration: 0.1s;
 	-o-transition-duration: 0.1s;
 	transition-duration: 0.1s;
-	/* min-width: 60px; */
-	/* font-size: 9pt; */
-	/* margin-top: 9px; */
 }
 
 input[type='button']:hover,

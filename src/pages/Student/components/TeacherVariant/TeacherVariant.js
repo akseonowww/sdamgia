@@ -3,7 +3,7 @@ import React from 'react';
 import Title from '../../../../components/Title';
 import '../../../../components/Form/Form.css';
 import '../../../../components/Input/Input.css';
-import '../../../../components/Button/Button.css';
+import '../../../../components/Button/Button.scss';
 import './TeacherVariant.css';
 
 const TeacherVariant = () => (
