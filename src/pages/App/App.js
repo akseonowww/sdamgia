@@ -20,10 +20,7 @@ function App() {
 				<div className="PageLayout StartPage">
 					<Header className="PageLayout-Header" />
 
-					<NavMain className="PageLayout-Nav PageLayout-Nav_desktop" />
-					<div className="Nav PageLayout-Nav PageLayout-Nav_mobile">
-						≡ математика
-					</div>
+					<NavMain className="PageLayout-Nav" />
 
 					<div className="PageLayout-Grid">
 						<Sidebar />
