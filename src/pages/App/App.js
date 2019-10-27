@@ -7,9 +7,9 @@ import NavMain from './components/NavMain/NavMain';
 import Footer from './components/Footer/Footer';
 import Student from '../Student';
 import Test from '../Test';
+import HelpButton from './components/HelpButton/HelpButton';
 import './App.scss';
 
-import helpButtonIcon from './assets/helpButtonIcon.png';
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
 
@@ -52,12 +52,7 @@ function App() {
 							<Footer className="PageLayout-Footer" />
 						</div>
 					</div>
-					<div
-						className="HelpButton"
-						style={{
-							backgroundImage: `url(${helpButtonIcon})`
-						}}
-					></div>
+					<HelpButton />
 				</div>
 			</BrowserRouter>
 		</div>
