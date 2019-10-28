@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a377f6304aa05cdb3fe433ffb31c19f",
+    "revision": "1454f6f679a785416d66386f64276910",
     "url": "/sdamgia/index.html"
   },
   {
-    "revision": "217fcd0dab4ff15ae199",
-    "url": "/sdamgia/static/css/main.059ce3b2.chunk.css"
+    "revision": "322fc74231d7e7fe9f6b",
+    "url": "/sdamgia/static/css/main.a7a64a3a.chunk.css"
   },
   {
-    "revision": "48b3197499dc2265e951",
-    "url": "/sdamgia/static/js/2.8293c28e.chunk.js"
+    "revision": "5c2214072b529cbb3449",
+    "url": "/sdamgia/static/js/2.7e929452.chunk.js"
   },
   {
-    "revision": "217fcd0dab4ff15ae199",
-    "url": "/sdamgia/static/js/main.03ce8dda.chunk.js"
+    "revision": "322fc74231d7e7fe9f6b",
+    "url": "/sdamgia/static/js/main.692bcf7a.chunk.js"
   },
   {
     "revision": "22209ff448b29e0f360a",
     "url": "/sdamgia/static/js/runtime-main.3beb3406.js"
+  },
+  {
+    "revision": "88d1a04830d48f86f4d850b2f6ffb471",
+    "url": "/sdamgia/static/media/button-store.88d1a048.svg"
   },
   {
     "revision": "488c457415ef6c76a453799af47555cb",
