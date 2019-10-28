@@ -1,6 +1,37 @@
+@import '../../../../breakpoints';
+
 .Footer {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 
-	font-size: 1rem;
+	@include media-breakpoint-up(mil) {
+		& {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&-Menu {
+		margin-bottom: 0.5rem;
+	}
+
+	&-Copyright {
+		margin-bottom: 1rem;
+	}
+
+	&-Menu,
+	&-Copyright {
+		font-size: 1rem;
+		line-height: 1.4rem;
+	}
+
+	&-Ad {
+		order: 3;
+
+		@include media-breakpoint-up(mil) {
+			& {
+				order: initial;
+			}
+		}
+	}
 }

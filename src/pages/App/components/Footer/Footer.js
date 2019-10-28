@@ -6,9 +6,9 @@ import spbsut from './assets/spbsut.png';
 
 const Footer = ({ className }) => (
 	<footer className={`Footer ${className}`}>
-		<p>
+		<nav className="Footer-Menu">
 			<a class="Link Link_black" href="/about">
-				О проекте
+				О проекте
 			</a>{' '}
 			·{' '}
 			<a class="Link Link_black" href="/staff">
@@ -16,17 +16,18 @@ const Footer = ({ className }) => (
 			</a>{' '}
 			·{' '}
 			<a class="Link Link_black" href="/legal">
-				Правовая информация
+				Правовая&nbsp;информация
 			</a>{' '}
-		</p>
+		</nav>
 		<a
+			className="Footer-Ad"
 			href="http://priem.sut.ru/"
 			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<img src={spbsut} alt="СПб ГУТ!" title="priem.sut.ru" width="160" />
 		</a>
-		<p>©&nbsp;Гущин Д. Д., 2011—2019</p>
+		<p className="Footer-Copyright">©&nbsp;Гущин Д. Д., 2011—2019</p>
 	</footer>
 );
 
