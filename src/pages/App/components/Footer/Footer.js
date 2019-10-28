@@ -7,15 +7,15 @@ import spbsut from './assets/spbsut.png';
 const Footer = ({ className }) => (
 	<footer className={`Footer ${className}`}>
 		<nav className="Footer-Menu">
-			<a class="Link Link_black" href="/about">
+			<a className="Link Link_black" href="/about">
 				О проекте
 			</a>{' '}
 			·{' '}
-			<a class="Link Link_black" href="/staff">
+			<a className="Link Link_black" href="/staff">
 				Редакция
 			</a>{' '}
 			·{' '}
-			<a class="Link Link_black" href="/legal">
+			<a className="Link Link_black" href="/legal">
 				Правовая&nbsp;информация
 			</a>{' '}
 		</nav>
