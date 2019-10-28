@@ -7,7 +7,6 @@ import NavMain from './components/NavMain/NavMain';
 import Footer from './components/Footer/Footer';
 import Student from '../Student';
 import Test from '../Test';
-import HelpButton from './components/HelpButton/HelpButton';
 import './App.scss';
 
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
@@ -49,7 +48,6 @@ function App() {
 							<Footer className="PageLayout-Footer" />
 						</div>
 					</div>
-					<HelpButton />
 				</div>
 			</BrowserRouter>
 		</div>
