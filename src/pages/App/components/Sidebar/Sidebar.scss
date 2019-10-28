@@ -30,10 +30,85 @@
 	}
 
 	&-BannerAd {
-		margin-top: 50px;
+		width: 100%;
+		margin-top: 1.25rem;
 	}
 
 	&-Search {
 		margin: 14px 0 7px;
 	}
 }
+
+.Info {
+	position: relative;
+
+	padding: 7.5px 0 25px;
+
+	font-size: 11px;
+	text-align: left;
+
+	background: #f0f5ff;
+	border-radius: 7px;
+
+	&-Item {
+		padding: 0 0.4rem;
+	}
+
+	&-ProfileWidget {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.login > noindex > .news p {
+	color: #000;
+}
+
+.login > noindex > .news p a {
+	color: #008;
+}
+
+.login > noindex > .news p a:hover {
+	color: #f60;
+}
+
+.login a:hover b {
+	color: #f60;
+}
+
+.login a:hover p {
+	color: #f60;
+	border-bottom: 1px solid rgba(255, 102, 0, 0.25);
+}
+
+
+.login form {
+	margin-bottom: 10px;
+}
+
+.login form a,
+.login__title a {
+	padding: 0 !important;
+	text-decoration: none;
+	color: #006;
+	border-bottom: 1px solid;
+	border-bottom-color: rgba(0, 0, 102, 0.25);
+}
+
+.login form a:hover,
+.login__title a:hover {
+	color: #f60;
+	border-bottom-color: rgba(255, 102, 0, 0.25);
+}
+
+.login__title {
+	font-size: 11px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 15px 0 5px;
+}
+
+.login__board-of-shame {
+	margin-top: 15px;
+}
+

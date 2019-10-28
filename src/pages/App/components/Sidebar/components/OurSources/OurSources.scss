@@ -1,0 +1,36 @@
+.OurSources {
+	&-Desc {
+		margin-bottom: 0.4rem;
+
+		line-height: 1rem;
+	}
+
+	&-ButtonStore {
+		position: absolute;
+		bottom: 0;
+
+		display: inline-block;
+		width: 81px;
+		height: 23px;
+
+		background: url(assets/button-store.svg) center / cover no-repeat;
+
+		&:hover {
+			opacity: 0.75;
+		}
+
+		&_iOS {
+			right: 0;
+
+			background-position: 0px -24px;
+			border-bottom-right-radius: 5px;
+		}
+
+		&_android {
+			left: 0;
+
+			background-position: 0 0;
+			border-bottom-left-radius: 5px;
+		}
+	}
+}

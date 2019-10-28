@@ -49,6 +49,7 @@ function App() {
 						</div>
 					</div>
 				</div>
+				<div className="ChatButton">Чат</div>
 			</BrowserRouter>
 		</div>
 	);

@@ -1,0 +1,33 @@
+.ButtonVK {
+	display: block;
+	margin-bottom: 8px;
+	padding: 3px 0 4px !important;
+
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+		sans-serif;
+	font-size: 12.5px;
+	color: #fff !important;
+	text-align: center;
+	text-decoration: none;
+
+	background: #5181b8;
+	border-radius: 4px !important;
+
+	&:hover {
+		background: #5b88bd;
+	}
+
+	&::before {
+		position: relative;
+		bottom: -1px;
+
+		display: inline-block;
+		width: 15px;
+		height: 11px;
+		margin-right: 8px;
+
+		background: url(assets/post_widget_2x.png) 0 -52px / 16px 106px no-repeat;
+
+		content: '';
+	}
+}
