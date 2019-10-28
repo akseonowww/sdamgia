@@ -7,8 +7,13 @@ import spbsut from './assets/spbsut.png';
 const Footer = ({ className }) => (
 	<footer className={`Footer ${className}`}>
 		<p style={{ float: 'left' }}>
-			<a href="/about">О проекте</a> · <a href="/staff">Редакция</a> ·{' '}
-			<a href="/legal">Правовая информация</a>{' '}
+			<a class="Link Link_black" href="/about">
+				О проекте
+			</a>{' '}
+			· <a class="Link Link_black" href="/staff">Редакция</a> ·{' '}
+			<a class="Link Link_black" href="/legal">
+				Правовая информация
+			</a>{' '}
 		</p>
 		<p align="right">©&nbsp;Гущин Д. Д., 2011—2019</p> <br />
 		<center style={{ clear: 'both' }}>
