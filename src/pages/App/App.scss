@@ -457,58 +457,6 @@ div[id=''] {
 	border-radius: 0 0 5px 5px;
 }
 
-input[type='button'],
-input[type='submit'] {
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	font-family: Verdana, Geneva, sans-serif;
-	border: none;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-khtml-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-ms-border-radius: 6px;
-	-o-border-radius: 6px;
-	background-color: #d2e2ff;
-	background: -webkit-linear-gradient(to bottom, #d2e2ff, #9dccff);
-	background: -khtml-linear-gradient(to bottom, #d2e2ff, #9dccff);
-	background: -moz-linear-gradient(to bottom, #d2e2ff, #9dccff);
-	background: -ms-linear-gradient(to bottom, #d2e2ff, #9dccff);
-	background: -o-linear-gradient(to bottom, #d2e2ff, #9dccff);
-	background: linear-gradient(to bottom, #d2e2ff, #9dccff);
-	box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
-	-webkit-transition-duration: 0.1s;
-	-khtml-transition-duration: 0.1s;
-	-moz-transition-duration: 0.1s;
-	-ms-transition-duration: 0.1s;
-	-o-transition-duration: 0.1s;
-	transition-duration: 0.1s;
-}
-
-input[type='button']:hover,
-input[type='submit']:hover {
-	background-color: #dbe8ff;
-	background: -webkit-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-	background: -khtml-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-	background: -moz-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-	background: -ms-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-	background: -o-linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-	background: linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-}
-
-input[type='button']:active,
-input[type='submit']:active {
-	background-color: #bfd6ff;
-	background: -webkit-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-	background: -khtml-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-	background: -moz-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-	background: -ms-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-	background: -o-linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-	background: linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-	box-shadow: inset 1px 1px 2px rgba(77, 77, 77, 0.4);
-}
-
 .content td {
 	border-radius: 2px;
 }
