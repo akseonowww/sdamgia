@@ -1,8 +1,7 @@
 import React from 'react';
 
 import SideMenu from './components/NavSide';
-
-import '../../../../components/Input/Input.css';
+import Search from './components/Search/Search';
 import './Sidebar.scss';
 
 import vkBotImg from './assets/vkBotImg.png';
@@ -13,6 +12,7 @@ import sidebarBannerAd from './assets/sidebarBannerAd.png';
 const Sidebar = () => (
 	<>
 		<aside className="SidebarBtns">сайты - меню - вход - новости</aside>
+
 		<aside className="Sidebar PageLayout-Sidebar">
 			<div className="sdamgia_btns">
 				<a href="https://sdamgia.ru">СДАМ ГИА</a>
@@ -21,49 +21,11 @@ const Sidebar = () => (
 				<a href="https://vpr.sdamgia.ru">РЕШУ ВПР</a>
 				<a href="https://ct.sdamgia.ru">РЕШУ ЦТ</a>
 			</div>
+
 			<SideMenu />
-			<form
-				className="Search Sidebar-Search"
-				action="/problem"
-				method="POST"
-			>
-				<label
-					className="Search-Label"
-					title="Для поиска нажмите клавишу Enter"
-				>
-					<input
-						className="Input Search-Input"
-						type="text"
-						name="id"
-						placeholder="№/текст задания"
-					/>
-					<div className="SearchIcon Search-SearchIcon">
-						<svg
-							className="SearchIcon-Svg"
-							version="1.1"
-							viewBox="0 0 27.9 50"
-							x="0px"
-							y="0px"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<circle
-								className="SearchIcon-Lens"
-								cx="10.9"
-								cy="24.1"
-								r="9.4"
-							></circle>
-							<rect
-								className="SearchIcon-Handle"
-								width="3"
-								height="14.5"
-								x="20"
-								y="27.6"
-								transform="matrix(0.7071 -0.7071 0.7071 0.7071 -18.3066 25.467)"
-							></rect>
-						</svg>
-					</div>
-				</label>
-			</form>
+
+			<Search className="Sidebar-Search" />
+
 			<div className="login" width="100%">
 				<form method="post">
 					<input name="la" type="hidden" value="logout" />
