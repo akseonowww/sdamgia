@@ -11,7 +11,6 @@ const News = ({ className }) => (
 		<a
 			className="news news_urgent"
 			href="https://ege.sdamgia.ru/game.htm"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			Играть <u>в ЕГЭ-игрушку</u>
@@ -19,7 +18,6 @@ const News = ({ className }) => (
 		<a
 			className="news news_urgent"
 			href="https://play.google.com/store/apps/details?id=com.ilnur.handbook"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<u>Мобильный справочник</u>
@@ -54,7 +52,6 @@ const News = ({ className }) => (
 		<a
 			className="news news_hot"
 			href="https://ege.sdamgia.ru/img/blockadblock_chrome.jpg"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__text">
@@ -64,7 +61,6 @@ const News = ({ className }) => (
 		<div className="login__title">
 			<a
 				href="https://sdamgia.ru/"
-				target="_blank"
 				rel="noopener noreferrer"
 			>
 				Новости
@@ -73,7 +69,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://vk.com/wall-34649478_180027"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__date">15 сентября</div>
@@ -82,7 +77,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://vk.com/mgumsch"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__date">15 августа</div>
@@ -94,7 +88,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://vk.com/wall-34649478_177050"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__date">20 июня</div>
@@ -105,7 +98,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://vk.com/wall-34649478_175961"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__date">14 июня</div>
@@ -116,7 +108,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://vk.com/wall-34649478_175325"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__date">12 июня</div>
@@ -128,7 +119,6 @@ const News = ({ className }) => (
 		<a
 			className="news news_urgent"
 			href="https://vk.com/wall-34649478_169793"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			Новый сервис — <u>карточки</u>
@@ -137,7 +127,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://ege.sdamgia.ru/page/examer.ru"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__text">Экзамер из Таганрога</div>
@@ -145,7 +134,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://ege.sdamgia.ru/page/thieves"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__text">
@@ -155,7 +143,6 @@ const News = ({ className }) => (
 		<a
 			className="news"
 			href="https://ege.sdamgia.ru/page/examer.ru"
-			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div className="news__text">
