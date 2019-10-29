@@ -9,19 +9,23 @@ import telegramBotImg from './assets/telegramBotImg.png';
 const News = ({ className }) => (
 	<div className={cx('News', className)}>
 		<a
-			className="news news_urgent"
+			className="News-Item News-Item_urgent Link Link_white Link_wrap"
 			href="https://ege.sdamgia.ru/game.htm"
 			rel="noopener noreferrer"
 		>
-			Играть <u>в ЕГЭ-игрушку</u>
+			Играть{' '}
+			<u className="Link-U Link_white-U Link_wrap-U">в ЕГЭ-игрушку</u>
 		</a>
 		<a
-			className="news news_urgent"
+			className="News-Item News-Item_urgent Link Link_white Link_wrap"
 			href="https://play.google.com/store/apps/details?id=com.ilnur.handbook"
 			rel="noopener noreferrer"
 		>
-			<u>Мобильный справочник</u>
+			<u className="Link-U Link_white-U Link_wrap-U">
+				Мобильный справочник
+			</u>
 		</a>
+
 		<table align="center" style={{ marginBottom: '5px' }}>
 			<tbody>
 				<tr>
@@ -49,8 +53,9 @@ const News = ({ className }) => (
 				</tr>
 			</tbody>
 		</table>
+
 		<a
-			className="news news_hot"
+			className="News-Item News-Item_hot Link Link_static"
 			href="https://ege.sdamgia.ru/img/blockadblock_chrome.jpg"
 			rel="noopener noreferrer"
 		>
@@ -58,6 +63,7 @@ const News = ({ className }) => (
 				На сайте что-то не так? Отключите адблок
 			</div>
 		</a>
+
 		<div className="News-List">
 			<a
 				className="Link Link_static Link_wrap News-Title"
@@ -67,54 +73,54 @@ const News = ({ className }) => (
 				<u className="Link-U Link_static-U Link_wrap-U">Новости</u>
 			</a>
 			<a
-				className="news"
+				className="News-Item Link Link_static"
 				href="https://vk.com/wall-34649478_180027"
 				rel="noopener noreferrer"
 			>
-				<div className="news__date">15 сентября</div>
-				<div className="news__text">
+				<div className="News-Date">15 сентября</div>
+				<div className="News-Text">
 					Решения всех демоверсий ЕГЭ−2020
 				</div>
 			</a>
 			<a
-				className="news"
+				className="News-Item Link Link_static"
 				href="https://vk.com/mgumsch"
 				rel="noopener noreferrer"
 			>
-				<div className="news__date">15 августа</div>
-				<div className="news__text">
+				<div className="News-Date">15 августа</div>
+				<div className="News-Text">
 					Подготовка к ЕГЭ и ОГЭ с нуля до 100 баллов на годовом курсе
 					УМСКУЛ
 				</div>
 			</a>
 			<a
-				className="news"
+				className="News-Item Link Link_static"
 				href="https://vk.com/wall-34649478_177050"
 				rel="noopener noreferrer"
 			>
-				<div className="news__date">20 июня</div>
-				<div className="news__text">
+				<div className="News-Date">20 июня</div>
+				<div className="News-Text">
 					Сначала составители ЕГЭ свою ошибку признали, потом
 					расхотели
 				</div>
 			</a>
 			<a
-				className="news"
+				className="News-Item Link Link_static"
 				href="https://vk.com/wall-34649478_175961"
 				rel="noopener noreferrer"
 			>
-				<div className="news__date">14 июня</div>
-				<div className="news__text">
+				<div className="News-Date">14 июня</div>
+				<div className="News-Text">
 					ЕГЭ ещё не начался, а выгнать уже смогли
 				</div>
 			</a>
 			<a
-				className="news"
+				className="News-Item Link Link_static"
 				href="https://vk.com/wall-34649478_175325"
 				rel="noopener noreferrer"
 			>
-				<div className="news__date">12 июня</div>
-				<div className="news__text">
+				<div className="News-Date">12 июня</div>
+				<div className="News-Text">
 					Комментарии Д. Гущина к геометрическим заданиям ЕГЭ основной
 					волны
 				</div>
@@ -122,40 +128,42 @@ const News = ({ className }) => (
 		</div>
 
 		<a
-			className="news news_urgent"
+			className="News-Item News-Item_urgent Link Link_white Link_wrap"
 			href="https://vk.com/wall-34649478_169793"
 			rel="noopener noreferrer"
 		>
-			Новый сервис — <u>карточки</u>
+			Новый сервис —{' '}
+			<u className="Link-U Link_white-U Link_wrap-U">карточки</u>
 		</a>
-		<div className="login__title">ЧУЖОЕ НЕ БРАТЬ!</div>
-		<a
-			className="news"
-			href="https://ege.sdamgia.ru/page/examer.ru"
-			rel="noopener noreferrer"
-		>
-			<div className="news__text">Экзамер из Таганрога</div>
-		</a>
-		<a
-			className="news"
-			href="https://ege.sdamgia.ru/page/thieves"
-			rel="noopener noreferrer"
-		>
-			<div className="news__text">
-				Учитель Думбадзе из школы 162 Петербурга
-			</div>
-		</a>
-		<a
-			className="news"
-			href="https://ege.sdamgia.ru/page/examer.ru"
-			rel="noopener noreferrer"
-		>
-			<div className="news__text">
-				<span className="smallcapitals">
+
+		<div className="News-Thiefs">
+			<div className="News-Title">ЧУЖОЕ НЕ БРАТЬ!</div>
+			<a
+				className="News-Item Link Link_static"
+				href="https://ege.sdamgia.ru/page/examer.ru"
+				rel="noopener noreferrer"
+			>
+				<div className="News-Text">Экзамер из Таганрога</div>
+			</a>
+			<a
+				className="News-Item Link Link_static"
+				href="https://ege.sdamgia.ru/page/thieves"
+				rel="noopener noreferrer"
+			>
+				<div className="News-Text">
+					Учитель Думбадзе из школы 162 Петербурга
+				</div>
+			</a>
+			<a
+				className="News-Item Link Link_static"
+				href="https://ege.sdamgia.ru/page/examer.ru"
+				rel="noopener noreferrer"
+			>
+				<div className="News-Text smallcapitals">
 					ОПРОВЕРЖЕНИЕ СВЕДЕНИЙ ОБ EXAMER ИЗ ТАГАНРОГА
-				</span>
-			</div>
-		</a>
+				</div>
+			</a>
+		</div>
 	</div>
 );
 
