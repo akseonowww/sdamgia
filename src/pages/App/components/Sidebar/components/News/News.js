@@ -58,64 +58,69 @@ const News = ({ className }) => (
 				На сайте что-то не так? Отключите адблок
 			</div>
 		</a>
-		<div className="login__title">
+		<div className="News-List">
 			<a
+				className="Link Link_static Link_wrap News-Title"
 				href="https://sdamgia.ru/"
 				rel="noopener noreferrer"
 			>
-				Новости
+				<u className="Link-U Link_static-U Link_wrap-U">Новости</u>
+			</a>
+			<a
+				className="news"
+				href="https://vk.com/wall-34649478_180027"
+				rel="noopener noreferrer"
+			>
+				<div className="news__date">15 сентября</div>
+				<div className="news__text">
+					Решения всех демоверсий ЕГЭ−2020
+				</div>
+			</a>
+			<a
+				className="news"
+				href="https://vk.com/mgumsch"
+				rel="noopener noreferrer"
+			>
+				<div className="news__date">15 августа</div>
+				<div className="news__text">
+					Подготовка к ЕГЭ и ОГЭ с нуля до 100 баллов на годовом курсе
+					УМСКУЛ
+				</div>
+			</a>
+			<a
+				className="news"
+				href="https://vk.com/wall-34649478_177050"
+				rel="noopener noreferrer"
+			>
+				<div className="news__date">20 июня</div>
+				<div className="news__text">
+					Сначала составители ЕГЭ свою ошибку признали, потом
+					расхотели
+				</div>
+			</a>
+			<a
+				className="news"
+				href="https://vk.com/wall-34649478_175961"
+				rel="noopener noreferrer"
+			>
+				<div className="news__date">14 июня</div>
+				<div className="news__text">
+					ЕГЭ ещё не начался, а выгнать уже смогли
+				</div>
+			</a>
+			<a
+				className="news"
+				href="https://vk.com/wall-34649478_175325"
+				rel="noopener noreferrer"
+			>
+				<div className="news__date">12 июня</div>
+				<div className="news__text">
+					Комментарии Д. Гущина к геометрическим заданиям ЕГЭ основной
+					волны
+				</div>
 			</a>
 		</div>
-		<a
-			className="news"
-			href="https://vk.com/wall-34649478_180027"
-			rel="noopener noreferrer"
-		>
-			<div className="news__date">15 сентября</div>
-			<div className="news__text">Решения всех демоверсий ЕГЭ−2020</div>
-		</a>
-		<a
-			className="news"
-			href="https://vk.com/mgumsch"
-			rel="noopener noreferrer"
-		>
-			<div className="news__date">15 августа</div>
-			<div className="news__text">
-				Подготовка к ЕГЭ и ОГЭ с нуля до 100 баллов на годовом курсе
-				УМСКУЛ
-			</div>
-		</a>
-		<a
-			className="news"
-			href="https://vk.com/wall-34649478_177050"
-			rel="noopener noreferrer"
-		>
-			<div className="news__date">20 июня</div>
-			<div className="news__text">
-				Сначала составители ЕГЭ свою ошибку признали, потом расхотели
-			</div>
-		</a>
-		<a
-			className="news"
-			href="https://vk.com/wall-34649478_175961"
-			rel="noopener noreferrer"
-		>
-			<div className="news__date">14 июня</div>
-			<div className="news__text">
-				ЕГЭ ещё не начался, а выгнать уже смогли
-			</div>
-		</a>
-		<a
-			className="news"
-			href="https://vk.com/wall-34649478_175325"
-			rel="noopener noreferrer"
-		>
-			<div className="news__date">12 июня</div>
-			<div className="news__text">
-				Комментарии Д. Гущина к геометрическим заданиям ЕГЭ основной
-				волны
-			</div>
-		</a>
+
 		<a
 			className="news news_urgent"
 			href="https://vk.com/wall-34649478_169793"

@@ -80,13 +80,11 @@
 	border-bottom: 1px solid rgba(255, 102, 0, 0.25);
 }
 
-
 .login form {
 	margin-bottom: 10px;
 }
 
-.login form a,
-.login__title a {
+.login form a {
 	padding: 0 !important;
 	text-decoration: none;
 	color: #006;
@@ -94,21 +92,11 @@
 	border-bottom-color: rgba(0, 0, 102, 0.25);
 }
 
-.login form a:hover,
-.login__title a:hover {
+.login form a:hover {
 	color: #f60;
 	border-bottom-color: rgba(255, 102, 0, 0.25);
-}
-
-.login__title {
-	font-size: 11px;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin: 15px 0 5px;
 }
 
 .login__board-of-shame {
 	margin-top: 15px;
 }
-
