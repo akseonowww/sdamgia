@@ -1,8 +1,14 @@
 @import '../../../../breakpoints';
 
 .Header {
+	display: flex;
+	justify-content: space-between;
 	max-width: 1000px;
 	margin: 0 auto;
+
+	&-Main {
+		flex-grow: 1;
+	}
 
 	&-Logo {
 		float: left;
@@ -39,6 +45,9 @@
 
 	&-SubjectImg {
 		display: none;
+		width: 346.667px;
+		height: 100px;
+		margin: 5px;
 
 		@include media-breakpoint-up(mil) {
 			& {
