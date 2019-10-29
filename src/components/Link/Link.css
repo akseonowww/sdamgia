@@ -27,10 +27,6 @@
 	border-bottom-color: rgba(255, 255, 255, 0.35);
 }
 
-.Link_selected {
-	cursor: default;
-}
-
 .Link:not(.Link_static):not(.Link_black):not(.Link_white):not(.Link_pseudo):visited,
 .Link-U:not(.Link_static-U):not(.Link_black-U):not(.Link_white-U):not(.Link_pseudo-U):visited {
 	color: #8f00af;
@@ -122,4 +118,14 @@
 
 .Link_wrap:hover .Link_pseudo-U {
 	border-color: rgba(255, 102, 0, 0.5) !important;
+}
+
+.Link_selected {
+	border: none;
+
+	cursor: default;
+}
+
+.Link_selected:hover {
+	color: #000 !important;
 }

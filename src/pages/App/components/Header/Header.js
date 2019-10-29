@@ -24,19 +24,18 @@ const Header = ({ className }) => (
 		/>
 		<div className="Header-Title">
 			<a
-				className="Header-Link"
-				target="_blank"
-				rel="noopener noreferrer"
+				className="Header-Link Link Link_black"
 				href="https://sdamgia.ru"
+				rel="noopener noreferrer"
 			>
 				СДАМ ГИА
 			</a>
 			:{' '}
 			<NavLink
+				className="Header-Link Link Link_black"
+				activeClassName="Link_selected"
 				to="/"
 				exact
-				className="Header-Link"
-				activeClassName="Header-Link_selected Link_selected"
 			>
 				РЕШУ ЕГЭ
 			</NavLink>
