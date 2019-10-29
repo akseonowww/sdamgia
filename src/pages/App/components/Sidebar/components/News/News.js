@@ -26,33 +26,24 @@ const News = ({ className }) => (
 			</u>
 		</a>
 
-		<table align="center" style={{ marginBottom: '5px' }}>
-			<tbody>
-				<tr>
-					<td align="left">
-						<a
-							href="https://vk.com/bot.sdamgia"
-							target="_blank"
-							rel="noopener noreferrer"
-							title="Наш умный бот ВК"
-						>
-							<img src={vkBotImg} alt="" />
-						</a>
-					</td>
-					<td width="5px"></td>
-					<td align="right">
-						<a
-							href="tg://resolve?domain=reshuege_bot"
-							target="_blank"
-							rel="noopener noreferrer"
-							title="Наш Телеграм-бот"
-						>
-							<img src={telegramBotImg} alt="" />
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<div className="News-Bots">
+			<a
+				className="News-Bot News-Bot_Vk"
+				href="https://vk.com/bot.sdamgia"
+				rel="noopener noreferrer"
+				title="Наш умный бот Вконтакте"
+			>
+				<img src={vkBotImg} alt="Наш умный бот Вконтакте" />
+			</a>
+			<a
+				className="News-Bot News-Bot_Telegram"
+				href="tg://resolve?domain=reshuege_bot"
+				rel="noopener noreferrer"
+				title="Наш Телеграм-бот"
+			>
+				<img src={telegramBotImg} alt="Наш Телеграм-бот" />
+			</a>
+		</div>
 
 		<a
 			className="News-Item News-Item_hot Link Link_static"

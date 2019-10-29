@@ -61,4 +61,20 @@
 
 		text-decoration: none;
 	}
+
+	&-Bots {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0.5rem;
+	}
+
+	&-Bot {
+		&:hover {
+			opacity: 0.75;
+		}
+
+		&_Vk {
+			margin-right: 0.4rem;
+		}
+	}
 }
