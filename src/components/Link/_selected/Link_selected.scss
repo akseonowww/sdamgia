@@ -1,0 +1,9 @@
+.Link_selected {
+	border: none;
+
+	cursor: default;
+
+	&:hover {
+		color: #000 !important;
+	}
+}

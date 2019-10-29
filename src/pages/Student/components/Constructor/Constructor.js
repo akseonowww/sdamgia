@@ -4,7 +4,7 @@ import axios from 'axios';
 import Section from '../../../../components/Section';
 import Title from '../../../../components/Title';
 import ConstructorForm from '../../../../components/ConstructorForm';
-import '../../../../components/Link/Link.css';
+import '../../../../components/Link/Link.scss';
 import './Constructor.css';
 import { getTopicsList } from '../../../../utils/constructor';
 

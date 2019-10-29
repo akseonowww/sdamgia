@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import '../../../../components/Link/Link.scss';
+import '../../../../components/Link/_selected/Link_selected.scss';
 import './Header.scss';
 
 const Header = ({ className }) => (

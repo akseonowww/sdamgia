@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import '../Link/Link.scss';
 import './VariantsLink.css';
-import '../Link/Link.css';
 
 const VariantsLink = props => {
 	const { className, to, children } = props;

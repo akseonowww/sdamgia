@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Title from '../../../../components/Title';
 import Section from '../../../../components/Section';
 import Grid from '../../../../components/Grid';
-import '../../../../components/Link/Link.css';
+import '../../../../components/Link/Link.scss';
 import VariantsLink from '../../../../components/VariantsLink';
 import '../../../../components/VariantsBox/VariantsBox.css';
 import './LarinVariants.css';

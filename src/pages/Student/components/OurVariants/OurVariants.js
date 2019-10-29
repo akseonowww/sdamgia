@@ -6,7 +6,7 @@ import ComplexHeader from '../../../../components/ComplexHeader';
 import Title from '../../../../components/Title';
 import Grid from '../../../../components/Grid';
 import VariantsLink from '../../../../components/VariantsLink';
-import '../../../../components/Link/Link.css';
+import '../../../../components/Link/Link.scss';
 import './OurVariants.css';
 
 const OurVariants = () => (
