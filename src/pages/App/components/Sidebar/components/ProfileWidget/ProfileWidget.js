@@ -1,24 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cx from 'classnames';
 
+import ProfileLink from './components/ProfileLink/ProfileLink';
+import ProfileAuth from './components/ProfileAuth';
 import './ProfileWidget.scss';
 
-import signOutIcon from './assets/signOutIcon.png';
-
 const ProfileWidget = ({ className }) => {
+	const [auth, setAuth] = useState(false);
+
 	return (
 		<div className={cx('ProfileWidget', className)}>
-			<div>
-				<a
-					className="Link Link_static ProfileWidget-Link"
-					href="/profile"
-				>
-					Константин
-				</a>
-			</div>
-			<a href="/signout">
-				<img src={signOutIcon} alt="Выйти" />
-			</a>
+			{auth ? <ProfileLink /> : <ProfileAuth />}
 		</div>
 	);
 };

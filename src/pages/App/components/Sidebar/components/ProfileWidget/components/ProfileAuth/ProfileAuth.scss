@@ -1,0 +1,52 @@
+.ProfileAuth {
+	width: 100%;
+	margin-bottom: 0.5rem;
+
+	&-Title {
+		display: block;
+		margin: 0 0 0.2rem;
+		padding-bottom: 0.2rem;
+
+		font-weight: bold !important;
+		font-size: 11px;
+		text-align: center !important;
+		color: #006;
+		text-transform: uppercase;
+	}
+
+	&-Form {
+		margin-bottom: 0.4rem;
+	}
+
+	&-InputGroup {
+		margin-bottom: 0.15rem;
+	}
+
+	&-Input {
+		box-sizing: border-box;
+		width: 100%;
+		margin-bottom: 0.4rem;
+		padding: 2px;
+
+		font-size: 9pt;
+
+		background: #f4f8ff;
+		border: 1px solid #5983ff;
+		border-radius: 3px;
+		box-shadow: inset 0 0 3px rgba(77, 77, 77, 0.35);
+	}
+
+	&-Button {
+		font-size: 9pt;
+	}
+
+	&-Links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-Link {
+		margin-bottom: 0.1rem;
+		padding: 0.1rem 0;
+	}
+}
