@@ -10,7 +10,7 @@ const ProfileWidget = ({ className }) => {
 
 	return (
 		<div className={cx('ProfileWidget', className)}>
-			{auth ? <ProfileLink /> : <ProfileAuth />}
+			{auth ? <ProfileLink /> : <ProfileAuth setAuth={setAuth} />}
 		</div>
 	);
 };

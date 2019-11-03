@@ -1,27 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../../../../../../../../components/Link/Link.scss';
 import '../../../../../../../../components/Button/Button.scss';
 import './ProfileAuth.scss';
 
-const ProfileAuth = () => {
+const ProfileAuth = ({ setAuth }) => {
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
+	const handleInputChange = e => {
+		const { name, value: newValue } = e.target;
+
+		switch (name) {
+			case 'user':
+				setEmail(newValue);
+				break;
+			case 'password':
+				setPassword(newValue);
+				break;
+			default:
+				break;
+		}
+	};
+
+	const handleSubmit = e => {
+		e.preventDefault();
+
+		if (email && password) setAuth(true);
+	};
+
 	return (
 		<div className="ProfileAuth">
 			<div className="ProfileAuth-Title">Вход на сайт</div>
 
-			<form className="ProfileAuth-Form" action="" method="POST">
+			<form
+				className="ProfileAuth-Form"
+				action=""
+				method="POST"
+				onSubmit={handleSubmit}
+			>
 				<div className="ProfileAuth-InputGroup">
 					<input
 						className="ProfileAuth-Input"
 						type="text"
 						name="user"
+						value={email}
 						placeholder="Электронная почта"
+						onChange={handleInputChange}
 					/>
 					<input
 						className="ProfileAuth-Input"
 						type="password"
 						name="password"
+						value={password}
 						placeholder="Пароль"
+						onChange={handleInputChange}
 					/>
 					<input type="hidden" name="la" value="login" />
 				</div>
