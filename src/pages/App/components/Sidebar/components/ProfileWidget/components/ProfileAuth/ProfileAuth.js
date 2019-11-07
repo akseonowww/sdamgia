@@ -37,10 +37,12 @@ const ProfileAuth = ({ setAuth }) => {
 	const handleSubmit = e => {
 		e.preventDefault();
 
-		if (email === '') {
+		if (!email.trim() || !email.match(/.+@.+\..+/i)) {
 			handleEmailInputFocus();
-		} else if (password === '') {
+			return;
+		} else if (!password) {
 			handlePasswordInputFocus();
+			return;
 		}
 
 		if (email && password) setAuth(true);
