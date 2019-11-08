@@ -26,22 +26,18 @@ const ProfileAuth = ({ setAuth }) => {
 		}
 	};
 
-	const handleEmailInputFocus = () => {
-		emailInput.current.focus();
-	};
-
-	const handlePasswordInputFocus = () => {
-		passwordInput.current.focus();
+	const handleInputFocus = ref => {
+		ref.current.focus();
 	};
 
 	const handleSubmit = e => {
 		e.preventDefault();
 
 		if (!email.trim() || !email.match(/.+@.+\..+/i)) {
-			handleEmailInputFocus();
+			handleInputFocus(emailInput);
 			return;
 		} else if (!password) {
-			handlePasswordInputFocus();
+			handleInputFocus(passwordInput);
 			return;
 		}
 
