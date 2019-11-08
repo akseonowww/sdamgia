@@ -33,6 +33,7 @@ const ProfileAuth = ({ setAuth }) => {
 	const handleSubmit = e => {
 		e.preventDefault();
 
+		// Validation
 		if (!email.trim() || !email.match(/.+@.+\..+/i)) {
 			handleInputFocus(emailInput);
 			return;
