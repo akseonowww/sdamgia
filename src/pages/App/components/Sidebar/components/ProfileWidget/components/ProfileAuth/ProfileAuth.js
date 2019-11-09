@@ -1,25 +1,57 @@
 import React, { useState, useRef } from 'react';
+import cx from 'classnames';
 
 import '../../../../../../../../components/Link/Link.scss';
 import '../../../../../../../../components/Button/Button.scss';
 import './ProfileAuth.scss';
 
 const ProfileAuth = ({ setAuth }) => {
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
+	const [email, setEmail] = useState({ value: '', error: false });
+	const [password, setPassword] = useState({ value: '', error: false });
+	const [submit, setSubmit] = useState(false);
 
 	const emailInput = useRef(null);
 	const passwordInput = useRef(null);
 
 	const handleInputChange = e => {
 		const { name, value: newValue } = e.target;
+		let newError = false;
 
 		switch (name) {
 			case 'user':
-				setEmail(newValue);
+				setEmail({
+					...email,
+					value: newValue
+				});
+
+				if (submit) {
+					newError =
+						!newValue.trim() || !newValue.match(/.+@.+\..+/i)
+							? true
+							: false;
+
+					setEmail({
+						value: newValue,
+						error: newError
+					});
+				}
+
 				break;
 			case 'password':
-				setPassword(newValue);
+				setPassword({
+					...password,
+					value: newValue
+				});
+
+				if (submit) {
+					newError = !newValue ? true : false;
+
+					setPassword({
+						value: newValue,
+						error: newError
+					});
+				}
+
 				break;
 			default:
 				break;
@@ -33,16 +65,34 @@ const ProfileAuth = ({ setAuth }) => {
 	const handleSubmit = e => {
 		e.preventDefault();
 
+		setSubmit(true);
+
 		// Validation
-		if (!email.trim() || !email.match(/.+@.+\..+/i)) {
-			handleInputFocus(emailInput);
-			return;
-		} else if (!password) {
-			handleInputFocus(passwordInput);
+		if (
+			!email.value.trim() ||
+			!email.value.match(/.+@.+\..+/i) ||
+			!password.value
+		) {
+			if (!password.value) {
+				handleInputFocus(passwordInput);
+				setPassword({
+					...password,
+					error: true
+				});
+			}
+
+			if (!email.value.trim() || !email.value.match(/.+@.+\..+/i)) {
+				handleInputFocus(emailInput);
+				setEmail({
+					...email,
+					error: true
+				});
+			}
+
 			return;
 		}
 
-		if (email && password) setAuth(true);
+		if (email.value && password.value) setAuth(true);
 	};
 
 	return (
@@ -57,19 +107,23 @@ const ProfileAuth = ({ setAuth }) => {
 			>
 				<div className="ProfileAuth-InputGroup">
 					<input
-						className="ProfileAuth-Input"
-						type="text"
+						className={cx('ProfileAuth-Input', {
+							'ProfileAuth-Input_invalid': email.error
+						})}
+						type="email"
 						name="user"
-						value={email}
+						value={email.value}
 						placeholder="Электронная почта"
 						ref={emailInput}
 						onChange={handleInputChange}
 					/>
 					<input
-						className="ProfileAuth-Input"
+						className={cx('ProfileAuth-Input', {
+							'ProfileAuth-Input_invalid': password.error
+						})}
 						type="password"
 						name="password"
-						value={password}
+						value={password.value}
 						placeholder="Пароль"
 						ref={passwordInput}
 						onChange={handleInputChange}
