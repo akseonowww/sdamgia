@@ -9,6 +9,7 @@ const ProfileAuth = ({ setAuth }) => {
 	const [email, setEmail] = useState({ value: '', error: false });
 	const [password, setPassword] = useState({ value: '', error: false });
 	const [submit, setSubmit] = useState(false);
+	const [wrongData, setWrongData] = useState(false);
 
 	const emailInput = useRef(null);
 	const passwordInput = useRef(null);
@@ -92,6 +93,13 @@ const ProfileAuth = ({ setAuth }) => {
 			return;
 		}
 
+		if (email.value !== 'form@hater.ru' || password.value !== 'shit') {
+			setWrongData(true);
+			handleInputFocus(emailInput);
+
+			return;
+		}
+
 		if (email.value && password.value) setAuth(true);
 	};
 
@@ -106,11 +114,17 @@ const ProfileAuth = ({ setAuth }) => {
 				onSubmit={handleSubmit}
 			>
 				<div className="ProfileAuth-InputGroup">
+					{wrongData && (
+						<div className="ProfileAuth-Alert">
+							Неправильная почта или&nbsp;пароль
+						</div>
+					)}
+
 					<input
 						className={cx('ProfileAuth-Input', {
 							'ProfileAuth-Input_invalid': email.error
 						})}
-						type="email"
+						type="text"
 						name="user"
 						value={email.value}
 						placeholder="Электронная почта"
