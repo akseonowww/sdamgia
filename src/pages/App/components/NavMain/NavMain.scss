@@ -3,7 +3,9 @@
 		padding-left: 4px;
 
 		&-Link {
+			display: inline;
 			max-width: 129px;
+			min-width: auto;
 
 			color: #000;
 			white-space: nowrap;
@@ -41,5 +43,22 @@
 				box-shadow: inset 0 1px 2px rgba(77, 77, 77, 0.15);
 			}
 		}
+	}
+
+	&-PopupBlock {
+		position: relative;
+	}
+
+	&-Popup {
+		position: absolute;
+		z-index: 1;
+
+		display: block;
+		float: left;
+		width: 142px;
+	}
+
+	&-PopupTab {
+		width: calc(100% - 21px);
 	}
 }

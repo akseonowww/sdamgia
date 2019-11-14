@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './NavMain.scss';
 
 const NavMain = ({ className }) => {
+	const [popup, setPopup] = useState(false);
+
 	const exam = 'ege';
 	const subjectsList = [
 		{
@@ -59,20 +61,50 @@ const NavMain = ({ className }) => {
 		}
 	];
 
+	const showPopup = () => {
+		setPopup(true);
+	};
+
+	const hidePopup = () => {
+		setPopup(false);
+	};
+
 	return (
 		<>
 			<nav
 				className={`NavMain NavMain_desktop ${className} ${className}_desktop`}
 			>
-				<a
-					className="NavMain-Link NavMain_desktop-Link"
-					href="/"
-					rel="nofollow"
-				>
-					<div className="NavMain-Tab NavMain_desktop-Tab">
+				<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
+					<div
+						class="NavMain-Tab NavMain_desktop-Tab"
+						onMouseEnter={showPopup}
+					>
 						≡ Математика
 					</div>
-				</a>
+
+					{popup && (
+						<div class="NavMain-Popup" onMouseLeave={hidePopup}>
+							<a
+								className="NavMain-Link NavMain_desktop-Link"
+								href="https://mathb-ege.sdamgia.ru"
+								rel="nofollow"
+							>
+								<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+									Базовый уровень
+								</div>
+							</a>
+							<a
+								className="NavMain-Link NavMain_desktop-Link"
+								href="https://math-ege.sdamgia.ru"
+								rel="nofollow"
+							>
+								<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+									Профильный уровень
+								</div>
+							</a>
+						</div>
+					)}
+				</div>
 
 				{subjectsList.map(({ title, url }) => (
 					<a
