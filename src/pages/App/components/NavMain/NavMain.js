@@ -66,7 +66,7 @@ const NavMain = ({ className }) => {
 			>
 				<a
 					className="NavMain-Link NavMain_desktop-Link"
-					href=""
+					href="/"
 					rel="nofollow"
 				>
 					<div className="NavMain-Tab NavMain_desktop-Tab">
