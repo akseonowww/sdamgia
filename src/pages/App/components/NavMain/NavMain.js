@@ -79,7 +79,7 @@ const NavMain = ({ className }) => {
 			>
 				<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
 					<div
-						class="NavMain-Tab NavMain_desktop-Tab"
+						className="NavMain-Tab NavMain_desktop-Tab"
 						onMouseEnter={showPopup}
 					>
 						≡ Математика
@@ -109,11 +109,12 @@ const NavMain = ({ className }) => {
 					)}
 				</div>
 
-				{subjectsList.map(({ title, url }) => (
+				{subjectsList.map(({ title, url }, i) => (
 					<a
 						className="NavMain-Link NavMain_desktop-Link"
 						href={`https://${url}-${exam}.sdamgia.ru`}
 						rel="nofollow"
+						key={i}
 					>
 						<div className="NavMain-Tab NavMain_desktop-Tab">
 							{title}
