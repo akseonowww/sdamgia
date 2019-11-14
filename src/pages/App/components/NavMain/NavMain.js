@@ -85,6 +85,10 @@ const NavMain = ({ className }) => {
 		setPopup(false);
 	}, []);
 
+	const getUrl = useCallback((popupItem, exam) => {
+		return `https://${popupItem}-${exam}.sdamgia.ru`;
+	}, []);
+
 	return (
 		<>
 			<nav
@@ -109,7 +113,10 @@ const NavMain = ({ className }) => {
 										{sublist.map((popupItem, sublistI) => (
 											<a
 												className="NavMain-Link NavMain_desktop-Link"
-												href={`https://${popupItem}${exam}.sdamgia.ru`}
+												href={getUrl(
+													popupItem.url,
+													exam
+												)}
 												rel="nofollow"
 												key={sublistI}
 											>
@@ -126,7 +133,7 @@ const NavMain = ({ className }) => {
 						return (
 							<a
 								className="NavMain-Link NavMain_desktop-Link"
-								href={`https://${url}-${exam}.sdamgia.ru`}
+								href={getUrl(url, exam)}
 								rel="nofollow"
 								key={i}
 							>
