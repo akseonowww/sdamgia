@@ -1,13 +1,27 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 import './NavMain.scss';
 
 const NavMain = ({ className }) => {
+	const [subjectList, setSubjectList] = useState([]);
 	const [popup, setPopup] = useState(false);
 
 	const exam = useMemo(() => 'ege', []);
-	const subjectsList = useMemo(
-		() => [
+
+	const showPopup = useCallback(() => {
+		setPopup(true);
+	}, []);
+
+	const hidePopup = useCallback(() => {
+		setPopup(false);
+	}, []);
+
+	const getUrl = useCallback((popupItem, exam) => {
+		return `https://${popupItem}-${exam}.sdamgia.ru`;
+	}, []);
+
+	useEffect(() => {
+		setSubjectList([
 			{
 				title: '≡ Математика',
 				sublist: [
@@ -73,20 +87,7 @@ const NavMain = ({ className }) => {
 				title: 'История',
 				url: 'hist'
 			}
-		],
-		[]
-	);
-
-	const showPopup = useCallback(() => {
-		setPopup(true);
-	}, []);
-
-	const hidePopup = useCallback(() => {
-		setPopup(false);
-	}, []);
-
-	const getUrl = useCallback((popupItem, exam) => {
-		return `https://${popupItem}-${exam}.sdamgia.ru`;
+		]);
 	}, []);
 
 	return (
@@ -94,56 +95,59 @@ const NavMain = ({ className }) => {
 			<nav
 				className={`NavMain NavMain_desktop ${className} ${className}_desktop`}
 			>
-				{subjectsList.map(({ title, url, sublist }, i) => {
-					if (sublist) {
-						return (
-							<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
-								<div
-									className="NavMain-Tab NavMain_desktop-Tab"
-									onMouseEnter={showPopup}
-								>
-									{title}
-								</div>
-
-								{popup && (
+				{subjectList.length > 0 &&
+					subjectList.map(({ title, url, sublist }, i) => {
+						if (sublist) {
+							return (
+								<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
 									<div
-										class="NavMain-Popup"
-										onMouseLeave={hidePopup}
+										className="NavMain-Tab NavMain_desktop-Tab"
+										onMouseEnter={showPopup}
 									>
-										{sublist.map((popupItem, sublistI) => (
-											<a
-												className="NavMain-Link NavMain_desktop-Link"
-												href={getUrl(
-													popupItem.url,
-													exam
-												)}
-												rel="nofollow"
-												key={sublistI}
-											>
-												<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-													{popupItem.title}
-												</div>
-											</a>
-										))}
+										{title}
 									</div>
-								)}
-							</div>
-						);
-					} else {
-						return (
-							<a
-								className="NavMain-Link NavMain_desktop-Link"
-								href={getUrl(url, exam)}
-								rel="nofollow"
-								key={i}
-							>
-								<div className="NavMain-Tab NavMain_desktop-Tab">
-									{title}
+
+									{popup && (
+										<div
+											class="NavMain-Popup"
+											onMouseLeave={hidePopup}
+										>
+											{sublist.map(
+												(sublistItem, sublistI) => (
+													<a
+														className="NavMain-Link NavMain_desktop-Link"
+														href={getUrl(
+															sublistItem.url,
+															exam
+														)}
+														rel="nofollow"
+														key={sublistI}
+													>
+														<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+															{sublistItem.title}
+														</div>
+													</a>
+												)
+											)}
+										</div>
+									)}
 								</div>
-							</a>
-						);
-					}
-				})}
+							);
+						} else {
+							return (
+								<a
+									className="NavMain-Link NavMain_desktop-Link"
+									href={getUrl(url, exam)}
+									rel="nofollow"
+									key={i}
+								>
+									<div className="NavMain-Tab NavMain_desktop-Tab">
+										{title}
+									</div>
+								</a>
+							);
+						}
+					})}
 
 				<div style={{ clear: 'both' }}></div>
 			</nav>
