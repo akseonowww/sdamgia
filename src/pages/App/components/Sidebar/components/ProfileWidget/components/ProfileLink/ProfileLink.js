@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+
+import './ProfileLink.scss';
 
 import signOutIcon from './assets/signOutIcon.png';
 
-const ProfileLink = () => {
+const ProfileLink = ({ setAuth }) => {
+	const signOut = useCallback(
+		e => {
+			e.preventDefault();
+			setAuth(false);
+		},
+		[setAuth]
+	);
+
 	return (
 		<>
 			<div className="">
@@ -13,8 +23,12 @@ const ProfileLink = () => {
 					Константин
 				</a>
 			</div>
-			<a href="/signout">
-				<img src={signOutIcon} alt="Выйти" />
+			<a href="/" onClick={e => signOut(e)}>
+				<img
+					className="ProfileLink-Icon"
+					src={signOutIcon}
+					alt="Выйти"
+				/>
 			</a>
 		</>
 	);
