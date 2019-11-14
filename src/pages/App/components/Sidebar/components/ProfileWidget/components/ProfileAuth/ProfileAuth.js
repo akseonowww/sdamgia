@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import cx from 'classnames';
 
 import '../../../../../../../../components/Link/Link.scss';
@@ -14,94 +14,100 @@ const ProfileAuth = ({ setAuth }) => {
 	const emailInput = useRef(null);
 	const passwordInput = useRef(null);
 
-	const handleInputChange = e => {
-		const { name, value: newValue } = e.target;
-		let newError = false;
+	const handleInputChange = useCallback(
+		e => {
+			const { name, value: newValue } = e.target;
+			let newError = false;
 
-		switch (name) {
-			case 'user':
-				setEmail({
-					...email,
-					value: newValue
-				});
-
-				if (submit) {
-					newError =
-						!newValue.trim() || !newValue.match(/.+@.+\..+/i)
-							? true
-							: false;
-
+			switch (name) {
+				case 'user':
 					setEmail({
-						value: newValue,
-						error: newError
+						...email,
+						value: newValue
 					});
-				}
 
-				break;
-			case 'password':
-				setPassword({
-					...password,
-					value: newValue
-				});
+					if (submit) {
+						newError =
+							!newValue.trim() || !newValue.match(/.+@.+\..+/i)
+								? true
+								: false;
 
-				if (submit) {
-					newError = !newValue ? true : false;
+						setEmail({
+							value: newValue,
+							error: newError
+						});
+					}
 
+					break;
+				case 'password':
 					setPassword({
-						value: newValue,
-						error: newError
+						...password,
+						value: newValue
+					});
+
+					if (submit) {
+						newError = !newValue ? true : false;
+
+						setPassword({
+							value: newValue,
+							error: newError
+						});
+					}
+
+					break;
+				default:
+					break;
+			}
+		},
+		[email, password, submit]
+	);
+
+	const handleInputFocus = useCallback(ref => {
+		ref.current.focus();
+	}, []);
+
+	const handleSubmit = useCallback(
+		e => {
+			e.preventDefault();
+
+			setSubmit(true);
+
+			// Validation
+			if (
+				!email.value.trim() ||
+				!email.value.match(/.+@.+\..+/i) ||
+				!password.value
+			) {
+				if (!password.value) {
+					handleInputFocus(passwordInput);
+					setPassword({
+						...password,
+						error: true
 					});
 				}
 
-				break;
-			default:
-				break;
-		}
-	};
+				if (!email.value.trim() || !email.value.match(/.+@.+\..+/i)) {
+					handleInputFocus(emailInput);
+					setEmail({
+						...email,
+						error: true
+					});
+				}
 
-	const handleInputFocus = ref => {
-		ref.current.focus();
-	};
-
-	const handleSubmit = e => {
-		e.preventDefault();
-
-		setSubmit(true);
-
-		// Validation
-		if (
-			!email.value.trim() ||
-			!email.value.match(/.+@.+\..+/i) ||
-			!password.value
-		) {
-			if (!password.value) {
-				handleInputFocus(passwordInput);
-				setPassword({
-					...password,
-					error: true
-				});
+				return;
 			}
 
-			if (!email.value.trim() || !email.value.match(/.+@.+\..+/i)) {
+			if (email.value !== 'form@hater.ru' || password.value !== 'shit') {
+				setWrongData(true);
 				handleInputFocus(emailInput);
-				setEmail({
-					...email,
-					error: true
-				});
+
+				return;
 			}
 
-			return;
-		}
-
-		if (email.value !== 'form@hater.ru' || password.value !== 'shit') {
-			setWrongData(true);
-			handleInputFocus(emailInput);
-
-			return;
-		}
-
-		if (email.value && password.value) setAuth(true);
-	};
+			if (email.value && password.value) setAuth(true);
+		},
+		[email, password, setAuth, handleInputFocus]
+	);
 
 	return (
 		<div className="ProfileAuth">
