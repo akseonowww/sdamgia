@@ -9,6 +9,19 @@ const NavMain = ({ className }) => {
 	const subjectsList = useMemo(
 		() => [
 			{
+				title: '≡ Математика',
+				sublist: [
+					{
+						title: 'Базовый уровень',
+						url: 'mathb'
+					},
+					{
+						title: 'Профильный уровень',
+						url: 'math'
+					}
+				]
+			},
+			{
 				title: 'Информатика',
 				url: 'math'
 			},
@@ -77,50 +90,53 @@ const NavMain = ({ className }) => {
 			<nav
 				className={`NavMain NavMain_desktop ${className} ${className}_desktop`}
 			>
-				<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
-					<div
-						className="NavMain-Tab NavMain_desktop-Tab"
-						onMouseEnter={showPopup}
-					>
-						≡ Математика
-					</div>
+				{subjectsList.map(({ title, url, sublist }, i) => {
+					if (sublist) {
+						return (
+							<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
+								<div
+									className="NavMain-Tab NavMain_desktop-Tab"
+									onMouseEnter={showPopup}
+								>
+									{title}
+								</div>
 
-					{popup && (
-						<div class="NavMain-Popup" onMouseLeave={hidePopup}>
+								{popup && (
+									<div
+										class="NavMain-Popup"
+										onMouseLeave={hidePopup}
+									>
+										{sublist.map((popupItem, sublistI) => (
+											<a
+												className="NavMain-Link NavMain_desktop-Link"
+												href={`https://${popupItem}${exam}.sdamgia.ru`}
+												rel="nofollow"
+												key={sublistI}
+											>
+												<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+													{popupItem.title}
+												</div>
+											</a>
+										))}
+									</div>
+								)}
+							</div>
+						);
+					} else {
+						return (
 							<a
 								className="NavMain-Link NavMain_desktop-Link"
-								href="https://mathb-ege.sdamgia.ru"
+								href={`https://${url}-${exam}.sdamgia.ru`}
 								rel="nofollow"
+								key={i}
 							>
-								<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-									Базовый уровень
+								<div className="NavMain-Tab NavMain_desktop-Tab">
+									{title}
 								</div>
 							</a>
-							<a
-								className="NavMain-Link NavMain_desktop-Link"
-								href="https://math-ege.sdamgia.ru"
-								rel="nofollow"
-							>
-								<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-									Профильный уровень
-								</div>
-							</a>
-						</div>
-					)}
-				</div>
-
-				{subjectsList.map(({ title, url }, i) => (
-					<a
-						className="NavMain-Link NavMain_desktop-Link"
-						href={`https://${url}-${exam}.sdamgia.ru`}
-						rel="nofollow"
-						key={i}
-					>
-						<div className="NavMain-Tab NavMain_desktop-Tab">
-							{title}
-						</div>
-					</a>
-				))}
+						);
+					}
+				})}
 
 				<div style={{ clear: 'both' }}></div>
 			</nav>
