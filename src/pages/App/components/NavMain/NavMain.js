@@ -20,14 +20,16 @@ const NavMain = ({ className }) => {
 	useEffect(() => {
 		setSubjectList([
 			{
-				title: '≡ Математика',
+				title: 'Математика',
 				sublist: [
 					{
 						title: 'Базовый уровень',
+						mobileTitle: 'база',
 						url: 'mathb'
 					},
 					{
 						title: 'Профильный уровень',
+						mobileTitle: 'профиль',
 						url: 'math'
 					}
 				]
@@ -110,8 +112,8 @@ const NavMain = ({ className }) => {
 						if (sublist) {
 							return (
 								<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
-									<div className="NavMain-Tab NavMain_desktop-Tab">
-										{title}
+									<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTitle">
+										≡ {title}
 									</div>
 
 									<div class="NavMain-Popup">
@@ -127,7 +129,14 @@ const NavMain = ({ className }) => {
 													key={sublistI}
 												>
 													<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-														{sublistItem.title}
+														<span className="NavMain-PopupLink NavMain-PopupLink_mobile">
+															{title +
+																' ' +
+																sublistItem.mobileTitle}
+														</span>
+														<span className="NavMain-PopupLink NavMain-PopupLink_desktop">
+															{sublistItem.title}
+														</span>
 													</div>
 												</a>
 											)

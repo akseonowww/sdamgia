@@ -72,16 +72,49 @@
 		}
 	}
 
-	&-Popup {
-		position: absolute;
-		z-index: 1;
-
+	&-PopupTitle {
 		display: none;
-		float: left;
-		width: 142px;
+
+		@include media-breakpoint-up(md) {
+			display: inline;
+		}
+	}
+
+	&-PopupLink {
+		&_mobile {
+			display: inline;
+
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+
+		&_desktop {
+			display: none;
+
+			@include media-breakpoint-up(md) {
+				display: inline;
+			}
+		}
+	}
+
+	&-Popup {
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			z-index: 1;
+
+			display: none;
+			float: left;
+
+			width: 142px;
+		}
 	}
 
 	&-PopupTab {
-		width: calc(100% - 21px);
+		width: calc(50% - 22px);
+
+		@include media-breakpoint-up(md) {
+			width: calc(100% - 21px);
+		}
 	}
 }
