@@ -111,12 +111,15 @@ const NavMain = ({ className }) => {
 					subjectList.map(({ title, url, sublist }, i) => {
 						if (sublist) {
 							return (
-								<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
+								<div
+									className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock"
+									key={i}
+								>
 									<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTitle">
 										≡ {title}
 									</div>
 
-									<div class="NavMain-Popup">
+									<div className="NavMain-Popup">
 										{sublist.map(
 											(sublistItem, sublistI) => (
 												<a
@@ -128,7 +131,7 @@ const NavMain = ({ className }) => {
 													rel="nofollow"
 													key={sublistI}
 												>
-													<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+													<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
 														<span className="NavMain-PopupLink NavMain-PopupLink_mobile">
 															{title +
 																' ' +
