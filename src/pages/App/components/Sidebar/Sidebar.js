@@ -7,7 +7,8 @@ import News from './components/News/News';
 import OurSources from './components/OurSources/OurSources';
 import './Sidebar.scss';
 
-import sidebarBannerAd from './assets/sidebarBannerAd.png';
+import sidebarBannerTopAd from './assets/sidebarBannerTopAd.gif';
+import sidebarBannerBottomAd from './assets/sidebarBannerBottomAd.png';
 
 const Sidebar = () => (
 	<>
@@ -20,6 +21,21 @@ const Sidebar = () => (
 				<a href="https://oge.sdamgia.ru">РЕШУ ОГЭ</a>
 				<a href="https://vpr.sdamgia.ru">РЕШУ ВПР</a>
 				<a href="https://ct.sdamgia.ru">РЕШУ ЦТ</a>
+			</div>
+
+			<div style={{ width: '160px', margin: 'auto' }}>
+				<center>
+					<a
+						href="https://ege-study.ru/online-repeticionniy-matematika?utm_source=sdamgia&amp;utm_medium=sdamgia&amp;utm_campaign=online_probniy_sent"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src={sidebarBannerTopAd}
+							alt="Наши друзья. Рекомендуем"
+						/>
+					</a>
+				</center>
 			</div>
 
 			<NavSide />
@@ -36,7 +52,7 @@ const Sidebar = () => (
 
 			<img
 				className="Sidebar-BannerAd Sidebar-BannerAd "
-				src={sidebarBannerAd}
+				src={sidebarBannerBottomAd}
 				alt="Реклама"
 			/>
 		</aside>

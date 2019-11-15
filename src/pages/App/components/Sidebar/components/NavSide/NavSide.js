@@ -3,22 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 import './NavSide.scss';
 
-import sideAd from './assets/agm.gif';
-
 const NavSide = () => {
 	return (
 		<div className="NavSide">
-			<div style={{ width: '160px', margin: 'auto' }}>
-				<center>
-					<a
-						href="https://ege-study.ru/online-repeticionniy-matematika?utm_source=sdamgia&amp;utm_medium=sdamgia&amp;utm_campaign=online_probniy_sent"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img src={sideAd} alt="Наши друзья. Рекомендуем" />
-					</a>
-				</center>
-			</div>
+			
 			<a
 				className="Link Link_black Link_wrap NavSide-Link"
 				href="/manual"
