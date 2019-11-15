@@ -29,28 +29,28 @@ html {
 
 .PageLayout-Nav {
 	margin-top: 0.4rem;
-}
 
-.PageLayout-Nav_desktop {
-	display: none;
-}
+	&_mobile {
+		display: block;
+		clear: both;
 
-.PageLayout-Nav_mobile {
-	display: block;
-	cursor: pointer;
-	text-align: center;
-	font-size: 16px;
-	background: linear-gradient(#fff0e6, #ffd2b6);
-	clear: both;
-}
+		font-size: 16px;
+		text-align: center;
 
-@media (min-width: 768px) {
-	.PageLayout-Nav_mobile {
-		display: none;
+		background: linear-gradient(#fff0e6, #ffd2b6);
+		cursor: pointer;
+
+		@include media-breakpoint-up(sm) {
+			display: none;
+		}
 	}
 
-	.PageLayout-Nav_desktop {
-		display: block;
+	&_desktop {
+		display: none;
+
+		@include media-breakpoint-up(sm) {
+			display: block;
+		}
 	}
 }
 
