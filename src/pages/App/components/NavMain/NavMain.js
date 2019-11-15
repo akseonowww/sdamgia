@@ -28,7 +28,7 @@ const NavMain = ({ className }) => {
 			},
 			{
 				title: 'Информатика',
-				url: 'math'
+				url: 'inf'
 			},
 			{
 				title: 'Русский язык',
