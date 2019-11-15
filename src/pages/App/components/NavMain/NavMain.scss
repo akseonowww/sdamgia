@@ -47,13 +47,19 @@
 
 	&-PopupBlock {
 		position: relative;
+
+		&:hover {
+			.NavMain-Popup {
+				display: block;
+			}
+		}
 	}
 
 	&-Popup {
 		position: absolute;
 		z-index: 1;
 
-		display: block;
+		display: none;
 		float: left;
 		width: 142px;
 	}

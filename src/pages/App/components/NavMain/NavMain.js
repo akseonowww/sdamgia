@@ -4,17 +4,8 @@ import './NavMain.scss';
 
 const NavMain = ({ className }) => {
 	const [subjectList, setSubjectList] = useState([]);
-	const [popup, setPopup] = useState(false);
 
 	const exam = useMemo(() => 'ege', []);
-
-	const showPopup = useCallback(() => {
-		setPopup(true);
-	}, []);
-
-	const hidePopup = useCallback(() => {
-		setPopup(false);
-	}, []);
 
 	const getUrl = useCallback((popupItem, exam) => {
 		return `https://${popupItem}-${exam}.sdamgia.ru`;
@@ -100,37 +91,29 @@ const NavMain = ({ className }) => {
 						if (sublist) {
 							return (
 								<div className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock">
-									<div
-										className="NavMain-Tab NavMain_desktop-Tab"
-										onMouseEnter={showPopup}
-									>
+									<div className="NavMain-Tab NavMain_desktop-Tab">
 										{title}
 									</div>
 
-									{popup && (
-										<div
-											class="NavMain-Popup"
-											onMouseLeave={hidePopup}
-										>
-											{sublist.map(
-												(sublistItem, sublistI) => (
-													<a
-														className="NavMain-Link NavMain_desktop-Link"
-														href={getUrl(
-															sublistItem.url,
-															exam
-														)}
-														rel="nofollow"
-														key={sublistI}
-													>
-														<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-															{sublistItem.title}
-														</div>
-													</a>
-												)
-											)}
-										</div>
-									)}
+									<div class="NavMain-Popup">
+										{sublist.map(
+											(sublistItem, sublistI) => (
+												<a
+													className="NavMain-Link NavMain_desktop-Link"
+													href={getUrl(
+														sublistItem.url,
+														exam
+													)}
+													rel="nofollow"
+													key={sublistI}
+												>
+													<div class="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+														{sublistItem.title}
+													</div>
+												</a>
+											)
+										)}
+									</div>
 								</div>
 							);
 						} else {
