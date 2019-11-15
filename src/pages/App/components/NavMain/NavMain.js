@@ -95,7 +95,7 @@ const NavMain = ({ className }) => {
 				className={`NavMain ${className} ${className}_mobile`}
 				onClick={toggleMobileMenu}
 			>
-				≡ математика
+				≡ {subjectList[0] && subjectList[0].title}
 			</nav>
 
 			<nav
