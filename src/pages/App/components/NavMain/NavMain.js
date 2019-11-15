@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import cx from 'classnames';
 
 import './NavMain.scss';
 
 const NavMain = ({ className }) => {
+	const [mobileMenu, setMobileMenu] = useState(false);
 	const [subjectList, setSubjectList] = useState([]);
 
 	const exam = 'ege';
@@ -10,6 +12,10 @@ const NavMain = ({ className }) => {
 	const getUrl = useCallback((popupItem, exam) => {
 		return `https://${popupItem}-${exam}.sdamgia.ru`;
 	}, []);
+
+	const toggleMobileMenu = () => {
+		setMobileMenu(!mobileMenu);
+	};
 
 	useEffect(() => {
 		setSubjectList([
@@ -84,7 +90,20 @@ const NavMain = ({ className }) => {
 	return (
 		<>
 			<nav
-				className={`NavMain NavMain_desktop ${className} ${className}_desktop`}
+				className={`NavMain ${className} ${className}_mobile`}
+				onClick={toggleMobileMenu}
+			>
+				≡ математика
+			</nav>
+
+			<nav
+				className={cx(
+					'NavMain',
+					'NavMain_desktop',
+					className,
+					`${className}_desktop`,
+					{ NavMain_show: mobileMenu }
+				)}
 			>
 				{subjectList.length > 0 &&
 					subjectList.map(({ title, url, sublist }, i) => {
@@ -133,10 +152,6 @@ const NavMain = ({ className }) => {
 					})}
 
 				<div style={{ clear: 'both' }}></div>
-			</nav>
-
-			<nav className={`NavMain ${className} ${className}_mobile`}>
-				≡ математика
 			</nav>
 		</>
 	);
