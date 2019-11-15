@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import './NavMain.scss';
 
 const NavMain = ({ className }) => {
 	const [subjectList, setSubjectList] = useState([]);
 
-	const exam = useMemo(() => 'ege', []);
+	const exam = 'ege';
 
 	const getUrl = useCallback((popupItem, exam) => {
 		return `https://${popupItem}-${exam}.sdamgia.ru`;
