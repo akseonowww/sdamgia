@@ -15,7 +15,7 @@ const ProfileLink = ({ setAuth }) => {
 
 	return (
 		<>
-			<div className="">
+			<div className="ProfileLink">
 				<a
 					className="Link Link_static ProfileWidget-Link"
 					href="/profile"
