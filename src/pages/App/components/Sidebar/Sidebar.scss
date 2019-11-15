@@ -23,6 +23,7 @@
 	color: #000;
 
 	@include media-breakpoint-up(md) {
+		box-sizing: initial;
 		width: 160px;
 		padding: 0 0.4rem;
 
