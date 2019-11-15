@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
+import cx from 'classnames';
 
 import NavSide from './components/NavSide';
 import Search from './components/Search/Search';
@@ -10,53 +11,89 @@ import './Sidebar.scss';
 import sidebarBannerTopAd from './assets/sidebarBannerTopAd.gif';
 import sidebarBannerBottomAd from './assets/sidebarBannerBottomAd.png';
 
-const Sidebar = () => (
-	<>
-		<aside className="SidebarBtns">сайты - меню - вход - новости</aside>
+const Sidebar = () => {
+	const [mobileSidebar, setMobileSidebar] = useState(false);
 
-		<aside className="Sidebar PageLayout-Sidebar">
-			<div className="sdamgia_btns">
-				<a href="https://sdamgia.ru">СДАМ ГИА</a>
-				<a href="https://ege.sdamgia.ru">РЕШУ ЕГЭ</a>
-				<a href="https://oge.sdamgia.ru">РЕШУ ОГЭ</a>
-				<a href="https://vpr.sdamgia.ru">РЕШУ ВПР</a>
-				<a href="https://ct.sdamgia.ru">РЕШУ ЦТ</a>
-			</div>
+	const toggleMobileSidebar = useCallback(() => {
+		setMobileSidebar(!mobileSidebar);
+	}, [mobileSidebar]);
 
-			<div style={{ width: '160px', margin: 'auto' }}>
-				<center>
-					<a
-						href="https://ege-study.ru/online-repeticionniy-matematika?utm_source=sdamgia&amp;utm_medium=sdamgia&amp;utm_campaign=online_probniy_sent"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img
-							src={sidebarBannerTopAd}
-							alt="Наши друзья. Рекомендуем"
-						/>
+	return (
+		<>
+			<aside className="SidebarBtns" onClick={toggleMobileSidebar}>
+				сайты - меню - вход - новости
+			</aside>
+
+			<aside
+				className={cx('Sidebar', 'PageLayout-Sidebar', {
+					Sidebar_shown: mobileSidebar
+				})}
+			>
+				<div className="Sidebar-Sites">
+					<a className="Sidebar-SitesLink" href="https://sdamgia.ru">
+						СДАМ ГИА
 					</a>
-				</center>
-			</div>
+					<a
+						className="Sidebar-SitesLink"
+						href="https://ege.sdamgia.ru"
+					>
+						РЕШУ ЕГЭ
+					</a>
+					<a
+						className="Sidebar-SitesLink"
+						href="https://oge.sdamgia.ru"
+					>
+						РЕШУ ОГЭ
+					</a>
+					<a
+						className="Sidebar-SitesLink"
+						href="https://vpr.sdamgia.ru"
+					>
+						РЕШУ ВПР
+					</a>
+					<a
+						className="Sidebar-SitesLink"
+						href="https://ct.sdamgia.ru"
+					>
+						РЕШУ ЦТ
+					</a>
+				</div>
 
-			<NavSide />
+				<div style={{ width: '160px', margin: 'auto' }}>
+					<center>
+						<a
+							href="https://ege-study.ru/online-repeticionniy-matematika?utm_source=sdamgia&amp;utm_medium=sdamgia&amp;utm_campaign=online_probniy_sent"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={sidebarBannerTopAd}
+								alt="Наши друзья. Рекомендуем"
+							/>
+						</a>
+					</center>
+				</div>
 
-			<Search className="Sidebar-Search" />
+				<NavSide />
 
-			<div className="Info">
-				<ProfileWidget className="Info-Item Info-ProfileWidget" />
+				<Search className="Sidebar-Search" />
 
-				<News />
+				<div className="Info">
+					<ProfileWidget className="Info-Item Info-ProfileWidget" />
 
-				<OurSources className="Info-Item" />
-			</div>
+					<News />
 
-			<img
-				className="Sidebar-BannerAd Sidebar-BannerAd "
-				src={sidebarBannerBottomAd}
-				alt="Реклама"
-			/>
-		</aside>
-	</>
-);
+					<OurSources className="Info-Item" />
+				</div>
+
+				<img
+					className="Sidebar-BannerAd Sidebar-BannerAd "
+					src={sidebarBannerBottomAd}
+					alt="Реклама"
+				/>
+			</aside>
+		</>
+	);
+};
 
 export default Sidebar;
