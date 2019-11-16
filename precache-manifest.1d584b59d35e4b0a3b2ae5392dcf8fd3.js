@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d40800139f8851120bb5da0892199cec",
+    "revision": "bf35177878e876c36a5d54aeee3ab3b1",
     "url": "/sdamgia/index.html"
   },
   {
-    "revision": "075fbda4b977092258d3",
-    "url": "/sdamgia/static/css/main.74a7b795.chunk.css"
+    "revision": "4bf32655e06362cc1833",
+    "url": "/sdamgia/static/css/main.52e3b871.chunk.css"
   },
   {
-    "revision": "67343151140904a6adcf",
-    "url": "/sdamgia/static/js/2.25a6735e.chunk.js"
+    "revision": "d400735daf488f1fff62",
+    "url": "/sdamgia/static/js/2.381f9ca5.chunk.js"
   },
   {
-    "revision": "075fbda4b977092258d3",
-    "url": "/sdamgia/static/js/main.43a1a99f.chunk.js"
+    "revision": "4bf32655e06362cc1833",
+    "url": "/sdamgia/static/js/main.4f53daad.chunk.js"
   },
   {
     "revision": "22209ff448b29e0f360a",
@@ -33,7 +33,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "931231aebf8ad3daef03c6c4cb511cf6",
-    "url": "/sdamgia/static/media/sidebarBannerAd.931231ae.png"
+    "url": "/sdamgia/static/media/sidebarBannerBottomAd.931231ae.png"
   },
   {
     "revision": "de0bd41b156ccdf0e3a4382947b97c6a",
