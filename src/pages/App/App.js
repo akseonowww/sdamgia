@@ -11,6 +11,7 @@ import './App.scss';
 
 import contentBannerTopAd from './assets/contentBannerTopAd.png';
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
+import ChatButton from '../../components/ChatButton/ChatButton';
 
 function App() {
 	return (
@@ -49,7 +50,7 @@ function App() {
 						</div>
 					</div>
 				</div>
-				<div className="ChatButton">Чат</div>
+				<ChatButton />
 			</BrowserRouter>
 		</div>
 	);
