@@ -68,7 +68,7 @@ const News = ({ className }) => (
 				href="https://vk.com/wall-34649478_180027"
 				rel="noopener noreferrer"
 			>
-				<div className="News-Date">15 сентября</div>
+				<div className="News-Date Smallcapitals">15 сентября</div>
 				<div className="News-Text">
 					Решения всех демоверсий ЕГЭ−2020
 				</div>
@@ -78,7 +78,7 @@ const News = ({ className }) => (
 				href="https://vk.com/mgumsch"
 				rel="noopener noreferrer"
 			>
-				<div className="News-Date">15 августа</div>
+				<div className="News-Date Smallcapitals">15 августа</div>
 				<div className="News-Text">
 					Подготовка к ЕГЭ и ОГЭ с нуля до 100 баллов на годовом курсе
 					УМСКУЛ
@@ -89,7 +89,7 @@ const News = ({ className }) => (
 				href="https://vk.com/wall-34649478_177050"
 				rel="noopener noreferrer"
 			>
-				<div className="News-Date">20 июня</div>
+				<div className="News-Date Smallcapitals">20 июня</div>
 				<div className="News-Text">
 					Сначала составители ЕГЭ свою ошибку признали, потом
 					расхотели
@@ -100,7 +100,7 @@ const News = ({ className }) => (
 				href="https://vk.com/wall-34649478_175961"
 				rel="noopener noreferrer"
 			>
-				<div className="News-Date">14 июня</div>
+				<div className="News-Date Smallcapitals">14 июня</div>
 				<div className="News-Text">
 					ЕГЭ ещё не начался, а выгнать уже смогли
 				</div>
@@ -110,7 +110,7 @@ const News = ({ className }) => (
 				href="https://vk.com/wall-34649478_175325"
 				rel="noopener noreferrer"
 			>
-				<div className="News-Date">12 июня</div>
+				<div className="News-Date Smallcapitals">12 июня</div>
 				<div className="News-Text">
 					Комментарии Д. Гущина к геометрическим заданиям ЕГЭ основной
 					волны
@@ -150,7 +150,7 @@ const News = ({ className }) => (
 				href="https://ege.sdamgia.ru/page/examer.ru"
 				rel="noopener noreferrer"
 			>
-				<div className="News-Text smallcapitals">
+				<div className="News-Text Smallcapitals">
 					ОПРОВЕРЖЕНИЕ СВЕДЕНИЙ ОБ EXAMER ИЗ ТАГАНРОГА
 				</div>
 			</a>

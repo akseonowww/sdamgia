@@ -103,15 +103,6 @@ html {
 	margin-bottom: 1rem;
 }
 
-p {
-	margin: 0;
-}
-
-.halfspace {
-	font-size: 0.5em;
-	line-height: 1;
-}
-
 .ChatButton {
 	position: fixed;
 	bottom: 50px;
@@ -126,13 +117,19 @@ p {
 	cursor: pointer;
 }
 
-.smallcapitals {
-	text-transform: uppercase;
-	font-size: 0.85em;
-	letter-spacing: 0.1em;
-	margin-right: -0.1em;
-}
-
 .BannerAd {
 	width: 100%;
+}
+
+.Halfspace {
+	font-size: 0.5em;
+	line-height: 1;
+}
+
+.Smallcapitals {
+	margin-right: -0.1em;
+
+	font-size: 0.85em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 }
