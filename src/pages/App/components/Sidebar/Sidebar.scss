@@ -5,13 +5,10 @@
 	text-align: center;
 
 	background: linear-gradient(#fff0e6, #ffd2b6);
-
 	cursor: pointer;
 
 	@include media-breakpoint-up(md) {
-		& {
-			display: none;
-		}
+		display: none;
 	}
 }
 
@@ -31,9 +28,7 @@
 	}
 
 	@include media-breakpoint-up(mil) {
-		& {
-			padding-left: 0;
-		}
+		padding-left: 0;
 	}
 
 	&_shown {
