@@ -1,20 +1,7 @@
 @import '../../breakpoints';
 
-html {
-	font-size: 18px;
-}
-
-@media (min-width: 768px) {
-	html {
-		font-size: 14px;
-	}
-}
-
 .PageLayout {
-	position: relative;
-
 	max-width: 1000px;
-	height: auto !important;
 	margin: auto;
 	padding-left: constant(safe-area-inset-left);
 	padding-left: env(safe-area-inset-left);
@@ -60,15 +47,11 @@ html {
 		margin: 0.4rem 0 1.5rem;
 
 		@include media-breakpoint-up(md) {
-			& {
-				grid-template-columns: 175px 1fr;
-			}
+			grid-template-columns: 175px 1fr;
 		}
 
 		@include media-breakpoint-up(mil) {
-			& {
-				grid-template-columns: 170px 1fr;
-			}
+			grid-template-columns: 170px 1fr;
 		}
 	}
 
@@ -76,31 +59,25 @@ html {
 		display: none;
 
 		@include media-breakpoint-up(md) {
-			& {
-				display: block;
-			}
+			display: block;
 		}
 	}
-}
 
-.PageLayout-Content {
-	margin: 0 0.5rem;
+	&-Content {
+		margin: 0 0.5rem;
 
-	@include media-breakpoint-up(md) {
-		& {
+		@include media-breakpoint-up(md) {
 			margin-left: 0;
 		}
-	}
 
-	@include media-breakpoint-up(mil) {
-		& {
+		@include media-breakpoint-up(mil) {
 			margin-right: 0;
 		}
 	}
-}
 
-.PageLayout-Main {
-	margin-bottom: 1rem;
+	&-Main {
+		margin-bottom: 1rem;
+	}
 }
 
 .BannerAd {
