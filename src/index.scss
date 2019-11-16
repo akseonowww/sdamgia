@@ -10,7 +10,17 @@
 	-webkit-text-size-adjust: 100%;
 
 	overflow-y: scroll;
+}
 
+.Halfspace {
+	font-size: 0.5em;
+	line-height: 1;
+}
 
-	--color-link-blue: #006;
+.Smallcapitals {
+	margin-right: -0.1em;
+
+	font-size: 0.85em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 }
