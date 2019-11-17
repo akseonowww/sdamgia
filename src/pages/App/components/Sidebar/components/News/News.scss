@@ -1,3 +1,5 @@
+@import '../../../../../../variables';
+
 .News {
 	&-Title {
 		display: block;
@@ -21,6 +23,7 @@
 			position: relative;
 
 			&::before {
+				content: '';
 				position: absolute;
 				top: 0;
 				bottom: -0.5px;
@@ -28,10 +31,8 @@
 
 				width: 2px;
 
-				background: #f60;
-				background: linear-gradient(to bottom right, #fb0, #f60);
-
-				content: '';
+				background: $danger;
+				background: linear-gradient(to bottom right, #fb0, $danger);
 			}
 		}
 
@@ -42,8 +43,12 @@
 
 			text-align: center !important;
 
-			background: #f60;
-			background: linear-gradient(to bottom right, #fb0, #f60) !important;
+			background: $danger;
+			background: linear-gradient(
+				to bottom right,
+				#fb0,
+				$danger
+			) !important;
 		}
 	}
 

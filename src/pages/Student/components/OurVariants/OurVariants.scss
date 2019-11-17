@@ -1,0 +1,49 @@
+@import '../../../../breakpoints';
+
+.OurVariants {
+	&-TitleWord1 {
+		display: block;
+
+		@include media-breakpoint-up(sm) {
+			display: inline;
+		}
+	}
+
+	&-TitleWord2 {
+		display: inline-block;
+
+		@include media-breakpoint-up(sm) {
+			display: inline-block;
+		}
+	}
+
+	&-Desc {
+		&_mobile {
+			display: block;
+
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+
+		&_desktop {
+			display: none;
+
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
+
+	&-Link {
+		grid-column: span 4;
+	}
+
+	&-Word {
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: inline;
+		}
+	}
+}
