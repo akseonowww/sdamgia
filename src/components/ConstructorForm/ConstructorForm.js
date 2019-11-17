@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import Grid from '../Grid';
 import TopicsByParts from './TopicsByParts';
 import Buttons from './Buttons';
-import './ConstructorForm.css';
-
+import './ConstructorForm.scss';
 
 export const getNewTestTotalText = total => {
 	if (total > 0) {
