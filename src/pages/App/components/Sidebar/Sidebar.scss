@@ -67,7 +67,7 @@
 		text-decoration: none;
 
 		background: linear-gradient(#fff0e6, #ffd2b6);
-		border-radius: 2px;
+		border-radius: $border-radius-input;
 		cursor: pointer;
 	}
 }
@@ -81,7 +81,7 @@
 	text-align: left;
 
 	background: $info;
-	border-radius: 7px;
+	border-radius: $border-radius-button;
 
 	&-Item {
 		padding: 0 0.4rem;

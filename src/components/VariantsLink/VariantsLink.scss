@@ -9,7 +9,7 @@
 
 	border-width: $border-width;
 	border-style: solid;
-	border-radius: 0.25rem;
+	border-radius: $border-radius-input;
 
 	@include media-breakpoint-up(md) {
 		padding: 0.25rem 0 0.35rem;

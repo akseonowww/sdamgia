@@ -34,18 +34,18 @@
 
 		background: #f4f8ff;
 		border: 1px solid #5983ff;
-		border-radius: 3px;
+		border-radius: $border-radius-input;
 		box-shadow: inset 0 0 3px rgba(77, 77, 77, 0.35);
 
 		&_invalid {
-			border-color: #f60;
+			border-color: $danger;
 		}
 	}
 
 	&-Alert {
 		margin-bottom: 0.5rem;
 
-		color: #f60;
+		color: $danger;
 	}
 
 	&-Button {

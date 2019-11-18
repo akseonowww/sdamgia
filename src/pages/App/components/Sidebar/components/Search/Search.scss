@@ -1,6 +1,9 @@
+@import '../../../../../../variables';
+
 .Search {
 	&-Label {
 		position: relative;
+		
 		display: block;
 
 		cursor: text;
@@ -14,7 +17,7 @@
 
 		font-size: 9pt;
 
-		border-radius: 7px;
+		border-radius: $border-radius-button;
 		outline: none;
 	}
 

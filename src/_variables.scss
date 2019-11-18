@@ -1,12 +1,10 @@
 $white: #fff;
 $black: #000;
-
 $primary: #006;
 $info: #f0f5ff;
 $visited: #8f00af;
 $danger: #f60;
 $light: #ccc;
-
 $input-bg: #f0f0f0;
 
 $border-width: 0.05rem;
@@ -16,3 +14,6 @@ $border-black: adjust-color($black, $alpha: -0.75);
 $border-white: adjust-color($white, $alpha: -0.5);
 $border-danger: adjust-color($danger, $alpha: -0.75);
 $border-dangerous: adjust-color($danger, $alpha: -0.5);
+
+$border-radius-button: 0.5rem;
+$border-radius-input: 0.25rem;

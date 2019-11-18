@@ -20,11 +20,11 @@
 		}
 
 		&:first-child {
-			border-radius: 4px 0 0 4px;
+			border-radius: $border-radius-input 0 0 $border-radius-input;
 		}
 
 		&:last-child {
-			border-radius: 0 4px 4px 0;
+			border-radius: 0 $border-radius-input $border-radius-input 0;
 		}
 
 		&:hover {
