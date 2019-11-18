@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SearchIcon from '../../../../../../components/SearchIcon/SearchIcon';
-import '../../../../../../components/Input/Input.css';
+import '../../../../../../components/Input/Input.scss';
 import './Search.scss';
 
 const Search = ({ className }) => (

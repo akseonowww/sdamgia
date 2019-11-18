@@ -2,7 +2,7 @@ import React from 'react';
 
 import Title from '../../../../components/Title';
 import '../../../../components/Form/Form.css';
-import '../../../../components/Input/Input.css';
+import '../../../../components/Input/Input.scss';
 import '../../../../components/Button/Button.scss';
 import './TeacherVariant.css';
 

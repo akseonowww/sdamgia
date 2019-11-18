@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import nahStep from '../Form/nahStep';
 import { getNewTestTotalText } from '../ConstructorForm';
 import { saveTopicsList, saveTestTotal } from '../../utils/constructor';
+import '../Input/Input.scss';
 import './Counter.scss';
 
 const useCounter = (
@@ -162,7 +163,7 @@ const Counter = ({
 				−
 			</button>
 			<input
-				className="Counter-Input Input"
+				className="Input Counter-Input"
 				type="tel"
 				name={name}
 				value={value}
