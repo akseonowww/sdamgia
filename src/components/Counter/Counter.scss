@@ -1,0 +1,68 @@
+@import '../../variables';
+@import '../../breakpoints';
+
+.Counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include media-breakpoint-up(sm) {
+		align-items: flex-start;
+	}
+
+	&-Button {
+		box-sizing: border-box;
+		width: 1.95rem;
+		height: 1.95rem;
+		padding: 0 0 0.1rem;
+
+		font-size: 1rem;
+		font-family: Verdana, sans-serif;
+		text-align: center;
+
+		background: transparent;
+		border-width: $border-width;
+		border-style: solid;
+		border-color: lighten($black, 90%);
+		border-radius: 50%;
+		outline: none;
+		box-shadow: none;
+
+		transition-property: border-color, color, fill;
+		transition-duration: 0.25s;
+		transition-timing-function: ease-out;
+
+		&_disabled {
+			color: $light;
+		}
+
+		&:not(&_disabled):hover {
+			color: $danger;
+
+			border-color: $border-dangerous;
+			cursor: pointer;
+
+			transition: none;
+		}
+	}
+
+	&-Input {
+		z-index: 1;
+		position: relative;
+		top: 0;
+
+		width: 3rem;
+
+		text-align: center;
+	}
+
+	&-Caption {
+		display: block;
+
+		@include media-breakpoint-up(sm) {
+			display: none;
+
+			font-size: 1rem;
+		}
+	}
+}

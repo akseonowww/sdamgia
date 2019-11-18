@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import nahStep from '../Form/nahStep';
 import { getNewTestTotalText } from '../ConstructorForm';
 import { saveTopicsList, saveTestTotal } from '../../utils/constructor';
-import './Counter.css';
+import './Counter.scss';
 
 const useCounter = (
 	value,
