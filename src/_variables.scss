@@ -7,12 +7,12 @@ $visited: #8f00af;
 $danger: #f60;
 $light: #ccc;
 
-$border-width: 0.05rem;
-$border-primary: #bfbfd8;
-$border-visited: #e3bfeb;
-$border-black: #bfbfbf;
-$border-white: rgba(255, 255, 255, 0.35);
-$border-danger: #ffd9bf;
-$border-dangerous: #ffb380;
-
 $input-bg: #f0f0f0;
+
+$border-width: 0.05rem;
+$border-primary: adjust-color($primary, $alpha: -0.75);
+$border-visited: adjust-color($visited, $alpha: -0.75);
+$border-black: adjust-color($black, $alpha: -0.75);
+$border-white: adjust-color($white, $alpha: -0.5);
+$border-danger: adjust-color($danger, $alpha: -0.75);
+$border-dangerous: adjust-color($danger, $alpha: -0.5);
