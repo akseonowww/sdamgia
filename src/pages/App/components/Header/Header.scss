@@ -17,11 +17,9 @@
 		height: 50px;
 
 		@include media-breakpoint-up(sm) {
-			& {
-				margin: 5px 33px 5px 33px;
-				width: 100px;
-				height: 100px;
-			}
+			margin: 5px 33px 5px 33px;
+			width: 100px;
+			height: 100px;
 		}
 	}
 
@@ -34,12 +32,10 @@
 		letter-spacing: 2.5px;
 
 		@include media-breakpoint-up(sm) {
-			& {
-				margin: 0 0 10px;
+			margin: 0 0 10px;
 
-				font-size: 30px;
-				line-height: 30px;
-			}
+			font-size: 30px;
+			line-height: 30px;
 		}
 	}
 
@@ -50,9 +46,7 @@
 		margin: 5px;
 
 		@include media-breakpoint-up(mil) {
-			& {
-				display: block;
-			}
+			display: block;
 		}
 	}
 
@@ -60,12 +54,10 @@
 		display: none;
 
 		@include media-breakpoint-up(sm) {
-			& {
-				display: block;
+			display: block;
 
-				font-size: 14px;
-				line-height: 20px;
-			}
+			font-size: 14px;
+			line-height: 20px;
 		}
 	}
 
@@ -74,12 +66,10 @@
 		line-height: 16px;
 
 		@include media-breakpoint-up(sm) {
-			& {
-				margin-top: 15px;
+			margin-top: 15px;
 
-				font-size: 20px;
-				line-height: 20px;
-			}
+			font-size: 20px;
+			line-height: 20px;
 		}
 	}
 }
