@@ -1,3 +1,5 @@
+@import '../../../transitions';
+
 .Switcher_checkbox-Label {
 	display: flex;
 	padding: 0.4rem;
@@ -7,16 +9,14 @@
 
 .Switcher_checkbox-Label,
 .Switcher_checkbox-FakeCheckbox {
-	transition-property: background;
-	transition-duration: 0.25s;
-	transition-timing-function: ease-out;
+	@include transition;
 }
 
 .Switcher_checkbox-Label:hover,
 .Switcher_checkbox-Label:hover .Switcher_checkbox-FakeCheckbox {
 	background: rgba(0, 0, 102, 0.1) !important;
 
-	transition: none;
+	@include transition-reset;
 }
 
 .Switcher_checkbox-Text {

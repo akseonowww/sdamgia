@@ -9,9 +9,9 @@ import {
 	saveTestTotal
 } from '../../../utils/constructor';
 import '../../Button/Button.scss';
-import '../../Switcher/Switcher.css';
-import '../../Switcher/_vertical/Switcher_vertical.css';
-import '../../Switcher/_checkbox/Switcher_checkbox.css';
+import '../../Switcher/Switcher.scss';
+import '../../Switcher/_vertical/Switcher_vertical.scss';
+import '../../Switcher/_checkbox/Switcher_checkbox.scss';
 
 const Buttons = ({
 	topicsList,

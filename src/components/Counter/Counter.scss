@@ -1,5 +1,6 @@
 @import '../../variables';
 @import '../../breakpoints';
+@import '../../transitions';
 
 .Counter {
 	display: flex;
@@ -28,9 +29,7 @@
 		outline: none;
 		box-shadow: none;
 
-		transition-property: border-color, color, fill;
-		transition-duration: 0.25s;
-		transition-timing-function: ease-out;
+		@include transition;
 
 		&_disabled {
 			color: $light;
@@ -42,7 +41,7 @@
 			border-color: $border-dangerous;
 			cursor: pointer;
 
-			transition: none;
+			@include transition-reset;
 		}
 	}
 
