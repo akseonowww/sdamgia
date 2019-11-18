@@ -1,46 +1,58 @@
+@import '../../variables';
+@import '../../transitions';
+
 .Switcher {
 	font-size: 0;
-}
 
-.Switcher-Label {
-	display: inline-block;
+	&-Label {
+		display: inline-block;
 
-	font-size: 1rem;
-	color: #006;
+		font-size: 1rem;
+		color: $primary;
 
-	border: 0.05rem solid #006;
-	background: transparent;
-}
+		background: transparent;
+		border: $border-width solid $primary;
 
-.Switcher-Label:not(:first-child):not(.Switcher_vertical-Label) {
-	border-left: none;
-}
+		@include transition;
 
-.Switcher-Text {
-	display: block;
-	padding: 4px 15px 6px;
+		&:not(:first-child):not(.Switcher_vertical-Label) {
+			border-left: none;
+		}
 
-	cursor: pointer;
-}
+		&:first-child {
+			border-radius: 4px 0 0 4px;
+		}
 
-.Switcher-Input {
-	display: none;
-}
+		&:last-child {
+			border-radius: 0 4px 4px 0;
+		}
 
-.Switcher-Label:hover .Switcher-Text {
-	background: rgba(0, 0, 102, 0.1);
-}
+		&:hover {
+			@include transition-reset;
 
-.Switcher-Input:checked + .Switcher-Text {
-	background: #006 !important;
-	color: #fff;
+			.Switcher-Text {
+				background: adjust-color($primary, $alpha: -0.9);
 
-	cursor: default;
-}
+				@include transition-reset;
+			}
+		}
+	}
 
-.Switcher-Label:first-child {
-	border-radius: 4px 0 0 4px;
-}
-.Switcher-Label:last-child {
-	border-radius: 0 4px 4px 0;
+	&-Text {
+		display: block;
+		padding: 4px 15px 6px;
+
+		cursor: pointer;
+	}
+
+	&-Input {
+		display: none;
+
+		&:checked + .Switcher-Text {
+			color: $white;
+
+			background: $primary !important;
+			cursor: default;
+		}
+	}
 }

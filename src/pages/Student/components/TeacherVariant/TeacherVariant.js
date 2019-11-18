@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Title from '../../../../components/Title';
-import '../../../../components/Form/Form.css';
+import '../../../../components/Form/Form.scss';
 import '../../../../components/Input/Input.scss';
 import '../../../../components/Button/Button.scss';
-import './TeacherVariant.css';
+import './TeacherVariant.scss';
 
 const TeacherVariant = () => (
 	<div className="TeacherVariant">

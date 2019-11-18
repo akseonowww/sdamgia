@@ -1,0 +1,35 @@
+@import '../../variables';
+@import '../../breakpoints';
+
+.TwoColumns {
+	&-Grid {
+		grid-row-gap: 0;
+	}
+
+	&-Col {
+		grid-column: 1/21;
+
+		@include media-breakpoint-up(md) {
+			grid-column: span 10;
+		}
+
+		&_1 {
+			margin-bottom: 1.75rem;
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+				padding: 0 0.4rem 1.5rem 0;
+
+				border-right: 0.15rem solid $primary;
+			}
+		}
+
+		&_2 {
+			border-top: 0.15rem solid $primary;
+
+			@include media-breakpoint-up(md) {
+				border-top: none;
+			}
+		}
+	}
+}

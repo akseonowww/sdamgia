@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '../Section';
 import Grid from '../Grid';
-import './TwoColumns.css';
+import './TwoColumns.scss';
 
 const TwoColumns = props => {
 	const { children } = props;

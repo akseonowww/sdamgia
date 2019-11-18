@@ -4,9 +4,9 @@ import axios from 'axios';
 import Section from '../../../../components/Section';
 import Title from '../../../../components/Title';
 import ConstructorForm from '../../../../components/ConstructorForm';
-import '../../../../components/Link/Link.scss';
-import './Constructor.css';
 import { getTopicsList } from '../../../../utils/constructor';
+import '../../../../components/Link/Link.scss';
+import './Constructor.scss';
 
 const Constructor = () => {
 	const [topicsList, setTopicsList] = useState(null);

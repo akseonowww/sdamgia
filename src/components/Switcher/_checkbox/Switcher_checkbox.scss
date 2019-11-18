@@ -1,32 +1,35 @@
+@import '../../../variables';
 @import '../../../transitions';
 
-.Switcher_checkbox-Label {
-	display: flex;
-	padding: 0.4rem;
+.Switcher_checkbox {
+	&-Label {
+		display: flex;
+		padding: 0.4rem;
 
-	border-color: rgba(0, 0, 102, 0.25);
-}
+		border-color: $border-primary;
 
-.Switcher_checkbox-Label,
-.Switcher_checkbox-FakeCheckbox {
-	@include transition;
-}
+		&:hover {
+			background: adjust-color($primary, $alpha: -0.9) !important;
 
-.Switcher_checkbox-Label:hover,
-.Switcher_checkbox-Label:hover .Switcher_checkbox-FakeCheckbox {
-	background: rgba(0, 0, 102, 0.1) !important;
+			.Switcher_checkbox-FakeCheckbox {
+				background: adjust-color($primary, $alpha: -0.9) !important;
 
-	@include transition-reset;
-}
+				@include transition-reset;
+			}
+		}
+	}
 
-.Switcher_checkbox-Text {
-	padding: 0 0 0 0.6rem;
+	&-FakeCheckbox {
+		border: $border-width solid $border-primary;
 
-	line-height: 1.25rem;
+		@include transition;
+	}
 
-	background: transparent !important;
-}
+	&-Text {
+		padding: 0 0 0 0.6rem;
 
-.Switcher_checkbox-FakeCheckbox {
-	border: 0.05rem solid rgba(0, 0, 102, 0.25);
+		line-height: 1.25rem;
+
+		background: transparent !important;
+	}
 }

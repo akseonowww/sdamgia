@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ComplexHeader.css';
+import './ComplexHeader.scss';
 
 const ComplexHeader = props => {
 	const { className, children } = props;

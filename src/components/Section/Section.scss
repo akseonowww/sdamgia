@@ -1,0 +1,32 @@
+@import '../../variables';
+@import '../../breakpoints';
+
+.Section {
+	margin-bottom: 1.75rem;
+
+	font-size: 1rem;
+
+	border-top: 0.15rem solid $primary;
+
+	&-ComplexHeader {
+		display: flex;
+		flex-direction: column;
+
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&-Desc {
+		margin: 0 0 1rem;
+
+		line-height: 1.4rem;
+		text-align: left;
+		text-indent: 1.5rem;
+
+		@include media-breakpoint-up(md) {
+			padding-right: 1.75rem;
+		}
+	}
+}

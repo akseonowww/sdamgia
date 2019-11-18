@@ -5,8 +5,8 @@ import Section from '../../../../components/Section';
 import Grid from '../../../../components/Grid';
 import '../../../../components/Link/Link.scss';
 import VariantsLink from '../../../../components/VariantsLink';
-import '../../../../components/VariantsBox/VariantsBox.css';
-import './LarinVariants.css';
+import '../../../../components/VariantsBox/VariantsBox.scss';
+import './LarinVariants.scss';
 
 const LarinVariants = () => {
     const [areVariantsAll, setAreVariantsAll] = useState(false);

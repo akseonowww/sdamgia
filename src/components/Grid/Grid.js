@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Grid.css';
+import './Grid.scss';
 
 const Grid = props => {
 	const { className, children } = props;

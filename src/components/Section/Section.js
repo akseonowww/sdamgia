@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Section.css';
+import './Section.scss';
 
 const Section = props => {
 	const { className, children } = props;

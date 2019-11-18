@@ -1,9 +1,0 @@
-.Form_oneLine {
-	display: flex;
-}
-
-.Form_oneLine-Input {
-	flex-grow: 1;
-	width: 100%;
-	margin-right: 0.25rem !important;
-}

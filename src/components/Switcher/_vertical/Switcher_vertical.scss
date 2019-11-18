@@ -1,16 +1,19 @@
-.Switcher_vertical-Label {
-	box-sizing: border-box;
-	width: 100%;
-	margin-right: 0;
-}
+.Switcher_vertical {
+	&-Label {
+		box-sizing: border-box;
+		width: 100%;
+		margin-right: 0;
 
-.Switcher_vertical-Label:not(:first-child) {
-	border-top: none;
-}
+		&:not(:first-child) {
+			border-top: none;
+		}
 
-.Switcher_vertical-Label:first-child {
-	border-radius: 4px 4px 0 0;
-}
-.Switcher_vertical-Label:last-child {
-	border-radius: 0 0 4px 4px;
+		&:first-child {
+			border-radius: 4px 4px 0 0;
+		}
+
+		&:last-child {
+			border-radius: 0 0 4px 4px;
+		}
+	}
 }
