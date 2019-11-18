@@ -28,7 +28,7 @@ function App() {
 						<div className="PageLayout-Content">
 							<main className="PageLayout-Main">
 								<img
-									className="BannerAd PageLayout-BannerAd_top"
+									className="PageLayout-BannerAd PageLayout-BannerAd_top"
 									src={contentBannerTopAd}
 									alt="Реклама"
 								/>
@@ -40,7 +40,7 @@ function App() {
 								</Switch>
 
 								<img
-									className="BannerAd"
+									className="PageLayout-BannerAd"
 									src={contentBannerBottomAd}
 									alt="Реклама"
 								/>
