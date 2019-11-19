@@ -119,6 +119,7 @@ const NavMain = ({ className }) => {
 										≡ {title}
 									</div>
 
+									<div style={{ clear: 'right' }} />
 									<div className="NavMain-Popup">
 										{sublist.map(
 											(sublistItem, sublistI) => (
