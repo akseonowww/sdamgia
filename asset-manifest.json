@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/sdamgia/static/css/main.ddcd6b38.chunk.css",
-    "main.js": "/sdamgia/static/js/main.4f53daad.chunk.js",
-    "main.js.map": "/sdamgia/static/js/main.4f53daad.chunk.js.map",
-    "runtime-main.js": "/sdamgia/static/js/runtime-main.3beb3406.js",
-    "runtime-main.js.map": "/sdamgia/static/js/runtime-main.3beb3406.js.map",
-    "static/js/2.381f9ca5.chunk.js": "/sdamgia/static/js/2.381f9ca5.chunk.js",
-    "static/js/2.381f9ca5.chunk.js.map": "/sdamgia/static/js/2.381f9ca5.chunk.js.map",
+    "main.css": "/sdamgia/static/css/main.7ecea354.chunk.css",
+    "main.js": "/sdamgia/static/js/main.992505a4.chunk.js",
+    "main.js.map": "/sdamgia/static/js/main.992505a4.chunk.js.map",
+    "runtime-main.js": "/sdamgia/static/js/runtime-main.b4c84b53.js",
+    "runtime-main.js.map": "/sdamgia/static/js/runtime-main.b4c84b53.js.map",
+    "static/js/2.1e677369.chunk.js": "/sdamgia/static/js/2.1e677369.chunk.js",
+    "static/js/2.1e677369.chunk.js.map": "/sdamgia/static/js/2.1e677369.chunk.js.map",
     "index.html": "/sdamgia/index.html",
-    "precache-manifest.8d0ab7681500b2a7ed937c86ade7f406.js": "/sdamgia/precache-manifest.8d0ab7681500b2a7ed937c86ade7f406.js",
+    "precache-manifest.89f2f56262a6d9a3cabe908651657cde.js": "/sdamgia/precache-manifest.89f2f56262a6d9a3cabe908651657cde.js",
     "service-worker.js": "/sdamgia/service-worker.js",
-    "static/css/main.ddcd6b38.chunk.css.map": "/sdamgia/static/css/main.ddcd6b38.chunk.css.map",
+    "static/css/main.7ecea354.chunk.css.map": "/sdamgia/static/css/main.7ecea354.chunk.css.map",
     "static/media/OurSources.scss": "/sdamgia/static/media/button-store.88d1a048.svg",
     "static/media/contentBannerBottomAd.png": "/sdamgia/static/media/contentBannerBottomAd.488c4574.png",
     "static/media/contentBannerTopAd.png": "/sdamgia/static/media/contentBannerTopAd.06163253.png",
     "static/media/sidebarBannerBottomAd.png": "/sdamgia/static/media/sidebarBannerBottomAd.931231ae.png",
     "static/media/Checkbox.scss": "/sdamgia/static/media/tick_blue.8599a7e0.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4c84b53.js",
+    "static/js/2.1e677369.chunk.js",
+    "static/css/main.7ecea354.chunk.css",
+    "static/js/main.992505a4.chunk.js"
+  ]
 }
