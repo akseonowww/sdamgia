@@ -92,7 +92,7 @@ const NavMain = ({ className }) => {
 	return (
 		<>
 			<nav
-				className={`NavMain ${className} ${className}_mobile`}
+				className={cx('NavMain', className, `${className}_mobile`)}
 				onClick={toggleMobileMenu}
 			>
 				≡ {subjectList[0] && subjectList[0].title}
@@ -104,7 +104,7 @@ const NavMain = ({ className }) => {
 					'NavMain_desktop',
 					className,
 					`${className}_desktop`,
-					{ NavMain_show: mobileMenu }
+					{ 'NavMain_show': mobileMenu }
 				)}
 			>
 				{subjectList.length > 0 &&

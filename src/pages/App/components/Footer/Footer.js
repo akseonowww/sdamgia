@@ -1,11 +1,12 @@
 import React from 'react';
+import cx from 'classnames';
 
 import './Footer.scss';
 
 import spbsut from './assets/spbsut.png';
 
 const Footer = ({ className }) => (
-	<footer className={`Footer ${className}`}>
+	<footer className={cx('Footer', className)}>
 		<nav className="Footer-Menu">
 			<a className="Link Link_black" href="/about">
 				О проекте
