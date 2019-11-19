@@ -27,6 +27,8 @@
 		&_desktop {
 			display: none;
 
+			margin-left: 4px;
+
 			@include media-breakpoint-up(sm) {
 				display: block;
 			}
