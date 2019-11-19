@@ -1,11 +1,10 @@
 import React from 'react';
+import cx from 'classnames';
 
 import './Section.scss';
 
-const Section = props => {
-	const { className, children } = props;
-
-	return <section className={`Section ${className}`}>{children}</section>;
-};
+const Section = ({ className, children }) => (
+	<section className={cx('Section', className)}>{children}</section>
+);
 
 export default Section;

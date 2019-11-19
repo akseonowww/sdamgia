@@ -1,11 +1,10 @@
 import React from 'react';
+import cx from 'classnames';
 
 import './Grid.scss';
 
-const Grid = props => {
-	const { className, children } = props;
-
-	return <div className={`Grid ${className}`}>{children}</div>;
-};
+const Grid = ({ className, children }) => (
+	<div className={cx('Grid', className)}>{children}</div>
+);
 
 export default Grid;

@@ -1,11 +1,12 @@
 import React from 'react';
+import cx from 'classnames';
 
 import SearchIcon from '../../../../../../components/SearchIcon/SearchIcon';
 import '../../../../../../components/Input/Input.scss';
 import './Search.scss';
 
 const Search = ({ className }) => (
-	<form className={`Search ${className}`} action="/problem" method="POST">
+	<form className={cx('Search', className)} action="/problem" method="POST">
 		<label
 			className="Search-Label"
 			title="Для поиска нажмите клавишу Enter"

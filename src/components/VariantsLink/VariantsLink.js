@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import cx from 'classnames';
 
 import '../Link/Link.scss';
 import './VariantsLink.scss';
@@ -9,7 +10,7 @@ const VariantsLink = props => {
 	const dataWordClassName = props['data-wordClassName'];
 
 	return (
-		<Link className={`VariantsLink Link ${className}`} to={to}>
+		<Link className={cx('Link', 'VariantsLink', className)} to={to}>
 			{!Number.isNaN(Number(children)) && dataWordClassName && (
 				<span className={dataWordClassName}>Вариант&nbsp;</span>
 			)}

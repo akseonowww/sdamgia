@@ -1,11 +1,12 @@
 import React from 'react';
+import cx from 'classnames';
 
 import ButtonVK from '../../../../../../components/ButtonVK/ButtonVK';
 import './OurSources.scss';
 
 const OurSources = ({ className }) => (
 	<div className="OurSources">
-		<div className={`OurSources-Desc ${className}`}>
+		<div className={cx('OurSources-Desc', className)}>
 			<ButtonVK
 				className="OurSources-ButtonVK"
 				url="https://vk.com/reshuege"

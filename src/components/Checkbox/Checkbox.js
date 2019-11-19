@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 import '../Input/Input.scss';
 import './Checkbox.scss';
@@ -13,7 +14,7 @@ const Checkbox = ({
 	return (
 		<>
 			<input
-				className={`Checkbox ${className}`}
+				className={cx('Checkbox', className)}
 				type="checkbox"
 				name={name}
 				checked={value}

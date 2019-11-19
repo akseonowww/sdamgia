@@ -1,9 +1,10 @@
 import React from 'react';
+import cx from 'classnames';
 
 import './SearchIcon.scss';
 
 const SearchIcon = ({ className }) => (
-	<div className={`SearchIcon ${className}`}>
+	<div className={cx('SearchIcon', className)}>
 		<svg
 			className="SearchIcon-Svg"
 			version="1.1"

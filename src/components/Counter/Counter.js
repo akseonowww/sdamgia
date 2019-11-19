@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import cx from 'classnames';
 
 import nahStep from '../Form/nahStep';
 import { getNewTestTotalText } from '../ConstructorForm';
@@ -151,13 +152,11 @@ const Counter = ({
 	);
 
 	return (
-		<div className={`Counter ${className}`}>
+		<div className={cx('Counter', className)}>
 			<button
-				className={
-					'Counter-Button ' +
-					// eslint-disable-next-line
-					(value == 0 && 'Counter-Button_disabled')
-				}
+				className={cx('Counter-Button', {
+					'Counter-Button_disabled': value < 1
+				})}
 				onClick={decrement}
 			>
 				−
