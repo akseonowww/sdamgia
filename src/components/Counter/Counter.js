@@ -62,30 +62,33 @@ const useCounter = (
 		}
 	};
 
-	const decrement = e => {
-		e.preventDefault();
+	const decrement = useCallback(
+		(e, part) => {
+			e.preventDefault();
 
-		let newValue = Number(value);
+			let newValue = Number(value);
 
-		if (value > 0) {
-			newValue = newValue - 1;
-		}
+			if (value > 0) {
+				newValue = newValue - 1;
+			}
 
-		list[index] = { ...list[index], value: newValue };
-		setValue(list);
-		saveTopicsList(list);
+			list[index] = { ...list[index], value: newValue };
+			setValue(list);
+			saveTopicsList(list);
 
-		const newTestTotalAmount = testTotal.amount - 1;
-		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
-		const newTestTotal = {
-			amount: newTestTotalAmount,
-			text: newTestTotalText
-		};
-		setTestTotal(newTestTotal);
-		saveTestTotal(newTestTotal);
+			const newTestTotalAmount = testTotal.amount - 1;
+			const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
+			const newTestTotal = {
+				amount: newTestTotalAmount,
+				text: newTestTotalText
+			};
+			setTestTotal(newTestTotal);
+			saveTestTotal(newTestTotal);
 
-		if (!newValue) switchOffPart(part);
-	};
+			if (!newValue) switchOffPart(part);
+		},
+		[value, setValue, list, index, testTotal, setTestTotal, switchOffPart]
+	);
 
 	const increment = e => {
 		e.preventDefault();
