@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import cx from 'classnames';
 
 import nahStep from '../Form/nahStep';
@@ -19,9 +19,9 @@ const useCounter = (
 	switchOnPart,
 	switchOffPart
 ) => {
-	const handleCounterInputFocus = () => {
+	const handleCounterInputFocus = useCallback(() => {
 		countInput.current.setSelectionRange(0, 9999);
-	};
+	}, [countInput]);
 
 	const handleCounterInputChange = e => {
 		const { value: newValue } = e.target;
