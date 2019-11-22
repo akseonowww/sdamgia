@@ -53,7 +53,7 @@ const useCounter = (
 			setTestTotal(newTestTotal);
 			saveTestTotal(newTestTotal);
 
-			if (newValue) {
+			if (Number(newValue)) {
 				for (let i = 0; i < list.length; i++) {
 					if (list[i].part === part && list[i].value < 1) return;
 				}
