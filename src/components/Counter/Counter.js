@@ -63,7 +63,7 @@ const useCounter = (
 	};
 
 	const decrement = useCallback(
-		(e, part) => {
+		e => {
 			e.preventDefault();
 
 			if (value <= 0) return;
@@ -89,7 +89,16 @@ const useCounter = (
 
 			if (!newValue) switchOffPart(part);
 		},
-		[value, setValue, list, index, testTotal, setTestTotal, switchOffPart]
+		[
+			value,
+			setValue,
+			list,
+			index,
+			testTotal,
+			setTestTotal,
+			part,
+			switchOffPart
+		]
 	);
 
 	const increment = e => {
