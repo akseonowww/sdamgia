@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sdamgia/static/css/main.7ecea354.chunk.css",
-    "main.js": "/sdamgia/static/js/main.0384d31d.chunk.js",
-    "main.js.map": "/sdamgia/static/js/main.0384d31d.chunk.js.map",
+    "main.js": "/sdamgia/static/js/main.4faf3581.chunk.js",
+    "main.js.map": "/sdamgia/static/js/main.4faf3581.chunk.js.map",
     "runtime-main.js": "/sdamgia/static/js/runtime-main.b4c84b53.js",
     "runtime-main.js.map": "/sdamgia/static/js/runtime-main.b4c84b53.js.map",
     "static/js/2.1e677369.chunk.js": "/sdamgia/static/js/2.1e677369.chunk.js",
     "static/js/2.1e677369.chunk.js.map": "/sdamgia/static/js/2.1e677369.chunk.js.map",
     "index.html": "/sdamgia/index.html",
-    "precache-manifest.a77047e8ca1929193b1a87a860831e02.js": "/sdamgia/precache-manifest.a77047e8ca1929193b1a87a860831e02.js",
+    "precache-manifest.9f66697a4c185fa42886e203d84dd321.js": "/sdamgia/precache-manifest.9f66697a4c185fa42886e203d84dd321.js",
     "service-worker.js": "/sdamgia/service-worker.js",
     "static/css/main.7ecea354.chunk.css.map": "/sdamgia/static/css/main.7ecea354.chunk.css.map",
     "static/media/OurSources.scss": "/sdamgia/static/media/button-store.88d1a048.svg",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.b4c84b53.js",
     "static/js/2.1e677369.chunk.js",
     "static/css/main.7ecea354.chunk.css",
-    "static/js/main.0384d31d.chunk.js"
+    "static/js/main.4faf3581.chunk.js"
   ]
 }
