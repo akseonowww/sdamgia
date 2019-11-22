@@ -23,44 +23,57 @@ const useCounter = (
 		countInput.current.setSelectionRange(0, 9999);
 	}, [countInput]);
 
-	const handleCounterInputChange = e => {
-		const { value: newValue } = e.target;
+	const handleCounterInputChange = useCallback(
+		e => {
+			const { value: newValue } = e.target;
 
-		// allow only number in counter input and show nah amination
-		if ((/\D/.test(newValue) && newValue !== '') || newValue > 999999) {
-			countInput.current.style.left = 0;
-			let x = 0,
-				m = 0,
-				nahStepTimeOut;
+			// allow only number in counter input and show nah amination
+			if ((/\D/.test(newValue) && newValue !== '') || newValue > 999999) {
+				countInput.current.style.left = 0;
+				let x = 0,
+					m = 0,
+					nahStepTimeOut;
 
-			nahStep(countInput.current, m, x, nahStepTimeOut);
+				nahStep(countInput.current, m, x, nahStepTimeOut);
 
-			return;
-		}
-
-		const oldValue = list[index].value;
-		list[index] = { ...list[index], value: newValue };
-		setValue(list);
-		saveTopicsList(list);
-
-		const newTestTotalAmount = testTotal.amount + (newValue - oldValue);
-		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
-		const newTestTotal = {
-			amount: newTestTotalAmount,
-			text: newTestTotalText
-		};
-		setTestTotal(newTestTotal);
-		saveTestTotal(newTestTotal);
-
-		if (newValue) {
-			for (let i = 0; i < list.length; i++) {
-				if (list[i].part === part && list[i].value < 1) return;
+				return;
 			}
-			switchOnPart(part);
-		} else {
-			switchOffPart(part);
-		}
-	};
+
+			const oldValue = list[index].value;
+			list[index] = { ...list[index], value: newValue };
+			setValue(list);
+			saveTopicsList(list);
+
+			const newTestTotalAmount = testTotal.amount + (newValue - oldValue);
+			const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
+			const newTestTotal = {
+				amount: newTestTotalAmount,
+				text: newTestTotalText
+			};
+			setTestTotal(newTestTotal);
+			saveTestTotal(newTestTotal);
+
+			if (newValue) {
+				for (let i = 0; i < list.length; i++) {
+					if (list[i].part === part && list[i].value < 1) return;
+				}
+				switchOnPart(part);
+			} else {
+				switchOffPart(part);
+			}
+		},
+		[
+			countInput,
+			setValue,
+			list,
+			index,
+			testTotal,
+			setTestTotal,
+			part,
+			switchOnPart,
+			switchOffPart
+		]
+	);
 
 	const decrement = useCallback(
 		e => {
