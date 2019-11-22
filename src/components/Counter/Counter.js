@@ -97,29 +97,41 @@ const useCounter = (
 		]
 	);
 
-	const increment = e => {
-		e.preventDefault();
+	const increment = useCallback(
+		e => {
+			e.preventDefault();
 
-		const newValue = Number(value) + 1;
+			const newValue = Number(value) + 1;
 
-		list[index] = { ...list[index], value: newValue };
-		setValue(list);
-		saveTopicsList(list);
+			list[index] = { ...list[index], value: newValue };
+			setValue(list);
+			saveTopicsList(list);
 
-		const newTestTotalAmount = testTotal.amount + 1;
-		const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
-		const newTestTotal = {
-			amount: newTestTotalAmount,
-			text: newTestTotalText
-		};
-		setTestTotal(newTestTotal);
-		saveTestTotal(newTestTotal);
+			const newTestTotalAmount = testTotal.amount + 1;
+			const newTestTotalText = getNewTestTotalText(newTestTotalAmount);
+			const newTestTotal = {
+				amount: newTestTotalAmount,
+				text: newTestTotalText
+			};
+			setTestTotal(newTestTotal);
+			saveTestTotal(newTestTotal);
 
-		for (let i = 0; i < list.length; i++) {
-			if (list[i].part === part && list[i].value < 1) return;
-		}
-		switchOnPart(part);
-	};
+			for (let i = 0; i < list.length; i++) {
+				if (list[i].part === part && list[i].value < 1) return;
+			}
+			switchOnPart(part);
+		},
+		[
+			value,
+			setValue,
+			list,
+			index,
+			testTotal,
+			setTestTotal,
+			part,
+			switchOnPart
+		]
+	);
 
 	return {
 		handleCounterInputFocus,
