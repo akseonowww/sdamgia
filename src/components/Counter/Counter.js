@@ -68,11 +68,7 @@ const useCounter = (
 
 			if (value <= 0) return;
 
-			let newValue = Number(value);
-
-			if (value > 0) {
-				newValue = newValue - 1;
-			}
+			let newValue = Number(value) - 1;
 
 			list[index] = { ...list[index], value: newValue };
 			setValue(list);
