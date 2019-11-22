@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import Counter from '../../Counter/Counter';
 import Subtopic from './Subtopic';
@@ -24,38 +24,47 @@ const TopicsByParts = ({
 		if (getExtraTopics()) setExtraTopics(getExtraTopics());
 	}, []);
 
-	const handleTopicClick = index => {
-		const list = [...topicsList];
-		list[index] = { ...list[index], checked: !list[index].checked };
+	const handleTopicClick = useCallback(
+		index => {
+			const list = [...topicsList];
+			list[index] = { ...list[index], checked: !list[index].checked };
 
-		setTopicsList(list);
-		saveTopicsList(list);
-	};
+			setTopicsList(list);
+			saveTopicsList(list);
+		},
+		[topicsList, setTopicsList]
+	);
 
-	const handleExtraPartNameClick = () => {
+	const handleExtraPartNameClick = useCallback(() => {
 		const newValue = !extraTopics;
 
 		setExtraTopics(newValue);
 		saveExtraTopics(newValue);
-	};
+	}, [extraTopics]);
 
-	const switchOffPart = part => {
-		const newParts = {
-			...parts,
-			[part]: false
-		};
-		setParts(newParts);
-		saveParts(newParts);
-	};
+	const switchOffPart = useCallback(
+		part => {
+			const newParts = {
+				...parts,
+				[part]: false
+			};
+			setParts(newParts);
+			saveParts(newParts);
+		},
+		[parts, setParts]
+	);
 
-	const switchOnPart = part => {
-		const newParts = {
-			...parts,
-			[part]: true
-		};
-		setParts(newParts);
-		saveParts(newParts);
-	};
+	const switchOnPart = useCallback(
+		part => {
+			const newParts = {
+				...parts,
+				[part]: true
+			};
+			setParts(newParts);
+			saveParts(newParts);
+		},
+		[parts, setParts]
+	);
 
 	const topicsListParted = topicsList.reduce(
 		(acc, { id, part, title, value, checked, subtopics }) => {
