@@ -66,6 +66,8 @@ const useCounter = (
 		(e, part) => {
 			e.preventDefault();
 
+			if (value <= 0) return;
+
 			let newValue = Number(value);
 
 			if (value > 0) {
