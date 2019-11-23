@@ -13,9 +13,9 @@ const NavMain = ({ className }) => {
 		return `https://${popupItem}-${exam}.sdamgia.ru`;
 	}, []);
 
-	const toggleMobileMenu = () => {
+	const toggleMobileMenu = useCallback(() => {
 		setMobileMenu(!mobileMenu);
-	};
+	}, [mobileMenu]);
 
 	useEffect(() => {
 		setSubjectList([
@@ -104,7 +104,7 @@ const NavMain = ({ className }) => {
 					'NavMain_desktop',
 					className,
 					`${className}_desktop`,
-					{ 'NavMain_show': mobileMenu }
+					{ NavMain_show: mobileMenu }
 				)}
 			>
 				{subjectList.length > 0 &&
