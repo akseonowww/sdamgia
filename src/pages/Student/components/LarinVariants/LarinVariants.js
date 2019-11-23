@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cx from 'classnames';
 
 import Title from '../../../../components/Title';
 import Section from '../../../../components/Section';
@@ -9,28 +10,33 @@ import '../../../../components/VariantsBox/VariantsBox.scss';
 import './LarinVariants.scss';
 
 const LarinVariants = () => {
-    const [variantsAll, AreVariantsAll] = useState(false);
-    
-    return (
-        <Section className="LarinVariants">
-            <Title>
-                <span className="LarinVariants-TitleWord1">Все варианты </span>
-                <span className="LarinVariants-TitleWord2">Александра&nbsp;</span>
-                <span className="LarinVariants-TitleWord3">Ларина</span>
-                <span className="Title-Caption">с 2013 года</span>
-            </Title>
+	const [variantsAll, AreVariantsAll] = useState(false);
 
-            <p className="Section-Desc LarinVariants-Desc_desktop">
-                Для тех, кто ищет варианты посложнее, чем обычно предлагают на ЕГЭ,
-                публикуем задания с развернутым ответом из тренировочных вариантов
-                А.<span className="halfspace">&nbsp;</span>А. Ларина. Новые условия
-                по субботам, решения по пятницам.
-            </p>
+	return (
+		<Section className="LarinVariants">
+			<Title>
+				<span className="LarinVariants-TitleWord1">Все варианты </span>
+				<span className="LarinVariants-TitleWord2">
+					Александра&nbsp;
+				</span>
+				<span className="LarinVariants-TitleWord3">Ларина</span>
+				<span className="Title-Caption">с 2013 года</span>
+			</Title>
 
-            <div className="VariantsBox">
-                <Grid className={`Variants LarinVariants-Variants ${!variantsAll && 'LarinVariants-Variants_cut'}`}>
-                    <VariantsLink className="VariantsLink_new" to="/test?id=25167677" title="Александр Ларин, тренировочный вариант ЕГЭ № 281">281</VariantsLink>
-                    <VariantsLink to="/test?id=25097380" title="Александр Ларин, тренировочный вариант ЕГЭ № 280">280</VariantsLink>
+			<p className="Section-Desc LarinVariants-Desc_desktop">
+				Для тех, кто ищет варианты посложнее, чем обычно предлагают
+				на ЕГЭ, публикуем задания с развернутым ответом из тренировочных
+				вариантов А.<span className="halfspace">&nbsp;</span>А. Ларина.
+				Новые условия по субботам, решения по пятницам.
+			</p>
+
+			<div className="VariantsBox">
+				<Grid
+					className={cx('Variants', 'LarinVariants-Variants', {
+						'LarinVariants-Variants_cut': !variantsAll
+					})}
+				>
+					<VariantsLink to="/test?id=25097380" title="Александр Ларин, тренировочный вариант ЕГЭ № 280">280</VariantsLink>
                     <VariantsLink to="/test?id=25018415" title="Александр Ларин, тренировочный вариант ЕГЭ № 279">279</VariantsLink>
                     <VariantsLink to="/test?id=24968450" title="Александр Ларин, тренировочный вариант ЕГЭ № 278">278</VariantsLink>
                     <VariantsLink to="/test?id=25079063" title="Александр Ларин, тренировочный вариант ЕГЭ № 277">277</VariantsLink>
@@ -312,14 +318,19 @@ const LarinVariants = () => {
                     <VariantsLink to="/test?id=5410471" title="Александр Ларин, тренировочный вариант ЕГЭ № 2">2</VariantsLink>
                     <VariantsLink to="/test?id=5410470" title="Александр Ларин, тренировочный вариант ЕГЭ № 1">1</VariantsLink>
                 </Grid>
-                {!variantsAll && (
-                    <div className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control" onClick={() => AreVariantsAll(true)}>
-                        <u className="Link-U Link_pseudo-U Link_wrap-U">Показать все</u>
-                    </div>
-                )}
-            </div>
-	    </Section>
-    );
+				{!variantsAll && (
+					<div
+						className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control"
+						onClick={() => AreVariantsAll(true)}
+					>
+						<u className="Link-U Link_pseudo-U Link_wrap-U">
+							Показать все
+						</u>
+					</div>
+				)}
+			</div>
+		</Section>
+	);
 };
 
 export default LarinVariants;
