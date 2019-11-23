@@ -9,7 +9,7 @@ import '../../../../components/VariantsBox/VariantsBox.scss';
 import './LarinVariants.scss';
 
 const LarinVariants = () => {
-    const [areVariantsAll, setAreVariantsAll] = useState(false);
+    const [variantsAll, AreVariantsAll] = useState(false);
     
     return (
         <Section className="LarinVariants">
@@ -28,7 +28,7 @@ const LarinVariants = () => {
             </p>
 
             <div className="VariantsBox">
-                <Grid className={`Variants LarinVariants-Variants ${!areVariantsAll && 'LarinVariants-Variants_cut'}`}>
+                <Grid className={`Variants LarinVariants-Variants ${!variantsAll && 'LarinVariants-Variants_cut'}`}>
                     <VariantsLink className="VariantsLink_new" to="/test?id=25167677" title="Александр Ларин, тренировочный вариант ЕГЭ № 281">281</VariantsLink>
                     <VariantsLink to="/test?id=25097380" title="Александр Ларин, тренировочный вариант ЕГЭ № 280">280</VariantsLink>
                     <VariantsLink to="/test?id=25018415" title="Александр Ларин, тренировочный вариант ЕГЭ № 279">279</VariantsLink>
@@ -312,8 +312,8 @@ const LarinVariants = () => {
                     <VariantsLink to="/test?id=5410471" title="Александр Ларин, тренировочный вариант ЕГЭ № 2">2</VariantsLink>
                     <VariantsLink to="/test?id=5410470" title="Александр Ларин, тренировочный вариант ЕГЭ № 1">1</VariantsLink>
                 </Grid>
-                {!areVariantsAll && (
-                    <div className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control" onClick={() => setAreVariantsAll(true)}>
+                {!variantsAll && (
+                    <div className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control" onClick={() => AreVariantsAll(true)}>
                         <u className="Link-U Link_pseudo-U Link_wrap-U">Показать все</u>
                     </div>
                 )}
