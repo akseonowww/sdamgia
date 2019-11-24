@@ -77,8 +77,12 @@
 			opacity: 0.75;
 		}
 
-		&_Vk {
+		&:first-child {
 			margin-right: 0.4rem;
+		}
+
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }
