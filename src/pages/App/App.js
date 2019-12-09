@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebar/Sidebar';
-import NavMain from './components/NavMain/NavMain';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import NavMain from './components/NavMain';
+import Footer from './components/Footer';
 import Student from '../Student';
 import Test from '../Test';
 import './App.scss';
