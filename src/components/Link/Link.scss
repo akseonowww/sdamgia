@@ -1,5 +1,4 @@
-@import '../../variables';
-@import '../../transitions';
+@import '../../variables', '../../transitions';
 
 @mixin Link-Style {
 	font-style: inherit;

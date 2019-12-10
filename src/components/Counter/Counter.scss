@@ -1,6 +1,4 @@
-@import '../../variables';
-@import '../../breakpoints';
-@import '../../transitions';
+@import '../../variables', '../../breakpoints', '../../transitions';
 
 .Counter {
 	display: flex;
