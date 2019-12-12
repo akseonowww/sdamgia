@@ -6,7 +6,6 @@ import Title from 'components/Title';
 import ConstructorForm from 'components/ConstructorForm';
 import { getTopicsList } from 'utils/constructor';
 import 'components/Link/Link.scss';
-import './Constructor.scss';
 
 const Constructor = () => {
 	const [topicsList, setTopicsList] = useState(null);

@@ -6,7 +6,6 @@ import Constructor from './components/Constructor';
 import TwoColumns from 'components/TwoColumns/TwoColumns';
 import TeacherVariant from './components/TeacherVariant';
 import CatalogSearch from './components/CatalogSearch';
-import './Student.scss';
 
 const Student = () => (
 	<>
