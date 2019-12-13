@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useRef } from 'react';
 import cx from 'classnames';
 
-import '../../../../../../../../components/Link/Link.scss';
-import '../../../../../../../../components/Button/Button.scss';
+import 'components/Link/Link.scss';
+import 'components/Button/Button.scss';
 import './ProfileAuth.scss';
 
 const ProfileAuth = ({ setAuth }) => {
