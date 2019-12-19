@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import cx from 'classnames';
 
+import { loadVariantsAll, saveVariantsAll } from './utils';
 import Title from 'components/Title';
 import Section from 'components/Section';
 import Grid from 'components/Grid';
@@ -12,9 +13,14 @@ import './LarinVariants.scss';
 
 const LarinVariants = () => {
 	const [larinVariants, setLarinVariants] = useState(null);
-	const [variantsAll, AreVariantsAll] = useState(false);
+	const [variantsAll, areVariantsAll] = useState(false);
 
 	useEffect(() => {
+		const variantsAllSaved = loadVariantsAll();
+		if (variantsAllSaved != null) {
+			areVariantsAll(variantsAllSaved);
+		}
+
 		axios
 			.get('http://sidorchik.ru/reshuege/api/larin/')
 			.then(response => response.data)
@@ -41,6 +47,13 @@ const LarinVariants = () => {
 				setLarinVariants(data);
 			});
 	}, []);
+
+	const toggleVariantsAll = useCallback(() => {
+		const newValue = !variantsAll;
+
+		areVariantsAll(newValue);
+		saveVariantsAll(newValue);
+	}, [variantsAll]);
 
 	return (
 		<Section className="LarinVariants">
@@ -80,16 +93,15 @@ const LarinVariants = () => {
 							</VariantsLink>
 						))}
 				</Grid>
-				{!variantsAll && (
-					<div
-						className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control"
-						onClick={() => AreVariantsAll(true)}
-					>
-						<u className="Link-U Link_pseudo-U Link_wrap-U">
-							Показать все
-						</u>
-					</div>
-				)}
+
+				<div
+					className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control"
+					onClick={toggleVariantsAll}
+				>
+					<u className="Link-U Link_pseudo-U Link_wrap-U">
+						{variantsAll ? 'Скрыть' : 'Показать все'}
+					</u>
+				</div>
 			</div>
 		</Section>
 	);
