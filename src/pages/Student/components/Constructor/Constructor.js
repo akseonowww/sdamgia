@@ -4,7 +4,7 @@ import axios from 'axios';
 import Section from 'components/Section';
 import Title from 'components/Title';
 import ConstructorForm from 'components/ConstructorForm';
-import { getTopicsList } from 'utils/constructor';
+import { getTopicsList } from 'pages/Student/components/Constructor/utils';
 import 'components/Link/Link.scss';
 
 const Constructor = () => {

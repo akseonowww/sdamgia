@@ -8,7 +8,7 @@ import {
 	getExtraTopics,
 	saveExtraTopics,
 	saveParts
-} from '../../../utils/constructor';
+} from '../../../pages/Student/components/Constructor/utils';
 
 const TopicsByParts = ({
 	topicsList,

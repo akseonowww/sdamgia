@@ -7,7 +7,7 @@ import {
 	saveParts,
 	getTestTotal,
 	saveTestTotal
-} from '../../../utils/constructor';
+} from '../../../pages/Student/components/Constructor/utils';
 import '../../Button/Button.scss';
 import '../../Switcher/Switcher.scss';
 import '../../Switcher/_vertical/Switcher_vertical.scss';

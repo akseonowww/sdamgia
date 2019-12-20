@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import Checkbox from '../../../Checkbox';
 import nahStep from '../../../Form/nahStep';
-import { saveTopicsList } from '../../../../utils/constructor';
+import { saveTopicsList } from '../../../../pages/Student/components/Constructor/utils';
 
 const Subtopic = ({ i, subtopic, subI, topicsList, setTopicsList }) => {
 	const subtopicLabel = useRef(null);

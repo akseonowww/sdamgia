@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import nahStep from '../Form/nahStep';
 import { getNewTestTotalText } from '../ConstructorForm';
-import { saveTopicsList, saveTestTotal } from '../../utils/constructor';
+import { saveTopicsList, saveTestTotal } from '../../pages/Student/components/Constructor/utils';
 import '../Input/Input.scss';
 import './Counter.scss';
 
