@@ -5,7 +5,9 @@ $info: #f0f5ff;
 $visited: #8f00af;
 $danger: #f60;
 $light: #ccc;
+
 $input-bg: #f0f0f0;
+$input-bg-hover: adjust-color($input-bg, $lightness: -7.5%);
 
 $border-width: 0.05rem;
 $border-primary: adjust-color($primary, $alpha: -0.75);

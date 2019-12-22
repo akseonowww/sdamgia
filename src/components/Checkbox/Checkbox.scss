@@ -1,5 +1,19 @@
+@import 'src/variables', 'src/transitions';
+
 .Label {
 	cursor: pointer;
+
+	.FakeCheckbox {
+		@include transition;
+	}
+
+	&:hover {
+		.FakeCheckbox {
+			background: $input-bg-hover;
+
+			@include transition-reset;
+		}
+	}
 }
 
 .Checkbox {
