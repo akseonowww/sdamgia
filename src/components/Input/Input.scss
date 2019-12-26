@@ -1,4 +1,4 @@
-@import 'src/variables';
+@import 'src/variables', 'src/transitions';
 
 .Input {
 	box-sizing: border-box;
@@ -12,4 +12,13 @@
 	border-radius: $border-radius-input;
 	outline: none;
 	box-shadow: none;
+
+	@include transition-reset;
+
+	&:focus,
+	&:hover {
+		background: $input-bg-hover;
+
+		@include transition-reset;
+	}
 }
