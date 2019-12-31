@@ -15,9 +15,15 @@
 
 	@include transition-reset;
 
-	&:focus,
 	&:hover {
 		background: $input-bg-hover;
+
+		@include transition-reset;
+	}
+
+	&:focus {
+		background: $white;
+		box-shadow: 0 1px 3px 1px $border-black;
 
 		@include transition-reset;
 	}
