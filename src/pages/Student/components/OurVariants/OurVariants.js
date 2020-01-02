@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Section from '../../../../components/Section';
-import ComplexHeader from '../../../../components/ComplexHeader';
-import Title from '../../../../components/Title';
-import Grid from '../../../../components/Grid';
-import VariantsLink from '../../../../components/VariantsLink';
-import '../../../../components/Link/Link.scss';
+import Section from 'components/Section';
+import ComplexHeader from 'components/ComplexHeader';
+import Title from 'components/Title';
+import Grid from 'components/Grid';
+import VariantsLink from 'components/VariantsLink';
+import 'components/Link/Link.scss';
 import './OurVariants.scss';
 
 const OurVariants = () => (

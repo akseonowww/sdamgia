@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Section from '../../components/Section';
-import Title from '../../components/Title';
+import Section from 'components/Section';
+import Title from 'components/Title';
 import './Test.scss';
 
 const Test = () => (

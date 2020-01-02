@@ -12,6 +12,10 @@
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.2.0"
 	},
+	"devDependencies": {
+		"classnames": "^2.2.6",
+		"harmony-reflect": "^1.6.1"
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
@@ -34,8 +38,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"classnames": "^2.2.6"
 	}
 }

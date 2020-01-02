@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import cx from 'classnames';
 
-import Title from '../../../../components/Title';
-import Section from '../../../../components/Section';
-import Grid from '../../../../components/Grid';
-import '../../../../components/Link/Link.scss';
-import VariantsLink from '../../../../components/VariantsLink';
-import '../../../../components/VariantsBox/VariantsBox.scss';
+import Title from 'components/Title';
+import Section from 'components/Section';
+import Grid from 'components/Grid';
+import 'components/Link/Link.scss';
+import VariantsLink from 'components/VariantsLink';
+import 'components/VariantsBox/VariantsBox.scss';
 import './LarinVariants.scss';
 
 const LarinVariants = () => {

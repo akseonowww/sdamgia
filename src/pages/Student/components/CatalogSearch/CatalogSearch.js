@@ -1,9 +1,9 @@
 import React, { useState, useLayoutEffect } from 'react';
 
-import Title from '../../../../components/Title';
-import '../../../../components/Form/Form.scss';
-import '../../../../components/Input/Input.scss';
-import '../../../../components/Button/Button.scss';
+import Title from 'components/Title';
+import 'components/Form/Form.scss';
+import 'components/Input/Input.scss';
+import 'components/Button/Button.scss';
 import './CatalogSearch.scss';
 
 const useWindowWidth = () => {
