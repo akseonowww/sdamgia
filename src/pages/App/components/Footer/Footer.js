@@ -28,7 +28,7 @@ const Footer = ({ className }) => (
 		>
 			<img src={spbsut} alt="СПб ГУТ!" title="priem.sut.ru" width="160" />
 		</a>
-		<p className="Footer-Copyright">©&nbsp;Гущин Д. Д., 2011—2019</p>
+		<div className="Footer-Copyright">©&nbsp;Гущин Д. Д., 2011—2019</div>
 	</footer>
 );
 
