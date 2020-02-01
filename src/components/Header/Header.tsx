@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { Link } from 'gatsby'
 import { cn } from '@bem-react/classname'
 
-import './header.scss'
+import './Header.scss'
 
 interface IHeaderProps {
 	siteTitle?: string

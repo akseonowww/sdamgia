@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from '../header'
+import Header from '../Header'
 import './Layout.scss'
 
 interface ILayoutProps {
