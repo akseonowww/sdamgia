@@ -6,6 +6,7 @@ import './header.scss'
 
 interface IHeaderProps {
 	siteTitle?: string
+	className?: string
 }
 
 const Header: FC<IHeaderProps> = ({ siteTitle = '' }) => {

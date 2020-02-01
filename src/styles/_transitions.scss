@@ -1,0 +1,9 @@
+@mixin transition {
+	transition-property: color, background, border-color, fill, box-shadow;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-out;
+}
+
+@mixin transition-reset {
+	transition: none;
+}

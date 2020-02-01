@@ -5,7 +5,12 @@
 		"max-line-length": 80,
 		"indentation": "tab",
 		"string-quotes": "double",
-		"at-rule-empty-line-before": "always",
+		"at-rule-empty-line-before": [
+			"always",
+			{
+				"except": ["first-nested"]
+			}
+		],
 		"shorthand-property-no-redundant-values": true,
 		"color-named": "never",
 		"no-extra-semicolons": true,
@@ -40,7 +45,10 @@
 			{ "except": ["first-nested", "after-single-line-comment"] }
 		],
 		"max-empty-lines": 1,
-		"declaration-block-no-duplicate-properties": true,
+		"declaration-block-no-duplicate-properties": [
+			true,
+			{ "ignore": ["consecutive-duplicates-with-different-values"] }
+		],
 		"value-list-max-empty-lines": 0,
 		"no-eol-whitespace": true,
 		"selector-class-pattern": [
@@ -221,12 +229,18 @@
 						"-moz-text-decoration",
 						"text-decoration",
 						"font-size-adjust",
+						"text-size-adjust",
+						"-ms-text-size-adjust",
+						"-webkit-text-size-adjust",
 						"font-stretch",
 						"font-effect",
 						"font-emphasize",
 						"font-emphasize-position",
 						"font-emphasize-style",
 						"font-smooth",
+						"font-smoothing",
+						"-webkit-font-smoothing",
+						"-moz-osx-font-smoothing",
 						"-webkit-text-align-last",
 						"-moz-text-align-last",
 						"-ms-text-align-last",
