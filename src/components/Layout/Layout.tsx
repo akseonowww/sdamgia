@@ -32,9 +32,8 @@ const Layout = ({ children }: ILayoutProps) => {
 					<div className="Layout-Content">
 						<main className="PageLayout-Main">{children}</main>
 						<footer>
-							© {new Date().getFullYear()}, Built with
-							{` `}
-							<a href="https://www.gatsbyjs.org">Gatsby</a>
+							Футер
+							{/* © Гущин Д. Д., 2011—{new Date().getFullYear()} */}
 						</footer>
 					</div>
 				</div>
