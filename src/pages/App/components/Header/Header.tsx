@@ -1,12 +1,16 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import cx from 'classnames';
+import React, { FC } from 'react'
+import { NavLink } from 'react-router-dom'
+import cx from 'classnames'
 
-import 'components/Link/Link.scss';
-import 'components/Link/_selected/Link_selected.scss';
-import './Header.scss';
+import 'components/Link/Link.scss'
+import 'components/Link/_selected/Link_selected.scss'
+import './Header.scss'
 
-const Header = ({ className }) => (
+interface IHeaderProps {
+	className?: string
+}
+
+const Header: FC<IHeaderProps> = ({ className }) => (
 	<header className={cx('Header', className)}>
 		<div className="Header-Main">
 			<NavLink activeClassName="Link_selected" to="/" exact>
@@ -38,9 +42,7 @@ const Header = ({ className }) => (
 			<div className="Header-WebsiteDesc">
 				Образовательный портал для подготовки к экзаменам
 			</div>
-			<div className="Header-SubjectTitle">
-				Математика профильного уровня
-			</div>
+			<div className="Header-SubjectTitle">Математика профильного уровня</div>
 		</div>
 
 		<img
@@ -49,6 +51,6 @@ const Header = ({ className }) => (
 			alt="Математика"
 		/>
 	</header>
-);
+)
 
-export default Header;
+export default Header
