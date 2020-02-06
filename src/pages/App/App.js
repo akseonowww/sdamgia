@@ -1,17 +1,17 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import NavMain from './components/NavMain';
-import Footer from './components/Footer';
-import Student from '../Student';
-import Test from '../Test';
-import './App.scss';
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import NavMain from './components/NavMain'
+import Footer from './components/Footer'
+import Student from '../Student'
+import Test from '../Test'
+import './App.scss'
 
-import contentBannerTopAd from './assets/contentBannerTopAd.png';
-import contentBannerBottomAd from './assets/contentBannerBottomAd.png';
-import ChatButton from '../../components/ChatButton/ChatButton';
+import contentBannerTopAd from './assets/contentBannerTopAd.png'
+import contentBannerBottomAd from './assets/contentBannerBottomAd.png'
+import ChatButton from '../../components/ChatButton/ChatButton'
 
 const App = () => (
 	<div className="App">
@@ -52,6 +52,6 @@ const App = () => (
 			<ChatButton />
 		</BrowserRouter>
 	</div>
-);
+)
 
-export default App;
+export default App
