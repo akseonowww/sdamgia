@@ -1,21 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import cx from 'classnames';
+import React, { FC, useState, useEffect, useCallback } from 'react'
+import cx from 'classnames'
 
-import './NavMain.scss';
+import './NavMain.scss'
 
-const NavMain = ({ className }) => {
-	const [mobileMenu, setMobileMenu] = useState(false);
-	const [subjectList, setSubjectList] = useState([]);
+interface INavMainProps {
+	className?: string
+}
 
-	const exam = 'ege';
+const NavMain: FC<INavMainProps> = ({ className }) => {
+	const [mobileMenu, setMobileMenu] = useState<boolean>(false)
+	const [subjectList, setSubjectList] = useState<Array<any>>([])
+
+	const exam = 'ege'
 
 	const getUrl = useCallback((popupItem, exam) => {
-		return `https://${popupItem}-${exam}.sdamgia.ru`;
-	}, []);
+		return `https://${popupItem}-${exam}.sdamgia.ru`
+	}, [])
 
 	const toggleMobileMenu = useCallback(() => {
-		setMobileMenu(!mobileMenu);
-	}, [mobileMenu]);
+		setMobileMenu(!mobileMenu)
+	}, [mobileMenu])
 
 	useEffect(() => {
 		setSubjectList([
@@ -25,69 +29,69 @@ const NavMain = ({ className }) => {
 					{
 						title: 'Базовый уровень',
 						mobileTitle: 'база',
-						url: 'mathb'
+						url: 'mathb',
 					},
 					{
 						title: 'Профильный уровень',
 						mobileTitle: 'профиль',
-						url: 'math'
-					}
-				]
+						url: 'math',
+					},
+				],
 			},
 			{
 				title: 'Информатика',
-				url: 'inf'
+				url: 'inf',
 			},
 			{
 				title: 'Русский язык',
-				url: 'rus'
+				url: 'rus',
 			},
 			{
 				title: 'Английский язык',
-				url: 'en'
+				url: 'en',
 			},
 			{
 				title: 'Немецкий язык',
-				url: 'de'
+				url: 'de',
 			},
 			{
 				title: 'Французcкий язык',
-				url: 'fr'
+				url: 'fr',
 			},
 			{
 				title: 'Испанский язык',
-				url: 'sp'
+				url: 'sp',
 			},
 			{
 				title: 'Физика',
-				url: 'phys'
+				url: 'phys',
 			},
 			{
 				title: 'Химия',
-				url: 'chem'
+				url: 'chem',
 			},
 			{
 				title: 'Биология',
-				url: 'bio'
+				url: 'bio',
 			},
 			{
 				title: 'География',
-				url: 'geo'
+				url: 'geo',
 			},
 			{
 				title: 'Обществознание',
-				url: 'soc'
+				url: 'soc',
 			},
 			{
 				title: 'Литература',
-				url: 'lit'
+				url: 'lit',
 			},
 			{
 				title: 'История',
-				url: 'hist'
-			}
-		]);
-	}, []);
+				url: 'hist',
+			},
+		])
+	}, [])
 
 	return (
 		<>
@@ -121,33 +125,26 @@ const NavMain = ({ className }) => {
 
 									<div style={{ clear: 'right' }} />
 									<div className="NavMain-Popup">
-										{sublist.map(
-											(sublistItem, sublistI) => (
-												<a
-													className="NavMain-Link NavMain_desktop-Link"
-													href={getUrl(
-														sublistItem.url,
-														exam
-													)}
-													rel="nofollow"
-													key={sublistI}
-												>
-													<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-														<span className="NavMain-PopupLink NavMain-PopupLink_mobile">
-															{title +
-																' ' +
-																sublistItem.mobileTitle}
-														</span>
-														<span className="NavMain-PopupLink NavMain-PopupLink_desktop">
-															{sublistItem.title}
-														</span>
-													</div>
-												</a>
-											)
-										)}
+										{sublist.map((sublistItem: any, sublistI: any) => (
+											<a
+												className="NavMain-Link NavMain_desktop-Link"
+												href={getUrl(sublistItem.url, exam)}
+												rel="nofollow"
+												key={sublistI}
+											>
+												<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+													<span className="NavMain-PopupLink NavMain-PopupLink_mobile">
+														{title + ' ' + sublistItem.mobileTitle}
+													</span>
+													<span className="NavMain-PopupLink NavMain-PopupLink_desktop">
+														{sublistItem.title}
+													</span>
+												</div>
+											</a>
+										))}
 									</div>
 								</div>
-							);
+							)
 						} else {
 							return (
 								<a
@@ -156,18 +153,16 @@ const NavMain = ({ className }) => {
 									rel="nofollow"
 									key={i}
 								>
-									<div className="NavMain-Tab NavMain_desktop-Tab">
-										{title}
-									</div>
+									<div className="NavMain-Tab NavMain_desktop-Tab">{title}</div>
 								</a>
-							);
+							)
 						}
 					})}
 
 				<div style={{ clear: 'both' }}></div>
 			</nav>
 		</>
-	);
-};
+	)
+}
 
-export default NavMain;
+export default NavMain
