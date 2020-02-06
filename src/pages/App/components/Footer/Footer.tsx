@@ -1,11 +1,15 @@
-import React from 'react';
-import cx from 'classnames';
+import React, { FC } from 'react'
+import cx from 'classnames'
 
-import './Footer.scss';
+import './Footer.scss'
 
-import spbsut from './assets/spbsut.png';
+import spbsut from './assets/spbsut.png'
 
-const Footer = ({ className }) => (
+interface IFooterProps {
+	className?: string
+}
+
+const Footer: FC<IFooterProps> = ({ className }) => (
 	<footer className={cx('Footer', className)}>
 		<nav className="Footer-Menu">
 			<a className="Link Link_black" href="/about">
@@ -30,6 +34,6 @@ const Footer = ({ className }) => (
 		</a>
 		<div className="Footer-Copyright">©&nbsp;Гущин Д. Д., 2011—2019</div>
 	</footer>
-);
+)
 
-export default Footer;
+export default Footer
