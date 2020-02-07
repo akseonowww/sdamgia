@@ -1,7 +1,19 @@
-const getSubjectList = () => [
+export interface ISubjectLevel {
+	title: string
+	mobileTitle: string
+	url: string
+}
+
+export interface ISubject {
+	title: string
+	levels?: Array<ISubjectLevel>
+	url?: string
+}
+
+export const getSubjectList = (): Array<ISubject> => [
 	{
 		title: 'Математика',
-		sublist: [
+		levels: [
 			{
 				title: 'Базовый уровень',
 				mobileTitle: 'база',
@@ -67,5 +79,3 @@ const getSubjectList = () => [
 		url: 'hist',
 	},
 ]
-
-export default getSubjectList

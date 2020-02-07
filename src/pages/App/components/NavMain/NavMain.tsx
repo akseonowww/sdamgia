@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect, useCallback } from 'react'
 import cx from 'classnames'
 
-import getSubjectList from 'utils/subjectList'
+import { getSubjectList, ISubject, ISubjectLevel } from 'utils/subjectList'
 import './NavMain.scss'
 
 interface INavMainProps {
@@ -10,7 +10,7 @@ interface INavMainProps {
 
 const NavMain: FC<INavMainProps> = ({ className }) => {
 	const [mobileMenu, setMobileMenu] = useState<boolean>(false)
-	const [subjectList, setSubjectList] = useState<Array<any>>([])
+	const [subjectList, setSubjectList] = useState<Array<ISubject>>([])
 
 	const exam = 'ege'
 
@@ -23,7 +23,8 @@ const NavMain: FC<INavMainProps> = ({ className }) => {
 	}, [mobileMenu])
 
 	useEffect(() => {
-		setSubjectList(getSubjectList())
+		const data = getSubjectList()
+		setSubjectList(data)
 	}, [])
 
 	return (
@@ -45,8 +46,8 @@ const NavMain: FC<INavMainProps> = ({ className }) => {
 				)}
 			>
 				{subjectList.length > 0 &&
-					subjectList.map(({ title, url, sublist }, i) => {
-						if (sublist) {
+					subjectList.map(({ title, url, levels }, i) => {
+						if (levels) {
 							return (
 								<div
 									className="NavMain-Link NavMain_desktop-Link NavMain-PopupBlock"
@@ -58,23 +59,25 @@ const NavMain: FC<INavMainProps> = ({ className }) => {
 
 									<div style={{ clear: 'right' }} />
 									<div className="NavMain-Popup">
-										{sublist.map((sublistItem: any, sublistI: any) => (
-											<a
-												className="NavMain-Link NavMain_desktop-Link"
-												href={getUrl(sublistItem.url, exam)}
-												rel="nofollow"
-												key={sublistI}
-											>
-												<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
-													<span className="NavMain-PopupLink NavMain-PopupLink_mobile">
-														{title + ' ' + sublistItem.mobileTitle}
-													</span>
-													<span className="NavMain-PopupLink NavMain-PopupLink_desktop">
-														{sublistItem.title}
-													</span>
-												</div>
-											</a>
-										))}
+										{levels.map(
+											(levelsItem: ISubjectLevel, levelsI: number) => (
+												<a
+													className="NavMain-Link NavMain_desktop-Link"
+													href={getUrl(levelsItem.url, exam)}
+													rel="nofollow"
+													key={levelsI}
+												>
+													<div className="NavMain-Tab NavMain_desktop-Tab NavMain-PopupTab">
+														<span className="NavMain-PopupLink NavMain-PopupLink_mobile">
+															{title + ' ' + levelsItem.mobileTitle}
+														</span>
+														<span className="NavMain-PopupLink NavMain-PopupLink_desktop">
+															{levelsItem.title}
+														</span>
+													</div>
+												</a>
+											)
+										)}
 									</div>
 								</div>
 							)
