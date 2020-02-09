@@ -1,37 +1,37 @@
-@import 'src/styles/breakpoints';
+@import "src/styles/breakpoints";
 
 .Footer {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	@include media-breakpoint-up(mil) {
-		& {
-			flex-direction: row;
-			justify-content: space-between;
-		}
-	}
+  @include media-breakpoint-up(mil) {
+    & {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 
-	&-Menu {
-		margin-bottom: 0.5rem;
-	}
+  &-Menu {
+    margin-bottom: 0.5rem;
+  }
 
-	&-Copyright {
-		margin-bottom: 1rem;
-	}
+  &-Copyright {
+    margin-bottom: 1rem;
+  }
 
-	&-Menu,
-	&-Copyright {
-		font-size: 1rem;
-		line-height: 1.4rem;
-	}
+  &-Menu,
+  &-Copyright {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 
-	&-Ad {
-		order: 3;
+  &-Ad {
+    order: 3;
 
-		@include media-breakpoint-up(mil) {
-			& {
-				order: initial;
-			}
-		}
-	}
+    @include media-breakpoint-up(mil) {
+      & {
+        order: initial;
+      }
+    }
+  }
 }
