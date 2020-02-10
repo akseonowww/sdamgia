@@ -1,139 +1,148 @@
-@import 'src/styles/variables', 'src/styles/breakpoints';
+@import "src/styles/variables", "src/styles/breakpoints";
 
 .NavMain {
-	&_desktop {
-		&-Link {
-			display: inline;
-			max-width: 129px;
-			min-width: auto;
+  &_desktop {
+    &-Link {
+      display: inline;
+      min-width: auto;
+      max-width: 129px;
 
-			color: $black;
-			white-space: nowrap;
-			text-decoration: none;
-		}
+      color: $black;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-		&-Tab {
-			float: left;
-			width: calc(50% - 22px);
-			min-width: 120px;
-			max-width: none;
-			height: 20px;
-			margin: 1px 1px 1px 0;
-			padding: 5px 10px 5px 10px;
+    &-Tab {
+      float: left;
+      width: calc(50% - 22px);
+      min-width: 120px;
+      max-width: none;
+      height: 20px;
+      margin: 1px 1px 1px 0;
+      padding: 5px 10px;
 
-			font-size: 14px;
-			line-height: 20px;
-			text-align: center;
-			color: $black;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: $black;
 
-			background: #ffe2c6;
-			background: linear-gradient(to bottom, #fff0e6, #ffd2b6);
-			border-radius: 14px 3px 14px 3px;
-			box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
-			cursor: pointer;
+      background: #ffe2c6;
+      background: linear-gradient(to bottom, #fff0e6, #ffd2b6);
+      border-radius: 14px 3px;
+      box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
+      cursor: pointer;
 
-			@include media-breakpoint-up(sm) {
-				width: 100px;
-				height: initial;
+      &:hover {
+        background: #ffc788;
+        background: linear-gradient(to top, #fff0e6, #ffd2b6);
+        box-shadow: inset 0 1px 2px rgba(77, 77, 77, 0.15);
+      }
 
-				font-size: 11px;
-				line-height: initial;
-			}
+      &_selected {
+        font-weight: bold;
 
-			@include media-breakpoint-up(mil) {
-				width: calc(14.28% - 21px);
-			}
+        background: #ffe2c6;
+        background: linear-gradient(to top, #ffe6e6, #ffd4a4);
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
+      }
 
-			&_selected {
-				font-weight: bold;
+      @include media-breakpoint-up(sm) {
+        width: 100px;
+        height: initial;
 
-				background: #ffe2c6;
-				background: linear-gradient(to top, #ffe6e6, #ffd4a4);
-				background-color: rgba(0, 0, 0, 0);
-				box-shadow: inset 0 0 2px rgba(77, 77, 77, 0.15);
-			}
+        font-size: 11px;
+        line-height: initial;
+      }
 
-			&:hover {
-				background: #ffc788;
-				background: linear-gradient(to top, #fff0e6, #ffd2b6);
-				box-shadow: inset 0 1px 2px rgba(77, 77, 77, 0.15);
-			}
-		}
-	}
+      @include media-breakpoint-up(mil) {
+        width: calc(14.28% - 21px);
+      }
+    }
+  }
 
-	&_show {
-		display: block !important;
-		margin-top: 0 !important;
-	}
+  &_show {
+    display: block !important;
+    margin-top: 0 !important;
+  }
 
-	&-PopupBlock {
-		position: relative;
+  &-PopupBlock {
+    position: relative;
 
-		overflow: visible;
+    overflow: visible;
 
-		@include media-breakpoint-up(sm) {
-			// float: left;
-			width: 14.28%;
-		}
+    &:hover {
+      .NavMain-Popup {
+        display: block;
+      }
+    }
 
-		&:hover {
-			.NavMain-Popup {
-				display: block;
-			}
-		}
-	}
+    @include media-breakpoint-up(sm) {
+      // float: left;
+      width: 14.28%;
+    }
+  }
 
-	&-PopupTitle {
-		display: none;
+  &-PopupTitle {
+    display: none;
 
-		@include media-breakpoint-up(sm) {
-			display: inline;
-			width: 100px;
+    @include media-breakpoint-up(sm) {
+      display: inline;
+      width: 100px;
 
-			line-height: initial;
-		}
+      line-height: initial;
+    }
 
-		@include media-breakpoint-up(mil) {
-			width: calc(14.28% - 21px);
-		}
-	}
+    @include media-breakpoint-up(mil) {
+      width: calc(14.28% - 21px);
+    }
+  }
 
-	&-PopupLink {
-		&_mobile {
-			display: inline;
+  &-PopupLink {
+    &_mobile {
+      display: inline;
 
-			@include media-breakpoint-up(sm) {
-				display: none;
-			}
-		}
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+    }
 
-		&_desktop {
-			display: none;
+    &_desktop {
+      display: none;
 
-			@include media-breakpoint-up(sm) {
-				display: inline;
-			}
-		}
-	}
+      @include media-breakpoint-up(sm) {
+        display: inline;
+      }
+    }
+  }
 
-	&-Popup {
-		@include media-breakpoint-up(sm) {
-			position: absolute;
-			right: 0;
-			z-index: 1;
+  &-Popup {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      right: 0;
+      z-index: 1;
 
-			display: none;
-			float: left;
+      display: none;
+      float: left;
+      width: 142px;
+    }
+  }
 
-			width: 142px;
-		}
-	}
+  &-PopupTab {
+    width: calc(50% - 22px);
 
-	&-PopupTab {
-		width: calc(50% - 22px);
+    @include media-breakpoint-up(sm) {
+      width: calc(100% - 21px);
+    }
+  }
+}
 
-		@include media-breakpoint-up(sm) {
-			width: calc(100% - 21px);
-		}
-	}
+.NavMain-Ruler_clear {
+  &_right {
+    clear: right;
+  }
+
+  &_both {
+    clear: both;
+  }
 }
