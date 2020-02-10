@@ -14,44 +14,44 @@ import contentBannerBottomAd from './assets/contentBannerBottomAd.png'
 import ChatButton from '../../components/ChatButton/ChatButton'
 
 const App = () => (
-	<div className="App">
-		<BrowserRouter>
-			<div className="PageLayout StartPage">
-				<Header className="PageLayout-Header" />
+  <div className="App">
+    <BrowserRouter>
+      <div className="PageLayout StartPage">
+        <Header className="PageLayout-Header" />
 
-				<NavMain className="PageLayout-Nav" />
+        <NavMain className="PageLayout-Nav" />
 
-				<div className="PageLayout-Grid">
-					<Sidebar />
+        <div className="PageLayout-Grid">
+          <Sidebar />
 
-					<div className="PageLayout-Content">
-						<main className="PageLayout-Main">
-							<img
-								className="PageLayout-BannerAd PageLayout-BannerAd_top"
-								src={contentBannerTopAd}
-								alt="Реклама"
-							/>
+          <div className="PageLayout-Content">
+            <main className="PageLayout-Main">
+              <img
+                className="PageLayout-BannerAd PageLayout-BannerAd_top"
+                src={contentBannerTopAd}
+                alt="Реклама"
+              />
 
-							<Switch>
-								<Route path="/" component={Student} exact />
-								<Route path="/test" component={Test} />
-								<Redirect to="/" />
-							</Switch>
+              <Switch>
+                <Route path="/" component={Student} exact />
+                <Route path="/test" component={Test} />
+                <Redirect to="/" />
+              </Switch>
 
-							<img
-								className="PageLayout-BannerAd"
-								src={contentBannerBottomAd}
-								alt="Реклама"
-							/>
-						</main>
+              <img
+                className="PageLayout-BannerAd"
+                src={contentBannerBottomAd}
+                alt="Реклама"
+              />
+            </main>
 
-						<Footer className="PageLayout-Footer" />
-					</div>
-				</div>
-			</div>
-			<ChatButton />
-		</BrowserRouter>
-	</div>
+            <Footer className="PageLayout-Footer" />
+          </div>
+        </div>
+      </div>
+      <ChatButton />
+    </BrowserRouter>
+  </div>
 )
 
 export default App
