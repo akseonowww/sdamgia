@@ -1,29 +1,29 @@
-@import 'src/styles/variables';
+@import "src/styles/variables";
 
 .Search {
-	&-Label {
-		position: relative;
-		
-		display: block;
+  &-Label {
+    position: relative;
 
-		cursor: text;
-	}
+    display: block;
 
-	&-Input {
-		width: 100%;
-		max-width: 100%;
-		margin: 0;
-		padding: 6px 2px 7px 26px;
+    cursor: text;
+  }
 
-		font-size: 9pt;
+  &-Input {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 6px 2px 7px 26px;
 
-		border-radius: $border-radius-button;
-		outline: none;
-	}
+    font-size: 9pt;
 
-	&-SearchIcon {
-		position: absolute;
-		top: 0;
-		left: 5.5px;
-	}
+    border-radius: $border-radius-button;
+    outline: none;
+  }
+
+  &-SearchIcon {
+    position: absolute;
+    top: 0;
+    left: 5.5px;
+  }
 }
