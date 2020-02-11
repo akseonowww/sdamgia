@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
 import cx from 'classnames'
 
-interface INewsItem {
+export interface INewsItemProps {
   type: string
-  date?: string
+  date?: string | null
   text: string
   url: string
 }
 
-const NewsItem: FC<INewsItem> = ({ type, date, text, url }) => {
+const NewsItem: FC<INewsItemProps> = ({ type, date, text, url }) => {
   return (
     <a
       className={cx(
