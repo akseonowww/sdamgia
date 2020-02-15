@@ -1,25 +1,25 @@
-@import 'src/styles/breakpoints';
+@import "src/styles/breakpoints";
 
 .ComplexHeader {
-	&-Link {
-		margin-top: 0.4rem;
+  &-Link {
+    margin-top: 0.4rem;
 
-		&_mobile {
-			margin-top: 1rem;
+    &_mobile {
+      margin-top: 1rem;
 
-			text-align: center;
+      text-align: center;
 
-			@include media-breakpoint-up(md) {
-				display: none;
-			}
-		}
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
 
-		&_desktop {
-			display: none;
+    &_desktop {
+      display: none;
 
-			@include media-breakpoint-up(md) {
-				display: block;
-			}
-		}
-	}
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
 }
