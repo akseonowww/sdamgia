@@ -10,7 +10,7 @@ import {
 } from 'pages/Student/components/Constructor/utils'
 import 'components/Link/Link.scss'
 
-interface ITopic {
+export interface ITopic {
   id: number
   title: string
   part: string
