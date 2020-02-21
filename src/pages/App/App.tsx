@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import Header from './components/Header'
@@ -13,7 +13,7 @@ import contentBannerTopAd from './assets/contentBannerTopAd.png'
 import contentBannerBottomAd from './assets/contentBannerBottomAd.png'
 import ChatButton from '../../components/ChatButton/ChatButton'
 
-const App = () => (
+const App: FC = () => (
   <div className="App">
     <BrowserRouter>
       <div className="PageLayout StartPage">
