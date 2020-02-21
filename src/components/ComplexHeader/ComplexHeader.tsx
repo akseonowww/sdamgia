@@ -1,11 +1,11 @@
-import React, { FC, ReactChildren } from 'react'
+import React, { FC, ReactNode } from 'react'
 import cx from 'classnames'
 
 import './ComplexHeader.scss'
 
 interface IComplexHeaderProps {
   className?: string
-  children: ReactChildren
+  children: ReactNode
 }
 
 const ComplexHeader: FC<IComplexHeaderProps> = ({ className, children }) => (

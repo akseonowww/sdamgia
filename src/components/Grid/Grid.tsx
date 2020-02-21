@@ -1,11 +1,11 @@
-import React, { FC, ReactChildren } from 'react'
+import React, { FC, ReactNode } from 'react'
 import cx from 'classnames'
 
 import './Grid.scss'
 
 interface IGridProps {
   className: string
-  children: ReactChildren
+  children: ReactNode
 }
 
 const Grid: FC<IGridProps> = ({ className, children }) => (
