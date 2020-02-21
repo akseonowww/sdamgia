@@ -1,20 +1,20 @@
-@import 'src/styles/variables';
+@import "src/styles/variables";
 
 .Title {
-	margin: 0 0 0.75rem;
-	padding-top: 0.15rem;
+  margin: 0 0 0.75rem;
+  padding-top: 0.15rem;
 
-	font-weight: bold;
-	font-size: 1.5rem;
-	text-align: left;
-	color: $primary;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  color: $primary;
 
-	&-Caption {
-		display: inline-block;
+  &-Caption {
+    display: inline-block;
 
-		font-weight: normal;
-		font-size: 0.75rem;
-		vertical-align: top;
-		color: $danger;
-	}
+    font-weight: normal;
+    font-size: 0.75rem;
+    vertical-align: top;
+    color: $danger;
+  }
 }
