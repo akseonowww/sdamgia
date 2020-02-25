@@ -11,9 +11,9 @@ import React, {
 import Checkbox from '../../Checkbox'
 import {
   saveTopicsList,
-  getParts,
+  loadParts,
   saveParts,
-  getTestTotal,
+  loadTestTotal,
   saveTestTotal,
 } from '../../../pages/Student/components/Constructor/utils'
 import '../../Button/Button.scss'
@@ -67,8 +67,8 @@ const Buttons: FC<IButtonsProps> = ({
   getNewTestTotalText,
 }) => {
   useEffect(() => {
-    if (getTestTotal()) setTestTotal(getTestTotal())
-    if (getParts()) setParts(getParts())
+    if (loadTestTotal()) setTestTotal(loadTestTotal())
+    if (loadParts()) setParts(loadParts())
   }, [setParts, setTestTotal])
 
   const switchPart = useCallback(

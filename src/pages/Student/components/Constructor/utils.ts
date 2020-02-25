@@ -10,13 +10,13 @@ const saveTopicsList = (topicList: Array<ITopic>) => {
   localStorage.setItem('topicList', JSON.stringify(topicList))
 }
 
-const getExtraTopics = () => localStorage.getItem('extraTopics') === 'true'
+const loadExtraTopics = () => localStorage.getItem('extraTopics') === 'true'
 
 const saveExtraTopics = (value: any) => {
   localStorage.setItem('extraTopics', value)
 }
 
-const getParts = () => {
+const loadParts = () => {
   const partsSaved = localStorage.getItem('parts')
 
   return partsSaved ? JSON.parse(partsSaved) : null
@@ -26,7 +26,7 @@ const saveParts = (parts: any) => {
   localStorage.setItem('parts', JSON.stringify(parts))
 }
 
-const getTestTotal = () => {
+const loadTestTotal = () => {
   const testTotalSaved = localStorage.getItem('testTotal')
 
   return testTotalSaved ? JSON.parse(testTotalSaved) : null
@@ -39,10 +39,10 @@ const saveTestTotal = (parts: any) => {
 export {
   loadTopicsList,
   saveTopicsList,
-  getExtraTopics,
+  loadExtraTopics,
   saveExtraTopics,
-  getParts,
+  loadParts,
   saveParts,
-  getTestTotal,
+  loadTestTotal,
   saveTestTotal,
 }
