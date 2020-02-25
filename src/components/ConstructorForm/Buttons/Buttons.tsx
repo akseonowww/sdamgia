@@ -36,7 +36,7 @@ export interface ITopic {
   title: string
   part: string
   subtopics: Array<ISubtopic>
-  value?: number
+  value: number
   checked?: boolean
 }
 
@@ -94,16 +94,12 @@ const Buttons: FC<IButtonsProps> = ({
           if (list[i].part === part) {
             let oldValue = list[i].value
 
-            if (oldValue === undefined) return false
-
             list[i] = {
               ...list[i],
               value: oldValue > 1 && willBeSaved ? oldValue : countValue,
             }
 
             const newValue = list[i].value
-
-            if (newValue === undefined) return false
 
             newTestTotalAmount = newTestTotalAmount + (newValue - oldValue)
           }
