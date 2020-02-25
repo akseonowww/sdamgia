@@ -4,6 +4,7 @@ import React, {
   Dispatch,
   SetStateAction,
   MouseEvent,
+  useCallback,
 } from 'react'
 
 import Checkbox from '../../Checkbox'
@@ -69,52 +70,63 @@ const Buttons: FC<IButtonsProps> = ({
     if (getParts()) setParts(getParts())
   }, [setParts, setTestTotal])
 
-  const switchPart = (part: string) => {
-    if (topicsList) {
-      const newValue = !parts[part]
-      const countValue = newValue ? 1 : 0
+  const switchPart = useCallback(
+    (part: string) => () => {
+      if (topicsList) {
+        const newValue = !parts[part]
+        const countValue = newValue ? 1 : 0
 
-      const willBeSaved = countValue === 1
+        const willBeSaved = countValue === 1
 
-      const newParts = {
-        ...parts,
-        [part]: newValue,
-      }
-      setParts(newParts)
-      saveParts(newParts)
-
-      const list = [...topicsList]
-      let newTestTotalAmount = testTotal.amount
-      for (let i = 0; i < list.length; i++) {
-        if (list[i].part === part) {
-          let oldValue = list[i].value
-
-          if (oldValue === undefined) return false
-
-          list[i] = {
-            ...list[i],
-            value: oldValue > 1 && willBeSaved ? oldValue : countValue,
-          }
-
-          const newValue = list[i].value
-
-          if (newValue === undefined) return false
-
-          newTestTotalAmount = newTestTotalAmount + (newValue - oldValue)
+        const newParts = {
+          ...parts,
+          [part]: newValue,
         }
-      }
+        setParts(newParts)
+        saveParts(newParts)
 
-      setTopicsList(list)
-      saveTopicsList(list)
+        const list = [...topicsList]
+        let newTestTotalAmount = testTotal.amount
+        for (let i = 0; i < list.length; i++) {
+          if (list[i].part === part) {
+            let oldValue = list[i].value
 
-      const newTestTotal = {
-        amount: newTestTotalAmount,
-        text: getNewTestTotalText(newTestTotalAmount),
+            if (oldValue === undefined) return false
+
+            list[i] = {
+              ...list[i],
+              value: oldValue > 1 && willBeSaved ? oldValue : countValue,
+            }
+
+            const newValue = list[i].value
+
+            if (newValue === undefined) return false
+
+            newTestTotalAmount = newTestTotalAmount + (newValue - oldValue)
+          }
+        }
+
+        setTopicsList(list)
+        saveTopicsList(list)
+
+        const newTestTotal = {
+          amount: newTestTotalAmount,
+          text: getNewTestTotalText(newTestTotalAmount),
+        }
+        setTestTotal(newTestTotal)
+        saveTestTotal(newTestTotal)
       }
-      setTestTotal(newTestTotal)
-      saveTestTotal(newTestTotal)
-    }
-  }
+    },
+    [
+      getNewTestTotalText,
+      parts,
+      setParts,
+      testTotal,
+      setTestTotal,
+      topicsList,
+      setTopicsList,
+    ]
+  )
 
   const handleResetClick = (e: MouseEvent) => {
     e.preventDefault()
@@ -163,7 +175,7 @@ const Buttons: FC<IButtonsProps> = ({
               fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
               name="testPart"
               value={parts.test}
-              onChange={() => switchPart('test')}
+              onChange={switchPart('test')}
             />
             <span className="Switcher-Text Switcher_checkbox-Text">
               Тестовая часть
@@ -175,7 +187,7 @@ const Buttons: FC<IButtonsProps> = ({
               fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
               name="detailedPart"
               value={parts.detailed}
-              onChange={() => switchPart('detailed')}
+              onChange={switchPart('detailed')}
             />
             <span className="Switcher-Text Switcher_checkbox-Text">
               Развернутая часть
