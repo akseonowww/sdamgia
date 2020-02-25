@@ -4,27 +4,12 @@ import axios from 'axios'
 import Section from 'components/Section'
 import Title from 'components/Title'
 import ConstructorForm from 'components/ConstructorForm'
+import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
 import {
   getTopicsList,
   getTopicListData,
 } from 'pages/Student/components/Constructor/utils'
 import 'components/Link/Link.scss'
-
-export interface ITopic {
-  id: number
-  title: string
-  part: string
-  subtopics: Array<ISubtopic>
-  value?: number
-  checked?: boolean
-}
-
-interface ISubtopic {
-  id: number
-  title: string
-  amount: number
-  checked?: boolean
-}
 
 const Constructor: FC = () => {
   const [topicsList, setTopicsList] = useState<Array<ITopic> | null>(null)

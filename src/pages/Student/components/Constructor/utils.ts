@@ -1,4 +1,4 @@
-import { ITopic } from './Constructor'
+import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
 
 const getTopicsList = (): Array<ITopic> | null => {
   const topicListSaved = localStorage.getItem('topicList')
