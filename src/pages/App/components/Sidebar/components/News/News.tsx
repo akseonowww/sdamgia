@@ -135,12 +135,13 @@ const News: FC<INewsProps> = ({ className }) => {
 
       <div className="News-Bots">
         {bots &&
-          bots.map(({ url, text, img }: IBotProps) => (
+          bots.map(({ url, text, img }: IBotProps, i: number) => (
             <a
               className="News-Bot"
               href={url}
               rel="noopener noreferrer"
               title={text}
+              key={i}
             >
               <img src={img} alt={text} />
             </a>
