@@ -1,10 +1,11 @@
 import React, {
   FC,
   useEffect,
+  useCallback,
   Dispatch,
   SetStateAction,
+  ChangeEvent,
   MouseEvent,
-  useCallback,
 } from 'react'
 
 import Checkbox from '../../Checkbox'
@@ -71,7 +72,9 @@ const Buttons: FC<IButtonsProps> = ({
   }, [setParts, setTestTotal])
 
   const switchPart = useCallback(
-    (part: string) => () => {
+    (e: ChangeEvent<HTMLInputElement>) => {
+      const part = e.target.name.split('Part')[0]
+
       if (topicsList) {
         const newValue = !parts[part]
         const countValue = newValue ? 1 : 0
@@ -175,7 +178,7 @@ const Buttons: FC<IButtonsProps> = ({
               fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
               name="testPart"
               value={parts.test}
-              onChange={switchPart('test')}
+              onChange={switchPart}
             />
             <span className="Switcher-Text Switcher_checkbox-Text">
               Тестовая часть
@@ -187,7 +190,7 @@ const Buttons: FC<IButtonsProps> = ({
               fakeCheckboxClassName="FakeCheckbox_blue Switcher_checkbox-FakeCheckbox"
               name="detailedPart"
               value={parts.detailed}
-              onChange={switchPart('detailed')}
+              onChange={switchPart}
             />
             <span className="Switcher-Text Switcher_checkbox-Text">
               Развернутая часть
