@@ -5,17 +5,15 @@ import Section from 'components/Section'
 import Title from 'components/Title'
 import ConstructorForm from 'components/ConstructorForm'
 import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
-import {
-  getTopicsList,
-  getTopicListData,
-} from 'pages/Student/components/Constructor/utils'
+import { getTopicList } from 'utils/topicList'
+import { loadTopicsList } from 'pages/Student/components/Constructor/utils'
 import 'components/Link/Link.scss'
 
 const Constructor: FC = () => {
   const [topicsList, setTopicsList] = useState<Array<ITopic> | null>(null)
 
   useEffect(() => {
-    const topicsListSaved = getTopicsList()
+    const topicsListSaved = loadTopicsList()
 
     if (!topicsListSaved) {
       axios
@@ -40,7 +38,7 @@ const Constructor: FC = () => {
         .catch(error => {
           console.log(error)
 
-          setTopicsList(getTopicListData)
+          setTopicsList(getTopicList)
         })
     } else {
       setTopicsList(topicsListSaved)
