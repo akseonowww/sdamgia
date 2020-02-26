@@ -1,57 +1,56 @@
-@import 'src/styles/variables', 'src/styles/transitions';
+@import "src/styles/variables", "src/styles/transitions";
 
 .Label {
-	cursor: pointer;
+  cursor: pointer;
 
-	.FakeCheckbox {
-		@include transition;
-	}
+  .FakeCheckbox {
+    @include transition;
+  }
 
-	&:hover {
-		.FakeCheckbox {
-			background: $input-bg-hover;
+  &:hover {
+    .FakeCheckbox {
+      background: $input-bg-hover;
 
-			@include transition-reset;
-		}
-	}
+      @include transition-reset;
+    }
+  }
 }
 
 .Checkbox {
-	position: absolute;
+  position: absolute;
 
-	opacity: 0;
+  opacity: 0;
 
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .FakeCheckbox {
-	position: relative;
-	display: inline-block;
-	box-sizing: border-box;
+  position: relative;
 
-	width: 1.25rem;
-	height: 1.25rem;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1.25rem;
+  height: 1.25rem;
 
-	&::after {
-		position: absolute;
-		top: -0.15rem;
-		left: 0.2rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.15rem;
+    left: 0.2rem;
 
-		display: block;
-		width: 1.25rem;
-		height: 1.25rem;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
 
-		background: url('./assets/tick.svg') center / 90% no-repeat;
-		opacity: 0;
+    background: url("./assets/tick.svg") center / 90% no-repeat;
+    opacity: 0;
+  }
 
-		content: '';
-	}
+  &_blue::after {
+    background-image: url("./assets/tick_blue.svg");
+  }
 
-	&_blue::after {
-		background-image: url('./assets/tick_blue.svg');
-	}
-
-	.Checkbox:checked + &::after {
-		opacity: 1;
-	}
+  .Checkbox:checked + &::after {
+    opacity: 1;
+  }
 }

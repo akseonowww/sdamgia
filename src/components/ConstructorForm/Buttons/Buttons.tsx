@@ -40,11 +40,11 @@ export interface ITopic {
   checked?: boolean
 }
 
-interface ISubtopic {
+export interface ISubtopic {
   id: number
   title: string
   amount: number
-  checked?: boolean
+  checked: boolean
 }
 
 export interface IParts {
