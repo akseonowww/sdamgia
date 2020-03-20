@@ -126,11 +126,11 @@ const TopicsByParts: any = ({
                       <Counter
                         className="ConstructorForm-Counter"
                         name={`prob${id}`}
-                        value={value}
-                        list={[...topicsList]}
                         index={id - 1}
-                        testTotal={testTotal}
+                        value={value}
                         setValue={setTopicsList}
+                        list={[...topicsList]}
+                        testTotal={testTotal}
                         setTestTotal={setTestTotal}
                         part={part}
                         switchOnPart={switchOnPart}

@@ -1,65 +1,65 @@
-@import 'src/styles/variables', 'src/styles/breakpoints', 'src/styles/transitions';
+@import "src/styles/variables", "src/styles/breakpoints", "src/styles/transitions";
 
 .Counter {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-	@include media-breakpoint-up(sm) {
-		align-items: flex-start;
-	}
+  &-Button {
+    box-sizing: border-box;
+    width: 1.95rem;
+    height: 1.95rem;
+    padding: 0 0 0.1rem;
 
-	&-Button {
-		box-sizing: border-box;
-		width: 1.95rem;
-		height: 1.95rem;
-		padding: 0 0 0.1rem;
+    font-size: 1rem;
+    font-family: Verdana, sans-serif;
+    text-align: center;
 
-		font-size: 1rem;
-		font-family: Verdana, sans-serif;
-		text-align: center;
+    background: transparent;
+    border-width: $border-width;
+    border-style: solid;
+    border-color: lighten($black, 90%);
+    border-radius: 50%;
+    outline: none;
+    box-shadow: none;
 
-		background: transparent;
-		border-width: $border-width;
-		border-style: solid;
-		border-color: lighten($black, 90%);
-		border-radius: 50%;
-		outline: none;
-		box-shadow: none;
+    &:not(&_disabled):hover {
+      color: $danger;
 
-		@include transition;
+      border-color: $border-dangerous;
+      cursor: pointer;
 
-		&_disabled {
-			color: $light;
-		}
+      @include transition-reset;
+    }
 
-		&:not(&_disabled):hover {
-			color: $danger;
+    &_disabled {
+      color: $light;
+    }
 
-			border-color: $border-dangerous;
-			cursor: pointer;
+    @include transition;
+  }
 
-			@include transition-reset;
-		}
-	}
+  &-Input {
+    position: relative;
+    top: 0;
+    z-index: 1;
 
-	&-Input {
-		z-index: 1;
-		position: relative;
-		top: 0;
+    width: 3rem;
 
-		width: 3rem;
+    text-align: center;
+  }
 
-		text-align: center;
-	}
+  &-Caption {
+    display: block;
 
-	&-Caption {
-		display: block;
+    @include media-breakpoint-up(sm) {
+      display: none;
 
-		@include media-breakpoint-up(sm) {
-			display: none;
+      font-size: 1rem;
+    }
+  }
 
-			font-size: 1rem;
-		}
-	}
+  @include media-breakpoint-up(sm) {
+    align-items: flex-start;
+  }
 }

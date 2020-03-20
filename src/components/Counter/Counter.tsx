@@ -1,6 +1,14 @@
-import React, { useCallback, useRef } from 'react'
+import React, {
+  useCallback,
+  useRef,
+  Dispatch,
+  SetStateAction,
+  RefObject,
+} from 'react'
 import cx from 'classnames'
 
+import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
+import { ITestTotal } from 'components/ConstructorForm/ConstructorForm'
 import nahStep from '../Form/nahStep'
 import { getNewTestTotalText } from '../ConstructorForm'
 import {
@@ -10,20 +18,36 @@ import {
 import '../Input/Input.scss'
 import './Counter.scss'
 
+interface ICounter {
+  className?: string
+  name: string
+  value: number
+  setValue: Dispatch<SetStateAction<ITopic[] | null>>
+  list: ITopic[] | null
+  index: number
+  testTotal: ITestTotal
+  setTestTotal: Dispatch<SetStateAction<ITestTotal>>
+  part: string
+  switchOnPart: (part: string) => void
+  switchOffPart: (part: string) => void
+}
+
 const useCounter = (
-  value,
-  list,
-  index,
-  setValue,
-  countInput,
-  testTotal,
-  setTestTotal,
-  part,
-  switchOnPart,
-  switchOffPart
+  index: number,
+  value: number,
+  setValue: Dispatch<SetStateAction<ITopic[] | null>>,
+  list: ITopic[] | null,
+  testTotal: ITestTotal,
+  setTestTotal: Dispatch<SetStateAction<ITestTotal>>,
+  part: string,
+  switchOnPart: (part: string) => void,
+  switchOffPart: (part: string) => void,
+  countInput: React.RefObject<HTMLInputElement | null>
 ) => {
   const handleCounterInputFocus = useCallback(() => {
-    countInput.current.setSelectionRange(0, 9999)
+    if (countInput && countInput.current) {
+      countInput.current.setSelectionRange(0, 9999)
+    }
   }, [countInput])
 
   const handleCounterInputChange = useCallback(
@@ -32,15 +56,19 @@ const useCounter = (
 
       // allow only number in counter input and show nah amination
       if ((/\D/.test(newValue) && newValue !== '') || newValue > 999999) {
-        countInput.current.style.left = 0
-        let x = 0,
-          m = 0,
-          nahStepTimeOut
+        if (countInput && countInput.current) {
+          countInput.current.style.left = '0'
+          let x = 0,
+            m = 0,
+            nahStepTimeOut
 
-        nahStep(countInput.current, m, x, nahStepTimeOut)
+          nahStep(countInput.current, m, x, nahStepTimeOut)
+        }
 
         return
       }
+
+      if (!list) return
 
       const oldValue = list[index].value
       list[index] = { ...list[index], value: newValue }
@@ -82,7 +110,7 @@ const useCounter = (
     e => {
       e.preventDefault()
 
-      if (value <= 0) return
+      if (value <= 0 || !list) return
 
       let newValue = Number(value) - 1
 
@@ -110,6 +138,8 @@ const useCounter = (
 
       const newValue = Number(value) + 1
 
+      if (!list) return
+
       list[index] = { ...list[index], value: newValue }
       setValue(list)
       saveTopicsList(list)
@@ -126,6 +156,7 @@ const useCounter = (
       for (let i = 0; i < list.length; i++) {
         if (list[i].part === part && list[i].value < 1) return
       }
+
       switchOnPart(part)
     },
     [value, setValue, list, index, testTotal, setTestTotal, part, switchOnPart]
@@ -142,33 +173,33 @@ const useCounter = (
 const Counter = ({
   className,
   name,
-  value,
-  list,
   index,
+  value,
   setValue,
+  list,
   testTotal,
   setTestTotal,
   part,
   switchOnPart,
   switchOffPart,
-}) => {
-  const countInput = useRef(null)
+}: ICounter) => {
+  const countInput = useRef<HTMLInputElement>(null)
   const {
     handleCounterInputFocus,
     handleCounterInputChange,
     increment,
     decrement,
   } = useCounter(
-    value,
-    list,
     index,
+    value,
     setValue,
-    countInput,
+    list,
     testTotal,
     setTestTotal,
     part,
     switchOnPart,
-    switchOffPart
+    switchOffPart,
+    countInput
   )
 
   return (
@@ -189,7 +220,7 @@ const Counter = ({
         ref={countInput}
         onClick={handleCounterInputFocus}
         onChange={handleCounterInputChange}
-        style={{ left: 0 }}
+        style={{ /* stylelint-disable */ left: 0 }}
         tabIndex={index + 1}
       />
       <button className="Counter-Button" onClick={increment}>
