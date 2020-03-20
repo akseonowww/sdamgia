@@ -9,7 +9,7 @@ interface ISubtopicProps {
   i: number
   subtopic: ISubtopic
   subI: number
-  topicsList: Array<ITopic>
+  topicsList: Array<ITopic> | null
   setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
 }
 
@@ -23,6 +23,8 @@ const Subtopic: FC<ISubtopicProps> = ({
   const subtopicLabel = useRef<HTMLLabelElement | null>(null)
 
   const handleCheckboxChange = (i: number, subI: number) => {
+    if (!topicsList) return
+
     const list = [...topicsList]
     const topic = (list[i] = { ...list[i] })
     topic.subtopics = [...topic.subtopics]

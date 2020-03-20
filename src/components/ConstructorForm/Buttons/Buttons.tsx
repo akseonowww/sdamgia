@@ -52,7 +52,7 @@ export interface IParts {
   detailed: boolean
 }
 
-interface ITestTotal {
+export interface ITestTotal {
   amount: number
   text: string
 }
