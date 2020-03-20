@@ -1,162 +1,162 @@
-@import 'src/styles/variables', 'src/styles/breakpoints';
+@import "src/styles/variables", "src/styles/breakpoints";
 
-$breakpoint-up-two-columns: 'screen and'
-	(
-		min-width: 830px
-	);
+$breakpoint-up-two-columns: "screen and"
+  (
+    min-width: 830px
+  );
 
 .ConstructorForm {
-	&-TopicList {
-		grid-column: 1/21;
-		grid-row: 1;
+  &-TopicList {
+    grid-column: 1/21;
+    grid-row: 1;
 
-		@media #{$breakpoint-up-two-columns} {
-			grid-column: 1/15;
-		}
+    @media #{$breakpoint-up-two-columns} {
+      grid-column: 1/15;
+    }
 
-		@include media-breakpoint-up(mil) {
-			grid-column: 1/16;
-		}
-	}
+    @include media-breakpoint-up(mil) {
+      grid-column: 1/16;
+    }
+  }
 
-	&-Buttons {
-		grid-column: 1/21;
-		grid-row: 2;
+  &-Buttons {
+    grid-column: 1/21;
+    grid-row: 2;
 
-		@media #{$breakpoint-up-two-columns} {
-			grid-column: 15/21;
-			grid-row: 1;
-		}
+    @media #{$breakpoint-up-two-columns} {
+      grid-column: 15/21;
+      grid-row: 1;
+    }
 
-		@include media-breakpoint-up(mil) {
-			grid-column: 16/21;
-			grid-row: 1;
-		}
-	}
+    @include media-breakpoint-up(mil) {
+      grid-column: 16/21;
+      grid-row: 1;
+    }
+  }
 
-	&-Row {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-column-gap: 0.75rem;
-		margin-bottom: 1rem;
+  &-Row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0.75rem;
+    margin-bottom: 1rem;
 
-		@include media-breakpoint-up(sm) {
-			grid-template-columns: 135px 1fr;
-			margin-bottom: 0.75rem;
-		}
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: 135px 1fr;
+      margin-bottom: 0.75rem;
+    }
 
-		@include media-breakpoint-up(md) {
-			grid-template-columns: 105px 1fr;
-			margin-bottom: 0.75rem;
-		}
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 105px 1fr;
+      margin-bottom: 0.75rem;
+    }
 
-		&_head {
-			display: none;
-			padding-bottom: 0.75rem;
+    &_head {
+      display: none;
+      padding-bottom: 0.75rem;
 
-			font-weight: bold;
-			color: $primary;
+      font-weight: bold;
+      color: $primary;
 
-			border-bottom: 0.05rem solid $border-primary;
+      border-bottom: 0.05rem solid $border-primary;
 
-			@include media-breakpoint-up(sm) {
-				display: grid;
-			}
-		}
+      @include media-breakpoint-up(sm) {
+        display: grid;
+      }
+    }
 
-		&_label {
-			grid-template-columns: 1fr;
-			margin-top: 2rem;
+    &_label {
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
 
-			font-style: italic;
-			color: $primary;
+      font-style: italic;
+      color: $primary;
 
-			@include media-breakpoint-up(sm) {
-				margin-top: 1rem;
-			}
-		}
+      @include media-breakpoint-up(sm) {
+        margin-top: 1rem;
+      }
+    }
 
-		&_head + &_label {
-			margin-top: 0.25rem;
+    &_head + &_label {
+      margin-top: 0.25rem;
 
-			@include media-breakpoint-up(sm) {
-				margin-top: -0.25rem;
-			}
-		}
-	}
+      @include media-breakpoint-up(sm) {
+        margin-top: -0.25rem;
+      }
+    }
+  }
 
-	&-Counter {
-		grid-row: 2;
-		width: 135px;
-		width: 169px;
-		margin: 0.2rem 0 0 -0.2rem;
+  &-Counter {
+    grid-row: 2;
+    width: 135px;
+    width: 169px;
+    margin: 0.2rem 0 0 -0.2rem;
 
-		@include media-breakpoint-up(sm) {
-			grid-row: auto;
-			width: auto;
-			margin: 0;
-		}
-	}
+    @include media-breakpoint-up(sm) {
+      grid-row: auto;
+      width: auto;
+      margin: 0;
+    }
+  }
 
-	&-TopicName {
-		position: relative;
+  &-TopicName {
+    position: relative;
 
-		display: grid;
-		grid-template-columns: 1.65rem 1fr;
-		grid-column-gap: 0.35rem;
-		padding: 0.15rem 0 0.4rem;
+    display: grid;
+    grid-template-columns: 1.65rem 1fr;
+    grid-column-gap: 0.35rem;
+    padding: 0.15rem 0 0.4rem;
 
-		font-size: 1rem;
-		line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 
-		@include media-breakpoint-up(md) {
-			box-sizing: border-box;
-			padding-right: 1.5rem;
-		}
-	}
+    @include media-breakpoint-up(md) {
+      box-sizing: border-box;
+      padding-right: 1.5rem;
+    }
+  }
 
-	&-TopicNumber {
-		text-align: right;
-	}
+  &-TopicNumber {
+    text-align: right;
+  }
 
-	&-TopicSubCheckbox {
-		margin-top: 0.15rem;
-	}
+  &-TopicSubCheckbox {
+    margin-top: 0.15rem;
+  }
 
-	&-ButtonsPanel {
-		margin: 1rem -0.5rem 0;
-		padding: 1rem 0.4rem 1.75rem;
+  &-ButtonsPanel {
+    margin: 1rem -0.5rem 0;
+    padding: 1rem 0.4rem 1.75rem;
 
-		background: $info;
+    background: $info;
 
-		@media #{$breakpoint-up-two-columns} {
-			position: -webkit-sticky;
-			position: sticky;
-			top: 0.5rem;
+    @media #{$breakpoint-up-two-columns} {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0.5rem;
 
-			margin: 28px 0 0.95rem;
-		}
-	}
+      margin: 28px 0 0.95rem;
+    }
+  }
 
-	&-SubmitButton {
-		width: 100%;
-		height: 4.25rem;
-		margin-bottom: 0.9rem !important;
+  &-SubmitButton {
+    width: 100%;
+    height: 4.25rem;
+    margin-bottom: 0.9rem !important;
 
-		white-space: normal;
-	}
+    white-space: normal;
+  }
 
-	&-Switcher {
-		margin-bottom: 0.75rem;
-	}
+  &-Switcher {
+    margin-bottom: 0.75rem;
+  }
 
-	&-ResetButton {
-		padding: 0 1rem 0.35rem;
-	}
+  &-ResetButton {
+    padding: 0 1rem 0.35rem;
+  }
 
-	&-ResetButtonText {
-		margin-left: 0.45rem;
+  &-ResetButtonText {
+    margin-left: 0.45rem;
 
-		font-size: 1rem;
-	}
+    font-size: 1rem;
+  }
 }

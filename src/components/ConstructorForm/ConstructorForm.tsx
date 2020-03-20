@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, Dispatch, SetStateAction } from 'react'
 
+import { ITopic } from './Buttons/Buttons'
 import Grid from '../Grid'
 import TopicsByParts from './TopicsByParts'
 import Buttons from './Buttons'
 import './ConstructorForm.scss'
 
-export const getNewTestTotalText = total => {
+export const getNewTestTotalText = (total: number): string => {
   if (total > 0) {
     const totalWord = 'задани'
 
@@ -18,13 +19,31 @@ export const getNewTestTotalText = total => {
   }
 }
 
-const ConstructorForm = ({ topicsList, setTopicsList }) => {
-  const [testTotal, setTestTotal] = useState({
+export interface ITestTotal {
+  amount: number
+  text: string
+}
+
+export interface IParts {
+  [test: string]: boolean
+  detailed: boolean
+}
+
+interface IConstructorFormProps {
+  topicsList: Array<ITopic> | null
+  setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
+}
+
+const ConstructorForm = ({
+  topicsList,
+  setTopicsList,
+}: IConstructorFormProps) => {
+  const [testTotal, setTestTotal] = useState<ITestTotal>({
     amount: 0,
     text: '',
   })
 
-  const [parts, setParts] = useState({
+  const [parts, setParts] = useState<IParts>({
     test: false,
     detailed: false,
   })
@@ -39,6 +58,7 @@ const ConstructorForm = ({ topicsList, setTopicsList }) => {
           </div>
           {topicsList && (
             <TopicsByParts
+              className="Constructor-PartList"
               topicsList={topicsList}
               setTopicsList={setTopicsList}
               parts={parts}

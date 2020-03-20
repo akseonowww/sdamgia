@@ -6,7 +6,8 @@ import React, {
   SetStateAction,
 } from 'react'
 
-import { ITopic, IParts, ITestTotal } from '../Buttons/Buttons'
+import { ITopic } from '../Buttons/Buttons'
+import { ITestTotal, IParts } from '../ConstructorForm'
 import Counter from '../../Counter/Counter'
 import Subtopic from './Subtopic'
 import PartName from './PartName/PartName'
@@ -18,6 +19,7 @@ import {
 } from '../../../pages/Student/components/Constructor/utils'
 
 interface ITopicsByPartsProps {
+  className?: string
   topicsList: Array<ITopic> | null
   setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
   parts: IParts
@@ -26,7 +28,8 @@ interface ITopicsByPartsProps {
   setTestTotal: Dispatch<SetStateAction<ITestTotal>>
 }
 
-const TopicsByParts = ({
+const TopicsByParts: any = ({
+  className,
   topicsList,
   setTopicsList,
   parts,
@@ -41,7 +44,7 @@ const TopicsByParts = ({
   }, [])
 
   const handleTopicClick = useCallback(
-    index => {
+    (index: number) => {
       const list = [...topicsList]
       list[index] = { ...list[index], checked: !list[index].checked }
 
@@ -59,7 +62,7 @@ const TopicsByParts = ({
   }, [extraTopics])
 
   const switchOffPart = useCallback(
-    part => {
+    (part: string) => {
       const newParts = {
         ...parts,
         [part]: false,
@@ -71,7 +74,7 @@ const TopicsByParts = ({
   )
 
   const switchOnPart = useCallback(
-    part => {
+    (part: string) => {
       const newParts = {
         ...parts,
         [part]: true,
@@ -99,66 +102,77 @@ const TopicsByParts = ({
       {}
     )
 
-  return Object.entries(topicsListParted).map(
-    ([part, topics]: [string, any], partI: number) => (
-      <div className="ConstructorForm-Part" key={partI}>
-        <PartName
-          part={part}
-          handleExtraPartNameClick={handleExtraPartNameClick}
-        />
+  return (
+    <div className={className}>
+      {topicsListParted &&
+        Object.entries(topicsListParted).map(
+          ([part, topics]: [string, any], partI: number) => (
+            <div className="ConstructorForm-Part" key={partI}>
+              <PartName
+                part={part}
+                handleExtraPartNameClick={handleExtraPartNameClick}
+              />
 
-        {(part !== 'extra' || (part === 'extra' && extraTopics)) &&
-          topics.map(
-            ({ id, title, value, checked, subtopics }: ITopic, i: number) => (
-              <div className="ConstructorForm-Row" key={'topic' + partI + i}>
-                <Counter
-                  className="ConstructorForm-Counter"
-                  name={`prob${id}`}
-                  value={value}
-                  list={[...topicsList]}
-                  index={id - 1}
-                  testTotal={testTotal}
-                  setValue={setTopicsList}
-                  setTestTotal={setTestTotal}
-                  part={part}
-                  switchOnPart={switchOnPart}
-                  switchOffPart={switchOffPart}
-                />
-                <div className="ConstructorForm-Topic">
-                  <div
-                    className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
-                    onClick={() => handleTopicClick(id - 1)}
-                  >
-                    <div className="ConstructorForm-TopicNumber">
-                      {part !== 'extra' ? id : `Д${i + 1}`}.
-                    </div>
-                    <div className="ConstructorForm-TopicDesc">
-                      <u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
-                        {title}
-                      </u>
-                    </div>
-                  </div>
+              {(part !== 'extra' || (part === 'extra' && extraTopics)) &&
+                topics.map(
+                  (
+                    { id, title, value, checked, subtopics }: ITopic,
+                    i: number
+                  ) => (
+                    <div
+                      className="ConstructorForm-Row"
+                      key={'topic' + partI + i}
+                    >
+                      <Counter
+                        className="ConstructorForm-Counter"
+                        name={`prob${id}`}
+                        value={value}
+                        list={[...topicsList]}
+                        index={id - 1}
+                        testTotal={testTotal}
+                        setValue={setTopicsList}
+                        setTestTotal={setTestTotal}
+                        part={part}
+                        switchOnPart={switchOnPart}
+                        switchOffPart={switchOffPart}
+                      />
+                      <div className="ConstructorForm-Topic">
+                        <div
+                          className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
+                          onClick={() => handleTopicClick(id - 1)}
+                        >
+                          <div className="ConstructorForm-TopicNumber">
+                            {part !== 'extra' ? id : `Д${i + 1}`}.
+                          </div>
+                          <div className="ConstructorForm-TopicDesc">
+                            <u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+                              {title}
+                            </u>
+                          </div>
+                        </div>
 
-                  {checked && (
-                    <div className="ConstructorForm-TopicSubs">
-                      {subtopics.map((subtopic, subI) => (
-                        <Subtopic
-                          i={id - 1}
-                          subtopic={subtopic}
-                          subI={subI}
-                          topicsList={topicsList}
-                          setTopicsList={setTopicsList}
-                          key={'subtopic' + subtopic.id}
-                        />
-                      ))}
+                        {checked && (
+                          <div className="ConstructorForm-TopicSubs">
+                            {subtopics.map((subtopic, subI) => (
+                              <Subtopic
+                                i={id - 1}
+                                subtopic={subtopic}
+                                subI={subI}
+                                topicsList={topicsList}
+                                setTopicsList={setTopicsList}
+                                key={'subtopic' + subtopic.id}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  )}
-                </div>
-              </div>
-            )
-          )}
-      </div>
-    )
+                  )
+                )}
+            </div>
+          )
+        )}
+    </div>
   )
 }
 

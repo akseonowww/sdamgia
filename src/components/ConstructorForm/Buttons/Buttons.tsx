@@ -8,6 +8,7 @@ import React, {
   MouseEvent,
 } from 'react'
 
+import { ITestTotal, IParts } from '../ConstructorForm'
 import Checkbox from '../../Checkbox'
 import {
   saveTopicsList,
@@ -45,16 +46,6 @@ export interface ISubtopic {
   title: string
   amount: number
   checked: boolean
-}
-
-export interface IParts {
-  [test: string]: boolean
-  detailed: boolean
-}
-
-export interface ITestTotal {
-  amount: number
-  text: string
 }
 
 const Buttons: FC<IButtonsProps> = ({
