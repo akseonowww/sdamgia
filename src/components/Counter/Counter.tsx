@@ -9,12 +9,9 @@ import cx from 'classnames'
 
 import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
 import { ITestTotal } from 'components/ConstructorForm/ConstructorForm'
-import nahStep from '../Form/nahStep'
 import { getNewTestTotalText } from '../ConstructorForm'
-import {
-  saveTopicsList,
-  saveTestTotal,
-} from '../../pages/Student/components/Constructor/utils'
+import { saveTestTotal, saveTopicsList } from 'components/ConstructorForm/utils'
+import nahStep from '../Form/nahStep'
 import '../Input/Input.scss'
 import './Counter.scss'
 

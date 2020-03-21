@@ -1,5 +1,5 @@
-import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
-import { IParts, ITestTotal } from 'components/ConstructorForm/ConstructorForm'
+import { ITopic } from './Buttons/Buttons'
+import { IParts, ITestTotal } from './ConstructorForm'
 
 const loadTopicsList = (): Array<ITopic> | null => {
   const topicListSaved = localStorage.getItem('topicList')
@@ -9,13 +9,6 @@ const loadTopicsList = (): Array<ITopic> | null => {
 
 const saveTopicsList = (topicList: Array<ITopic>) => {
   localStorage.setItem('topicList', JSON.stringify(topicList))
-}
-
-const loadExtraTopics = (): boolean =>
-  localStorage.getItem('extraTopics') === 'true'
-
-const saveExtraTopics = (value: boolean) => {
-  localStorage.setItem('extraTopics', value.toString())
 }
 
 const loadParts = (): IParts => {
@@ -39,12 +32,10 @@ const saveTestTotal = (testTotal: ITestTotal) => {
 }
 
 export {
-  loadTopicsList,
   saveTopicsList,
-  loadExtraTopics,
-  saveExtraTopics,
-  loadParts,
+  loadTopicsList,
   saveParts,
-  loadTestTotal,
+  loadParts,
   saveTestTotal,
+  loadTestTotal,
 }

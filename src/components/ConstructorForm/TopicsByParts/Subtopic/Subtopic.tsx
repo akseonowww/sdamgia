@@ -1,9 +1,9 @@
 import React, { FC, useRef, Dispatch, SetStateAction } from 'react'
 
-import Checkbox from '../../../Checkbox'
-import nahStep from '../../../Form/nahStep'
-import { saveTopicsList } from '../../../../pages/Student/components/Constructor/utils'
 import { ITopic, ISubtopic } from 'components/ConstructorForm/Buttons/Buttons'
+import { saveTopicsList } from 'components/ConstructorForm/utils'
+import nahStep from '../../../Form/nahStep'
+import Checkbox from '../../../Checkbox'
 
 interface ISubtopicProps {
   i: number

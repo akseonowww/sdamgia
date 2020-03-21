@@ -9,14 +9,14 @@ import React, {
 } from 'react'
 
 import { ITestTotal, IParts } from '../ConstructorForm'
-import Checkbox from '../../Checkbox'
 import {
-  saveTopicsList,
-  loadParts,
   saveParts,
-  loadTestTotal,
+  loadParts,
   saveTestTotal,
-} from '../../../pages/Student/components/Constructor/utils'
+  loadTestTotal,
+  saveTopicsList,
+} from '../utils'
+import Checkbox from '../../Checkbox'
 import '../../Button/Button.scss'
 import '../../Switcher/Switcher.scss'
 import '../../Switcher/_vertical/Switcher_vertical.scss'

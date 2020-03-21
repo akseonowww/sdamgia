@@ -1,12 +1,12 @@
 import React, { FC, useState, useEffect } from 'react'
 import axios from 'axios'
 
+import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
+import { getTopicList } from 'utils/topicList'
+import { loadTopicsList } from 'components/ConstructorForm/utils'
 import Section from 'components/Section'
 import Title from 'components/Title'
 import ConstructorForm from 'components/ConstructorForm'
-import { ITopic } from 'components/ConstructorForm/Buttons/Buttons'
-import { getTopicList } from 'utils/topicList'
-import { loadTopicsList } from 'pages/Student/components/Constructor/utils'
 import 'components/Link/Link.scss'
 
 const Constructor: FC = () => {

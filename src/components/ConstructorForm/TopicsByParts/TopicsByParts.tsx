@@ -8,15 +8,11 @@ import React, {
 
 import { ITopic } from '../Buttons/Buttons'
 import { ITestTotal, IParts } from '../ConstructorForm'
-import Counter from '../../Counter/Counter'
+import { saveExtraTopics, loadExtraTopics } from './utils'
+import { saveParts, saveTopicsList } from '../utils'
+import Counter from '../../Counter'
 import Subtopic from './Subtopic'
-import PartName from './PartName/PartName'
-import {
-  saveTopicsList,
-  loadExtraTopics,
-  saveExtraTopics,
-  saveParts,
-} from '../../../pages/Student/components/Constructor/utils'
+import PartName from './PartName'
 
 interface ITopicsByPartsProps {
   className?: string
