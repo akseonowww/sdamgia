@@ -1,34 +1,34 @@
 import { ITopic } from './Buttons/Buttons'
 import { IParts, ITestTotal } from './ConstructorForm'
 
-const loadTopicsList = (): Array<ITopic> | null => {
-  const topicListSaved = localStorage.getItem('topicList')
+const loadTopicsList = (page: string): Array<ITopic> | null => {
+  const topicListSaved = localStorage.getItem(`${page}TopicList`)
 
   return topicListSaved ? JSON.parse(topicListSaved) : null
 }
 
-const saveTopicsList = (topicList: Array<ITopic>) => {
-  localStorage.setItem('topicList', JSON.stringify(topicList))
+const saveTopicsList = (page: string, topicList: Array<ITopic>) => {
+  localStorage.setItem(`${page}TopicList`, JSON.stringify(topicList))
 }
 
-const loadParts = (): IParts => {
-  const partsSaved = localStorage.getItem('parts')
+const loadParts = (page: string): IParts => {
+  const partsSaved = localStorage.getItem(`${page}Parts`)
 
   return partsSaved ? JSON.parse(partsSaved) : null
 }
 
-const saveParts = (parts: IParts) => {
-  localStorage.setItem('parts', JSON.stringify(parts))
+const saveParts = (page: string, parts: IParts) => {
+  localStorage.setItem(`${page}Parts`, JSON.stringify(parts))
 }
 
-const loadTestTotal = (): ITestTotal => {
-  const testTotalSaved = localStorage.getItem('testTotal')
+const loadTestTotal = (page: string): ITestTotal => {
+  const testTotalSaved = localStorage.getItem(`${page}TestTotal`)
 
   return testTotalSaved ? JSON.parse(testTotalSaved) : null
 }
 
-const saveTestTotal = (testTotal: ITestTotal) => {
-  localStorage.setItem('testTotal', JSON.stringify(testTotal))
+const saveTestTotal = (page: string, testTotal: ITestTotal) => {
+  localStorage.setItem(`${page}TestTotal`, JSON.stringify(testTotal))
 }
 
 export {

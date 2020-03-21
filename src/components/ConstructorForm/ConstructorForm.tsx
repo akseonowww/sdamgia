@@ -19,6 +19,12 @@ export const getNewTestTotalText = (total: number): string => {
   }
 }
 
+interface IConstructorFormProps {
+  page: string
+  topicsList: Array<ITopic> | null
+  setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
+}
+
 export interface ITestTotal {
   amount: number
   text: string
@@ -29,12 +35,8 @@ export interface IParts {
   detailed: boolean
 }
 
-interface IConstructorFormProps {
-  topicsList: Array<ITopic> | null
-  setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
-}
-
 const ConstructorForm = ({
+  page,
   topicsList,
   setTopicsList,
 }: IConstructorFormProps) => {
@@ -59,6 +61,7 @@ const ConstructorForm = ({
           {topicsList && (
             <TopicsByParts
               className="Constructor-PartList"
+              page={page}
               topicsList={topicsList}
               setTopicsList={setTopicsList}
               parts={parts}
@@ -70,6 +73,7 @@ const ConstructorForm = ({
         </div>
 
         <Buttons
+          page={page}
           topicsList={topicsList}
           setTopicsList={setTopicsList}
           parts={parts}

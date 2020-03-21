@@ -17,6 +17,7 @@ import './Counter.scss'
 
 interface ICounter {
   className?: string
+  page: string
   name: string
   value: number
   setValue: Dispatch<SetStateAction<ITopic[] | null>>
@@ -30,6 +31,7 @@ interface ICounter {
 }
 
 const useCounter = (
+  page: string,
   index: number,
   value: number,
   setValue: Dispatch<SetStateAction<ITopic[] | null>>,
@@ -70,7 +72,7 @@ const useCounter = (
       const oldValue = list[index].value
       list[index] = { ...list[index], value: newValue }
       setValue(list)
-      saveTopicsList(list)
+      saveTopicsList(page, list)
 
       const newTestTotalAmount = testTotal.amount + (newValue - oldValue)
       const newTestTotalText = getNewTestTotalText(newTestTotalAmount)
@@ -79,7 +81,7 @@ const useCounter = (
         text: newTestTotalText,
       }
       setTestTotal(newTestTotal)
-      saveTestTotal(newTestTotal)
+      saveTestTotal(page, newTestTotal)
 
       if (Number(newValue)) {
         for (let i = 0; i < list.length; i++) {
@@ -93,6 +95,7 @@ const useCounter = (
     [
       countInput,
       setValue,
+      page,
       list,
       index,
       testTotal,
@@ -113,7 +116,7 @@ const useCounter = (
 
       list[index] = { ...list[index], value: newValue }
       setValue(list)
-      saveTopicsList(list)
+      saveTopicsList(page, list)
 
       const newTestTotalAmount = testTotal.amount - 1
       const newTestTotalText = getNewTestTotalText(newTestTotalAmount)
@@ -122,11 +125,21 @@ const useCounter = (
         text: newTestTotalText,
       }
       setTestTotal(newTestTotal)
-      saveTestTotal(newTestTotal)
+      saveTestTotal(page, newTestTotal)
 
       if (!newValue) switchOffPart(part)
     },
-    [value, setValue, list, index, testTotal, setTestTotal, part, switchOffPart]
+    [
+      value,
+      setValue,
+      page,
+      list,
+      index,
+      testTotal,
+      setTestTotal,
+      part,
+      switchOffPart,
+    ]
   )
 
   const increment = useCallback(
@@ -139,7 +152,7 @@ const useCounter = (
 
       list[index] = { ...list[index], value: newValue }
       setValue(list)
-      saveTopicsList(list)
+      saveTopicsList(page, list)
 
       const newTestTotalAmount = testTotal.amount + 1
       const newTestTotalText = getNewTestTotalText(newTestTotalAmount)
@@ -148,7 +161,7 @@ const useCounter = (
         text: newTestTotalText,
       }
       setTestTotal(newTestTotal)
-      saveTestTotal(newTestTotal)
+      saveTestTotal(page, newTestTotal)
 
       for (let i = 0; i < list.length; i++) {
         if (list[i].part === part && list[i].value < 1) return
@@ -156,7 +169,17 @@ const useCounter = (
 
       switchOnPart(part)
     },
-    [value, setValue, list, index, testTotal, setTestTotal, part, switchOnPart]
+    [
+      value,
+      setValue,
+      page,
+      list,
+      index,
+      testTotal,
+      setTestTotal,
+      part,
+      switchOnPart,
+    ]
   )
 
   return {
@@ -169,6 +192,7 @@ const useCounter = (
 
 const Counter = ({
   className,
+  page,
   name,
   index,
   value,
@@ -187,6 +211,7 @@ const Counter = ({
     increment,
     decrement,
   } = useCounter(
+    page,
     index,
     value,
     setValue,

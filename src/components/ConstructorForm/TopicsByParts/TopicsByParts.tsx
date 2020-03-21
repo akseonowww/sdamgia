@@ -16,6 +16,7 @@ import PartName from './PartName'
 
 interface ITopicsByPartsProps {
   className?: string
+  page: string
   topicsList: Array<ITopic> | null
   setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
   parts: IParts
@@ -26,6 +27,7 @@ interface ITopicsByPartsProps {
 
 const TopicsByParts: any = ({
   className,
+  page,
   topicsList,
   setTopicsList,
   parts,
@@ -45,9 +47,9 @@ const TopicsByParts: any = ({
       list[index] = { ...list[index], checked: !list[index].checked }
 
       setTopicsList(list)
-      saveTopicsList(list)
+      saveTopicsList(page, list)
     },
-    [topicsList, setTopicsList]
+    [page, topicsList, setTopicsList]
   )
 
   const handleExtraPartNameClick = useCallback(() => {
@@ -64,9 +66,9 @@ const TopicsByParts: any = ({
         [part]: false,
       }
       setParts(newParts)
-      saveParts(newParts)
+      saveParts(page, newParts)
     },
-    [parts, setParts]
+    [page, parts, setParts]
   )
 
   const switchOnPart = useCallback(
@@ -76,9 +78,9 @@ const TopicsByParts: any = ({
         [part]: true,
       }
       setParts(newParts)
-      saveParts(newParts)
+      saveParts(page, newParts)
     },
-    [parts, setParts]
+    [page, parts, setParts]
   )
 
   const topicsListParted =
@@ -121,6 +123,7 @@ const TopicsByParts: any = ({
                     >
                       <Counter
                         className="ConstructorForm-Counter"
+                        page={page}
                         name={`prob${id}`}
                         index={id - 1}
                         value={value}
@@ -151,6 +154,7 @@ const TopicsByParts: any = ({
                           <div className="ConstructorForm-TopicSubs">
                             {subtopics.map((subtopic, subI) => (
                               <Subtopic
+                                page={page}
                                 i={id - 1}
                                 subtopic={subtopic}
                                 subI={subI}

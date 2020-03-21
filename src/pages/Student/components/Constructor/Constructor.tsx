@@ -11,9 +11,10 @@ import 'components/Link/Link.scss'
 
 const Constructor: FC = () => {
   const [topicsList, setTopicsList] = useState<Array<ITopic> | null>(null)
+  const PAGE = 'student'
 
   useEffect(() => {
-    const topicsListSaved = loadTopicsList()
+    const topicsListSaved = loadTopicsList(PAGE)
 
     if (!topicsListSaved) {
       axios
@@ -60,7 +61,11 @@ const Constructor: FC = () => {
         не получается, до тех пор, пока не начнет получаться.
       </p>
 
-      <ConstructorForm topicsList={topicsList} setTopicsList={setTopicsList} />
+      <ConstructorForm
+        page={PAGE}
+        topicsList={topicsList}
+        setTopicsList={setTopicsList}
+      />
     </Section>
   )
 }

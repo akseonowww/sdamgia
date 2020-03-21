@@ -6,6 +6,7 @@ import nahStep from '../../../Form/nahStep'
 import Checkbox from '../../../Checkbox'
 
 interface ISubtopicProps {
+  page: string
   i: number
   subtopic: ISubtopic
   subI: number
@@ -14,6 +15,7 @@ interface ISubtopicProps {
 }
 
 const Subtopic: FC<ISubtopicProps> = ({
+  page,
   i,
   subtopic,
   subI,
@@ -54,7 +56,7 @@ const Subtopic: FC<ISubtopicProps> = ({
       checked: newValue,
     }
     setTopicsList(list)
-    saveTopicsList(list)
+    saveTopicsList(page, list)
   }
 
   return (

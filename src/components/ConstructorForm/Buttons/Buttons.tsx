@@ -23,6 +23,7 @@ import '../../Switcher/_vertical/Switcher_vertical.scss'
 import '../../Switcher/_checkbox/Switcher_checkbox.scss'
 
 interface IButtonsProps {
+  page: string
   topicsList: Array<ITopic> | null
   setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
   parts: IParts
@@ -49,6 +50,7 @@ export interface ISubtopic {
 }
 
 const Buttons: FC<IButtonsProps> = ({
+  page,
   topicsList,
   setTopicsList,
   parts,
@@ -58,9 +60,9 @@ const Buttons: FC<IButtonsProps> = ({
   getNewTestTotalText,
 }) => {
   useEffect(() => {
-    if (loadTestTotal()) setTestTotal(loadTestTotal())
-    if (loadParts()) setParts(loadParts())
-  }, [setParts, setTestTotal])
+    if (loadTestTotal(page)) setTestTotal(loadTestTotal(page))
+    if (loadParts(page)) setParts(loadParts(page))
+  }, [page, setParts, setTestTotal])
 
   const switchPart = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +79,7 @@ const Buttons: FC<IButtonsProps> = ({
           [part]: newValue,
         }
         setParts(newParts)
-        saveParts(newParts)
+        saveParts(page, newParts)
 
         const list = [...topicsList]
         let newTestTotalAmount = testTotal.amount
@@ -97,14 +99,14 @@ const Buttons: FC<IButtonsProps> = ({
         }
 
         setTopicsList(list)
-        saveTopicsList(list)
+        saveTopicsList(page, list)
 
         const newTestTotal = {
           amount: newTestTotalAmount,
           text: getNewTestTotalText(newTestTotalAmount),
         }
         setTestTotal(newTestTotal)
-        saveTestTotal(newTestTotal)
+        saveTestTotal(page, newTestTotal)
       }
     },
     [
@@ -113,6 +115,7 @@ const Buttons: FC<IButtonsProps> = ({
       setParts,
       testTotal,
       setTestTotal,
+      page,
       topicsList,
       setTopicsList,
     ]
@@ -130,21 +133,21 @@ const Buttons: FC<IButtonsProps> = ({
         }
       }
       setTopicsList(list)
-      saveTopicsList(list)
+      saveTopicsList(page, list)
 
       const newTestTotal = {
         amount: 0,
         text: '',
       }
       setTestTotal(newTestTotal)
-      saveTestTotal(newTestTotal)
+      saveTestTotal(page, newTestTotal)
 
       const newParts = {
         test: false,
         detailed: false,
       }
       setParts(newParts)
-      saveParts(newParts)
+      saveParts(page, newParts)
     }
   }
 
