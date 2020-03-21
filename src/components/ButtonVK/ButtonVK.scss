@@ -1,33 +1,32 @@
-.ButtonVK {
-	display: block;
-	margin-bottom: 8px;
-	padding: 3px 0 4px !important;
+.ButtonVk {
+  display: block;
+  margin-bottom: 8px;
+  padding: 3px 0 4px !important;
 
-	font-size: inherit;
-	font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
-		sans-serif;
-	text-align: center;
-	text-decoration: none;
-	color: #fff !important;
+  font-size: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+    sans-serif;
+  text-align: center;
+  color: #fff !important;
+  text-decoration: none;
 
-	background: #5181b8;
-	border-radius: 4px !important;
+  background: #5181b8;
+  border-radius: 4px !important;
 
-	&:hover {
-		background: #5b88bd;
-	}
+  &::before {
+    content: "";
+    position: relative;
+    bottom: -1px;
 
-	&::before {
-		position: relative;
-		bottom: -1px;
+    display: inline-block;
+    width: 15px;
+    height: 11px;
+    margin-right: 8px;
 
-		display: inline-block;
-		width: 15px;
-		height: 11px;
-		margin-right: 8px;
+    background: url("assets/post_widget_2x.png") 0 -52px / 16px 106px no-repeat;
+  }
 
-		background: url(assets/post_widget_2x.png) 0 -52px / 16px 106px no-repeat;
-
-		content: '';
-	}
+  &:hover {
+    background: #5b88bd;
+  }
 }

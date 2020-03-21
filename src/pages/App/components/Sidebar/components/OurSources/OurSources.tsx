@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import cx from 'classnames'
 
-import ButtonVK from 'components/ButtonVK/ButtonVK'
+import ButtonVK from 'components/ButtonVk'
 import './OurSources.scss'
 
 interface IOurSources {
