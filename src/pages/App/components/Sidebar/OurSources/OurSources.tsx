@@ -26,7 +26,7 @@ const OurSources: FC<IOurSources> = ({ className }) => (
       {' '}
     </a>
     <a
-      className="OurSources-ButtonStore OurSources-ButtonStore_iOS"
+      className="OurSources-ButtonStore OurSources-ButtonStore_ios"
       href="https://appsto.re/ru/TSavbb.i"
       target="_blank"
       rel="noopener noreferrer"
