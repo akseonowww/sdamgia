@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react'
 import cx from 'classnames'
 
-import ProfileLink from './components/ProfileLink/ProfileLink'
-import ProfileAuth from './components/ProfileAuth'
+import ProfileLink from './ProfileLink/ProfileLink'
+import ProfileAuth from './ProfileAuth'
 import './ProfileWidget.scss'
 
 interface IProfileWidgetProps {

@@ -1,4 +1,4 @@
-import { INewsItemProps } from 'pages/App/components/Sidebar/components/News/components/NewsItem'
+import { INewsItemProps } from 'pages/App/components/Sidebar/News/NewsItem'
 
 export const getNewsList = (): Array<INewsItemProps> => [
   {

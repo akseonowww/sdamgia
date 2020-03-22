@@ -1,4 +1,4 @@
-import { IBotProps } from 'pages/App/components/Sidebar/components/News'
+import { IBotProps } from 'pages/App/components/Sidebar/News'
 
 import vkBotImg from './assets/vkBotImg.png'
 import telegramBotImg from './assets/telegramBotImg.png'

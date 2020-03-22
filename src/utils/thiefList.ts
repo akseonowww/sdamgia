@@ -1,4 +1,4 @@
-import { IThiefProps } from 'pages/App/components/Sidebar/components/News'
+import { IThiefProps } from 'pages/App/components/Sidebar/News'
 
 export const getThiefList = (): Array<IThiefProps> => [
   {

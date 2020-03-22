@@ -2,13 +2,13 @@ import React, { FC, useState, useEffect } from 'react'
 import axios from 'axios'
 import cx from 'classnames'
 
-import { INewsItemProps } from './components/NewsItem/NewsItem'
+import { INewsItemProps } from './NewsItem/NewsItem'
 import { getBotList } from 'utils/botList'
 import { getNewsList } from 'utils/newsList'
 import { getThiefList } from 'utils/thiefList'
 import './News.scss'
 
-import NewsItem from './components/NewsItem/NewsItem'
+import NewsItem from './NewsItem/NewsItem'
 
 export interface IBotProps {
   url: string

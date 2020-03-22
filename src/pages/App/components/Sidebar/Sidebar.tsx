@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from 'react'
 import cx from 'classnames'
 
-import NavSide from './components/NavSide'
-import Search from './components/Search/Search'
-import ProfileWidget from './components/ProfileWidget/ProfileWidget'
-import News from './components/News/News'
-import OurSources from './components/OurSources/OurSources'
+import NavSide from './NavSide'
+import Search from './Search/Search'
+import ProfileWidget from './ProfileWidget/ProfileWidget'
+import News from './News/News'
+import OurSources from './OurSources/OurSources'
 import './Sidebar.scss'
 
 import sidebarBannerTopAd from './assets/sidebarBannerTopAd.gif'
