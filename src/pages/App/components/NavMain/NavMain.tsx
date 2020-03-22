@@ -9,7 +9,7 @@ interface INavMainProps {
 }
 
 const NavMain: FC<INavMainProps> = ({ className }) => {
-  const [mobileMenu, setMobileMenu] = useState<boolean>(false)
+  const [mobileMenu, isMobileMenu] = useState<boolean>(false)
   const [subjectList, setSubjectList] = useState<Array<ISubject>>([])
 
   const exam = 'ege'
@@ -19,7 +19,7 @@ const NavMain: FC<INavMainProps> = ({ className }) => {
   }, [])
 
   const toggleMobileMenu = useCallback(() => {
-    setMobileMenu(!mobileMenu)
+    isMobileMenu(!mobileMenu)
   }, [mobileMenu])
 
   useEffect(() => {
