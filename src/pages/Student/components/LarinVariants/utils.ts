@@ -4,7 +4,7 @@ const loadVariantsAll = (): boolean => {
   return variantsAllSaved ? JSON.parse(variantsAllSaved) : false
 }
 
-const saveVariantsAll = (variantsAll: boolean) => {
+const saveVariantsAll = (variantsAll: boolean): void => {
   localStorage.setItem('variantsAll', JSON.stringify(variantsAll))
 }
 
