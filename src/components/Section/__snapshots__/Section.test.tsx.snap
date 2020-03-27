@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section should render a content 1`] = `
+"<section class=\\"Section\\">
+  <div>Auxiliary Section</div>
+</section>"
+`;
+
+exports[`Section should render a content 2`] = `
+"<section class=\\"Section Student-Section\\">
+  <div>Student Section</div>
+</section>"
+`;
+
+exports[`Section should render a content 3`] = `
+"<section class=\\"Section Student-Section\\">
+  <h1>Student Section</h1>
+  <div>Description</div>
+</section>"
+`;
