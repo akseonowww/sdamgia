@@ -3,17 +3,17 @@ import { unmountComponentAtNode, render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import pretty from 'pretty'
 
-import VariantsLink, { IVariantsLinkProps } from '../VariantsLink'
+import VariantLink, { IVariantLinkProps } from '../VariantLink'
 
 jest.mock('react-router-dom', () => ({
-  Link: ({ className, to, title, children }: IVariantsLinkProps) => (
+  Link: ({ className, to, title, children }: IVariantLinkProps) => (
     <div className={className} data-to={to} title={title}>
       {children}
     </div>
   ),
 }))
 
-describe('VariantsLink', () => {
+describe('VariantLink', () => {
   let container: HTMLElement | null = null
 
   beforeEach(() => {
@@ -31,13 +31,13 @@ describe('VariantsLink', () => {
 
   it('renders with required and optional props', () => {
     act(() => {
-      render(<VariantsLink to="/test?id=1">1</VariantsLink>, container)
+      render(<VariantLink to="/test?id=1">1</VariantLink>, container)
     })
     expect(container && container.textContent).toBe('1')
 
     act(() => {
       render(
-        <VariantsLink
+        <VariantLink
           className="LarinVariants-Link"
           data-wordClassName="LarinVariants-Word"
           to="/test?id=1"
@@ -47,7 +47,7 @@ describe('VariantsLink', () => {
           <div className="LarinVariants-Hint" title="Помощь">
             ?
           </div>
-        </VariantsLink>,
+        </VariantLink>,
         container
       )
     })
@@ -56,13 +56,13 @@ describe('VariantsLink', () => {
 
   it('should render a number', () => {
     act(() => {
-      render(<VariantsLink to="/test?id=1">1</VariantsLink>, container)
+      render(<VariantLink to="/test?id=1">1</VariantLink>, container)
     })
     if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
 
     act(() => {
       render(
-        <VariantsLink
+        <VariantLink
           className="LarinVariants-Link"
           data-wordClassName="LarinVariants-Word"
           to="/test?id=1"
@@ -72,7 +72,7 @@ describe('VariantsLink', () => {
           <div className="LarinVariants-Hint" title="Помощь">
             ?
           </div>
-        </VariantsLink>,
+        </VariantLink>,
         container
       )
     })

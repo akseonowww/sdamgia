@@ -7,7 +7,7 @@ import Title from 'components/Title'
 import Section from 'components/Section'
 import Grid from 'components/Grid'
 import 'components/Link/Link.scss'
-import VariantsLink from 'components/VariantsLink'
+import VariantLink from 'components/VariantLink'
 import 'components/VariantsBox/VariantsBox.scss'
 import './LarinVariants.scss'
 
@@ -86,13 +86,13 @@ const LarinVariants: FC = () => {
         >
           {larinVariants &&
             larinVariants.map(({ id, number }: ILarinVariant, i: number) => (
-              <VariantsLink
+              <VariantLink
                 to={'/test?id=' + id}
                 title={'Александр Ларин, тренировочный вариант ЕГЭ № ' + number}
                 key={i}
               >
                 {number}
-              </VariantsLink>
+              </VariantLink>
             ))}
         </Grid>
 

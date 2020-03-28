@@ -5,7 +5,7 @@ import Section from 'components/Section'
 import ComplexHeader from 'components/ComplexHeader'
 import Title from 'components/Title'
 import Grid from 'components/Grid'
-import VariantsLink from 'components/VariantsLink'
+import VariantLink from 'components/VariantLink'
 import 'components/Link/Link.scss'
 import './OurVariants.scss'
 
@@ -36,120 +36,120 @@ const OurVariants: FC = () => (
     </p>
 
     <Grid className="Variants">
-      <VariantsLink
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890461"
       >
         1
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890462"
       >
         2
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890463"
       >
         3
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890464"
       >
         4
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890465"
       >
         5
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890466"
       >
         6
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890467"
       >
         7
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890468"
       >
         8
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=24890469"
       >
         9
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=248904610"
       >
         10
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=248904611"
       >
         11
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=248904612"
       >
         12
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=248904613"
       >
         13
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=248904614"
       >
         14
-      </VariantsLink>
-      <VariantsLink
+      </VariantLink>
+      <VariantLink
         className="OurVariants-Link"
         data-wordClassName="OurVariants-Word"
         to="/test?id=248904615"
       >
         15
-      </VariantsLink>
-      <VariantsLink
-        className="VariantsLink_onePerRow Link_static"
+      </VariantLink>
+      <VariantLink
+        className="VariantLink_onePerRow Link_static"
         to="/test?a=own_test"
       >
         Ваш персональный вариант
-        <div className="VariantsLink-Hint" title="Помощь">
+        <div className="VariantLink-Hint" title="Помощь">
           ?
         </div>
-      </VariantsLink>
+      </VariantLink>
     </Grid>
 
     <div className="ComplexHeader-Link ComplexHeader-Link_mobile">

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import cx from 'classnames'
 
 import '../Link/Link.scss'
-import './VariantsLink.scss'
+import './VariantLink.scss'
 
-export interface IVariantsLinkProps {
+export interface IVariantLinkProps {
   className?: string
   to: string
   title?: string
@@ -13,7 +13,7 @@ export interface IVariantsLinkProps {
   'data-wordClassName'?: string
 }
 
-const VariantsLink: FC<IVariantsLinkProps> = props => {
+const VariantsLink: FC<IVariantLinkProps> = props => {
   const { className, to, children, title } = props
   const dataWordClassName = props['data-wordClassName']
 
