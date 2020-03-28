@@ -5,7 +5,7 @@ import cx from 'classnames'
 import '../Link/Link.scss'
 import './VariantsLink.scss'
 
-interface IVariantsLinkProps {
+export interface IVariantsLinkProps {
   className?: string
   to: string
   title?: string
