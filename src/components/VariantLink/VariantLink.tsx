@@ -13,13 +13,13 @@ export interface IVariantLinkProps {
   'data-wordClassName'?: string
 }
 
-const VariantsLink: FC<IVariantLinkProps> = props => {
+const VariantLink: FC<IVariantLinkProps> = props => {
   const { className, to, children, title } = props
   const dataWordClassName = props['data-wordClassName']
 
   return (
     <Link
-      className={cx('Link', 'VariantsLink', className)}
+      className={cx('Link', 'VariantLink', className)}
       to={to}
       title={title}
     >
@@ -31,4 +31,4 @@ const VariantsLink: FC<IVariantLinkProps> = props => {
   )
 }
 
-export default VariantsLink
+export default VariantLink

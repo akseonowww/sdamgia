@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VariantLink should render a number 1`] = `"<div class=\\"Link VariantsLink\\" data-to=\\"/test?id=1\\">1</div>"`;
+exports[`VariantLink should render a number 1`] = `"<div class=\\"Link VariantLink\\" data-to=\\"/test?id=1\\">1</div>"`;
 
 exports[`VariantLink should render a number 2`] = `
-"<div class=\\"Link VariantsLink LarinVariants-Link\\" data-to=\\"/test?id=1\\" title=\\"Larin Variant #1\\">1<div class=\\"LarinVariants-Hint\\" title=\\"Помощь\\">?</div>
+"<div class=\\"Link VariantLink LarinVariants-Link\\" data-to=\\"/test?id=1\\" title=\\"Larin Variant #1\\">1<div class=\\"LarinVariants-Hint\\" title=\\"Помощь\\">?</div>
 </div>"
 `;
