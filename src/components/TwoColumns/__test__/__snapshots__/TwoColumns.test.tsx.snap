@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TwoColumns should render a content 1`] = `
+"<section class=\\"Section\\">
+  <div class=\\"Grid TwoColumns-Grid\\">
+    <div class=\\"TwoColumns-Col TwoColumns-Col_1\\">
+      <div>First Col</div>
+    </div>
+    <div class=\\"TwoColumns-Col TwoColumns-Col_2\\">
+      <div>Second Col</div>
+    </div>
+  </div>
+</section>"
+`;
