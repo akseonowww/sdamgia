@@ -25,6 +25,6 @@ describe('SearchIcon', () => {
     act(() => {
       render(<SearchIcon />, container)
     })
-    if (container) expect(pretty(container.outerHTML)).toMatchSnapshot()
+    if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
   })
 })
