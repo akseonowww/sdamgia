@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title should render a content 1`] = `"<h2 class=\\"Title\\">Variants</h2>"`;
+
+exports[`Title should render a content 2`] = `"<h2 class=\\"Title\\"><span>Variants</span><span>2020</span></h2>"`;
