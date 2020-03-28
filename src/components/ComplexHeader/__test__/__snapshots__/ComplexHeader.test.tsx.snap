@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComplexHeader should render a content 1`] = `
+"<div class=\\"ComplexHeader\\">
+  <h1>Variants</h1>
+  <div>Archive</div>
+</div>"
+`;
+
+exports[`ComplexHeader should render a content 2`] = `
+"<div class=\\"ComplexHeader Section-ComplexHeader\\">
+  <h1>Variants</h1>
+  <div>Archive</div>
+</div>"
+`;
