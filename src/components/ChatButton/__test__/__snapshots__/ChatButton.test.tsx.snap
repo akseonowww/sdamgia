@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatButton should render a content 1`] = `"<div class=\\"ChatButton\\">Чат</div>"`;
