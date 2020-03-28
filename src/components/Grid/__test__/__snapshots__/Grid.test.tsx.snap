@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid should render a content 1`] = `
+"<div class=\\"Grid\\">
+  <div>Auxiliary Block</div>
+</div>"
+`;
+
+exports[`Grid should render a content 2`] = `
+"<div class=\\"Grid ConstructorForm\\">
+  <div>Constructor Form</div>
+</div>"
+`;
+
+exports[`Grid should render a content 3`] = `
+"<div class=\\"Grid ConstructorForm\\">
+  <div>Constructor Form</div>
+  <div>Constructor Buttons</div>
+</div>"
+`;

@@ -4,7 +4,7 @@ import cx from 'classnames'
 import './Grid.scss'
 
 interface IGridProps {
-  className: string
+  className?: string
   children: ReactNode
 }
 
