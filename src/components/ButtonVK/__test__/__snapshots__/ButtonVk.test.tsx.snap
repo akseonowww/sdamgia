@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonVk should render a content 1`] = `"<a class=\\"ButtonVk\\" href=\\"https://vk.com/reshuege\\" rel=\\"noopener noreferrer\\">Our group</a>"`;
+
+exports[`ButtonVk should render a content 2`] = `"<a class=\\"ButtonVk Student-ButtonVk\\" href=\\"https://vk.com/reshuege\\" rel=\\"noopener noreferrer\\">Our group</a>"`;
