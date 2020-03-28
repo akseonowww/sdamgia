@@ -3,7 +3,7 @@ import { unmountComponentAtNode, render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import pretty from 'pretty'
 
-import Section from './Section'
+import Section from '../Section'
 
 describe('Section', () => {
   let container: HTMLElement | null = null
