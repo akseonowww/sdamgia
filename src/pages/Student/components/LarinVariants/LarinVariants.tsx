@@ -8,7 +8,7 @@ import Section from 'components/Section'
 import Grid from 'components/Grid'
 import 'components/Link/Link.scss'
 import VariantLink from 'components/VariantLink'
-import 'components/VariantsBox/VariantsBox.scss'
+import 'components/VariantBox/VariantBox.scss'
 import './LarinVariants.scss'
 
 interface ILarinVariant {
@@ -78,7 +78,7 @@ const LarinVariants: FC = () => {
         по субботам, решения по пятницам.
       </p>
 
-      <div className="VariantsBox">
+      <div className="VariantBox">
         <Grid
           className={cx('Variants', 'LarinVariants-Variants', {
             'LarinVariants-Variants_cut': !variantsAll,
@@ -97,7 +97,7 @@ const LarinVariants: FC = () => {
         </Grid>
 
         <div
-          className="Link Link_pseudo Link_wrap VariantsBox-Control LarinVariants-Control"
+          className="Link Link_pseudo Link_wrap VariantBox-Control LarinVariants-Control"
           onClick={toggleVariantsAll}
         >
           <u className="Link-U Link_pseudo-U Link_wrap-U">
