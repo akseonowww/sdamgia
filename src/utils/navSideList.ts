@@ -9,7 +9,7 @@ export const getNavSideList = (): Array<IPage> => [
   {
     url: '/manual',
     exact: false,
-    text: 'Об экзаменеs',
+    text: 'Об экзамене',
     hint: 'Шкалы, статистика, оценивание заданий',
   },
   {
