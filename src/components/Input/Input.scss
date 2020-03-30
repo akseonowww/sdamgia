@@ -1,31 +1,31 @@
-@import 'src/styles/variables', 'src/styles/transitions';
+@import "src/styles/variables", "src/styles/transitions";
 
 .Input {
-	box-sizing: border-box;
-	padding: 0.3rem 0.55rem 0.4rem;
+  box-sizing: border-box;
+  padding: 0.3rem 0.55rem 0.4rem;
 
-	font-family: inherit;
-	font-size: inherit;
+  font-size: inherit;
+  font-family: inherit;
 
-	background: $input-bg;
-	border: none;
-	border-radius: $border-radius-input;
-	outline: none;
-	box-shadow: none;
+  background: $input-bg;
+  border: none;
+  border-radius: $border-radius-input;
+  outline: none;
+  box-shadow: none;
 
-	@include transition;
+  @include transition;
 
-	&:hover {
-		background: $input-bg-hover;
-	}
+  &:hover {
+    background: $input-bg-hover;
+  }
 
-	&:focus {
-		background: $white;
-		box-shadow: 0 1px 3px 1px $border-black;
-	}
+  &:focus {
+    background: $white;
+    box-shadow: 0 1px 3px 1px $border-black;
+  }
 
-	&:hover,
-	&:focus {
-		@include transition-reset;
-	}
+  &:hover,
+  &:focus {
+    @include transition-reset;
+  }
 }

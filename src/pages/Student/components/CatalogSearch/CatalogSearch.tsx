@@ -2,7 +2,7 @@ import React, { FC, useState, useLayoutEffect } from 'react'
 
 import Title from 'components/Title'
 import 'components/Form/Form.scss'
-import 'components/Input/Input.scss'
+import Input from 'components/Input'
 import 'components/Button/Button.scss'
 
 const useWindowWidth = (): number => {
@@ -21,6 +21,7 @@ const useWindowWidth = (): number => {
 }
 
 const CatalogSearch: FC = () => {
+  const [value, setValue] = useState('')
   const windowWidth = useWindowWidth()
 
   const placeholder =
@@ -37,11 +38,12 @@ const CatalogSearch: FC = () => {
 
       <form action="/test" method="POST">
         <div className="Form_oneLine">
-          <input
-            className="Input Form_oneLine-Input"
-            type="text"
+          <Input
+            className="Form_oneLine-Input"
             name="id"
+            value={value}
             placeholder={placeholder}
+            setValue={setValue}
           />
           <input className="Button" type="submit" value="Открыть" />
         </div>

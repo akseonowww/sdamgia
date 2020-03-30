@@ -12,7 +12,7 @@ import { ITestTotal } from 'components/ConstructorForm/ConstructorForm'
 import { getNewTestTotalText } from '../ConstructorForm'
 import { saveTestTotal, saveTopicsList } from 'components/ConstructorForm/utils'
 import nahStep from '../Form/nahStep'
-import '../Input/Input.scss'
+import Input from 'components/Input'
 import './Counter.scss'
 
 interface ICounter {
@@ -41,7 +41,7 @@ const useCounter = (
   part: string,
   switchOnPart: (part: string) => void,
   switchOffPart: (part: string) => void,
-  countInput: React.RefObject<HTMLInputElement | null>
+  countInput: RefObject<HTMLInputElement | null>
 ) => {
   const handleCounterInputFocus = useCallback(() => {
     if (countInput && countInput.current) {
@@ -234,17 +234,19 @@ const Counter = ({
       >
         −
       </button>
-      <input
-        className="Input Counter-Input"
+
+      <Input
+        className="Counter-Input"
         type="tel"
         name={name}
-        value={value}
-        ref={countInput}
-        onClick={handleCounterInputFocus}
-        onChange={handleCounterInputChange}
-        style={{ /* stylelint-disable */ left: 0 }}
+        value={value.toString()}
         tabIndex={index + 1}
+        style={{ /* stylelint-disable */ left: 0 }}
+        innerRef={countInput}
+        handleClick={handleCounterInputFocus}
+        handleChange={handleCounterInputChange}
       />
+
       <button className="Counter-Button" onClick={increment}>
         +
       </button>

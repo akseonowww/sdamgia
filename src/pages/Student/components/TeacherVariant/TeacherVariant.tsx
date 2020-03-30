@@ -1,31 +1,37 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 
 import Title from 'components/Title'
 import 'components/Form/Form.scss'
-import 'components/Input/Input.scss'
+import Input from 'components/Input'
 import 'components/Button/Button.scss'
 
-const TeacherVariant: FC = () => (
-  <div className="TeacherVariant">
-    <Title>Вариант учителя</Title>
+const TeacherVariant: FC = () => {
+  const [value, setValue] = useState('')
 
-    <p className="Section-Desc">
-      Если ваш школьный учитель составил работу и сообщил вам номер,
-      введите&nbsp;его&nbsp;здесь.
-    </p>
+  return (
+    <div className="TeacherVariant">
+      <Title>Вариант учителя</Title>
 
-    <form action="/test" method="POST">
-      <div className="Form_oneLine">
-        <input
-          className="Input Form_oneLine-Input"
-          type="tel"
-          name="id"
-          placeholder="Номер варианта"
-        />
-        <input className="Button" type="submit" value="Открыть" />
-      </div>
-    </form>
-  </div>
-)
+      <p className="Section-Desc">
+        Если ваш школьный учитель составил работу и сообщил вам номер,
+        введите&nbsp;его&nbsp;здесь.
+      </p>
+
+      <form action="/test" method="POST">
+        <div className="Form_oneLine">
+          <Input
+            className="Form_oneLine-Input"
+            type="tel"
+            name="id"
+            value={value}
+            placeholder="Номер варианта"
+            setValue={setValue}
+          />
+          <input className="Button" type="submit" value="Открыть" />
+        </div>
+      </form>
+    </div>
+  )
+}
 
 export default TeacherVariant
