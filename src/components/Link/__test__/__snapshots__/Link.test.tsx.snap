@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link should render a content 1`] = `"<a class=\\"Link\\" href=\\"/\\" rel=\\"noopener noreferrer\\">About Project</a>"`;
+
+exports[`Link should render a content 2`] = `"<a class=\\"Link Link_black\\" href=\\"/\\" rel=\\"noopener noreferrer\\">About Project</a>"`;
+
+exports[`Link should render a content 3`] = `"<a class=\\"Link Link_static\\" href=\\"/archive\\">Archive</a>"`;
+
+exports[`Link should render a content 4`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
+
+exports[`Link should render a content 5`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
+
+exports[`Link should render a content 6`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
