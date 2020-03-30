@@ -1,7 +1,7 @@
 import React, { FC, useState, useCallback, useRef } from 'react'
 import cx from 'classnames'
 
-import 'components/Link/Link.scss'
+import Link from 'components/Link'
 import 'components/Button/Button.scss'
 import './ProfileAuth.scss'
 
@@ -164,15 +164,15 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
       </form>
 
       <div className="ProfileAuth-Links">
-        <a className="Link Link_wrap ProfileAuth-Link" href="/register">
+        <Link className="Link_wrap ProfileAuth-Link" href="/register">
           <u className="Link-U Link_wrap-U">Зарегистрироваться</u>
-        </a>
-        <a className="Link Link_wrap ProfileAuth-Link" href="/pass_change">
+        </Link>
+        <Link className="Link_wrap ProfileAuth-Link" href="/pass_change">
           <u className="Link-U Link_wrap-U">Восстановление пароля</u>
-        </a>
-        <a className="Link Link_wrap ProfileAuth-Link" href="/vkauth">
+        </Link>
+        <Link className="Link_wrap ProfileAuth-Link" href="/vkauth">
           <u className="Link-U Link_wrap-U">Вход через ВКонтакте</u>
-        </a>
+        </Link>
       </div>
     </div>
   )

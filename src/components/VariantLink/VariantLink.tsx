@@ -1,8 +1,7 @@
 import React, { FC, ReactNode } from 'react'
-import { Link } from 'react-router-dom'
 import cx from 'classnames'
 
-import '../Link/Link.scss'
+import Link from 'components/Link'
 import './VariantLink.scss'
 
 export interface IVariantLinkProps {
@@ -18,11 +17,7 @@ const VariantLink: FC<IVariantLinkProps> = props => {
   const dataWordClassName = props['data-wordClassName']
 
   return (
-    <Link
-      className={cx('Link', 'VariantLink', className)}
-      to={to}
-      title={title}
-    >
+    <Link className={cx('VariantLink', className)} to={to} title={title}>
       {!Number.isNaN(Number(children)) && dataWordClassName && (
         <span className={dataWordClassName}>Вариант&nbsp;</span>
       )}

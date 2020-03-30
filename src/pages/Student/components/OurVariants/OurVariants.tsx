@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
-import { Link } from 'react-router-dom'
 
 import Section from 'components/Section'
 import ComplexHeader from 'components/ComplexHeader'
 import Title from 'components/Title'
 import Grid from 'components/Grid'
 import VariantLink from 'components/VariantLink'
-import 'components/Link/Link.scss'
+import Link from 'components/Link'
 import './OurVariants.scss'
 
 const OurVariants: FC = () => (
@@ -18,7 +17,7 @@ const OurVariants: FC = () => (
         <span className="Title-Caption">новые октябрьские</span>
       </Title>
       <div className="ComplexHeader-Link ComplexHeader-Link_desktop">
-        <Link className="Link Link_static" to="/archive">
+        <Link className="Link_static" to="/archive">
           Прошлые месяцы
         </Link>
       </div>
@@ -142,7 +141,7 @@ const OurVariants: FC = () => (
         15
       </VariantLink>
       <VariantLink
-        className="VariantLink_onePerRow Link_static"
+        className="Link_static VariantLink_onePerRow"
         to="/test?a=own_test"
       >
         Ваш персональный вариант
@@ -153,7 +152,7 @@ const OurVariants: FC = () => (
     </Grid>
 
     <div className="ComplexHeader-Link ComplexHeader-Link_mobile">
-      <Link className="Link Link_static" to="/archive">
+      <Link className="Link_static" to="/archive">
         Варианты прошлых месяцев
       </Link>
     </div>

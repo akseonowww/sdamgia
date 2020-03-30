@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import cx from 'classnames'
 
+import Link from 'components/Link'
 import './Footer.scss'
 
 import spbsut from './assets/spbsut.png'
@@ -12,17 +13,17 @@ interface IFooterProps {
 const Footer: FC<IFooterProps> = ({ className }) => (
   <footer className={cx('Footer', className)}>
     <nav className="Footer-Menu">
-      <a className="Link Link_black" href="/about">
+      <Link className="Link_black" href="/about">
         О проекте
-      </a>{' '}
+      </Link>{' '}
       ·{' '}
-      <a className="Link Link_black" href="/staff">
+      <Link className="Link_black" href="/staff">
         Редакция
-      </a>{' '}
+      </Link>{' '}
       ·{' '}
-      <a className="Link Link_black" href="/legal">
+      <Link className="Link_black" href="/legal">
         Правовая&nbsp;информация
-      </a>{' '}
+      </Link>{' '}
     </nav>
     <a
       className="Footer-Ad"

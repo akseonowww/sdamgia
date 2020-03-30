@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+
 import axios from 'axios'
 
 import { getNavSideList, IPage } from 'utils/navSideList'
+import Link from 'components/Link'
 import './NavSide.scss'
 
 const NavSide = () => {
@@ -33,16 +34,16 @@ const NavSide = () => {
     <div className="NavSide">
       {pages &&
         pages.map(({ url, exact, text, hint }: IPage, i: number) => (
-          <NavLink
-            className="Link Link_black Link_wrap NavSide-Link"
-            activeClassName="NavLink_selected Link_selected"
+          <Link
+            className="Link_black Link_wrap NavSide-Link"
+            activeClassName="NavLink_selected"
             to={url}
             exact={exact}
             title={hint}
             key={i}
           >
             <u className="Link-U Link_black-U Link_wrap-U">{text}</u>
-          </NavLink>
+          </Link>
         ))}
     </div>
   )

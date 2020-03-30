@@ -1,9 +1,7 @@
 import React, { FC } from 'react'
-import { NavLink } from 'react-router-dom'
 import cx from 'classnames'
 
-import 'components/Link/Link.scss'
-import 'components/Link/_selected/Link_selected.scss'
+import Link from 'components/Link'
 import './Header.scss'
 
 interface IHeaderProps {
@@ -13,31 +11,22 @@ interface IHeaderProps {
 const Header: FC<IHeaderProps> = ({ className }) => (
   <header className={cx('Header', className)}>
     <div className="Header-Main">
-      <NavLink activeClassName="Link_selected" to="/" exact>
+      <Link activeClassName to="/" exact>
         <img
           className="Header-Logo"
           src="https://ege.sdamgia.ru/img/headers/logo.svg"
           alt="Сдам ГИА"
         />
-      </NavLink>
+      </Link>
 
       <div className="Header-Title">
-        <a
-          className="Header-Link Link Link_black"
-          href="https://sdamgia.ru"
-          rel="noopener noreferrer"
-        >
+        <Link className="Link_black Header-Link" href="https://sdamgia.ru">
           СДАМ ГИА
-        </a>
+        </Link>
         :{' '}
-        <NavLink
-          className="Header-Link Link Link_black"
-          activeClassName="Link_selected"
-          to="/"
-          exact
-        >
+        <Link className="Link_black Header-Link" activeClassName to="/" exact>
           РЕШУ ЕГЭ
-        </NavLink>
+        </Link>
       </div>
       <div className="Header-WebsiteDesc">
         Образовательный портал для подготовки к экзаменам
