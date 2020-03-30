@@ -6,3 +6,5 @@ exports[`VariantLink should render a number 2`] = `
 "<div class=\\"Link VariantLink LarinVariants-Link\\" data-to=\\"/test?id=1\\" title=\\"Larin Variant #1\\">1<div class=\\"LarinVariants-Hint\\" title=\\"Помощь\\">?</div>
 </div>"
 `;
+
+exports[`VariantLink should render a number 3`] = `"<div class=\\"Link VariantLink LarinVariants-Link\\" data-to=\\"/test?id=1\\" title=\\"Larin Variant #1\\"><span class=\\"LarinVariants-Word\\">Вариант&nbsp;</span>1</div>"`;

@@ -39,7 +39,6 @@ describe('VariantLink', () => {
       render(
         <VariantLink
           className="LarinVariants-Link"
-          data-wordClassName="LarinVariants-Word"
           to="/test?id=1"
           title="Larin Variant #1"
         >
@@ -52,6 +51,21 @@ describe('VariantLink', () => {
       )
     })
     expect(container && container.textContent).toBe('1?')
+
+    act(() => {
+      render(
+        <VariantLink
+          className="LarinVariants-Link"
+          data-wordClassName="LarinVariants-Word"
+          to="/test?id=1"
+          title="Larin Variant #1"
+        >
+          1
+        </VariantLink>,
+        container
+      )
+    })
+    expect(container && container.textContent).toBe('Вариант 1')
   })
 
   it('should render a number', () => {
@@ -64,7 +78,6 @@ describe('VariantLink', () => {
       render(
         <VariantLink
           className="LarinVariants-Link"
-          data-wordClassName="LarinVariants-Word"
           to="/test?id=1"
           title="Larin Variant #1"
         >
@@ -72,6 +85,21 @@ describe('VariantLink', () => {
           <div className="LarinVariants-Hint" title="Помощь">
             ?
           </div>
+        </VariantLink>,
+        container
+      )
+    })
+    if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
+
+    act(() => {
+      render(
+        <VariantLink
+          className="LarinVariants-Link"
+          data-wordClassName="LarinVariants-Word"
+          to="/test?id=1"
+          title="Larin Variant #1"
+        >
+          1
         </VariantLink>,
         container
       )
