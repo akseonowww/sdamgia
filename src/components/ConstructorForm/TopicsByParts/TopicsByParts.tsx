@@ -137,14 +137,14 @@ const TopicsByParts: any = ({
                       />
                       <div className="ConstructorForm-Topic">
                         <div
-                          className="Link Link_pseudo Link_pseudo-black Link_wrap ConstructorForm-TopicName"
+                          className="Link Link_pseudo Link_pseudoBlack Link_wrap ConstructorForm-TopicName"
                           onClick={() => handleTopicClick(id - 1)}
                         >
                           <div className="ConstructorForm-TopicNumber">
                             {part !== 'extra' ? id : `Д${i + 1}`}.
                           </div>
                           <div className="ConstructorForm-TopicDesc">
-                            <u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudo-black-U">
+                            <u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudoBlack-U">
                               {title}
                             </u>
                           </div>

@@ -1,150 +1,149 @@
-@import 'src/styles/variables', 'src/styles/transitions';
+@import "src/styles/variables", "src/styles/transitions";
 
 @mixin Link-Style {
-	font-style: inherit;
-	font-weight: inherit;
-	color: $primary;
-	text-decoration: none;
+  font-style: inherit;
+  font-weight: inherit;
+  color: $primary;
+  text-decoration: none;
 
-	border-bottom-width: $border-width;
-	border-bottom-style: solid;
-	border-color: $border-primary;
+  border-color: $border-primary;
+  border-bottom-width: $border-width;
+  border-bottom-style: solid;
 
-	@include transition;
+  @include transition;
 }
 
 @mixin Link_pseudo-Style {
-	border-bottom-width: 0.1rem;
-	border-bottom-style: dashed;
-	border-color: rgba(9, 9, 73, 0.25);
-	cursor: pointer;
+  border-color: rgba(9, 9, 73, 0.25);
+  border-bottom-width: 0.1rem;
+  border-bottom-style: dashed;
+  cursor: pointer;
 }
 
 .Link {
-	@include Link-Style;
+  &:not(&_static):not(&_black):not(&_white):not(&_pseudo):visited,
+  &-U:not(&_static-U):not(&_black-U):not(&_white-U):not(&_pseudo-U):visited {
+    color: $visited;
 
-	&-U {
-		@include Link-Style;
-	}
+    border-color: $border-visited;
+  }
 
-	&_black {
-		color: $black;
+  &:hover {
+    color: $danger !important;
 
-		border-bottom-color: $border-black;
+    border-color: $border-danger !important;
 
-		&-U {
-			color: $black;
+    @include transition-reset;
+  }
 
-			border-bottom-color: $border-black;
-		}
-	}
+  &_black {
+    color: $black;
 
-	&_white {
-		color: $white;
+    border-bottom-color: $border-black;
 
-		&-U {
-			border-bottom-color: $border-white;
-		}
-	}
+    &-U {
+      color: $black;
 
-	&:not(&_static):not(&_black):not(&_white):not(&_pseudo):visited,
-	&-U:not(&_static-U):not(&_black-U):not(&_white-U):not(&_pseudo-U):visited {
-		color: $visited;
+      border-bottom-color: $border-black;
+    }
+  }
 
-		border-color: $border-visited;
-	}
+  &_white {
+    color: $white;
 
-	&_pseudo {
-		margin: 0;
-		padding: 0;
+    &-U {
+      border-bottom-color: $border-white;
+    }
+  }
 
-		font-family: inherit;
-		font-size: inherit;
-		text-align: left;
+  &_pseudo {
+    margin: 0;
+    padding: 0;
 
-		background: transparent;
-		border: none;
-		outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
 
-		@include Link_pseudo-Style;
+    background: transparent;
+    border: none;
+    outline: none;
 
-		&-U {
-			@include Link_pseudo-Style;
-		}
-	}
+    &-U {
+      @include Link_pseudo-Style;
+    }
 
-	&_pseudo-black {
-		color: $black;
+    @include Link_pseudo-Style;
+  }
 
-		border-color: $border-black;
+  &_pseudoBlack {
+    color: $black;
 
-		&-U {
-			color: $black;
+    border-color: $border-black;
 
-			border-color: $border-black;
-		}
-	}
+    &-U {
+      color: $black;
 
-	&_pseudo-white {
-		color: $white;
+      border-color: $border-black;
+    }
+  }
 
-		border-color: $border-white;
+  &_pseudoWhite {
+    color: $white;
 
-		&-U {
-			color: $white;
+    border-color: $border-white;
 
-			border-color: $border-white;
-		}
-	}
+    &-U {
+      color: $white;
 
-	&:hover {
-		color: $danger !important;
+      border-color: $border-white;
+    }
+  }
 
-		border-color: $border-danger !important;
+  &_white:hover {
+    color: $white !important;
 
-		@include transition-reset;
-	}
+    border-bottom-color: $white !important;
+  }
 
-	&_white:hover {
-		color: $white !important;
+  &_pseudo:hover {
+    border-color: $border-dangerous !important;
+  }
 
-		border-bottom-color: $white !important;
-	}
+  &_wrap {
+    width: 100%;
 
-	&_pseudo:hover {
-		border-color: $border-dangerous !important;
-	}
+    text-align: left;
 
-	&_wrap {
-		width: 100%;
+    background: transparent;
+    border: none;
 
-		text-align: left;
+    &:hover {
+      .Link-U {
+        border-color: $border-danger !important;
 
-		background: transparent;
-		border: none;
+        @include transition-reset;
+      }
 
-		&-U {
-			color: inherit;
+      .Link_white-U {
+        border-color: $white !important;
+      }
 
-			text-decoration: none;
+      .Link_pseudo-U {
+        border-color: $border-dangerous !important;
+      }
+    }
 
-			@include transition-reset;
-		}
+    &-U {
+      color: inherit;
+      text-decoration: none;
 
-		&:hover {
-			.Link-U {
-				border-color: $border-danger !important;
+      @include transition-reset;
+    }
+  }
 
-				@include transition-reset;
-			}
+  &-U {
+    @include Link-Style;
+  }
 
-			.Link_white-U {
-				border-color: $white !important;
-			}
-
-			.Link_pseudo-U {
-				border-color: $border-dangerous !important;
-			}
-		}
-	}
+  @include Link-Style;
 }
