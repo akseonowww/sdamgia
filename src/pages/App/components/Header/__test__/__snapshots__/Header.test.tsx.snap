@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render a content 1`] = `
+"<header class=\\"Header\\">
+  <div class=\\"Header-Main\\"><a aria-current=\\"page\\" class=\\"Link Link_selected\\" href=\\"/\\"><img class=\\"Header-Logo\\" src=\\"https://ege.sdamgia.ru/img/headers/logo.svg\\" alt=\\"Сдам ГИА\\"></a>
+    <div class=\\"Header-Title\\"><a class=\\"Link Link_black Header-Link\\" href=\\"https://sdamgia.ru\\" rel=\\"noopener noreferrer\\">СДАМ ГИА</a>: <a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">РЕШУ ЕГЭ</a></div>
+    <div class=\\"Header-WebsiteDesc\\">Образовательный портал для подготовки к&nbsp;экзаменам</div>
+    <div class=\\"Header-SubjectTitle\\">Математика профильного уровня</div>
+  </div><img class=\\"Header-SubjectImg\\" src=\\"https://math.reshuct.by/img/headers/math.png\\" alt=\\"Математика\\">
+</header>"
+`;
+
+exports[`Header should render a content 2`] = `
+"<header class=\\"Header PageLayout-Header\\">
+  <div class=\\"Header-Main\\"><a aria-current=\\"page\\" class=\\"Link Link_selected\\" href=\\"/\\"><img class=\\"Header-Logo\\" src=\\"https://ege.sdamgia.ru/img/headers/logo.svg\\" alt=\\"Сдам ГИА\\"></a>
+    <div class=\\"Header-Title\\"><a class=\\"Link Link_black Header-Link\\" href=\\"https://sdamgia.ru\\" rel=\\"noopener noreferrer\\">СДАМ ГИА</a>: <a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">РЕШУ ЕГЭ</a></div>
+    <div class=\\"Header-WebsiteDesc\\">Образовательный портал для подготовки к&nbsp;экзаменам</div>
+    <div class=\\"Header-SubjectTitle\\">Математика профильного уровня</div>
+  </div><img class=\\"Header-SubjectImg\\" src=\\"https://math.reshuct.by/img/headers/math.png\\" alt=\\"Математика\\">
+</header>"
+`;
