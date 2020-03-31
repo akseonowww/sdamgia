@@ -33,7 +33,9 @@ const Footer: FC<IFooterProps> = ({ className }) => (
     >
       <img src={spbsut} alt="СПб ГУТ!" title="priem.sut.ru" width="160" />
     </a>
-    <div className="Footer-Copyright">©&nbsp;Гущин Д. Д., 2011—2019</div>
+    <div className="Footer-Copyright">
+      ©&nbsp;Гущин Д. Д., 2011—{new Date().getFullYear()}
+    </div>
   </footer>
 )
 
