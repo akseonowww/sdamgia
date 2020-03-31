@@ -20,8 +20,8 @@ interface ICounter {
   page: string
   name: string
   value: number
-  setValue: Dispatch<SetStateAction<ITopic[] | null>>
   list: ITopic[] | null
+  setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>
   index: number
   testTotal: ITestTotal
   setTestTotal: Dispatch<SetStateAction<ITestTotal>>
@@ -34,8 +34,8 @@ const useCounter = (
   page: string,
   index: number,
   value: number,
-  setValue: Dispatch<SetStateAction<ITopic[] | null>>,
   list: ITopic[] | null,
+  setTopicsList: Dispatch<SetStateAction<ITopic[] | null>>,
   testTotal: ITestTotal,
   setTestTotal: Dispatch<SetStateAction<ITestTotal>>,
   part: string,
@@ -71,7 +71,7 @@ const useCounter = (
 
       const oldValue = list[index].value
       list[index] = { ...list[index], value: newValue }
-      setValue(list)
+      setTopicsList(list)
       saveTopicsList(page, list)
 
       const newTestTotalAmount = testTotal.amount + (newValue - oldValue)
@@ -94,9 +94,9 @@ const useCounter = (
     },
     [
       countInput,
-      setValue,
       page,
       list,
+      setTopicsList,
       index,
       testTotal,
       setTestTotal,
@@ -115,7 +115,7 @@ const useCounter = (
       let newValue = Number(value) - 1
 
       list[index] = { ...list[index], value: newValue }
-      setValue(list)
+      setTopicsList(list)
       saveTopicsList(page, list)
 
       const newTestTotalAmount = testTotal.amount - 1
@@ -131,9 +131,9 @@ const useCounter = (
     },
     [
       value,
-      setValue,
       page,
       list,
+      setTopicsList,
       index,
       testTotal,
       setTestTotal,
@@ -151,7 +151,7 @@ const useCounter = (
       if (!list) return
 
       list[index] = { ...list[index], value: newValue }
-      setValue(list)
+      setTopicsList(list)
       saveTopicsList(page, list)
 
       const newTestTotalAmount = testTotal.amount + 1
@@ -171,9 +171,9 @@ const useCounter = (
     },
     [
       value,
-      setValue,
       page,
       list,
+      setTopicsList,
       index,
       testTotal,
       setTestTotal,
@@ -196,8 +196,8 @@ const Counter = ({
   name,
   index,
   value,
-  setValue,
   list,
+  setTopicsList,
   testTotal,
   setTestTotal,
   part,
@@ -214,8 +214,8 @@ const Counter = ({
     page,
     index,
     value,
-    setValue,
     list,
+    setTopicsList,
     testTotal,
     setTestTotal,
     part,
