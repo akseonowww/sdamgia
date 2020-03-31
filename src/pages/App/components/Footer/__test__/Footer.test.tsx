@@ -12,6 +12,8 @@ describe('Footer', () => {
   beforeEach(() => {
     container = document.createElement('div')
     document.body.appendChild(container)
+
+    jest.spyOn(Date.prototype, 'getFullYear').mockReturnValue(2021)
   })
 
   afterEach(() => {
@@ -20,6 +22,8 @@ describe('Footer', () => {
       container.remove()
       container = null
     }
+
+    jest.restoreAllMocks()
   })
 
   it('renders with or without a className', () => {
@@ -32,7 +36,7 @@ describe('Footer', () => {
       )
     })
     expect(container && container.textContent).toBe(
-      `О проекте · Редакция · Правовая информация © Гущин Д. Д., 2011—${new Date().getFullYear()}`
+      `О проекте · Редакция · Правовая информация © Гущин Д. Д., 2011—2021`
     )
 
     act(() => {
@@ -44,7 +48,23 @@ describe('Footer', () => {
       )
     })
     expect(container && container.textContent).toBe(
-      `О проекте · Редакция · Правовая информация © Гущин Д. Д., 2011—${new Date().getFullYear()}`
+      `О проекте · Редакция · Правовая информация © Гущин Д. Д., 2011—2021`
+    )
+  })
+
+  it('renders an other current year', () => {
+    jest.spyOn(Date.prototype, 'getFullYear').mockReturnValue(2025)
+
+    act(() => {
+      render(
+        <MemoryRouter>
+          <Footer className="PageLayout-Footer" />
+        </MemoryRouter>,
+        container
+      )
+    })
+    expect(container && container.textContent).toBe(
+      `О проекте · Редакция · Правовая информация © Гущин Д. Д., 2011—2025`
     )
   })
 

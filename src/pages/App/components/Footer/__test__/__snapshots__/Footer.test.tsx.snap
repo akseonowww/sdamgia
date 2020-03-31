@@ -3,13 +3,13 @@
 exports[`Footer should render a content 1`] = `
 "<footer class=\\"Footer\\">
   <nav class=\\"Footer-Menu\\"><a class=\\"Link Link_black\\" href=\\"/about\\" rel=\\"noopener noreferrer\\">О&nbsp;проекте</a> · <a class=\\"Link Link_black\\" href=\\"/staff\\" rel=\\"noopener noreferrer\\">Редакция</a> · <a class=\\"Link Link_black\\" href=\\"/legal\\" rel=\\"noopener noreferrer\\">Правовая&nbsp;информация</a> </nav><a class=\\"Footer-Ad\\" href=\\"http://priem.sut.ru/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\"><img src=\\"spbsut.png\\" alt=\\"СПб ГУТ!\\" title=\\"priem.sut.ru\\" width=\\"160\\"></a>
-  <div class=\\"Footer-Copyright\\">©&nbsp;Гущин Д.&nbsp;Д., 2011—2020</div>
+  <div class=\\"Footer-Copyright\\">©&nbsp;Гущин Д.&nbsp;Д., 2011—2021</div>
 </footer>"
 `;
 
 exports[`Footer should render a content 2`] = `
 "<footer class=\\"Footer PageLayout-Footer\\">
   <nav class=\\"Footer-Menu\\"><a class=\\"Link Link_black\\" href=\\"/about\\" rel=\\"noopener noreferrer\\">О&nbsp;проекте</a> · <a class=\\"Link Link_black\\" href=\\"/staff\\" rel=\\"noopener noreferrer\\">Редакция</a> · <a class=\\"Link Link_black\\" href=\\"/legal\\" rel=\\"noopener noreferrer\\">Правовая&nbsp;информация</a> </nav><a class=\\"Footer-Ad\\" href=\\"http://priem.sut.ru/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\"><img src=\\"spbsut.png\\" alt=\\"СПб ГУТ!\\" title=\\"priem.sut.ru\\" width=\\"160\\"></a>
-  <div class=\\"Footer-Copyright\\">©&nbsp;Гущин Д.&nbsp;Д., 2011—2020</div>
+  <div class=\\"Footer-Copyright\\">©&nbsp;Гущин Д.&nbsp;Д., 2011—2021</div>
 </footer>"
 `;
