@@ -4,13 +4,13 @@ import { classnames as cx } from '@bem-react/classnames'
 
 import './ButtonVk.scss'
 
-interface IButtonVKProps {
+interface IButtonVkProps {
   className?: string
   url: string
   children: ReactNode
 }
 
-const ButtonVk = ({ className, url, children }: IButtonVKProps) => {
+const ButtonVk = ({ className, url, children }: IButtonVkProps) => {
   const buttonVk = cn('ButtonVk')
 
   return (
