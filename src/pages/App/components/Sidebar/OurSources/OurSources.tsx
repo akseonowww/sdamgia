@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import cx from 'classnames'
 
-import ButtonVK from 'components/ButtonVk'
+import ButtonVk from 'components/ButtonVk'
 import './OurSources.scss'
 
 interface IOurSources {
@@ -11,9 +11,9 @@ interface IOurSources {
 const OurSources: FC<IOurSources> = ({ className }) => (
   <div className="OurSources">
     <div className={cx('OurSources-Desc', className)}>
-      <ButtonVK className="OurSources-ButtonVK" url="https://vk.com/reshuege">
+      <ButtonVk className="OurSources-ButtonVK" url="https://vk.com/reshuege">
         Наша группа
-      </ButtonVK>
+      </ButtonVk>
       Мобильные приложения:
     </div>
     <a
