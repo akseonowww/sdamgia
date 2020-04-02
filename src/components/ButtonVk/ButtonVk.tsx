@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
-import cx from 'classnames'
+import { cn } from '@bem-react/classname'
+import { classnames as cx } from '@bem-react/classnames'
 
 import './ButtonVk.scss'
 
@@ -9,10 +10,18 @@ interface IButtonVKProps {
   children: ReactNode
 }
 
-const ButtonVk = ({ className, url, children }: IButtonVKProps) => (
-  <a className={cx('ButtonVk', className)} href={url} rel="noopener noreferrer">
-    {children}
-  </a>
-)
+const ButtonVk = ({ className, url, children }: IButtonVKProps) => {
+  const buttonVk = cn('ButtonVk')
+
+  return (
+    <a
+      className={cx(buttonVk(), className)}
+      href={url}
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  )
+}
 
 export default ButtonVk
