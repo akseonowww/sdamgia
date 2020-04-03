@@ -3,6 +3,12 @@
 .Link_white {
   color: $white;
 
+  &:hover {
+    color: $white;
+
+    border-bottom-color: $white;
+  }
+
   &-U {
     color: inherit;
 

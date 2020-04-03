@@ -21,6 +21,8 @@
 }
 
 .Link {
+  @include Link-Style;
+
   &:not(&_static):not(&_black):not(&_white):not(&_pseudo):visited,
   &-U:not(&_static-U):not(&_black-U):not(&_white-U):not(&_pseudo-U):visited {
     color: $visited;
@@ -29,23 +31,11 @@
   }
 
   &:hover {
-    color: $danger !important;
+    color: $danger;
 
-    border-color: $border-danger !important;
+    border-color: $border-danger;
 
     @include transition-reset;
-  }
-
-  &_black {
-    color: $black;
-
-    border-bottom-color: $border-black;
-
-    &-U {
-      color: $black;
-
-      border-bottom-color: $border-black;
-    }
   }
 
   &_pseudo {
@@ -91,12 +81,6 @@
     }
   }
 
-  &_white:hover {
-    color: $white !important;
-
-    border-bottom-color: $white !important;
-  }
-
   &_pseudo:hover {
     border-color: $border-dangerous !important;
   }
@@ -136,6 +120,4 @@
   &-U {
     @include Link-Style;
   }
-
-  @include Link-Style;
 }

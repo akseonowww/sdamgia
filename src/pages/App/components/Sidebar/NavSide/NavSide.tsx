@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import { getNavSideList, IPage } from 'utils/navSideList'
 import Link from 'components/Link'
+import 'components/Link/_black/Link_black.scss'
 import './NavSide.scss'
 
 const NavSide = () => {
