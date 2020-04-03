@@ -6,6 +6,7 @@ import { INewsItemProps } from './NewsItem/NewsItem'
 import { getBotList } from 'utils/botList'
 import { getNewsList } from 'utils/newsList'
 import { getThiefList } from 'utils/thiefList'
+import 'components/Link/_white/Link_white.scss'
 import './News.scss'
 
 import NewsItem from './NewsItem/NewsItem'

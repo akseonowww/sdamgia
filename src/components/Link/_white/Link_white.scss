@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+.Link_white {
+  color: $white;
+
+  &-U {
+    color: inherit;
+
+    border-bottom-color: $border-white;
+  }
+}
