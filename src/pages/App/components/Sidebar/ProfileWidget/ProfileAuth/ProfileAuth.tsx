@@ -2,6 +2,7 @@ import React, { FC, useState, useCallback, useRef } from 'react'
 import cx from 'classnames'
 
 import Link from 'components/Link'
+import 'components/Link/_wrap/Link_wrap.scss'
 import 'components/Button/Button.scss'
 import './ProfileAuth.scss'
 

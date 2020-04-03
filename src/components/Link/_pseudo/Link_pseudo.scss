@@ -1,0 +1,46 @@
+.Link_pseudo {
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+  font-family: inherit;
+  text-align: left;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  &:hover {
+    border-color: $border-dangerous !important;
+  }
+
+  &-U {
+    @include Link_pseudo-Style;
+  }
+
+  @include Link_pseudo-Style;
+}
+
+.Link_pseudoBlack {
+  color: $black;
+
+  border-color: $border-black;
+
+  &-U {
+    color: $black;
+
+    border-color: $border-black;
+  }
+}
+
+.Link_pseudoWhite {
+  color: $white;
+
+  border-color: $border-white;
+
+  &-U {
+    color: $white;
+
+    border-color: $border-white;
+  }
+}
