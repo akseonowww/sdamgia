@@ -1,8 +1,7 @@
 import React, { FC, useState, useCallback, useRef } from 'react'
 import cx from 'classnames'
 
-import Link from 'components/Link'
-import 'components/Link/_wrap/Link_wrap.scss'
+import LinkWrap from 'components/Link/_wrap'
 import 'components/Button/Button.scss'
 import './ProfileAuth.scss'
 
@@ -165,15 +164,24 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
       </form>
 
       <div className="ProfileAuth-Links">
-        <Link className="Link_wrap ProfileAuth-Link" href="/register">
-          <u className="Link-U Link_wrap-U">Зарегистрироваться</u>
-        </Link>
-        <Link className="Link_wrap ProfileAuth-Link" href="/pass_change">
-          <u className="Link-U Link_wrap-U">Восстановление пароля</u>
-        </Link>
-        <Link className="Link_wrap ProfileAuth-Link" href="/vkauth">
-          <u className="Link-U Link_wrap-U">Вход через ВКонтакте</u>
-        </Link>
+        {[
+          {
+            href: '/register',
+            text: 'Зарегистрироваться',
+          },
+          {
+            href: '/pass_change',
+            text: 'Восстановление пароля',
+          },
+          {
+            href: '/vkauth',
+            text: 'Вход через Вконтакте',
+          },
+        ].map(({ href, text }) => (
+          <LinkWrap className="ProfileAuth-Link" href={href}>
+            {text}
+          </LinkWrap>
+        ))}
       </div>
     </div>
   )
