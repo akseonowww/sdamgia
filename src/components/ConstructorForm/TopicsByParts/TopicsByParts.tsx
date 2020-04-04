@@ -13,6 +13,7 @@ import { saveParts, saveTopicsList } from '../utils'
 import Counter from '../../Counter'
 import Subtopic from './Subtopic'
 import PartName from './PartName'
+import LinkPseudo from 'components/Link/_pseudo'
 
 interface ITopicsByPartsProps {
   className?: string
@@ -136,19 +137,20 @@ const TopicsByParts: any = ({
                         switchOffPart={switchOffPart}
                       />
                       <div className="ConstructorForm-Topic">
-                        <div
-                          className="Link Link_pseudo Link_pseudoBlack Link_wrap ConstructorForm-TopicName"
-                          onClick={() => handleTopicClick(id - 1)}
+                        <LinkPseudo
+                          className="Link_pseudoBlack ConstructorForm-TopicName"
+                          handleClick={() => handleTopicClick(id - 1)}
+                          free
                         >
                           <div className="ConstructorForm-TopicNumber">
                             {part !== 'extra' ? id : `Д${i + 1}`}.
                           </div>
                           <div className="ConstructorForm-TopicDesc">
-                            <u className="Link_wrap-U Link-U Link_pseudo-U Link_pseudoBlack-U">
+                            <u className="Link-U Link_wrap-U Link_pseudo-U Link_pseudoBlack-U">
                               {title}
                             </u>
                           </div>
-                        </div>
+                        </LinkPseudo>
 
                         {checked && (
                           <div className="ConstructorForm-TopicSubs">
