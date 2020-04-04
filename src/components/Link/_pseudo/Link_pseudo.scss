@@ -1,3 +1,12 @@
+@import "src/styles/variables";
+
+@mixin Link_pseudo-Style {
+  border-color: rgba(9, 9, 73, 0.25);
+  border-bottom-width: 0.1rem;
+  border-bottom-style: dashed;
+  cursor: pointer;
+}
+
 .Link_pseudo {
   margin: 0;
   padding: 0;

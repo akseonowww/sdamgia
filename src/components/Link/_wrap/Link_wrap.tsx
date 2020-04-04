@@ -7,17 +7,42 @@ import './Link_wrap.scss'
 
 interface ILink_wrapProps {
   className?: string
+  classNameU?: string
   href?: string
+  handleClick?: () => void
   children: ReactNode
 }
 
-const Link_wrap: FC<ILink_wrapProps> = ({ className, href, children }) => {
+const Link_wrap: FC<ILink_wrapProps> = ({
+  className,
+  classNameU,
+  href,
+  handleClick,
+  children,
+}) => {
   const link = cn('Link')
   const link_wrap = cn(link({ wrap: true }))
+  const link_wrapU = () => link_wrap('U').split(' ')[1]
+
+  if (handleClick) {
+    return (
+      <Link
+        className={cx(link_wrap(), className)}
+        classNameU={cx(link_wrapU(), classNameU)}
+        handleClick={handleClick}
+      >
+        {children}
+      </Link>
+    )
+  }
 
   return (
-    <Link className={cx(link_wrap(), className)} href={href}>
-      <u className={cx(link('U'), link_wrap('U'))}>{children}</u>
+    <Link
+      className={cx(link_wrap(), className)}
+      classNameU={cx(link_wrapU(), classNameU)}
+      href={href}
+    >
+      {children}
     </Link>
   )
 }
