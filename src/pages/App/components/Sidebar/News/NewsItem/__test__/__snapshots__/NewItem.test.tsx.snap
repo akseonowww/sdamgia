@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsItem should render a content 1`] = `
+"<a class=\\"Link Link_static News-Item\\" href=\\"https://vk.com/wall-34649478_177050\\" rel=\\"noopener noreferrer\\">
+  <div class=\\"News-Date Smallcapitals\\">20 июня</div>
+  <div class=\\"News-Text\\">Сначала составители ЕГЭ свою ошибку признали, потом расхотели</div>
+</a>"
+`;
+
+exports[`NewsItem should render a content 2`] = `"<a class=\\"Link Link_white Link_wrap News-Item News-Item_urgent\\" href=\\"https://vk.com/wall-34649478_169793\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U Link_white-U\\">Новый сервис&nbsp;— карточки</u></a>"`;
+
+exports[`NewsItem should render a content 3`] = `
+"<a class=\\"Link Link_static News-Item News-Item_hot\\" href=\\"https://ege.sdamgia.ru/img/blockadblock_chrome.jpg\\" rel=\\"noopener noreferrer\\">
+  <div class=\\"News-Date Smallcapitals\\"></div>
+  <div class=\\"News-Text\\">На&nbsp;сайте что-то не&nbsp;так? Отключите адблок</div>
+</a>"
+`;
