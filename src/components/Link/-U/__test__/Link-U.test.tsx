@@ -3,9 +3,9 @@ import { unmountComponentAtNode, render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import pretty from 'pretty'
 
-import LinkWrapU from '../'
+import LinkU from '../'
 
-describe('Link_wrap-U', () => {
+describe('Link-U', () => {
   let container: HTMLElement | null = null
 
   beforeEach(() => {
@@ -23,36 +23,36 @@ describe('Link_wrap-U', () => {
 
   it('renders with or without a className', () => {
     act(() => {
-      render(<LinkWrapU>Link with more clickable zone</LinkWrapU>, container)
+      render(<LinkU>Common link with more clickable zone</LinkU>, container)
     })
     expect(container && container.textContent).toBe(
-      'Link with more clickable zone'
+      'Common link with more clickable zone'
     )
 
     act(() => {
       render(
-        <LinkWrapU className="Link_pseudo-U Link_pseudoBlack-U">
-          Link with more clickable zone
-        </LinkWrapU>,
+        <LinkU className="Link_wrap-U Link_pseudo-U Link_pseudoBlack-U">
+          Pseudo black link with more clickable zone
+        </LinkU>,
         container
       )
     })
     expect(container && container.textContent).toBe(
-      'Link with more clickable zone'
+      'Pseudo black link with more clickable zone'
     )
   })
 
   it('should render a content', () => {
     act(() => {
-      render(<LinkWrapU>Link with more clickable zone</LinkWrapU>, container)
+      render(<LinkU>Common link with more clickable zone</LinkU>, container)
     })
     if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
 
     act(() => {
       render(
-        <LinkWrapU className="Link_pseudo-U Link_pseudoBlack-U">
-          Link with more clickable zone
-        </LinkWrapU>,
+        <LinkU className="Link_wrap-U Link_pseudo-U Link_pseudoBlack-U">
+          Pseudo black link with more clickable zone
+        </LinkU>,
         container
       )
     })
