@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, Fragment } from 'react'
 import cx from 'classnames'
 
 import Link from 'components/Link'
@@ -13,17 +13,27 @@ interface IFooterProps {
 const Footer: FC<IFooterProps> = ({ className }) => (
   <footer className={cx('Footer', className)}>
     <nav className="Footer-Menu">
-      <Link className="Link_black" href="/about">
-        О проекте
-      </Link>{' '}
-      ·{' '}
-      <Link className="Link_black" href="/staff">
-        Редакция
-      </Link>{' '}
-      ·{' '}
-      <Link className="Link_black" href="/legal">
-        Правовая&nbsp;информация
-      </Link>{' '}
+      {[
+        {
+          href: '/about',
+          text: 'О проекте',
+        },
+        {
+          href: '/staff',
+          text: 'Редакция',
+        },
+        {
+          href: '/legal',
+          text: 'Правовая информация',
+        },
+      ].map(({ href, text }, i) => (
+        <Fragment key={`Footer-Link${i}`}>
+          <Link className="Link_black" href={href}>
+            {text}
+          </Link>
+          {i < 2 && ' · '}
+        </Fragment>
+      ))}
     </nav>
     <a
       className="Footer-Ad"
