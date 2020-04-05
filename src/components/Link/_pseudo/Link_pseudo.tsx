@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import { cn } from '@bem-react/classname'
 import { classnames as cx } from '@bem-react/classnames'
 
+import Link from '..'
 import LinkWrap from '../_wrap'
 import './Link_pseudo.scss'
 
@@ -22,15 +23,23 @@ const Link_pseudo: FC<ILink_pseudoProps> = ({
   const link_pseudo = cn(link({ pseudo: true }))
   const link_pseudoU = () => link_pseudo('U').split(' ')[1]
 
+  if (customChildren) {
+    return (
+      <LinkWrap
+        className={cx(link_pseudo(), className)}
+        classNameU={link_pseudoU()}
+        customChildren={customChildren}
+        handleClick={handleClick}
+      >
+        {children}
+      </LinkWrap>
+    )
+  }
+
   return (
-    <LinkWrap
-      className={cx(link_pseudo(), className)}
-      classNameU={link_pseudoU()}
-      customChildren={customChildren}
-      handleClick={handleClick}
-    >
+    <Link className={cx(link_pseudo(), className)} handleClick={handleClick}>
       {children}
-    </LinkWrap>
+    </Link>
   )
 }
 

@@ -7,7 +7,8 @@ import Title from 'components/Title'
 import Section from 'components/Section'
 import Grid from 'components/Grid'
 import VariantLink from 'components/VariantLink'
-import LinkPseudo from 'components/Link/_pseudo'
+import LinkWrap from 'components/Link/_wrap'
+import 'components/Link/_pseudo'
 import 'components/VariantBox/VariantBox.scss'
 import './LarinVariants.scss'
 
@@ -30,15 +31,15 @@ const LarinVariants: FC = () => {
 
     axios
       .get('http://sidorchik.ru/reshuege/api/larin/')
-      .then(response => response.data)
-      .then(data =>
+      .then((response) => response.data)
+      .then((data) =>
         data.map(({ id, number }: ILarinVariant) => ({
           id,
           number,
         }))
       )
-      .then(data => setLarinVariants(data))
-      .catch(error => {
+      .then((data) => setLarinVariants(data))
+      .catch((error) => {
         console.log(error)
 
         const data = []
@@ -96,12 +97,13 @@ const LarinVariants: FC = () => {
             ))}
         </Grid>
 
-        <LinkPseudo
-          className="VariantBox-Control LarinVariants-Control"
+        <LinkWrap
+          className="Link_pseudo VariantBox-Control LarinVariants-Control"
+          classNameU="Link_pseudo-U"
           handleClick={toggleVariantsAll}
         >
           {variantsAll ? 'Скрыть' : 'Показать все'}
-        </LinkPseudo>
+        </LinkWrap>
       </div>
     </Section>
   )
