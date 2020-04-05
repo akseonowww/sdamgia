@@ -6,7 +6,7 @@ import './ChatButton.scss'
 
 interface IChatButtonProps {}
 
-const ChatButton: FC<IChatButtonProps> = ({}) => {
+const ChatButton: FC<IChatButtonProps> = () => {
   const chatButton = cn('ChatButton')
 
   return <div className={cx(chatButton())}>Чат</div>
