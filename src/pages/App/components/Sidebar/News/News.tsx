@@ -10,6 +10,8 @@ import 'components/Link/_white/Link_white.scss'
 import './News.scss'
 
 import NewsItem from './NewsItem/NewsItem'
+import Link from 'components/Link'
+import LinkWrap from 'components/Link/_wrap'
 
 export interface IBotProps {
   url: string
@@ -39,16 +41,16 @@ const News: FC<INewsProps> = ({ className }) => {
   useEffect(() => {
     axios
       .get('http://sidorchik.ru/reshuege/api/sidebar/bots/')
-      .then(response => response.data)
-      .then(data =>
+      .then((response) => response.data)
+      .then((data) =>
         data.map(({ url, text, img }: IBotProps) => ({
           url,
           text,
           img,
         }))
       )
-      .then(data => setBots(data))
-      .catch(error => {
+      .then((data) => setBots(data))
+      .catch((error) => {
         console.log(error)
 
         const dataNew = getBotList()
@@ -57,8 +59,8 @@ const News: FC<INewsProps> = ({ className }) => {
 
     axios
       .get('http://sidorchik.ru/reshuege/api/sidebar/news/')
-      .then(response => response.data)
-      .then(data =>
+      .then((response) => response.data)
+      .then((data) =>
         data.map(({ type, date, text, url }: INewsItemProps) => ({
           type,
           date,
@@ -66,8 +68,8 @@ const News: FC<INewsProps> = ({ className }) => {
           url,
         }))
       )
-      .then(data => setNews(data))
-      .catch(error => {
+      .then((data) => setNews(data))
+      .catch((error) => {
         console.log(error)
 
         const dataNew = getNewsList()
@@ -76,16 +78,16 @@ const News: FC<INewsProps> = ({ className }) => {
 
     axios
       .get('http://sidorchik.ru/reshuege/api/sidebar/thieves/')
-      .then(response => response.data)
-      .then(data =>
+      .then((response) => response.data)
+      .then((data) =>
         data.map(({ type, text, url }: IThiefProps) => ({
           type,
           text,
           url,
         }))
       )
-      .then(data => setThieves(data))
-      .catch(error => {
+      .then((data) => setThieves(data))
+      .catch((error) => {
         console.log(error)
 
         const dataNew = getThiefList()
@@ -94,8 +96,8 @@ const News: FC<INewsProps> = ({ className }) => {
 
     axios
       .get('http://sidorchik.ru/reshuege/api/sidebar/sources-news/')
-      .then(response => response.data)
-      .then(data =>
+      .then((response) => response.data)
+      .then((data) =>
         data.map(({ type, date, text, url }: INewsItemProps) => ({
           type,
           date,
@@ -103,8 +105,8 @@ const News: FC<INewsProps> = ({ className }) => {
           url,
         }))
       )
-      .then(data => setSourcesNews(data))
-      .catch(error => {
+      .then((data) => setSourcesNews(data))
+      .catch((error) => {
         console.log(error)
 
         const dataNew = [
@@ -161,13 +163,13 @@ const News: FC<INewsProps> = ({ className }) => {
       ))}
 
       <div className="News-List">
-        <a
-          className="Link Link_static Link_wrap News-Title"
+        <LinkWrap
+          className="Link_static News-Title"
+          classNameU="Link_static-U"
           href="https://sdamgia.ru/"
-          rel="noopener noreferrer"
         >
-          <u className="Link-U Link_static-U Link_wrap-U">Новости</u>
-        </a>
+          Новости
+        </LinkWrap>
 
         {news &&
           news.map(({ type, date, text, url }: INewsItemProps, i: number) => (
@@ -180,17 +182,11 @@ const News: FC<INewsProps> = ({ className }) => {
 
         {thieves &&
           thieves.map(({ type, text, url, letterCase }, i: number) => (
-            <a
-              className={cx(
-                'News-Item',
-                {
-                  [`News-Item_${type}`]: type !== 'default',
-                },
-                'Link',
-                'Link_static'
-              )}
+            <Link
+              className={cx('Link_static', 'News-Item', {
+                [`News-Item_${type}`]: type !== 'default',
+              })}
               href={url}
-              rel="noopener noreferrer"
               key={i}
             >
               <div
@@ -200,7 +196,7 @@ const News: FC<INewsProps> = ({ className }) => {
               >
                 {text}
               </div>
-            </a>
+            </Link>
           ))}
       </div>
     </div>
