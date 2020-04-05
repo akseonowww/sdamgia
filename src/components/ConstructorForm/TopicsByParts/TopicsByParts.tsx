@@ -14,6 +14,7 @@ import Counter from '../../Counter'
 import Subtopic from './Subtopic'
 import PartName from './PartName'
 import LinkPseudo from 'components/Link/_pseudo'
+import LinkU from 'components/Link/-U'
 
 interface ITopicsByPartsProps {
   className?: string
@@ -146,9 +147,9 @@ const TopicsByParts: any = ({
                             {part !== 'extra' ? id : `Д${i + 1}`}.
                           </div>
                           <div className="ConstructorForm-TopicDesc">
-                            <u className="Link-U Link_wrap-U Link_pseudo-U Link_pseudoBlack-U">
+                            <LinkU className="Link_wrap-U Link_pseudo-U Link_pseudoBlack-U">
                               {title}
-                            </u>
+                            </LinkU>
                           </div>
                         </LinkPseudo>
 
