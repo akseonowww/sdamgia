@@ -23,35 +23,41 @@ describe('Link_wrap-U', () => {
 
   it('renders with or without a className', () => {
     act(() => {
-      render(<LinkWrapU>Link with more clickable zone</LinkWrapU>, container)
+      render(
+        <LinkWrapU>Common link with more clickable zone</LinkWrapU>,
+        container
+      )
     })
     expect(container && container.textContent).toBe(
-      'Link with more clickable zone'
+      'Common link with more clickable zone'
     )
 
     act(() => {
       render(
         <LinkWrapU className="Link_pseudo-U Link_pseudoBlack-U">
-          Link with more clickable zone
+          Pseudo black link with more clickable zone
         </LinkWrapU>,
         container
       )
     })
     expect(container && container.textContent).toBe(
-      'Link with more clickable zone'
+      'Pseudo black link with more clickable zone'
     )
   })
 
   it('should render a content', () => {
     act(() => {
-      render(<LinkWrapU>Link with more clickable zone</LinkWrapU>, container)
+      render(
+        <LinkWrapU>Common link with more clickable zone</LinkWrapU>,
+        container
+      )
     })
     if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
 
     act(() => {
       render(
         <LinkWrapU className="Link_pseudo-U Link_pseudoBlack-U">
-          Link with more clickable zone
+          Pseudo black link with more clickable zone
         </LinkWrapU>,
         container
       )
