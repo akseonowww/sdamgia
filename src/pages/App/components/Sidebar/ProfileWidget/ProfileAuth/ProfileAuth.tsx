@@ -27,7 +27,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
   const passwordInput = useRef<HTMLInputElement | null>(null)
 
   const handleInputChange = useCallback(
-    e => {
+    (e) => {
       const { name, value: newValue } = e.target
       let newError = false
 
@@ -72,12 +72,12 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
     [email, password, submit]
   )
 
-  const handleInputFocus = useCallback(ref => {
+  const handleInputFocus = useCallback((ref) => {
     ref.current.focus()
   }, [])
 
   const handleSubmit = useCallback(
-    e => {
+    (e) => {
       e.preventDefault()
 
       setSubmit(true)
@@ -177,8 +177,12 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
             href: '/vkauth',
             text: 'Вход через Вконтакте',
           },
-        ].map(({ href, text }) => (
-          <LinkWrap className="ProfileAuth-Link" href={href}>
+        ].map(({ href, text }, i) => (
+          <LinkWrap
+            className="ProfileAuth-Link"
+            href={href}
+            key={`ProfileAuth-Link_${i}`}
+          >
             {text}
           </LinkWrap>
         ))}

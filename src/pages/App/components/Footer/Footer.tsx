@@ -27,7 +27,7 @@ const Footer: FC<IFooterProps> = ({ className }) => (
           text: 'Правовая информация',
         },
       ].map(({ href, text }, i) => (
-        <Fragment key={`Footer-Link${i}`}>
+        <Fragment key={`Footer-Link_${i}`}>
           <Link className="Link_black" href={href}>
             {text}
           </Link>
