@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link_pseudo should render a content 1`] = `"<div class=\\"Link Link_pseudo\\">Other tasks</div>"`;
+
+exports[`Link_pseudo should render a content 2`] = `"<div class=\\"Link Link_pseudo Link_pseudoBlack\\">Solution</div>"`;
+
+exports[`Link_pseudo should render a content 3`] = `
+"<div class=\\"Link Link_wrap Link_pseudo Link_pseudoBlack ConstructorForm-TopicName\\">
+  <div class=\\"ConstructorForm-TopicNumber\\">1</div>
+  <div class=\\"ConstructorForm-TopicDesc\\"><u class=\\"Link-U Link_wrap-U Link_pseudo-U Link_pseudoBlack-U\\">Task topic description</u></div>
+</div>"
+`;
