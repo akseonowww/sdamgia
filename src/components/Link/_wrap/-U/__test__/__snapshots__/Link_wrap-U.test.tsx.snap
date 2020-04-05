@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link_wrap-U should render a content 1`] = `"<u class=\\"Link-U Link_wrap-U\\">Link with more clickable zone</u>"`;
+
+exports[`Link_wrap-U should render a content 2`] = `"<u class=\\"Link-U Link_wrap-U Link_pseudo-U Link_pseudoBlack-U\\">Link with more clickable zone</u>"`;
