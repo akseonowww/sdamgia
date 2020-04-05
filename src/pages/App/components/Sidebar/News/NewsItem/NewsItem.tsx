@@ -1,6 +1,11 @@
 import React, { FC } from 'react'
 import cx from 'classnames'
 
+import Link from 'components/Link'
+import 'components/Link/_wrap/Link_wrap.scss'
+import LinkWrapU from 'components/Link/_wrap/-U'
+import 'components/Link/_white/Link_white.scss'
+
 export interface INewsItemProps {
   type: string
   date?: string | null
@@ -10,20 +15,18 @@ export interface INewsItemProps {
 
 const NewsItem: FC<INewsItemProps> = ({ type, date, text, url }) => {
   return (
-    <a
+    <Link
       className={cx(
-        'News-Item',
-        {
-          [`News-Item_${type}`]: type !== 'default',
-        },
-        'Link',
         {
           Link_static: type !== 'urgent',
           'Link_white Link_wrap': type === 'urgent',
+        },
+        'News-Item',
+        {
+          [`News-Item_${type}`]: type !== 'default',
         }
       )}
       href={url}
-      rel="noopener noreferrer"
     >
       {type !== 'urgent' && (
         <>
@@ -33,9 +36,9 @@ const NewsItem: FC<INewsItemProps> = ({ type, date, text, url }) => {
       )}
 
       {type === 'urgent' && (
-        <u className="Link-U Link_white-U Link_wrap-U">{text}</u>
+        <LinkWrapU className="Link_white-U">{text}</LinkWrapU>
       )}
-    </a>
+    </Link>
   )
 }
 
