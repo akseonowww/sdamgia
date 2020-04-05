@@ -17,6 +17,7 @@ import {
   saveTopicsList,
 } from '../utils'
 import Checkbox from '../../Checkbox'
+import LinkWrapU from 'components/Link/_wrap/-U'
 import '../../Button/Button.scss'
 import '../../Switcher/Switcher.scss'
 import '../../Switcher/_vertical/Switcher_vertical.scss'
@@ -189,13 +190,14 @@ const Buttons: FC<IButtonsProps> = ({
         </div>
 
         <button
-          className="Link Link_pseudo Link_wrap ConstructorForm-ResetButton"
+          className="Link Link_wrap Link_pseudo ConstructorForm-ResetButton"
           onClick={handleResetClick}
         >
           <span>×</span>
-          <u className="Link-U Link_pseudo-U Link_wrap-U ConstructorForm-ResetButtonText">
+
+          <LinkWrapU className="Link_pseudo-U ConstructorForm-ResetButtonText">
             Очистить поля
-          </u>
+          </LinkWrapU>
         </button>
       </div>
     </div>
