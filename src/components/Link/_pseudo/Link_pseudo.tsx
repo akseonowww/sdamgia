@@ -7,14 +7,14 @@ import './Link_pseudo.scss'
 
 interface ILink_pseudoProps {
   className?: string
-  free?: boolean
+  customChildren?: boolean
   handleClick: () => void
   children: ReactNode
 }
 
 const Link_pseudo: FC<ILink_pseudoProps> = ({
   className,
-  free,
+  customChildren,
   handleClick,
   children,
 }) => {
@@ -22,23 +22,11 @@ const Link_pseudo: FC<ILink_pseudoProps> = ({
   const link_pseudo = cn(link({ pseudo: true }))
   const link_pseudoU = () => link_pseudo('U').split(' ')[1]
 
-  if (free) {
-    return (
-      <LinkWrap
-        className={cx(link_pseudo(), className)}
-        classNameU={link_pseudoU()}
-        free
-        handleClick={handleClick}
-      >
-        {children}
-      </LinkWrap>
-    )
-  }
-
   return (
     <LinkWrap
       className={cx(link_pseudo(), className)}
       classNameU={link_pseudoU()}
+      customChildren={customChildren}
       handleClick={handleClick}
     >
       {children}

@@ -141,7 +141,7 @@ const TopicsByParts: any = ({
                         <LinkPseudo
                           className="Link_pseudoBlack ConstructorForm-TopicName"
                           handleClick={() => handleTopicClick(id - 1)}
-                          free
+                          customChildren
                         >
                           <div className="ConstructorForm-TopicNumber">
                             {part !== 'extra' ? id : `Д${i + 1}`}.

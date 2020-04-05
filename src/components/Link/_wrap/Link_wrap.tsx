@@ -9,7 +9,7 @@ interface ILink_wrapProps {
   className?: string
   classNameU?: string
   href?: string
-  free?: boolean
+  customChildren?: boolean
   handleClick?: () => void
   children: ReactNode
 }
@@ -18,7 +18,7 @@ const Link_wrap: FC<ILink_wrapProps> = ({
   className,
   classNameU,
   href,
-  free,
+  customChildren,
   handleClick,
   children,
 }) => {
@@ -26,7 +26,7 @@ const Link_wrap: FC<ILink_wrapProps> = ({
   const link_wrap = cn(link({ wrap: true }))
   const link_wrapU = () => link_wrap('U').split(' ')[1]
 
-  if (free) {
+  if (customChildren) {
     return (
       <Link className={cx(link_wrap(), className)} handleClick={handleClick}>
         {children}
