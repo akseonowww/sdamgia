@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react'
-import cx from 'classnames'
+import { cn } from '@bem-react/classname'
+import { classnames as cx } from '@bem-react/classnames'
 
 import './Grid.scss'
 
@@ -8,8 +9,9 @@ interface IGridProps {
   children: ReactNode
 }
 
-const Grid: FC<IGridProps> = ({ className, children }) => (
-  <div className={cx('Grid', className)}>{children}</div>
-)
+const Grid: FC<IGridProps> = ({ className, children }) => {
+  const grid = cn('Grid')
 
+  return <div className={cx(grid(), className)}>{children}</div>
+}
 export default Grid

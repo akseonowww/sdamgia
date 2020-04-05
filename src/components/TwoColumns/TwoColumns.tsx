@@ -1,4 +1,6 @@
 import React, { ReactNode } from 'react'
+import { cn } from '@bem-react/classname'
+import { classnames as cx } from '@bem-react/classnames'
 
 import Section from '../Section'
 import Grid from '../Grid'
@@ -8,13 +10,17 @@ interface ITwoColumnsProps {
   children: ReactNode[]
 }
 
-const TwoColumns = ({ children }: ITwoColumnsProps) => (
-  <Section>
-    <Grid className="TwoColumns-Grid">
-      <div className="TwoColumns-Col TwoColumns-Col_1">{children[0]}</div>
-      <div className="TwoColumns-Col TwoColumns-Col_2">{children[1]}</div>
-    </Grid>
-  </Section>
-)
+const TwoColumns = ({ children }: ITwoColumnsProps) => {
+  const twoColumns = cn('TwoColumns')
+
+  return (
+    <Section>
+      <Grid className={cx(twoColumns('Grid'))}>
+        <div className={cx(twoColumns('Col', { 1: true }))}>{children[0]}</div>
+        <div className={cx(twoColumns('Col', { 2: true }))}>{children[1]}</div>
+      </Grid>
+    </Section>
+  )
+}
 
 export default TwoColumns
