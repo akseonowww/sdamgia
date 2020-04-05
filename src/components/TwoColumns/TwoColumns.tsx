@@ -16,16 +16,8 @@ const TwoColumns = ({ children }: ITwoColumnsProps) => {
   return (
     <Section>
       <Grid className={cx(twoColumns('Grid'))}>
-        <div
-          className={cx(twoColumns('Col'), twoColumns('Col_1'))}
-        >
-          {children[0]}
-        </div>
-        <div
-          className={cx(twoColumns('Col'), twoColumns('Col_2'))}
-        >
-          {children[1]}
-        </div>
+        <div className={cx(twoColumns('Col', { 1: true }))}>{children[0]}</div>
+        <div className={cx(twoColumns('Col', { 2: true }))}>{children[1]}</div>
       </Grid>
     </Section>
   )
