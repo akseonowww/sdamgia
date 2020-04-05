@@ -4,6 +4,7 @@ import { ITopic, ISubtopic } from 'components/ConstructorForm/Buttons/Buttons'
 import { saveTopicsList } from 'components/ConstructorForm/utils'
 import nahStep from '../../../Form/nahStep'
 import Checkbox from '../../../Checkbox'
+import Link from 'components/Link'
 
 interface ISubtopicProps {
   page: string
@@ -75,13 +76,13 @@ const Subtopic: FC<ISubtopicProps> = ({
       <div className="ConstructorForm-TopicDesc">
         {subtopic.title}
         &nbsp;·&nbsp;
-        <a
-          className="Link Link_black"
+        <Link
+          className="Link_black"
           href={'https://ege.sdamgia.ru/test?theme=' + subtopic.id}
         >
           {subtopic.amount}
           &nbsp;шт.
-        </a>
+        </Link>
       </div>
     </label>
   )
