@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render a content 1`] = `"<input class=\\"Input Form_oneLine-Input\\" type=\\"tel\\" name=\\"id\\" placeholder=\\"Номер варианта\\" value=\\"0\\">"`;
