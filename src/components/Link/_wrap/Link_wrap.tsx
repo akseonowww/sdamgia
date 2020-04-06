@@ -7,8 +7,12 @@ import './Link_wrap.scss'
 
 interface ILink_wrapProps {
   className?: string
+  activeClassName?: string
   classNameU?: string
+  to?: string
   href?: string
+  exact?: boolean
+  title?: string
   customChildren?: boolean
   handleClick?: () => void
   children: ReactNode
@@ -16,8 +20,12 @@ interface ILink_wrapProps {
 
 const Link_wrap: FC<ILink_wrapProps> = ({
   className,
+  activeClassName,
   classNameU,
-  href,
+  to,
+  href = '/',
+  exact,
+  title,
   customChildren,
   handleClick,
   children,
@@ -40,6 +48,21 @@ const Link_wrap: FC<ILink_wrapProps> = ({
         className={cx(link_wrap(), className)}
         classNameU={cx(link_wrapU(), classNameU)}
         handleClick={handleClick}
+      >
+        {children}
+      </Link>
+    )
+  }
+
+  if (to && activeClassName) {
+    return (
+      <Link
+        className={cx(link_wrap(), className)}
+        activeClassName={activeClassName}
+        classNameU={cx(link_wrapU(), classNameU)}
+        to={to}
+        exact={exact}
+        title={title}
       >
         {children}
       </Link>

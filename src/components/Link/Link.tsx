@@ -28,6 +28,20 @@ const Link: FC<ILinkProps> = ({
   handleClick,
   children,
 }) => {
+  if (to && (activeClassName || exact) && classNameU) {
+    return (
+      <RouterNavLink
+        className={cx('Link', className)}
+        activeClassName={cx('Link_selected', activeClassName)}
+        to={to}
+        exact={exact}
+        title={title}
+      >
+        <u className={cx('Link-U', classNameU)}>{children}</u>
+      </RouterNavLink>
+    )
+  }
+
   if (to && (activeClassName || exact)) {
     return (
       <RouterNavLink

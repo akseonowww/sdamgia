@@ -11,6 +11,10 @@ exports[`Link_wrap should render a content 2`] = `
 
 exports[`Link_wrap should render a content 3`] = `"<div class=\\"Link Link_wrap Link_pseudo VariantBox-Control LarinVariants-Control\\"><u class=\\"Link-U Link_wrap-U Link_pseudo-U\\">Show more</u></div>"`;
 
-exports[`Link_wrap should render a content 4`] = `"<a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/pass_change\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U\\">Password recovery</u></a>"`;
+exports[`Link_wrap should render a content 4`] = `"<a class=\\"Link Link Link_wrap Link_black NavSide-Link\\" title=\\"Scales, statistics, task assessment\\" href=\\"/manual\\"><u class=\\"Link-U Link_wrap-U Link_black-U\\">All about exam</u></a>"`;
 
-exports[`Link_wrap should render a content 5`] = `"<a class=\\"Link Link_wrap Link_black NavSide-Link\\" href=\\"/site-section\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U Link_black-U\\">Site section</u></a>"`;
+exports[`Link_wrap should render a content 5`] = `"<a class=\\"Link Link Link_wrap Link_black NavSide-Link\\" title=\\"Scales, statistics, task assessment\\" href=\\"/manual\\"><u class=\\"Link-U Link_wrap-U Link_black-U\\">About exam</u></a>"`;
+
+exports[`Link_wrap should render a content 6`] = `"<a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/pass_change\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U\\">Password recovery</u></a>"`;
+
+exports[`Link_wrap should render a content 7`] = `"<a class=\\"Link Link_wrap Link_black NavSide-Link\\" href=\\"/site-section\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U Link_black-U\\">Site section</u></a>"`;

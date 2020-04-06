@@ -2,6 +2,7 @@ import React from 'react'
 import { unmountComponentAtNode, render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import pretty from 'pretty'
+import { MemoryRouter } from 'react-router-dom'
 
 import LinkWrap from '../'
 
@@ -73,6 +74,45 @@ describe('Link_wrap', () => {
       expect(container && container.textContent).toBe('Show more')
     })
 
+    it('nav', () => {
+      act(() => {
+        render(
+          <MemoryRouter>
+            <LinkWrap
+              className="Link_black NavSide-Link"
+              activeClassName="NavLink_selected"
+              classNameU="Link_black-U"
+              to="/manual"
+              title="Scales, statistics, task assessment"
+            >
+              All about exam
+            </LinkWrap>
+          </MemoryRouter>,
+          container
+        )
+      })
+      expect(container && container.textContent).toBe('All about exam')
+
+      act(() => {
+        render(
+          <MemoryRouter>
+            <LinkWrap
+              className="Link_black NavSide-Link"
+              activeClassName="NavLink_selected"
+              classNameU="Link_black-U"
+              to="/manual"
+              exact
+              title="Scales, statistics, task assessment"
+            >
+              About exam
+            </LinkWrap>
+          </MemoryRouter>,
+          container
+        )
+      })
+      expect(container && container.textContent).toBe('About exam')
+    })
+
     it('common', () => {
       act(() => {
         render(
@@ -140,6 +180,43 @@ describe('Link_wrap', () => {
         >
           Show more
         </LinkWrap>,
+        container
+      )
+    })
+    if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
+
+    act(() => {
+      render(
+        <MemoryRouter>
+          <LinkWrap
+            className="Link_black NavSide-Link"
+            activeClassName="NavLink_selected"
+            classNameU="Link_black-U"
+            to="/manual"
+            title="Scales, statistics, task assessment"
+          >
+            All about exam
+          </LinkWrap>
+        </MemoryRouter>,
+        container
+      )
+    })
+    if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
+
+    act(() => {
+      render(
+        <MemoryRouter>
+          <LinkWrap
+            className="Link_black NavSide-Link"
+            activeClassName="NavLink_selected"
+            classNameU="Link_black-U"
+            to="/manual"
+            exact
+            title="Scales, statistics, task assessment"
+          >
+            About exam
+          </LinkWrap>
+        </MemoryRouter>,
         container
       )
     })
