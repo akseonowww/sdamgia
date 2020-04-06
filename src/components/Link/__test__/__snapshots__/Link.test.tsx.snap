@@ -1,13 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Link should render a content 1`] = `"<a class=\\"Link\\" href=\\"/\\" rel=\\"noopener noreferrer\\">About Project</a>"`;
+exports[`Link should render content of 7 types: 1. React Router Nav wrap 1`] = `"<a aria-current=\\"page\\" class=\\"Link Link Link_wrap Link_black NavSide-Link Link_selected\\" title=\\"Шкалы, статистика, оценивание заданий\\" href=\\"/\\"><u class=\\"Link-U Link_wrap-U Link_black-U\\">About exam</u></a>"`;
 
-exports[`Link should render a content 2`] = `"<a class=\\"Link Link_black\\" href=\\"/\\" rel=\\"noopener noreferrer\\">About Project</a>"`;
+exports[`Link should render content of 7 types: 2. React Router Nav 1`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
 
-exports[`Link should render a content 3`] = `"<a class=\\"Link Link_static\\" href=\\"/archive\\">Archive</a>"`;
+exports[`Link should render content of 7 types: 2. React Router Nav 2`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
 
-exports[`Link should render a content 4`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
+exports[`Link should render content of 7 types: 2. React Router Nav 3`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
 
-exports[`Link should render a content 5`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
+exports[`Link should render content of 7 types: 3. React Router 1`] = `"<a class=\\"Link Link_static\\" href=\\"/archive\\">Archive</a>"`;
 
-exports[`Link should render a content 6`] = `"<a aria-current=\\"page\\" class=\\"Link Link_black Header-Link Link_selected\\" href=\\"/\\">RESHU EGE</a>"`;
+exports[`Link should render content of 7 types: 4. wrap with click handler 1`] = `"<div class=\\"Link_wrap Link_pseudo VariantBox-Control LarinVariants-Control\\"><u class=\\"Link-U Link_wrap-U Link_pseudo-U\\">Show all</u></div>"`;
+
+exports[`Link should render content of 7 types: 5. with click handler 1`] = `"<div class=\\"Link_pseudo\\">Solution</div>"`;
+
+exports[`Link should render content of 7 types: 6. wrap 1`] = `"<a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/pass_change\\" rel=\\"noopener noreferrer\\">Password Recovery</a>"`;
+
+exports[`Link should render content of 7 types: 7. HTML 1`] = `"<a class=\\"Link\\" href=\\"/\\" rel=\\"noopener noreferrer\\">About Project</a>"`;
+
+exports[`Link should render content of 7 types: 7. HTML 2`] = `"<a class=\\"Link Link_black\\" href=\\"/\\" rel=\\"noopener noreferrer\\">About Project</a>"`;
