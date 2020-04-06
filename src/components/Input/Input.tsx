@@ -63,6 +63,7 @@ const Input: FC<IInputProps> = ({
       ref={innerRef}
       onClick={handleSpecialClick}
       onChange={handleSpecialChange ? handleSpecialChange : handleChange}
+      data-testid="Input"
     />
   )
 }

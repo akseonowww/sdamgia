@@ -1,3 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input should render a content 1`] = `"<input class=\\"Input Form_oneLine-Input\\" type=\\"tel\\" name=\\"id\\" placeholder=\\"Номер варианта\\" value=\\"0\\">"`;
+exports[`Input renders 3 types: 1) common matches snapshot 1`] = `
+<input
+  class="Input"
+  data-testid="Input"
+  name="name"
+  placeholder="First Name"
+  type="text"
+  value="0"
+/>
+`;
+
+exports[`Input renders 3 types: 2) with custom "type" matches snapshot 1`] = `
+<input
+  class="Input Form_oneLine-Input"
+  data-testid="Input"
+  name="id"
+  placeholder="Variant Number"
+  type="tel"
+  value="0"
+/>
+`;
+
+exports[`Input renders 3 types: 3) with given handlers matches snapshot 1`] = `
+<input
+  class="Input Counter-Input"
+  data-testid="Input"
+  name="prob1"
+  style="left: 0px;"
+  tabindex="1"
+  type="tel"
+  value="0"
+/>
+`;
