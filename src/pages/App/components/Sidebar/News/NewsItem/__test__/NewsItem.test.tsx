@@ -3,7 +3,7 @@ import { unmountComponentAtNode, render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import pretty from 'pretty'
 
-import NewsItem from '../'
+import NewsItem from '..'
 
 describe('NewsItem', () => {
   let container: HTMLElement | null = null
