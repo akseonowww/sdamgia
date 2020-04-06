@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link_wrap should render a content 1`] = `"<div class=\\"Link Link_wrap\\"><span>1</span><u class=\\"Link-U Link_wrap-U\\">Underlined word</u></div>"`;
+
+exports[`Link_wrap should render a content 2`] = `
+"<div class=\\"Link Link_wrap Link_pseudoBlack ConstructorForm-TopicName\\">
+  <div class=\\"ConstructorForm-TopicNumber\\">1</div>
+  <div class=\\"ConstructorForm-TopicDesc\\"><u class=\\"Link-U Link_wrap-U Link_pseudo-U Link_pseudoBlack-U\\">Task topic description</u></div>
+</div>"
+`;
+
+exports[`Link_wrap should render a content 3`] = `"<div class=\\"Link Link_wrap Link_pseudo VariantBox-Control LarinVariants-Control\\"><u class=\\"Link-U Link_wrap-U Link_pseudo-U\\">Show more</u></div>"`;
+
+exports[`Link_wrap should render a content 4`] = `"<a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/pass_change\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U\\">Password recovery</u></a>"`;
+
+exports[`Link_wrap should render a content 5`] = `"<a class=\\"Link Link_wrap Link_black NavSide-Link\\" href=\\"/site-section\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U Link_black-U\\">Site section</u></a>"`;
