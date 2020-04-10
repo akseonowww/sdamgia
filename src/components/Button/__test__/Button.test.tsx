@@ -42,6 +42,12 @@ describe('Button', () => {
       )
     })
     expect(container && container.textContent).toBe('Make work from 5 tasks')
+
+    act(() => {
+      const button = document.querySelector('.Button')
+      button && button.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    })
+    expect(handleClick).toHaveBeenCalledTimes(1)
   })
 
   it('matches snapshot', () => {
