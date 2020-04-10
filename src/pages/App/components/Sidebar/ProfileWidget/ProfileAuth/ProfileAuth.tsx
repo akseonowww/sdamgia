@@ -1,6 +1,7 @@
 import React, { FC, useState, useCallback, useRef } from 'react'
 import { cn } from '@bem-react/classname'
 import cx from 'classnames'
+import axios from 'axios'
 
 import Button from 'components/Button'
 import './ProfileAuth.scss'
@@ -110,14 +111,24 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
         return
       }
 
-      if (email.value !== 'form@hater.ru' || password.value !== 'shit') {
-        setWrongData(true)
-        handleInputFocus(emailInput)
+      axios
+        .get(`${process.env.REACT_APP_LOGIN}`, {
+          params: {
+            username: email.value,
+            password: password.value,
+          },
+        })
+        .then((response: any) => {
+          const status: boolean = response.data.status
 
-        return
-      }
-
-      if (email.value && password.value) setAuth(true)
+          if (status) {
+            setAuth(true)
+          } else {
+            setWrongData(true)
+            handleInputFocus(emailInput)
+          }
+        })
+        .catch((error: string) => console.log(error))
     },
     [email, password, setAuth, handleInputFocus]
   )
