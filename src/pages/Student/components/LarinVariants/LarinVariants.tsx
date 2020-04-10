@@ -6,8 +6,8 @@ import { loadVariantsAll, saveVariantsAll } from './utils'
 import Title from 'components/Title'
 import Section from 'components/Section'
 import Grid from 'components/Grid'
-import 'components/Link/Link.scss'
 import VariantLink from 'components/VariantLink'
+import LinkPseudo from 'components/Link/_pseudo'
 import 'components/VariantBox/VariantBox.scss'
 import './LarinVariants.scss'
 
@@ -96,14 +96,12 @@ const LarinVariants: FC = () => {
             ))}
         </Grid>
 
-        <div
-          className="Link Link_pseudo Link_wrap VariantBox-Control LarinVariants-Control"
-          onClick={toggleVariantsAll}
+        <LinkPseudo
+          className="VariantBox-Control LarinVariants-Control"
+          handleClick={toggleVariantsAll}
         >
-          <u className="Link-U Link_pseudo-U Link_wrap-U">
-            {variantsAll ? 'Скрыть' : 'Показать все'}
-          </u>
-        </div>
+          {variantsAll ? 'Скрыть' : 'Показать все'}
+        </LinkPseudo>
       </div>
     </Section>
   )

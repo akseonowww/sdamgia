@@ -1,0 +1,35 @@
+@import "src/styles/variables", "src/styles/transitions";
+
+.Link_wrap {
+  width: 100%;
+
+  text-align: left;
+
+  background: transparent;
+  border: none !important;
+
+  &:hover {
+    .Link_wrap-U {
+      border-color: $border-danger !important;
+
+      @include transition-reset;
+    }
+
+    .Link_white-U {
+      border-color: $white !important;
+    }
+
+    .Link_pseudo-U {
+      color: $danger;
+
+      border-color: $border-dangerous !important;
+    }
+  }
+
+  &-U {
+    color: inherit;
+    text-decoration: none;
+
+    @include transition;
+  }
+}

@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+
+.Link_black {
+  color: $black;
+
+  border-bottom-color: $border-black;
+
+  &-U {
+    color: $black;
+
+    border-bottom-color: $border-black;
+  }
+}
