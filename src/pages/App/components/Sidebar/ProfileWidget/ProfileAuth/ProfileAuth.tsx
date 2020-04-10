@@ -1,9 +1,10 @@
 import React, { FC, useState, useCallback, useRef } from 'react'
+import { cn } from '@bem-react/classname'
 import cx from 'classnames'
 
 import Button from 'components/Button'
-import LinkWrap from 'components/Link/_wrap'
 import './ProfileAuth.scss'
+import ProfileAuthLinks from './ProfileAuthLinks'
 
 interface IProfileAuthProps {
   setAuth: Function
@@ -15,6 +16,8 @@ interface IFieldState {
 }
 
 const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
+  const profileAuth = cn('ProfileAuth')
+
   const [email, setEmail] = useState<IFieldState>({ value: '', error: false })
   const [password, setPassword] = useState<IFieldState>({
     value: '',
@@ -163,30 +166,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
         <Button className="ProfileAuth-Button">Войти</Button>
       </form>
 
-      <div className="ProfileAuth-Links">
-        {[
-          {
-            href: '/register',
-            text: 'Зарегистрироваться',
-          },
-          {
-            href: '/pass_change',
-            text: 'Восстановление пароля',
-          },
-          {
-            href: '/vkauth',
-            text: 'Вход через Вконтакте',
-          },
-        ].map(({ href, text }, i) => (
-          <LinkWrap
-            className="ProfileAuth-Link"
-            href={href}
-            key={`ProfileAuth-Link_${i}`}
-          >
-            {text}
-          </LinkWrap>
-        ))}
-      </div>
+      <ProfileAuthLinks blockClassName={profileAuth} />
     </div>
   )
 }
