@@ -1,30 +1,30 @@
-@import 'src/styles/variables';
+@import "src/styles/variables";
 
 .Button {
-	display: inline-block;
-	padding: 0.25rem 1.1rem 0.5rem;
+  display: inline-block;
+  padding: 0.25rem 1.1rem 0.5rem;
 
-	font-family: inherit;
-	font-size: inherit;
+  font-size: inherit;
+  font-family: inherit;
 
-	background: #d2e2ff;
-	background: linear-gradient(to bottom, #d2e2ff, #9dccff);
-	border: none;
-	border-radius: $border-radius-button;
-	outline: none;
-	box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
-	cursor: pointer;
+  background: #d2e2ff;
+  background: linear-gradient(to bottom, #d2e2ff, #9dccff);
+  border: none;
+  border-radius: $border-radius-button;
+  outline: none;
+  box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
+  cursor: pointer;
 
-	transition-duration: 0.1s;
+  transition-duration: 0.1s;
 
-	&:hover {
-		background: #dbe8ff;
-		background: linear-gradient(to bottom, #dbe8ff, #b1d6ff);
-	}
+  &:hover {
+    background: #dbe8ff;
+    background: linear-gradient(to bottom, #dbe8ff, #b1d6ff);
+  }
 
-	&:active {
-		background: #bfd6ff;
-		background: linear-gradient(to bottom, #bfd6ff, #d2e2ff);
-		box-shadow: inset 1px 1px 2px rgba(77, 77, 77, 0.4);
-	}
+  &:active {
+    background: #bfd6ff;
+    background: linear-gradient(to bottom, #bfd6ff, #d2e2ff);
+    box-shadow: inset 1px 1px 2px rgba(77, 77, 77, 0.4);
+  }
 }

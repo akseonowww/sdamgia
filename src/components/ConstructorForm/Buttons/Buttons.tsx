@@ -18,7 +18,7 @@ import {
 } from '../utils'
 import Checkbox from '../../Checkbox'
 import LinkWrapU from 'components/Link/_wrap/-U'
-import '../../Button/Button.scss'
+import Button from 'components/Button'
 import '../../Switcher/Switcher.scss'
 import '../../Switcher/_vertical/Switcher_vertical.scss'
 import '../../Switcher/_checkbox/Switcher_checkbox.scss'
@@ -155,12 +155,13 @@ const Buttons: FC<IButtonsProps> = ({
   return (
     <div className="ConstructorForm-Buttons">
       <div className="ConstructorForm-ButtonsPanel">
-        <input
-          className="Button ConstructorForm-SubmitButton"
+        <Button
+          className="ConstructorForm-SubmitButton"
           type="submit"
-          value={`Составить вариант ${testTotal.text}`}
           tabIndex={topicsList ? topicsList.length : 1}
-        />
+        >
+          Составить вариант {testTotal.text}
+        </Button>
 
         <div className="Switcher Switcher_vertical Switcher_checkbox ConstructorForm-Switcher">
           <label className="Label Switcher-Label Switcher_vertical-Label Switcher_checkbox-Label">

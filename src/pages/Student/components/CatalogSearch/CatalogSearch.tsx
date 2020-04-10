@@ -3,7 +3,7 @@ import React, { FC, useState, useLayoutEffect } from 'react'
 import Title from 'components/Title'
 import 'components/Form/Form.scss'
 import Input from 'components/Input'
-import 'components/Button/Button.scss'
+import Button from 'components/Button'
 
 const useWindowWidth = (): number => {
   const [width, setWidth] = useState(0)
@@ -45,7 +45,7 @@ const CatalogSearch: FC = () => {
             placeholder={placeholder}
             setValue={setValue}
           />
-          <input className="Button" type="submit" value="Открыть" />
+          <Button>Открыть</Button>
         </div>
       </form>
     </div>

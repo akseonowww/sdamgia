@@ -3,7 +3,7 @@ import React, { FC, useState } from 'react'
 import Title from 'components/Title'
 import 'components/Form/Form.scss'
 import Input from 'components/Input'
-import 'components/Button/Button.scss'
+import Button from 'components/Button'
 
 const TeacherVariant: FC = () => {
   const [value, setValue] = useState('')
@@ -27,7 +27,7 @@ const TeacherVariant: FC = () => {
             placeholder="Номер варианта"
             setValue={setValue}
           />
-          <input className="Button" type="submit" value="Открыть" />
+          <Button>Открыть</Button>
         </div>
       </form>
     </div>

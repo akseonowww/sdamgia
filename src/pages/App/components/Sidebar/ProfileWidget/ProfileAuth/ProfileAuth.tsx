@@ -1,8 +1,8 @@
 import React, { FC, useState, useCallback, useRef } from 'react'
 import cx from 'classnames'
 
+import Button from 'components/Button'
 import LinkWrap from 'components/Link/_wrap'
-import 'components/Button/Button.scss'
 import './ProfileAuth.scss'
 
 interface IProfileAuthProps {
@@ -160,7 +160,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
           />
           <input type="hidden" name="la" value="login" />
         </div>
-        <button className="Button ProfileAuth-Button">Войти</button>
+        <Button className="ProfileAuth-Button">Войти</Button>
       </form>
 
       <div className="ProfileAuth-Links">
