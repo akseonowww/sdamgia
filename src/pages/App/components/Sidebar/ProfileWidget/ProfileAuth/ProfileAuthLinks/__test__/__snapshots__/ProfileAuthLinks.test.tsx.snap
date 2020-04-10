@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileAuthLinks matches snapshot 1`] = `"<div class=\\"ProfileAuth-Links\\"><a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/register\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U\\">Зарегистрироваться</u></a><a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/pass_change\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U\\">Восстановление пароля</u></a><a class=\\"Link Link_wrap ProfileAuth-Link\\" href=\\"/vkauth\\" rel=\\"noopener noreferrer\\"><u class=\\"Link-U Link_wrap-U\\">Вход через Вконтакте</u></a></div>"`;
