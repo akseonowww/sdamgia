@@ -197,7 +197,7 @@ const Buttons: FC<IButtonsProps> = ({
           <span>×</span>
 
           <LinkWrapU className="Link_pseudo-U ConstructorForm-ResetButtonText">
-            Очистить поля
+            Убрать все
           </LinkWrapU>
         </button>
       </div>
