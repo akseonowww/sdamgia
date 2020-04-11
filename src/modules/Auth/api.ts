@@ -10,6 +10,4 @@ export const getAuthStatus = (params: IAuthParams) =>
     .get(`${process.env.REACT_APP_AUTH}`, {
       params,
     })
-    .then((response: any) => {
-      return response.data.status ? true : Promise.reject(response)
-    })
+    .then((response: any) => response.data.status)

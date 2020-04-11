@@ -5,7 +5,7 @@ import Link from 'components/Link'
 import './ProfileLink.scss'
 
 import signOutIcon from './assets/signOutIcon.png'
-import { fetchAuthStatusFailure } from 'modules/Auth'
+import { fetchAuthStatusSuccess } from 'modules/Auth'
 
 const ProfileLink: FC = () => {
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ const ProfileLink: FC = () => {
   const signOut = useCallback(
     (e) => {
       e.preventDefault()
-      dispatch(fetchAuthStatusFailure())
+      dispatch(fetchAuthStatusSuccess(false))
     },
     [dispatch]
   )
