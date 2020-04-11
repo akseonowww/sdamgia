@@ -1,11 +1,11 @@
 import React, { FC, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 
+import { fetchAuthStatusSuccess } from 'modules/Auth'
 import Link from 'components/Link'
 import './ProfileLink.scss'
 
 import signOutIcon from './assets/signOutIcon.png'
-import { fetchAuthStatusSuccess } from 'modules/Auth'
 
 const ProfileLink: FC = () => {
   const dispatch = useDispatch()
