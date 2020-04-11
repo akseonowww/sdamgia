@@ -1,21 +1,21 @@
 import React, { FC, useCallback } from 'react'
+import { useDispatch } from 'react-redux'
 
 import Link from 'components/Link'
 import './ProfileLink.scss'
 
 import signOutIcon from './assets/signOutIcon.png'
+import { fetchAuthStatusFailure } from 'modules/Auth'
 
-interface IProfileLinkProps {
-  setAuth: Function
-}
+const ProfileLink: FC = () => {
+  const dispatch = useDispatch()
 
-const ProfileLink: FC<IProfileLinkProps> = ({ setAuth }) => {
   const signOut = useCallback(
-    e => {
+    (e) => {
       e.preventDefault()
-      setAuth(false)
+      dispatch(fetchAuthStatusFailure())
     },
-    [setAuth]
+    [dispatch]
   )
 
   return (
@@ -25,7 +25,7 @@ const ProfileLink: FC<IProfileLinkProps> = ({ setAuth }) => {
           Константин
         </Link>
       </div>
-      <a href="/" onClick={e => signOut(e)}>
+      <a href="/" onClick={(e) => signOut(e)}>
         <img className="ProfileLink-Icon" src={signOutIcon} alt="Выйти" />
       </a>
     </>

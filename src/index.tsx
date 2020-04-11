@@ -1,7 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
+import createStore from './store'
 import App from './pages/App'
 import './index.scss'
 
-ReactDOM.render(<App />, document.querySelector('.Root'))
+const store = createStore()
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('.Root')
+)

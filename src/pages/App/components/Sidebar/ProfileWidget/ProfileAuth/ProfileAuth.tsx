@@ -1,22 +1,20 @@
-import React, { FC, useState, useCallback, useRef } from 'react'
+import React, { FC, useState, useCallback, useRef, useEffect } from 'react'
 import { cn } from '@bem-react/classname'
 import cx from 'classnames'
-import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
 
+import { fetchAuthStatusRequest } from 'modules/Auth'
+import { getAuthLoading, getAuthStatus } from 'modules/Auth/selectors'
 import Button from 'components/Button'
 import './ProfileAuth.scss'
 import ProfileAuthLinks from './ProfileAuthLinks'
-
-interface IProfileAuthProps {
-  setAuth: Function
-}
 
 interface IFieldState {
   value: string
   error: boolean
 }
 
-const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
+const ProfileAuth: FC = () => {
   const profileAuth = cn('ProfileAuth')
 
   const [email, setEmail] = useState<IFieldState>({ value: '', error: false })
@@ -24,8 +22,13 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
     value: '',
     error: false,
   })
-  const [submit, setSubmit] = useState<boolean>(false)
-  const [wrongData, setWrongData] = useState<boolean>(false)
+  const [submitted, isSubmitted] = useState(false)
+  const [readyForCheck, isReadyForCheck] = useState(false)
+  const [wrongData, setWrongData] = useState(false)
+
+  const loading = useSelector(getAuthLoading)
+  const auth = useSelector(getAuthStatus)
+  const dispatch = useDispatch()
 
   const emailInput = useRef<HTMLInputElement | null>(null)
   const passwordInput = useRef<HTMLInputElement | null>(null)
@@ -42,7 +45,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
             value: newValue,
           })
 
-          if (submit) {
+          if (submitted) {
             newError =
               !newValue.trim() || !newValue.match(/.+@.+\..+/i) ? true : false
 
@@ -59,7 +62,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
             value: newValue,
           })
 
-          if (submit) {
+          if (submitted) {
             newError = !newValue ? true : false
 
             setPassword({
@@ -73,7 +76,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
           break
       }
     },
-    [email, password, submit]
+    [submitted, email, password]
   )
 
   const handleInputFocus = useCallback((ref) => {
@@ -84,7 +87,8 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
     (e) => {
       e.preventDefault()
 
-      setSubmit(true)
+      isSubmitted(true)
+      isReadyForCheck(true)
 
       // Validation
       if (
@@ -111,27 +115,26 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
         return
       }
 
-      axios
-        .get(`${process.env.REACT_APP_LOGIN}`, {
-          params: {
-            username: email.value,
-            password: password.value,
-          },
-        })
-        .then((response: any) => {
-          const status: boolean = response.data.status
+      setWrongData(false)
 
-          if (status) {
-            setAuth(true)
-          } else {
-            setWrongData(true)
-            handleInputFocus(emailInput)
-          }
+      dispatch(
+        fetchAuthStatusRequest({
+          username: email.value,
+          password: password.value,
         })
-        .catch((error: string) => console.log(error))
+      )
     },
-    [email, password, setAuth, handleInputFocus]
+    [email, password, handleInputFocus, dispatch]
   )
+
+  useEffect(() => {
+    if (readyForCheck && !loading && !auth) {
+      setWrongData(true)
+      handleInputFocus(emailInput)
+
+      isReadyForCheck(false)
+    }
+  }, [readyForCheck, loading, auth, handleInputFocus])
 
   return (
     <div className="ProfileAuth">
@@ -160,6 +163,7 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
             placeholder="Электронная почта"
             ref={emailInput}
             onChange={handleInputChange}
+            autoComplete="off"
           />
           <input
             className={cx('ProfileAuth-Input', {
@@ -174,7 +178,12 @@ const ProfileAuth: FC<IProfileAuthProps> = ({ setAuth }) => {
           />
           <input type="hidden" name="la" value="login" />
         </div>
-        <Button className="ProfileAuth-Button">Войти</Button>
+        <Button
+          className={cx({ Button_disabled: loading }, 'ProfileAuth-Button')}
+          disabled={loading}
+        >
+          Войти
+        </Button>
       </form>
 
       <ProfileAuthLinks blockClassName={profileAuth} />

@@ -7,6 +7,7 @@ import './Button.scss'
 interface IButtonProps {
   className?: string
   type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
   tabIndex?: number
   handleClick?: () => void
   children: ReactNode
@@ -15,6 +16,7 @@ interface IButtonProps {
 const Button: FC<IButtonProps> = ({
   className,
   type,
+  disabled,
   tabIndex,
   handleClick,
   children,
@@ -25,6 +27,7 @@ const Button: FC<IButtonProps> = ({
     <button
       className={cx(button(), className)}
       type={type}
+      disabled={disabled}
       tabIndex={tabIndex}
       onClick={handleClick}
     >
