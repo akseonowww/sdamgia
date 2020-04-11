@@ -29,6 +29,13 @@ export const fetchAuthStatusFailure = createAction(
   constants.FETCH_AUTH_STATUS_FAILURE
 )
 
+export const fetchAuthUserSuccess = createAction(
+  constants.FETCH_AUTH_USER_SUCCESS
+)
+export const fetchAuthUserFailure = createAction(
+  constants.FETCH_AUTH_USER_FAILURE
+)
+
 const loading = handleActions(
   {
     [constants.FETCH_AUTH_STATUS_REQUEST]: () => true,
@@ -47,7 +54,16 @@ const status = handleActions(
   false
 )
 
+const user = handleActions(
+  {
+    [constants.FETCH_AUTH_USER_SUCCESS]: (_state, action) => action.payload,
+    [constants.FETCH_AUTH_USER_FAILURE]: () => null,
+  },
+  null
+)
+
 export default combineReducers({
   loading,
   status,
+  user,
 })

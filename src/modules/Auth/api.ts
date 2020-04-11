@@ -10,4 +10,4 @@ export const getAuthStatus = (params: IAuthParams) =>
     .get(`${process.env.REACT_APP_AUTH}`, {
       params,
     })
-    .then((response: any) => response.data.status)
+    .then((response: any) => response.data)

@@ -5,6 +5,8 @@ import {
   fetchAuthStatusSuccess,
   fetchAuthStatusFailure,
   IAuthStatusAction,
+  fetchAuthUserSuccess,
+  fetchAuthUserFailure,
 } from './duck'
 import { getAuthStatus } from './api'
 
@@ -14,11 +16,15 @@ function* fetchAuthStatusWatcher() {
 
 function* fetchAuthStatusFlow(action: IAuthStatusAction) {
   try {
-    const status = yield call(getAuthStatus, action.payload)
+    const { status, user } = yield call(getAuthStatus, action.payload)
+
     yield put(fetchAuthStatusSuccess(status))
+    yield put(fetchAuthUserSuccess(user))
   } catch (error) {
     console.log(error)
+
     yield put(fetchAuthStatusFailure())
+    yield put(fetchAuthUserFailure())
   }
 }
 
