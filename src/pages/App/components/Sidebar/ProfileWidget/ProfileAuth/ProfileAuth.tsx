@@ -147,12 +147,6 @@ const ProfileAuth: FC = () => {
         onSubmit={handleSubmit}
       >
         <div className="ProfileAuth-InputGroup">
-          {wrongData && (
-            <div className="ProfileAuth-Alert">
-              Неправильная почта или&nbsp;пароль
-            </div>
-          )}
-
           <input
             className={cx('ProfileAuth-Input', {
               'ProfileAuth-Input_invalid': email.error,
@@ -163,7 +157,6 @@ const ProfileAuth: FC = () => {
             placeholder="Электронная почта"
             ref={emailInput}
             onChange={handleInputChange}
-            autoComplete="off"
           />
           <input
             className={cx('ProfileAuth-Input', {
@@ -178,12 +171,22 @@ const ProfileAuth: FC = () => {
           />
           <input type="hidden" name="la" value="login" />
         </div>
-        <Button
-          className={cx({ Button_disabled: loading }, 'ProfileAuth-Button')}
-          disabled={loading}
-        >
-          Войти
-        </Button>
+        <div className="ProfileAuth-ButtonGroup">
+          <Button
+            className={cx({ Button_disabled: loading }, 'ProfileAuth-Button')}
+            disabled={loading}
+          >
+            Войти
+          </Button>
+
+          {wrongData && (
+            <div className="ProfileAuth-Alert">
+              Не та почта
+              <br />
+              или пароль
+            </div>
+          )}
+        </div>
       </form>
 
       <ProfileAuthLinks blockClassName={profileAuth} />

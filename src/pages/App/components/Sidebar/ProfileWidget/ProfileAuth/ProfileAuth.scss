@@ -44,9 +44,15 @@
   }
 
   &-Alert {
-    margin-bottom: 0.5rem;
+    margin-top: -0.05rem;
 
+    line-height: 0.95rem;
     color: $danger;
+  }
+
+  &-ButtonGroup {
+    display: flex;
+    justify-content: space-between;
   }
 
   &-Button {
