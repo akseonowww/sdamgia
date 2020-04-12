@@ -24,7 +24,7 @@ const ProfileLink: FC = () => {
     <>
       <div className="ProfileLink">
         <Link className="Link_static ProfileWidget-Link" href="/profile">
-          {user && user.name}
+          {user && user.name ? user.name : 'Профиль'}
         </Link>
       </div>
       <a href="/" onClick={(e) => signOut(e)}>
