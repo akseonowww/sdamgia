@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProfileLink matches snapshot 1`] = `"<div class=\\"ProfileLink\\"><a class=\\"Link Link_static ProfileWidget-Link\\" href=\\"/profile\\" rel=\\"noopener noreferrer\\">Профиль</a></div><a href=\\"/\\"><img class=\\"ProfileLink-Icon\\" src=\\"signOutIcon.png\\" alt=\\"Выйти\\"></a>"`;
+exports[`ProfileLink renders stub when no user name 1`] = `"<div class=\\"ProfileLink\\"><a class=\\"Link Link_static ProfileWidget-Link\\" href=\\"/profile\\" rel=\\"noopener noreferrer\\">Профиль</a></div><a href=\\"/\\"><img class=\\"ProfileLink-Icon\\" src=\\"signOutIcon.png\\" alt=\\"Выйти\\"></a>"`;
+
+exports[`ProfileLink renders user name 1`] = `"<div class=\\"ProfileLink\\"><a class=\\"Link Link_static ProfileWidget-Link\\" href=\\"/profile\\" rel=\\"noopener noreferrer\\">Константин</a></div><a href=\\"/\\"><img class=\\"ProfileLink-Icon\\" src=\\"signOutIcon.png\\" alt=\\"Выйти\\"></a>"`;

@@ -5,13 +5,20 @@ import pretty from 'pretty'
 
 import ProfileLink from '..'
 
-jest.mock('react-redux', () => ({
-  useSelector: jest.fn(),
-  useDispatch: jest.fn().mockReturnValueOnce(jest.fn()),
-}))
-jest.mock('modules/Auth/selectors', () => ({
-  getAuthUser: jest.fn().mockReturnValueOnce(''),
-}))
+jest.mock('react-redux', () => {
+  const user = {
+    name: 'Константин',
+  }
+
+  return {
+    useSelector: jest
+      .fn()
+      .mockReturnValue(user)
+      .mockReturnValueOnce(null)
+      .mockReturnValueOnce(user),
+    useDispatch: jest.fn().mockReturnValue(jest.fn()),
+  }
+})
 
 describe('ProfileLink', () => {
   let container: HTMLElement | null = null
@@ -33,13 +40,19 @@ describe('ProfileLink', () => {
     act(() => {
       render(<ProfileLink />, container)
     })
-    expect(container && container.textContent).toBe('Профиль')
+
+    if (!container) return
+    expect(container.textContent).toBe('Профиль')
+    expect(pretty(container.innerHTML)).toMatchSnapshot()
   })
 
-  it('matches snapshot', () => {
+  it('renders user name', () => {
     act(() => {
       render(<ProfileLink />, container)
     })
-    if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
+
+    if (!container) return
+    expect(container.textContent).toBe('Константин')
+    expect(pretty(container.innerHTML)).toMatchSnapshot()
   })
 })
