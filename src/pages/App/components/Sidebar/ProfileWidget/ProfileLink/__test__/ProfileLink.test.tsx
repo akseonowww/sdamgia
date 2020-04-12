@@ -13,7 +13,7 @@ jest.mock('react-redux', () => {
   return {
     useSelector: jest
       .fn()
-      .mockReturnValue(user)
+      .mockReturnValue(null)
       .mockReturnValueOnce(null)
       .mockReturnValueOnce(user),
     useDispatch: jest.fn().mockReturnValue(jest.fn()),
@@ -25,7 +25,7 @@ describe('ProfileLink', () => {
 
   beforeEach(() => {
     container = document.createElement('div')
-    document.body.appendChild(container)
+    document.body.append(container)
   })
 
   afterEach(() => {
@@ -53,6 +53,23 @@ describe('ProfileLink', () => {
 
     if (!container) return
     expect(container.textContent).toBe('Константин')
+    expect(pretty(container.innerHTML)).toMatchSnapshot()
+  })
+
+  it('provides signing out', () => {
+    if (!container) return
+
+    act(() => {
+      render(<ProfileLink />, container)
+    })
+
+    const button = container.querySelector('.ProfileLink-Button')
+
+    act(() => {
+      button && button.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    })
+
+    expect(container.textContent).toBe('Профиль')
     expect(pretty(container.innerHTML)).toMatchSnapshot()
   })
 })

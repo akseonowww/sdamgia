@@ -12,13 +12,9 @@ const ProfileLink: FC = () => {
   const user = useSelector(getAuthUser)
   const dispatch = useDispatch()
 
-  const signOut = useCallback(
-    (e) => {
-      e.preventDefault()
-      dispatch(fetchAuthStatusSuccess(false))
-    },
-    [dispatch]
-  )
+  const signOut = useCallback(() => {
+    dispatch(fetchAuthStatusSuccess(false))
+  }, [dispatch])
 
   return (
     <>
@@ -27,9 +23,9 @@ const ProfileLink: FC = () => {
           {user && user.name ? user.name : 'Профиль'}
         </Link>
       </div>
-      <a href="/" onClick={(e) => signOut(e)}>
+      <div className="ProfileLink-Button" onClick={signOut}>
         <img className="ProfileLink-Icon" src={signOutIcon} alt="Выйти" />
-      </a>
+      </div>
     </>
   )
 }
