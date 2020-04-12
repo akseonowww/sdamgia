@@ -21,8 +21,6 @@ function* fetchAuthStatusFlow(action: IAuthStatusAction) {
     yield put(fetchAuthStatusSuccess(status))
     yield put(fetchAuthUserSuccess(user))
   } catch (error) {
-    console.log(error)
-
     yield put(fetchAuthStatusFailure())
     yield put(fetchAuthUserFailure())
   }

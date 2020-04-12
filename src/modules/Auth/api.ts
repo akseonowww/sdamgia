@@ -11,3 +11,4 @@ export const getAuthStatus = (params: IAuthParams) =>
       params,
     })
     .then((response: any) => response.data)
+    .catch((error: string) => console.log(error))
