@@ -1,4 +1,12 @@
 .ProfileLink {
+  display: flex;
+
+  &-Link {
+    margin-right: 0.25rem;
+
+    font-weight: bold;
+  }
+
   &-Button {
     cursor: pointer;
   }

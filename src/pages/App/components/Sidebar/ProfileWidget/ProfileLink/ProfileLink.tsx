@@ -17,16 +17,17 @@ const ProfileLink: FC = () => {
   }, [dispatch])
 
   return (
-    <>
-      <div className="ProfileLink">
-        <Link className="Link_static ProfileWidget-Link" href="/profile">
+    <div className="ProfileLink">
+      <div className="ProfileLink-Link">
+        <Link className="Link_static" href="/profile">
           {user && user.name ? user.name : 'Профиль'}
         </Link>
       </div>
+
       <div className="ProfileLink-Button" onClick={signOut}>
         <img className="ProfileLink-Icon" src={signOutIcon} alt="Выйти" />
       </div>
-    </>
+    </div>
   )
 }
 
