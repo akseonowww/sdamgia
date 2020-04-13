@@ -9,15 +9,8 @@ export interface IAuthStatusAction {
   payload: IAuthParams
 }
 
-export const fetchAuthLoadingRequest = createAction(
-  constants.FETCH_AUTH_LOADING_REQUEST
-)
-export const fetchAuthLoadingSuccess = createAction(
-  constants.FETCH_AUTH_LOADING_SUCCESS
-)
-export const fetchAuthLoadingFailure = createAction(
-  constants.FETCH_AUTH_LOADING_FAILURE
-)
+export const startAuthLoading = createAction(constants.START_AUTH_LOADING)
+export const finishAuthLoading = createAction(constants.FINISH_AUTH_LOADING)
 
 export const fetchAuthStatusRequest = createAction(
   constants.FETCH_AUTH_STATUS_REQUEST
@@ -38,9 +31,8 @@ export const fetchAuthUserFailure = createAction(
 
 const loading = handleActions(
   {
-    [constants.FETCH_AUTH_STATUS_REQUEST]: () => true,
-    [constants.FETCH_AUTH_STATUS_SUCCESS]: () => false,
-    [constants.FETCH_AUTH_STATUS_FAILURE]: () => false,
+    [constants.START_AUTH_LOADING]: () => true,
+    [constants.FINISH_AUTH_LOADING]: () => false,
   },
   false
 )
