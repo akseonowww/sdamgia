@@ -13,7 +13,7 @@ const ProfileWidget: FC<IProfileWidgetProps> = ({ className }) => {
   const auth = useSelector(getAuthStatus)
 
   return (
-    <div className={className}>{!auth ? <ProfileLink /> : <ProfileAuth />}</div>
+    <div className={className}>{auth ? <ProfileLink /> : <ProfileAuth />}</div>
   )
 }
 
