@@ -1,4 +1,8 @@
 .ProfileLink {
+  &-Button {
+    cursor: pointer;
+  }
+
   &-Icon {
     &:hover {
       opacity: 0.75;
