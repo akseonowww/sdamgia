@@ -7,7 +7,6 @@ import { cn } from '@bem-react/classname'
 import ProfileAuthLinks from '../ProfileAuthLinks'
 
 describe('ProfileAuthLinks', () => {
-  const handleClick = jest.fn()
   const profileAuth = cn('ProfileAuth')
   let container: HTMLElement | null = null
 
@@ -26,7 +25,7 @@ describe('ProfileAuthLinks', () => {
 
   it('renders with required and optional props', () => {
     act(() => {
-      render(<ProfileAuthLinks blockClassName={profileAuth} />, container)
+      render(<ProfileAuthLinks blockClassName={profileAuth()} />, container)
     })
     expect(container && container.textContent).toBe(
       'ЗарегистрироватьсяВосстановление пароляВход через Вконтакте'
@@ -35,7 +34,7 @@ describe('ProfileAuthLinks', () => {
 
   it('matches snapshot', () => {
     act(() => {
-      render(<ProfileAuthLinks blockClassName={profileAuth} />, container)
+      render(<ProfileAuthLinks blockClassName={profileAuth()} />, container)
     })
     if (container) expect(pretty(container.innerHTML)).toMatchSnapshot()
   })

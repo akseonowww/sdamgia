@@ -137,7 +137,7 @@ const ProfileAuth: FC = () => {
   }, [readyForCheck, loading, auth, handleInputFocus])
 
   return (
-    <div className="ProfileAuth">
+    <div className={cx(profileAuth)}>
       <div className="ProfileAuth-Title">Вход на сайт</div>
 
       <form
@@ -189,7 +189,7 @@ const ProfileAuth: FC = () => {
         </div>
       </form>
 
-      <ProfileAuthLinks blockClassName={profileAuth} />
+      <ProfileAuthLinks blockClassName={profileAuth()} />
     </div>
   )
 }

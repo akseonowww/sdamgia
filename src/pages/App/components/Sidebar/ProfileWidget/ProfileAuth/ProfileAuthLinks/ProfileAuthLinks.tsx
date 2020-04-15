@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, memo } from 'react'
 
 import LinkWrap from 'components/Link/_wrap'
 
 interface ILinksProps {
-  blockClassName: Function
+  blockClassName: string
 }
 
 const ProfileAuthLinks: FC<ILinksProps> = ({ blockClassName }) => {
@@ -23,12 +23,12 @@ const ProfileAuthLinks: FC<ILinksProps> = ({ blockClassName }) => {
   ]
 
   return (
-    <div className={blockClassName('Links')}>
+    <div className={`${blockClassName}-Links`}>
       {links.map(({ href, text }, i) => (
         <LinkWrap
-          className={blockClassName('Link')}
+          className={`${blockClassName}-Link`}
           href={href}
-          key={`ProfileAuth-Link_${i}`}
+          key={`${blockClassName}-Link_${i}`}
         >
           {text}
         </LinkWrap>
@@ -37,4 +37,4 @@ const ProfileAuthLinks: FC<ILinksProps> = ({ blockClassName }) => {
   )
 }
 
-export default ProfileAuthLinks
+export default memo(ProfileAuthLinks)
