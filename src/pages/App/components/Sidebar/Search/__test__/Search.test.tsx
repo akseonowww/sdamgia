@@ -1,5 +1,6 @@
 import React from 'react'
-import { render, fireEvent, cleanup } from '@testing-library/react'
+import { cleanup, render, fireEvent } from '@testing-library/react'
+import pretty from 'pretty'
 
 import Search from '../Search'
 
@@ -23,5 +24,11 @@ describe('Search', () => {
     fireEvent.change(input, { target: { value: 'Поезд двигаясь' } })
 
     expect(input.value).toBe('Поезд двигаясь')
+  })
+
+  it('matches snapshot', () => {
+    const { container } = render(<Search />)
+
+    expect(pretty(container.innerHTML)).toMatchSnapshot()
   })
 })
