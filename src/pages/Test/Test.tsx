@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import Section from 'components/Section'
 import Title from 'components/Title'
 
-const Test = () => (
+const Test: FC = () => (
   <Section className="Test">
     <Title>Тест</Title>
     <p className="Section-Desc">
