@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 import cx from 'classnames'
 
 import NavSide from './NavSide'
-import Search from './Search/Search'
+import Search from './Search'
 import ProfileWidget from './ProfileWidget/ProfileWidget'
 import News from './News/News'
 import OurSources from './OurSources/OurSources'
