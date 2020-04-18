@@ -28,7 +28,7 @@ describe('ProfileAuthLinks', () => {
       render(<ProfileAuthLinks blockClassName={profileAuth()} />, container)
     })
     expect(container && container.textContent).toBe(
-      'ЗарегистрироватьсяВосстановление пароляВход через Вконтакте'
+      'Восстановление пароляВход через ВконтактеРегистрация'
     )
   })
 
