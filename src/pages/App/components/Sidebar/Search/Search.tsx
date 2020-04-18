@@ -15,6 +15,7 @@ const Search: FC<ISearchProps> = ({ className }) => {
   return (
     <form className={cx('Search', className)} action="/problem" method="POST">
       <label className="Search-Label" title="Для поиска нажмите клавишу Enter">
+        <SearchIcon className="Search-SearchIcon" />
         <Input
           className="Search-Input"
           name="id"
@@ -22,7 +23,6 @@ const Search: FC<ISearchProps> = ({ className }) => {
           placeholder="№/текст задания"
           setValue={setValue}
         />
-        <SearchIcon className="Search-SearchIcon" />
       </label>
     </form>
   )
